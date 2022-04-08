@@ -9,5 +9,8 @@
         <module name="RecursosBiblioteca" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Proyecto-CVDS-2021" target="1.7" />
+    </bytecodeTargetLevel>
   </component>
 </project>
