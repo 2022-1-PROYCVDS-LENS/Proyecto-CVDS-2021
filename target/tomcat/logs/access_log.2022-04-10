@@ -29,3 +29,8 @@
 0:0:0:0:0:0:0:1 - - [10/Apr/2022:16:11:10 -0500] "GET /recursosBiblioteca/javax.faces.resource/izquierdo.png;jsessionid=E76AF8C98F26C2A6D4A858CD3911AFBF?ln=imagenes HTTP/1.1" 200 19469 http-bio-8080-exec-3 5
 0:0:0:0:0:0:0:1 - - [10/Apr/2022:16:11:10 -0500] "GET /recursosBiblioteca/javax.faces.resource/derecho.png;jsessionid=E76AF8C98F26C2A6D4A858CD3911AFBF?ln=imagenes HTTP/1.1" 200 2579 http-bio-8080-exec-1 2
 0:0:0:0:0:0:0:1 - - [10/Apr/2022:16:11:10 -0500] "GET /favicon.ico HTTP/1.1" 404 973 http-bio-8080-exec-5 0
+0:0:0:0:0:0:0:1 - - [10/Apr/2022:22:00:57 -0500] "GET / HTTP/1.1" 200 3467 http-bio-8080-exec-1 543
+0:0:0:0:0:0:0:1 - - [10/Apr/2022:22:00:57 -0500] "GET / HTTP/1.1" 200 3467 http-bio-8080-exec-2 543
+0:0:0:0:0:0:0:1 - - [10/Apr/2022:22:00:57 -0500] "GET /recursosBiblioteca/javax.faces.resource/derecho.png;jsessionid=E38B24B920CF4E5709789D9E71B47473?ln=imagenes HTTP/1.1" 200 2579 http-bio-8080-exec-5 7
+0:0:0:0:0:0:0:1 - - [10/Apr/2022:22:00:57 -0500] "GET /recursosBiblioteca/javax.faces.resource/izquierdo.png;jsessionid=E38B24B920CF4E5709789D9E71B47473?ln=imagenes HTTP/1.1" 200 19469 http-bio-8080-exec-4 9
+0:0:0:0:0:0:0:1 - - [10/Apr/2022:22:00:57 -0500] "GET /favicon.ico HTTP/1.1" 404 973 http-bio-8080-exec-6 2

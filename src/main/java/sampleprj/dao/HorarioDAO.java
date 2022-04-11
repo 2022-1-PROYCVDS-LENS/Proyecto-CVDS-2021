@@ -1,4 +1,9 @@
 package sampleprj.dao;
 
-public class HorarioDAO {
+import samples.entities.Horario;
+
+public interface HorarioDAO {
+
+    public void save(Horario horario);
+    public Horario load(int id);
 }

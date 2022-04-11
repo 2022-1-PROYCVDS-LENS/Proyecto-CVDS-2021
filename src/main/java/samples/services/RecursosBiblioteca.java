@@ -1,4 +1,4 @@
 package samples.services;
 
-public class RecursosBiblioteca {
+public interface RecursosBiblioteca {
 }

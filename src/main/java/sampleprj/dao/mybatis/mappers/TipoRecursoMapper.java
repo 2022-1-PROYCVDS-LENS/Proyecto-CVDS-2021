@@ -1,4 +1,4 @@
 package sampleprj.dao.mybatis.mappers;
 
-public class TipoRecursoMapper {
+public interface TipoRecursoMapper {
 }

@@ -1,4 +1,9 @@
 package sampleprj.dao;
 
-public class ReservaDAO {
+
+import samples.entities.Reserva;
+
+public interface ReservaDAO {
+    public void save(Reserva reserva);
+    public Reserva load(int id);
 }

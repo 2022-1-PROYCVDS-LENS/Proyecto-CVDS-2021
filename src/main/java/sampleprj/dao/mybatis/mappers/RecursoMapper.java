@@ -1,4 +1,4 @@
 package sampleprj.dao.mybatis.mappers;
 
-public class RecursoMapper {
+public interface RecursoMapper {
 }

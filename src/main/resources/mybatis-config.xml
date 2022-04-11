@@ -10,19 +10,21 @@
     <!--    <properties resource="config.properties">-->
     <!--    </properties>-->
     <typeAliases>
-        <typeAlias type='edu.eci.cvds.samples.entities.Cliente' alias='Cliente'/>
-        <typeAlias type='edu.eci.cvds.samples.entities.Item' alias='Item'/>
-        <typeAlias type='edu.eci.cvds.samples.entities.ItemRentado' alias='ItemRentado'/>
-        <typeAlias type='edu.eci.cvds.samples.entities.TipoItem' alias='TipoItem'/>
+        <typeAlias type='samples.entities.Horario' alias='Horario'/>
+        <typeAlias type='samples.entities.Recurso' alias='Recurso'/>
+        <typeAlias type='samples.entities.Reserva' alias='Reserva'/>
+        <typeAlias type='samples.entities.ReservaRecurrente' alias='ReservaRecurrente'/>
+        <typeAlias type='samples.entities.TipoRecurso' alias='TipoRecurso'/>
+        <typeAlias type='samples.entities.Usuario' alias='Usuario'/>
     </typeAliases>
 
     <environments default="development">
         <environment id="development">
             <transactionManager type="JDBC" />
             <dataSource type="POOLED">
-                <property name="driver" value="ec2-3-217-251-77.compute-1.amazonaws.com" />
+                <property name="driver" value="org.postgresql.Driver" />
                 <!--property name="url" value="jdbc:mysql://localhost:3306/video_rental"/!-->
-                <property name="url" value="heroku pg:psql postgresql-spherical-81227 --app lens-recursos-biblioteca"/>
+                <property name="url" value="jdbc:postgresql://vlpfheoislchmc:ea80f4e964e9d9ae8de809ce3f68be131aaa7218f3a832d50cb46afcc41ceac7@ec2-3-217-251-77.compute-1.amazonaws.com:5432/d5q8d2nec1lvbl?useSSL=true"/>
                 <property name="username" value="vlpfheoislchmc" />
                 <property name="password" value="ea80f4e964e9d9ae8de809ce3f68be131aaa7218f3a832d50cb46afcc41ceac7" />
 
@@ -32,7 +34,12 @@
     </environments>
 
     <mappers>
-
+        <mapper resource="mappers/HorarioMapper.xml"></mapper>
+        <mapper resource="mappers/RecursoMapper.xml"></mapper>
+        <mapper resource="mappers/ReservaMapper.xml"></mapper>
+        <mapper resource="mappers/ReservaRecurrenteMapper.xml"></mapper>
+        <mapper resource="mappers/TipoRecursoMapper.xml"></mapper>
+        <mapper resource="mappers/UsuarioMapper.xml"></mapper>
     </mappers>
 
 

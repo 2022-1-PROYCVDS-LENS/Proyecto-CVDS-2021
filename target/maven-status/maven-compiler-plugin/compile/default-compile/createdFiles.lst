@@ -20,7 +20,9 @@ sampleprj\dao\mybatis\MyBATISUsuarioDAO.class
 sampleprj\dao\ReservaRecurrenteDAO.class
 samples\services\impl\RecursosBibliotecaImpl.class
 sampleprj\dao\ReservaDAO.class
+guice\GuiceContextListener$1.class
 sampleprj\dao\mybatis\MyBATISReservaDAO.class
+samples\services\RecursosBibliotecaFactory$1.class
 sampleprj\dao\HorarioDAO.class
 sampleprj\dao\RecursoDAO.class
 samples\entities\Reserva.class

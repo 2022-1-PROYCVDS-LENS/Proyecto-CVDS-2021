@@ -1,4 +1,22 @@
 package samples.entities;
 
-public class Usuario {
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+import java.io.Serializable;
+
+@NoArgsConstructor
+@AllArgsConstructor
+public class Usuario implements Serializable {
+    private @Getter @Setter int id;
+    private @Getter @Setter String tipoUsuario;
+    private @Getter @Setter String nombre;
+    private @Getter @Setter String programa;
+
+    @Override
+    public String toString(){
+        return "Horario{" + "id=" + id + "tipoUsuario=" + tipoUsuario + "nombre=" + nombre + "programa=" + programa + "}";
+    }
 }

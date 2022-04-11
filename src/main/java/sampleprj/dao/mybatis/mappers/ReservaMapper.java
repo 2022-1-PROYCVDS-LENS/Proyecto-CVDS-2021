@@ -1,4 +1,4 @@
 package sampleprj.dao.mybatis.mappers;
 
-public class ReservaMapper {
+public interface ReservaMapper {
 }
