@@ -20,6 +20,7 @@
   </properties>
 
   <dependencies>
+    <!--default-->
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
@@ -32,6 +33,7 @@
       <version>8.0</version>
       <scope>provided</scope>
     </dependency>
+    <!--Tomcat-->
     <dependency>
       <groupId>javax</groupId>
       <artifactId>javaee-web-api</artifactId>
@@ -63,6 +65,40 @@
       <artifactId>primefaces</artifactId>
       <version>8.0</version>
     </dependency>
+    <!--Guice-->
+    <dependency>
+      <groupId>org.mybatis</groupId>
+      <artifactId>mybatis-guice</artifactId>
+      <version>3.10</version>
+    </dependency>
+    <dependency>
+      <groupId>org.mybatis</groupId>
+      <artifactId>mybatis</artifactId>
+      <version>3.4.5</version>
+    </dependency>
+    <dependency>
+      <groupId>com.google.inject</groupId>
+      <artifactId>guice</artifactId>
+      <version>5.1.0</version>
+    </dependency>
+    <!--SQL-->
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <version>5.1.44</version>
+    </dependency>
+    <dependency>
+      <groupId>com.h2database</groupId>
+      <artifactId>h2</artifactId>
+      <version>1.4.191</version>
+    </dependency>
+    <!--Getter y setters-->
+      <dependency>
+        <groupId>org.projectlombok</groupId>
+        <artifactId>lombok</artifactId>
+        <version>1.18.16</version>
+        <scope>provided</scope>
+      </dependency>
   </dependencies>
 
   <build>
