@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="sampleprj.dao.dato.mybatis.mappers.HorarioMapper">
+
+    <resultMap type="Horario" id="HorarioResult">
+        <id property="id_horario" column="id_horario"/>
+        <result property="horas" column="horas"/>
+        <result property="estado" column="estado"/>
+        <association property="recurso" javaType="Recurso" resultMap="sampleprj.dao.dato.mybatis.mappers.RecursoMapper.RecursoResult"/>
+    </resultMap>
+
+</mapper>

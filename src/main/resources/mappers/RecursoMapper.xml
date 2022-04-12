@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="sampleprj.dao.dato.mybatis.mappers.RecursoMapper">
+
+    <resultMap type="Recurso" id="RecursoResult">
+        <id property="id_recurso" column="id_recurso"/>
+        <result property="nombre" column="nombre"/>
+        <result property="habilitado" column="habilitado"/>
+        <result property="ubicacion" column="ubicacion"/>
+    </resultMap>
+
+    <select parameterType="map" id="consultarRecursos" resultMap="RecursoResult">
+        select
+        rec.nombre,
+        rec.habilitado,
+        rec.ubicacion,
+        tr.tipo,
+        tr.capacidad,
+        tr.ejemplares,
+        ho.horas,
+        ho.estado
+        from Recursos as rec
+        join TiposRecursos as tr
+        ON rec.id_recurso = tr.id_recurso
+        join Horarios as ho
+        ON rec.id_recurso = ho.id_recurso;
+    </select>
+
+</mapper>
