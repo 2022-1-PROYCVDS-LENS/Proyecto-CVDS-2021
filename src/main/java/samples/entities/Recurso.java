@@ -1,6 +1,5 @@
 package samples.entities;
 
-
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -16,9 +15,11 @@ public class Recurso implements Serializable {
     private @Getter @Setter String nombre;
     private @Getter @Setter String habilitado;
     private @Getter @Setter String ubicacion;
+    private @Getter @Setter int ejemplares;
+    private @Getter @Setter int capacidad;
+    private @Getter @Setter TipoRecurso tipo;
     private @Getter @Setter List<Horario> horarios;
     private @Getter @Setter List<Reserva> reservas;
-    private @Getter @Setter TipoRecurso tipo;
 
     @Override
     public String toString() {

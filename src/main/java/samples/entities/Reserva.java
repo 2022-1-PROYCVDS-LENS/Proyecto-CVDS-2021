@@ -12,9 +12,10 @@ import java.util.List;
 @AllArgsConstructor
 public class Reserva implements Serializable {
     private @Getter @Setter int id;
-    private @Getter @Setter int idUsuario;
-    private @Getter @Setter int idRecurso;
+    private @Getter @Setter Usuario idUsuario;
+    private @Getter @Setter Recurso idRecurso;
     private @Getter @Setter String inicio;
+    private @Getter @Setter String fin;
     private @Getter @Setter boolean recurrente;
     private @Getter @Setter String estado;
     private @Getter @Setter String solicitud;
@@ -23,6 +24,6 @@ public class Reserva implements Serializable {
 
     @Override
     public String toString(){
-        return "Horario{" + "id=" + id + "idUsuario=" + idUsuario + "idRecurso=" + idRecurso + "inicio=" + inicio + "recurrente=" + recurrente+"estado=" + estado+"solicitud="+solicitud+"reservaRecurrentes=\n\t" + reservaRecurrentes + "usuarios=\n\t" + usuarios+"}";
+        return "Horario{" + "id=" + id + "idUsuario=" + idUsuario + "idRecurso=" + idRecurso + "inicio=" + inicio + "fin=" + fin + "recurrente=" + recurrente+"estado=" + estado+"solicitud="+solicitud+"reservaRecurrentes=\n\t" + reservaRecurrentes + "usuarios=\n\t" + usuarios+"}";
     }
 }

@@ -6,10 +6,10 @@
 <mapper namespace="sampleprj.dao.dato.mybatis.mappers.HorarioMapper">
 
     <resultMap type="Horario" id="HorarioResult">
-        <id property="id_horario" column="id_horario"/>
-        <result property="horas" column="horas"/>
+        <id property="id" column="id_horario"/>
+        <result property="horario" column="horas"/>
         <result property="estado" column="estado"/>
-        <association property="recurso" javaType="Recurso" resultMap="sampleprj.dao.dato.mybatis.mappers.RecursoMapper.RecursoResult"/>
+        <association property="idRecurso" javaType="Recurso" resultMap="sampleprj.dao.dato.mybatis.mappers.RecursoMapper.RecursoResult"/>
     </resultMap>
 
 </mapper>

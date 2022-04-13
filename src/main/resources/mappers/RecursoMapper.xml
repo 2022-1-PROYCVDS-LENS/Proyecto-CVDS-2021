@@ -6,10 +6,15 @@
 <mapper namespace="sampleprj.dao.dato.mybatis.mappers.RecursoMapper">
 
     <resultMap type="Recurso" id="RecursoResult">
-        <id property="id_recurso" column="id_recurso"/>
+        <id property="id" column="id_recurso"/>
         <result property="nombre" column="nombre"/>
         <result property="habilitado" column="habilitado"/>
         <result property="ubicacion" column="ubicacion"/>
+        <result property="ejemplares" column="ejemplares"/>
+        <result property="capacidad" column="capacidad"/>
+        <association property="tipo" javaType="TipoRecurso" resultMap="sampleprj.dao.mybatis.mappers.TipoRecursoMapper.RecursoResult"/>
+        <collection property="reservas" ofType="Reserva" resultMap="sampleprj.dao.mybatis.mappers.ReservaMapper.ReservaResult"/>
+        <collection property="horarios" ofType="Horario" resultMap="sampleprj.dao.mybatis.mappers.HorarioMapper.HorarioResult"/>
     </resultMap>
 
     <select parameterType="map" id="consultarRecursos" resultMap="RecursoResult">
@@ -17,15 +22,15 @@
         rec.nombre,
         rec.habilitado,
         rec.ubicacion,
+        rec.capacidad,
+        rec.ejemplares,
         tr.tipo,
-        tr.capacidad,
-        tr.ejemplares,
         ho.horas,
         ho.estado
         from Recursos as rec
-        join TiposRecursos as tr
+        left join TiposRecursos as tr
         ON rec.id_recurso = tr.id_recurso
-        join Horarios as ho
+        left join Horarios as ho
         ON rec.id_recurso = ho.id_recurso;
     </select>
 

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="sampleprj.dao.dato.mybatis.mappers.UsuarioMapper">
+
+    <resultMap type="Usuario" id="UsuarioResult">
+        <id property="id_usuarios" column="id_usuarios"/>
+        <result property="tipo" column="tipo"/>
+        <result property="nombre" column="nombre"/>
+        <result property="programa" column="programa"/>
+    </resultMap>
+
+</mapper>

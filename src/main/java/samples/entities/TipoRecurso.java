@@ -11,11 +11,10 @@ import java.io.Serializable;
 @AllArgsConstructor
 public class TipoRecurso implements Serializable {
     private @Getter @Setter int id;
-    private @Getter @Setter String tipo;
-    private @Getter @Setter int capacidad;
+    private @Getter @Setter String nombre;
 
     @Override
     public String toString(){
-        return "Horario{" + "id=" + id + "tipo=" + tipo + "capacidad=" + capacidad + "}";
+        return "Horario{" + "id=" + id + "nombre=" + nombre + "}";
     }
 }
