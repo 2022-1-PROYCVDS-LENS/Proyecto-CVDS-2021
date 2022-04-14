@@ -3,7 +3,7 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="sampleprj.dao.dato.mybatis.mappers.RecursoMapper">
+<mapper namespace="sampleprj.dao.mybatis.mappers.RecursoMapper">
 
     <resultMap type="Recurso" id="RecursoResult">
         <id property="id" column="id_recurso"/>
@@ -12,12 +12,11 @@
         <result property="ubicacion" column="ubicacion"/>
         <result property="ejemplares" column="ejemplares"/>
         <result property="capacidad" column="capacidad"/>
-        <association property="tipo" javaType="TipoRecurso" resultMap="sampleprj.dao.mybatis.mappers.TipoRecursoMapper.RecursoResult"/>
-        <collection property="reservas" ofType="Reserva" resultMap="sampleprj.dao.mybatis.mappers.ReservaMapper.ReservaResult"/>
-        <collection property="horarios" ofType="Horario" resultMap="sampleprj.dao.mybatis.mappers.HorarioMapper.HorarioResult"/>
+        <association property="tipo" javaType="TipoRecurso" resultMap="sampleprj.dao.mybatis.mappers.TipoRecursoMapper.TipoRecursoResult"/>
+        <collection property="horarios" ofType="Horario" resultMap="sampleprj.dao.mybatis.mappers.HorarioMapper.HorarioResult" columnPrefix="ho_"/>
     </resultMap>
 
-    <select parameterType="map" id="consultarRecursos" resultMap="RecursoResult">
+    <select id="consultarRecursos" resultMap="RecursoResult">
         select
         rec.nombre,
         rec.habilitado,
@@ -27,9 +26,9 @@
         tr.tipo,
         ho.horas,
         ho.estado
-        from Recursos as rec
+        from public.recursos as rec
         left join TiposRecursos as tr
-        ON rec.id_recurso = tr.id_recurso
+        ON rec.id_tiporecurso = tr.id_tiporecurso
         left join Horarios as ho
         ON rec.id_recurso = ho.id_recurso;
     </select>

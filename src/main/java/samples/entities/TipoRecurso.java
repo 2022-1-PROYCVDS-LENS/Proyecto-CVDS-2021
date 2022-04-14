@@ -15,6 +15,6 @@ public class TipoRecurso implements Serializable {
 
     @Override
     public String toString(){
-        return "Horario{" + "id=" + id + "nombre=" + nombre + "}";
+        return "Tipo{" + "idT=" + id + "nombreT=" + nombre + "}";
     }
 }

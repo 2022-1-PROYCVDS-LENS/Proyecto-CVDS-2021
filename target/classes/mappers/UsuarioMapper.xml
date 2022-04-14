@@ -3,11 +3,11 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="sampleprj.dao.dato.mybatis.mappers.UsuarioMapper">
+<mapper namespace="sampleprj.dao.mybatis.mappers.UsuarioMapper">
 
     <resultMap type="Usuario" id="UsuarioResult">
-        <id property="id_usuarios" column="id_usuarios"/>
-        <result property="tipo" column="tipo"/>
+        <id property="id" column="id_usuarios"/>
+        <result property="tipoUsuario" column="tipo"/>
         <result property="nombre" column="nombre"/>
         <result property="programa" column="programa"/>
     </resultMap>

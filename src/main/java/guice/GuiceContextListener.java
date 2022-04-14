@@ -7,7 +7,7 @@ import org.mybatis.guice.datasource.helper.JdbcHelper;
 import sampleprj.dao.*;
 import sampleprj.dao.mybatis.*;
 import samples.services.RecursosBiblioteca;
-import samples.services.impl.RecursosBibliotecaImpl;
+import samples.services.impl.*;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;

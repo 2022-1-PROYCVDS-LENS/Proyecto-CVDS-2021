@@ -13,7 +13,7 @@ public class MyBATISRecursoDAO implements RecursoDAO {
 
     @Override
     public void save(Recurso recurso) {
-
+        recursoMapper.insertarRecurso(recurso);
     }
 
     @Override
@@ -23,6 +23,6 @@ public class MyBATISRecursoDAO implements RecursoDAO {
 
     @Override
     public List<Recurso> consultarRecursos() {
-        return null;
+        return recursoMapper.consultarRecursos();
     }
 }

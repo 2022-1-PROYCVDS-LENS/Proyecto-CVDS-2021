@@ -5,7 +5,7 @@ import org.mybatis.guice.XMLMyBatisModule;
 import sampleprj.dao.*;
 import sampleprj.dao.mybatis.*;
 import sampleprj.dao.mybatis.mappers.HorarioMapper;
-import samples.services.impl.RecursosBibliotecaImpl;
+import samples.services.impl.*;
 
 import java.util.Optional;
 

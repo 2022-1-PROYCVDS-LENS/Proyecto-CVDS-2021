@@ -17,6 +17,6 @@ public class Usuario implements Serializable {
 
     @Override
     public String toString(){
-        return "Horario{" + "id=" + id + "tipoUsuario=" + tipoUsuario + "nombre=" + nombre + "programa=" + programa + "}";
+        return "Usuario{" + "id=" + id + "tipoUsuario=" + tipoUsuario + "nombre=" + nombre + "programa=" + programa + "}";
     }
 }

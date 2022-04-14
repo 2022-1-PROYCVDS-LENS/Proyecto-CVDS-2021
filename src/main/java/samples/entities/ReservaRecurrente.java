@@ -16,6 +16,6 @@ public class ReservaRecurrente implements Serializable {
 
     @Override
     public String toString(){
-        return "Horario{" + "id=" + id + "periodo=" + periodo + "fin=" + fin + "}";
+        return "ReservaRe{" + "id=" + id + "periodo=" + periodo + "fin=" + fin + "}";
     }
 }
