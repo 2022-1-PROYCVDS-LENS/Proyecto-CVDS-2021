@@ -10,12 +10,12 @@
     <!--    <properties resource="config.properties">-->
     <!--    </properties>-->
     <typeAliases>
-        <typeAlias type='samples.entities.Horario' alias='Horario'/>
-        <typeAlias type='samples.entities.Recurso' alias='Recurso'/>
-        <typeAlias type='samples.entities.Reserva' alias='Reserva'/>
-        <typeAlias type='samples.entities.ReservaRecurrente' alias='ReservaRecurrente'/>
-        <typeAlias type='samples.entities.TipoRecurso' alias='TipoRecurso'/>
-        <typeAlias type='samples.entities.Usuario' alias='Usuario'/>
+        <typeAlias type='entities.Horario' alias='Horario'/>
+        <typeAlias type='entities.Recurso' alias='Recurso'/>
+        <typeAlias type='entities.Reserva' alias='Reserva'/>
+        <typeAlias type='entities.ReservaRecurrente' alias='ReservaRecurrente'/>
+        <typeAlias type='entities.TipoRecurso' alias='TipoRecurso'/>
+        <typeAlias type='entities.Usuario' alias='Usuario'/>
     </typeAliases>
 
     <environments default="development">
