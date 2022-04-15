@@ -65,6 +65,11 @@ public class RecursosBibliotecaImpl implements RecursosBiblioteca {
     }
 
     @Override
+    public List<Recurso> consultarRecursosPorTipo(int tipo) {
+        return recursoDAO.consultarRecursosPorTipo(tipo);
+    }
+
+    @Override
     public ReservaRecurrente consultarReservaRecurrente(int id) {
         return reservaRecurrenteDAO.load(id);
     }
@@ -107,5 +112,15 @@ public class RecursosBibliotecaImpl implements RecursosBiblioteca {
     @Override
     public void registrarUsuario(Usuario u) {
         usuarioDAO.save(u);
+    }
+
+    @Override
+    public List<Recurso> consultarRecursosPorCapacidad(int i) {
+        return recursoDAO.consultarRecursosPorCapacidad(i);
+    }
+
+    @Override
+    public List<Recurso> consultarRecursosPorUbicacion(String ubi) {
+        return recursoDAO.consultarRecursosPorUbicacion(ubi);
     }
 }

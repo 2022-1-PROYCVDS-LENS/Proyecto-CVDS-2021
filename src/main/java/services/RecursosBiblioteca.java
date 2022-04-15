@@ -14,6 +14,7 @@ public interface RecursosBiblioteca {
     );
     public abstract void registrarRegusrso(Recurso r);
     public abstract List<Recurso> consultarRecursos();
+    public abstract List<Recurso> consultarRecursosPorTipo(int tipo);
 
     public abstract ReservaRecurrente consultarReservaRecurrente(int id);
     public abstract void registrarReservaRecurrente(//Parametros
@@ -29,4 +30,8 @@ public interface RecursosBiblioteca {
     public abstract void registrarUsuario(//parametros
     );
     public abstract void registrarUsuario(Usuario u);
+
+    List<Recurso> consultarRecursosPorCapacidad(int i);
+
+    List<Recurso> consultarRecursosPorUbicacion(String ubi);
 }

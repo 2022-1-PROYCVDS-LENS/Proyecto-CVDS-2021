@@ -9,4 +9,10 @@ public interface RecursoDAO {
     public Recurso load(int id);
 
     public List<Recurso> consultarRecursos();
+
+    public List<Recurso> consultarRecursosPorTipo(int tipo);
+
+    public List<Recurso> consultarRecursosPorCapacidad(int i);
+
+    public List<Recurso> consultarRecursosPorUbicacion(String ubi);
 }
