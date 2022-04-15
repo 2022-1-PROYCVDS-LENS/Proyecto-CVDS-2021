@@ -13,16 +13,15 @@ import java.util.List;
 /**
  * Bean para la interfaz de usuario de la consulta de recursos
  */
-
+@SuppressWarnings("deprecation")
 @ManagedBean(name = "consultarRecursosBean")
 @SessionScoped
-public class ConsultarRecursosBean implements Serializable {
-    private static final long serialVersionUID = 1L;
+public class ConsultarRecursosBean extends BasePageBean {
 
     @Inject
     private RecursosBiblioteca recursosBiblioteca;
-
     private Recurso recurso;
+
     public List<Recurso> getRecursos() {
         return recursosBiblioteca.consultarRecursos();
     }
