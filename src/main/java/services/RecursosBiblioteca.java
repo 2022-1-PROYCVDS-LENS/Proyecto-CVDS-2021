@@ -11,7 +11,7 @@ public interface RecursosBiblioteca {
     public abstract void registrarHorario(Horario h);
     public abstract Recurso consultarRecurso(int id);
     public abstract  void registrarRecurso(String nombre, String ubicacion, TipoRecurso tipo, int capacidad);
-    );
+
     public abstract void registrarRegusrso(Recurso r);
     public abstract List<Recurso> consultarRecursos();
     public abstract List<Recurso> consultarRecursosPorTipo(int tipo);
