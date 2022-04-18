@@ -2,6 +2,7 @@ package persistence.mybatisimpl;
 
 import com.google.inject.Inject;
 import entities.Recurso;
+import entities.TipoRecurso;
 import persistence.RecursoDAO;
 import persistence.mybatisimpl.mappers.RecursoMapper;
 
@@ -40,5 +41,10 @@ public class MyBATISRecursoDAO implements RecursoDAO {
     @Override
     public List<Recurso> consultarRecursosPorUbicacion(String ubi) {
         return recursoMapper.consultarRecursosPorUbicacion(ubi);
+    }
+
+    @Override
+    public void registrarRecurso(String nombre, String ubicacion, TipoRecurso tipo, int capacidad) {
+        recursoMapper.registrarRecurso(nombre, ubicacion, tipo, capacidad);
     }
 }

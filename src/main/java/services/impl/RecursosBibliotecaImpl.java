@@ -50,8 +50,8 @@ public class RecursosBibliotecaImpl implements RecursosBiblioteca {
     }
 
     @Override
-    public void registrarRecurso() {
-
+    public void registrarRecurso(String nombre, String ubicacion, TipoRecurso tipo, int capacidad) {
+        recursoDAO.registrarRecurso(nombre, ubicacion, tipo, capacidad);
     }
 
     @Override
