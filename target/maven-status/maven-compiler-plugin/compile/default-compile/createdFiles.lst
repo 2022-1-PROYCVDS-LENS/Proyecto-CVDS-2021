@@ -5,6 +5,7 @@ persistence\mybatisimpl\mappers\ReservaRecurrenteMapper.class
 persistence\mybatisimpl\mappers\TipoRecursoMapper.class
 managedbeans\ConsultarRecursosBean.class
 persistence\mybatisimpl\MyBATISUsuarioDAO.class
+services\ExceptionRecursosBiblioteca.class
 persistence\mybatisimpl\mappers\ReservaMapper.class
 entities\ReservaRecurrente.class
 guice\GuiceContextListener.class
