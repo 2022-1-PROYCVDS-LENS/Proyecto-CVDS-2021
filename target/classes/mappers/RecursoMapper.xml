@@ -10,11 +10,11 @@
         <result property="nombre" column="nombre"/>
         <result property="habilitado" column="habilitado"/>
         <result property="ubicacion" column="ubicacion"/>
-        <result property="capacidad" column="capacidad"/>
         <result property="ejemplares" column="ejemplares"/>
-        <association property="tipo" javaType="TipoRecurso" resultMap="sampleprj.dao.mybatis.mappers.TipoRecursoMapper"/>
-        <collection property="reservas" ofType="Reserva" resultMap="sampleprj.dao.mybatis.mappers.ReservaMapper"/>
-        <collection property="horarios" ofType="Horario" resultMap="sampleprj.dao.mybatis.mappers.HorarioMapper"/>
+        <result property="capacidad" column="capacidad"/>
+        <association property="tipo" javaType="TipoRecurso" resultMap="sampleprj.dao.mybatis.mappers.TipoRecursoMapper.RecursoResult"/>
+        <collection property="reservas" ofType="Reserva" resultMap="sampleprj.dao.mybatis.mappers.ReservaMapper.ReservaResult"/>
+        <collection property="horarios" ofType="Horario" resultMap="sampleprj.dao.mybatis.mappers.HorarioMapper.HorarioResult"/>
     </resultMap>
 
     <select parameterType="map" id="consultarRecursos" resultMap="RecursoResult">

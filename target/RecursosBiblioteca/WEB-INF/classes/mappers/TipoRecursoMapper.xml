@@ -6,11 +6,8 @@
 <mapper namespace="sampleprj.dao.dato.mybatis.mappers.TipoRecursoMapper">
 
     <resultMap type="TipoRecurso" id="TipoRecursoResult">
-        <id property="id_reserva" column="id_reserva"/>
-        <result property="tipo" column="tipo"/>
-        <result property="capacidad" column="capacidad"/>
-        <result property="ejemplares" column="ejemplares"/>
-        <association property="recurso" javaType="Recurso" resultMap="sampleprj.dao.dato.mybatis.mappers.RecursoMapper.RecursoResult"/>
+        <id property="id" column="id_tiporecurso"/>
+        <result property="nombre" column="nombre"/>
     </resultMap>
 
 </mapper>

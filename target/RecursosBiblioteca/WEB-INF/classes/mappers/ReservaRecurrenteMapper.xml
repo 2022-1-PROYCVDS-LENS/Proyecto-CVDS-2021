@@ -6,7 +6,7 @@
 <mapper namespace="sampleprj.dao.dato.mybatis.mappers.ReservaRecurrenteMapper">
 
     <resultMap type="ReservaRecurrente" id="ReservaRecurrenteResult">
-        <id property="id_reservasR" column="id_reservasR"/>
+        <id property="id" column="id_reservasr"/>
         <result property="periodo" column="periodo"/>
         <result property="fin" column="fin"/>
     </resultMap>
