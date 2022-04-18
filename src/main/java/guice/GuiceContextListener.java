@@ -2,12 +2,14 @@ package guice;
 
 import com.google.inject.Guice;
 import com.google.inject.Injector;
+
 import org.mybatis.guice.XMLMyBatisModule;
 import org.mybatis.guice.datasource.helper.JdbcHelper;
-import sampleprj.dao.*;
-import sampleprj.dao.mybatis.*;
-import samples.services.RecursosBiblioteca;
-import samples.services.impl.RecursosBibliotecaImpl;
+
+import persistence.*;
+import persistence.mybatisimpl.*;
+import services.RecursosBiblioteca;
+import services.impl.*;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;
@@ -39,6 +41,7 @@ public class GuiceContextListener implements ServletContextListener {
             }
         });
 
-        servletContextEvent.getServletContext().setAttribute(Injector.class.getName(), injector);
+        ServletContext servletContext = servletContextEvent.getServletContext();
+        servletContext.setAttribute(Injector.class.getName(), injector);
     }
 }

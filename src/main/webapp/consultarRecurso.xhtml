@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html style = "background-color:#ffffff"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<head>
+  <title><ui:insert name="title">Recursos biblioteca</ui:insert></title>
+  <style type="text/css">
+    body {
+      background-image:url('./resources/imagenes/fondoconsulta.jpg');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: 100% 120%;
+    }
+  </style>
+
+</head>
+<h:body> <h:form>
+  <div style = "background-color:#990000" >
+    <center><h:outputText style = "color:#ffffff;font-size:220%;font-family:sans-serif" value = "Escuela Colombiana de ingieneria Julio Garavito: Recursos de biblioteca"/></center>
+  </div>
+  <div style = "display:grid; grid-template-columns: 1fr 10fr 1fr; grid-gap: 40px">
+    <div>
+      <h:graphicImage library="imagenes" name="izquierdo.png" height = "105%"/>
+    </div>
+    <div>
+      <div style="text-align: center;"><h1>Filtros</h1></div>
+      <div style = "display:grid; grid-template-columns: 1fr 1fr 1fr 1fr">
+        <div>
+          <div style="text-align: center;"><h3>Tipo de recurso</h3></div>
+          <center><h:selectOneMenu value="#{consultarRecursosBean.tipo}">
+            <f:selectItem itemLabel="Seleccione Tipo" itemValue="-1"/>
+            <f:selectItem itemValue="1" itemLabel="Libro" />
+            <f:selectItem itemValue="2" itemLabel="Sala de estudio" />
+            <f:selectItem itemValue="3" itemLabel="Equipo de computo" />
+            <f:selectItem itemValue="4" itemLabel="Equipo audiovisual" />
+          </h:selectOneMenu></center>
+        </div>
+        <div>
+          <div style="text-align: center;"><h3>Capacidad</h3></div>
+          <center><h:selectOneMenu value="#{consultarRecursosBean.capacidad}">
+            <f:selectItem itemLabel="Seleccione Capacidad" itemValue="-1"/>
+            <f:selectItem itemValue="1" itemLabel="1" />
+            <f:selectItem itemValue="2" itemLabel="2" />
+            <f:selectItem itemValue="3" itemLabel="3" />
+            <f:selectItem itemValue="4" itemLabel="4" />
+            <f:selectItem itemValue="5" itemLabel="5" />
+          </h:selectOneMenu></center>
+        </div>
+        <div>
+          <div style="text-align: center;"><h3>Ubicacion del recurso</h3></div>
+          <center><h:selectOneMenu value="#{consultarRecursosBean.ubicacion}">
+            <f:selectItem itemLabel="Seleccione Ubicación" itemValue=""/>
+            <f:selectItem itemValue="biblioteca" itemLabel="Biblioteca" />
+            <f:selectItem itemValue="bloque_a" itemLabel="Bloque A" />
+            <f:selectItem itemValue="bloque_b" itemLabel="Bloque B" />
+            <f:selectItem itemValue="bloque_c" itemLabel="Bloque C" />
+            <f:selectItem itemValue="bloque_d" itemLabel="Bloque D" />
+            <f:selectItem itemValue="bloque_e" itemLabel="Bloque E" />
+            <f:selectItem itemValue="bloque_f" itemLabel="Bloque F" />
+            <f:selectItem itemValue="bloque_g" itemLabel="Bloque G" />
+            <f:selectItem itemValue="bloque_h" itemLabel="Bloque H" />
+            <f:selectItem itemValue="bloque_i" itemLabel="Bloque I" />
+          </h:selectOneMenu></center>
+        </div>
+        <div style = "display:flex; align-items:end">
+
+        </div>
+      </div>
+      <div style = "display:flex; align-items:center; justify-content: center ;
+                        position: relative;top: 100px;" >
+        <!--                Insertar aca lista de recursos-->
+        <div style="text-align: center;">
+          <p:commandButton  value="Filtrar" action="#{consultarRecursosBean.filtrarLosRecursos}" update="tabla" style="color:#ffffff; background-color:#990000; width:50%; height:50%; font-size:120% " />
+          <p:dataTable id="tabla" value="#{consultarRecursosBean.recursos}" var = "recurso" border = "4" style ="background-color:#ebeff4" >
+          <p:column>
+            <f:facet name = "header">Nombre</f:facet>
+            <!--                        {recurso.nombre}-->
+            <h:outputText value = "#{recurso.nombre}"/>
+          </p:column>
+          <p:column>
+            <f:facet name = "header">Tipo</f:facet>
+            <!--                        {recurso.tipo}-->
+            <h:outputText value = "#{recurso.tipo}"/>
+          </p:column>
+          <p:column>
+            <f:facet name = "header">Capacidad</f:facet>
+            <!--                        {recurso.capacidad}-->
+            <h:outputText value = "#{recurso.capacidad}"/>
+          </p:column>
+          <p:column>
+            <f:facet name = "header">Ubicación</f:facet>
+            <!--                        {recurso.ubicacion}-->
+            <h:outputText value = "#{recurso.ubicacion}"/>
+          </p:column>
+        </p:dataTable>
+        </div>
+
+      </div>
+    </div>
+    <div>
+      <end><h:graphicImage library="imagenes" name="derecho.png" height = "105%" style = "float:left"/></end>
+    </div>
+  </div>
+</h:form></h:body>
+
+
+</html>

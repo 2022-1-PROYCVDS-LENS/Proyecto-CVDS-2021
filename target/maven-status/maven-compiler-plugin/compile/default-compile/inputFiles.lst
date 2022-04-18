@@ -1,30 +1,31 @@
-C:\Users\nicol\CVDS\RecursosBiblioteca\Proyecto-CVDS-2021\src\main\java\view\BasePageBean.java
-C:\Users\nicol\CVDS\RecursosBiblioteca\Proyecto-CVDS-2021\src\main\java\samples\entities\Horario.java
-C:\Users\nicol\CVDS\RecursosBiblioteca\Proyecto-CVDS-2021\src\main\java\samples\entities\Reserva.java
-C:\Users\nicol\CVDS\RecursosBiblioteca\Proyecto-CVDS-2021\src\main\java\sampleprj\dao\mybatis\mappers\TipoRecursoMapper.java
-C:\Users\nicol\CVDS\RecursosBiblioteca\Proyecto-CVDS-2021\src\main\java\sampleprj\dao\mybatis\MyBATISHorarioDAO.java
-C:\Users\nicol\CVDS\RecursosBiblioteca\Proyecto-CVDS-2021\src\main\java\samples\entities\Recurso.java
-C:\Users\nicol\CVDS\RecursosBiblioteca\Proyecto-CVDS-2021\src\main\java\sampleprj\dao\mybatis\mappers\UsuarioMapper.java
-C:\Users\nicol\CVDS\RecursosBiblioteca\Proyecto-CVDS-2021\src\main\java\samples\entities\ReservaRecurrente.java
-C:\Users\nicol\CVDS\RecursosBiblioteca\Proyecto-CVDS-2021\src\main\java\sampleprj\dao\mybatis\mappers\HorarioMapper.java
-C:\Users\nicol\CVDS\RecursosBiblioteca\Proyecto-CVDS-2021\src\main\java\sampleprj\dao\mybatis\mappers\RecursoMapper.java
-C:\Users\nicol\CVDS\RecursosBiblioteca\Proyecto-CVDS-2021\src\main\java\sampleprj\dao\HorarioDAO.java
-C:\Users\nicol\CVDS\RecursosBiblioteca\Proyecto-CVDS-2021\src\main\java\samples\services\impl\RecursosBibliotecaImpl.java
-C:\Users\nicol\CVDS\RecursosBiblioteca\Proyecto-CVDS-2021\src\main\java\sampleprj\dao\mybatis\MyBATISTipoRecursoDAO.java
-C:\Users\nicol\CVDS\RecursosBiblioteca\Proyecto-CVDS-2021\src\main\java\sampleprj\dao\ReservaDAO.java
-C:\Users\nicol\CVDS\RecursosBiblioteca\Proyecto-CVDS-2021\src\main\java\sampleprj\dao\UsuarioDAO.java
-C:\Users\nicol\CVDS\RecursosBiblioteca\Proyecto-CVDS-2021\src\main\java\sampleprj\dao\RecursoDAO.java
-C:\Users\nicol\CVDS\RecursosBiblioteca\Proyecto-CVDS-2021\src\main\java\view\RecursosBEan.java
-C:\Users\nicol\CVDS\RecursosBiblioteca\Proyecto-CVDS-2021\src\main\java\samples\services\RecursosBibliotecaFactory.java
-C:\Users\nicol\CVDS\RecursosBiblioteca\Proyecto-CVDS-2021\src\main\java\sampleprj\dao\mybatis\MyBATISReservaDAO.java
-C:\Users\nicol\CVDS\RecursosBiblioteca\Proyecto-CVDS-2021\src\main\java\guice\GuiceContextListener.java
-C:\Users\nicol\CVDS\RecursosBiblioteca\Proyecto-CVDS-2021\src\main\java\sampleprj\dao\mybatis\mappers\ReservaRecurrenteMapper.java
-C:\Users\nicol\CVDS\RecursosBiblioteca\Proyecto-CVDS-2021\src\main\java\samples\entities\TipoRecurso.java
-C:\Users\nicol\CVDS\RecursosBiblioteca\Proyecto-CVDS-2021\src\main\java\sampleprj\dao\mybatis\MyBATISReservaRecurrenteDAO.java
-C:\Users\nicol\CVDS\RecursosBiblioteca\Proyecto-CVDS-2021\src\main\java\sampleprj\dao\mybatis\MyBATISRecursoDAO.java
-C:\Users\nicol\CVDS\RecursosBiblioteca\Proyecto-CVDS-2021\src\main\java\sampleprj\dao\ReservaRecurrenteDAO.java
-C:\Users\nicol\CVDS\RecursosBiblioteca\Proyecto-CVDS-2021\src\main\java\sampleprj\dao\mybatis\mappers\ReservaMapper.java
-C:\Users\nicol\CVDS\RecursosBiblioteca\Proyecto-CVDS-2021\src\main\java\sampleprj\dao\TipoRecursoDAO.java
-C:\Users\nicol\CVDS\RecursosBiblioteca\Proyecto-CVDS-2021\src\main\java\samples\services\RecursosBiblioteca.java
-C:\Users\nicol\CVDS\RecursosBiblioteca\Proyecto-CVDS-2021\src\main\java\samples\entities\Usuario.java
-C:\Users\nicol\CVDS\RecursosBiblioteca\Proyecto-CVDS-2021\src\main\java\sampleprj\dao\mybatis\MyBATISUsuarioDAO.java
+D:\UNIVERSIDAD\7 SEMESTRE\CVDS\proyecto\Proyecto-CVDS-2021\src\main\java\persistence\ReservaRecurrenteDAO.java
+D:\UNIVERSIDAD\7 SEMESTRE\CVDS\proyecto\Proyecto-CVDS-2021\src\main\java\persistence\mybatisimpl\MyBATISReservaRecurrenteDAO.java
+D:\UNIVERSIDAD\7 SEMESTRE\CVDS\proyecto\Proyecto-CVDS-2021\src\main\java\persistence\mybatisimpl\MyBATISUsuarioDAO.java
+D:\UNIVERSIDAD\7 SEMESTRE\CVDS\proyecto\Proyecto-CVDS-2021\src\main\java\persistence\mybatisimpl\MyBATISRecursoDAO.java
+D:\UNIVERSIDAD\7 SEMESTRE\CVDS\proyecto\Proyecto-CVDS-2021\src\main\java\persistence\RecursoDAO.java
+D:\UNIVERSIDAD\7 SEMESTRE\CVDS\proyecto\Proyecto-CVDS-2021\src\main\java\managedbeans\ConsultarRecursosBean.java
+D:\UNIVERSIDAD\7 SEMESTRE\CVDS\proyecto\Proyecto-CVDS-2021\src\main\java\persistence\mybatisimpl\mappers\TipoRecursoMapper.java
+D:\UNIVERSIDAD\7 SEMESTRE\CVDS\proyecto\Proyecto-CVDS-2021\src\main\java\entities\Usuario.java
+D:\UNIVERSIDAD\7 SEMESTRE\CVDS\proyecto\Proyecto-CVDS-2021\src\main\java\entities\Horario.java
+D:\UNIVERSIDAD\7 SEMESTRE\CVDS\proyecto\Proyecto-CVDS-2021\src\main\java\entities\TipoRecurso.java
+D:\UNIVERSIDAD\7 SEMESTRE\CVDS\proyecto\Proyecto-CVDS-2021\src\main\java\persistence\mybatisimpl\mappers\ReservaMapper.java
+D:\UNIVERSIDAD\7 SEMESTRE\CVDS\proyecto\Proyecto-CVDS-2021\src\main\java\persistence\mybatisimpl\mappers\UsuarioMapper.java
+D:\UNIVERSIDAD\7 SEMESTRE\CVDS\proyecto\Proyecto-CVDS-2021\src\main\java\services\RecursosBiblioteca.java
+D:\UNIVERSIDAD\7 SEMESTRE\CVDS\proyecto\Proyecto-CVDS-2021\src\main\java\entities\Reserva.java
+D:\UNIVERSIDAD\7 SEMESTRE\CVDS\proyecto\Proyecto-CVDS-2021\src\main\java\managedbeans\BasePageBean.java
+D:\UNIVERSIDAD\7 SEMESTRE\CVDS\proyecto\Proyecto-CVDS-2021\src\main\java\services\RecursosBibliotecaFactory.java
+D:\UNIVERSIDAD\7 SEMESTRE\CVDS\proyecto\Proyecto-CVDS-2021\src\main\java\persistence\mybatisimpl\MyBATISReservaDAO.java
+D:\UNIVERSIDAD\7 SEMESTRE\CVDS\proyecto\Proyecto-CVDS-2021\src\main\java\persistence\ReservaDAO.java
+D:\UNIVERSIDAD\7 SEMESTRE\CVDS\proyecto\Proyecto-CVDS-2021\src\main\java\persistence\UsuarioDAO.java
+D:\UNIVERSIDAD\7 SEMESTRE\CVDS\proyecto\Proyecto-CVDS-2021\src\main\java\persistence\mybatisimpl\MyBATISHorarioDAO.java
+D:\UNIVERSIDAD\7 SEMESTRE\CVDS\proyecto\Proyecto-CVDS-2021\src\main\java\services\impl\RecursosBibliotecaImpl.java
+D:\UNIVERSIDAD\7 SEMESTRE\CVDS\proyecto\Proyecto-CVDS-2021\src\main\java\guice\GuiceContextListener.java
+D:\UNIVERSIDAD\7 SEMESTRE\CVDS\proyecto\Proyecto-CVDS-2021\src\main\java\persistence\HorarioDAO.java
+D:\UNIVERSIDAD\7 SEMESTRE\CVDS\proyecto\Proyecto-CVDS-2021\src\main\java\persistence\mybatisimpl\mappers\HorarioMapper.java
+D:\UNIVERSIDAD\7 SEMESTRE\CVDS\proyecto\Proyecto-CVDS-2021\src\main\java\persistence\mybatisimpl\mappers\RecursoMapper.java
+D:\UNIVERSIDAD\7 SEMESTRE\CVDS\proyecto\Proyecto-CVDS-2021\src\main\java\persistence\TipoRecursoDAO.java
+D:\UNIVERSIDAD\7 SEMESTRE\CVDS\proyecto\Proyecto-CVDS-2021\src\main\java\entities\ReservaRecurrente.java
+D:\UNIVERSIDAD\7 SEMESTRE\CVDS\proyecto\Proyecto-CVDS-2021\src\main\java\persistence\mybatisimpl\mappers\ReservaRecurrenteMapper.java
+D:\UNIVERSIDAD\7 SEMESTRE\CVDS\proyecto\Proyecto-CVDS-2021\src\main\java\services\main.java
+D:\UNIVERSIDAD\7 SEMESTRE\CVDS\proyecto\Proyecto-CVDS-2021\src\main\java\persistence\mybatisimpl\MyBATISTipoRecursoDAO.java
+D:\UNIVERSIDAD\7 SEMESTRE\CVDS\proyecto\Proyecto-CVDS-2021\src\main\java\entities\Recurso.java
