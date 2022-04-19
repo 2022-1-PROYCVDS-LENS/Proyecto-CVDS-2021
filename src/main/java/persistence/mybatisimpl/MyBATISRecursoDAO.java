@@ -44,7 +44,7 @@ public class MyBATISRecursoDAO implements RecursoDAO {
     }
 
     @Override
-    public void registrarRecurso(String nombre, String ubicacion, TipoRecurso tipo, int capacidad) {
-        recursoMapper.registrarRecurso(nombre, ubicacion, tipo, capacidad);
+    public void registrarRecurso(String nombre, String habilitado, String ubicacion, TipoRecurso tipo, int capacidad) {
+        recursoMapper.registrarRecurso(nombre, habilitado, ubicacion, tipo, capacidad);
     }
 }

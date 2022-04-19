@@ -129,3 +129,8 @@
 0:0:0:0:0:0:0:1 - - [18/Apr/2022:20:46:43 -0500] "POST /recursosBiblioteca/consultarRecurso.xhtml HTTP/1.1" 200 10556 http-bio-8080-exec-3 160
 0:0:0:0:0:0:0:1 - - [18/Apr/2022:20:46:50 -0500] "POST /recursosBiblioteca/consultarRecurso.xhtml HTTP/1.1" 200 6750 http-bio-8080-exec-3 166
 0:0:0:0:0:0:0:1 - - [18/Apr/2022:20:46:54 -0500] "POST /recursosBiblioteca/consultarRecurso.xhtml HTTP/1.1" 200 10556 http-bio-8080-exec-3 169
+0:0:0:0:0:0:0:1 - - [18/Apr/2022:22:25:38 -0500] "GET / HTTP/1.1" 200 3416 http-bio-8080-exec-1 400
+0:0:0:0:0:0:0:1 - - [18/Apr/2022:22:25:38 -0500] "GET /recursosBiblioteca/javax.faces.resource/izquierdo.png;jsessionid=4C9E0853529B83A97A907A6C9BFBF5BA?ln=imagenes HTTP/1.1" 200 19469 http-bio-8080-exec-3 9
+0:0:0:0:0:0:0:1 - - [18/Apr/2022:22:25:38 -0500] "GET /recursosBiblioteca/javax.faces.resource/derecho.png;jsessionid=4C9E0853529B83A97A907A6C9BFBF5BA?ln=imagenes HTTP/1.1" 200 2579 http-bio-8080-exec-4 3
+0:0:0:0:0:0:0:1 - - [18/Apr/2022:22:25:38 -0500] "GET /resources/imagenes/fondoconsulta.jpg HTTP/1.1" 200 1093776 http-bio-8080-exec-2 24
+0:0:0:0:0:0:0:1 - - [18/Apr/2022:22:25:38 -0500] "GET /favicon.ico HTTP/1.1" 404 973 http-bio-8080-exec-6 6

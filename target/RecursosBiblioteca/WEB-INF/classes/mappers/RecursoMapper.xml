@@ -93,10 +93,11 @@
             #{ubi} = rec.ubicacion
     </select>
 
-    <insert parameterType="map" id="registrarRecurso">
-        insert into Recursos(id, nombre, ubicacion, tipo, capacidad)
-        values (nextval('id_Recursos') #{name}, #{location}, #{type}, #{capacity})
-    </insert>
 
+
+    <insert parameterType="map" id="registrarRecurso">
+        insert into recursos(id_recurso, nombre, habilitado, ubicacion, capacidad, id_tiporecurso)
+        values (nextval('recursos_id'), #{name}, #{enable}, #{location}, #{capacity}, #{type.id})
+    </insert>
 
 </mapper>

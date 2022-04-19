@@ -1,6 +1,7 @@
 managedbeans\BasePageBean.class
 persistence\TipoRecursoDAO.class
 persistence\mybatisimpl\MyBATISRecursoDAO.class
+managedbeans\RegistrarRecursosBean.class
 persistence\mybatisimpl\mappers\HorarioMapper.class
 persistence\mybatisimpl\mappers\ReservaRecurrenteMapper.class
 persistence\mybatisimpl\mappers\TipoRecursoMapper.class
