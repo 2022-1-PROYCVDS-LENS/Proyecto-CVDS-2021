@@ -17,7 +17,14 @@ public class bibliotecaTest {
     public void deberiaConsultarSinFiltro(){
         List<Recurso> recursos = biblioteca.consultarRecursos();
         String recu = recursos.get(0).toString();
-        Assert.assertEquals(recursos.size(), Character.getNumericValue(recu.charAt(12)));
+        int evaluar = Character.getNumericValue(recu.charAt(12));
+        for (int i = 1; i < recursos.size(); i++){
+            recu = recursos.get(i).toString();
+            if(evaluar < Character.getNumericValue(recu.charAt(12))){
+                evaluar = Character.getNumericValue(recu.charAt(12));
+            }
+        }
+        Assert.assertEquals(recursos.size(), evaluar);
 
     }
     @Test
