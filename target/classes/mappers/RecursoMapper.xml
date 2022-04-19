@@ -95,7 +95,7 @@
 
     <insert parameterType="map" id="registrarRecurso">
         insert into Recursos(id, nombre, ubicacion, tipo, capacidad)
-        values (nextval('id_Recursos') #{name}, #{location}, #{type}, #{capacity})
+        values (nextval('recursos_id') #{name}, #{location}, #{type}, #{capacity})
     </insert>
 
 

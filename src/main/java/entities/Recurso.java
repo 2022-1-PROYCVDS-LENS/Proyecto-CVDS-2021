@@ -23,6 +23,6 @@ public class Recurso implements Serializable {
 
     @Override
     public String toString() {
-        return "Recurso{" + "id= " + id + " nombre= " + nombre + " habilitado= " + habilitado + " ubicacion= " + ubicacion + " capacidad= "+ capacidad + " ejemplares= " +ejemplares+ " horarios= " + horarios + " reservas= " + reservas + " tipo= " + tipo + "}";
+        return "Recurso{" + "id= " + id + " nombre= " + nombre + " habilitado= " + habilitado + " ubicacion= " + ubicacion + " capacidad= "+ capacidad + " ejemplares= " +ejemplares+ " horarios= " + horarios + " reservas= " + reservas + " tipo= " + tipo.getNombre() + "}";
     }
 }
