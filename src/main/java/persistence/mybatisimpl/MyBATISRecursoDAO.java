@@ -5,6 +5,7 @@ import entities.Recurso;
 import entities.TipoRecurso;
 import persistence.RecursoDAO;
 import persistence.mybatisimpl.mappers.RecursoMapper;
+import services.ExceptionRecursosBiblioteca;
 
 
 import java.util.List;
@@ -44,7 +45,12 @@ public class MyBATISRecursoDAO implements RecursoDAO {
     }
 
     @Override
-    public void registrarRecurso(String nombre, String habilitado, String ubicacion, TipoRecurso tipo, int capacidad) {
-        recursoMapper.registrarRecurso(nombre, habilitado, ubicacion, tipo, capacidad);
+    public void registrarRecurso(String nombre, String habilitado, String ubicacion, TipoRecurso tipo, int capacidad) throws ExceptionRecursosBiblioteca {
+        try{
+            recursoMapper.registrarRecurso(nombre, habilitado, ubicacion, tipo, capacidad);
+        }catch (Exception e){
+            throw new ExceptionRecursosBiblioteca("error");
+        }
+
     }
 }

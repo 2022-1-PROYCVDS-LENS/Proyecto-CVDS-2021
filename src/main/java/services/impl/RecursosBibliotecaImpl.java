@@ -3,6 +3,7 @@ package services.impl;
 import com.google.inject.Inject;
 import entities.*;
 import persistence.*;
+import services.ExceptionRecursosBiblioteca;
 import services.RecursosBiblioteca;
 
 import javax.ejb.Singleton;
@@ -50,8 +51,13 @@ public class RecursosBibliotecaImpl implements RecursosBiblioteca {
     }
 
     @Override
-    public void registrarRecurso(String nombre, String habilitado, String ubicacion, TipoRecurso tipo, int capacidad) {
-        recursoDAO.registrarRecurso(nombre, habilitado, ubicacion, tipo, capacidad);
+    public void registrarRecurso(String nombre, String habilitado, String ubicacion, TipoRecurso tipo, int capacidad) throws ExceptionRecursosBiblioteca {
+        try{
+            recursoDAO.registrarRecurso(nombre, habilitado, ubicacion, tipo, capacidad);
+        }catch (Exception e){
+            throw new ExceptionRecursosBiblioteca("Error");
+        }
+
     }
 
     @Override

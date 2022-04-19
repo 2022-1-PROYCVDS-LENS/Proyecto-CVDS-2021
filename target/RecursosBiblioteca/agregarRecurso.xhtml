@@ -31,27 +31,27 @@
 
                 <div>
                     <center><h3>Nombre</h3></center>
-                    <center><p:inputText  id= "nombre" type="String" binding = "#{nombre}"  class="form-control" style="width:40%; height:50%"/></center>
+                    <center><p:inputText  id= "nombre" type="String" binding= "#{nombre}"  class="form-control" style="width:40%; height:50%"/></center>
                 </div>
                 <div>
                     <center><h3>Habilitado</h3></center>
-                    <center><p:inputText  id= "habilitado" type="String" binding = "#{habilitado}"   class="form-control" style="width:40%; height:50%"/></center>
+                    <center><p:inputText  id= "habilitado" type="String" binding= "#{habilitado}"   class="form-control" style="width:40%; height:50%"/></center>
                 </div>
                 <div>
                     <center><h3>Tipo</h3></center>
-                    <center><p:inputText  id= "tipo" type="String" binding = "#{tipo}"   class="form-control" style="width:40%; height:50%"/></center>
+                    <center><p:inputText  id= "tipo" type="String" binding= "#{tipo}"   class="form-control" style="width:40%; height:50%"/></center>
                 </div>
                 <div>
                     <center><h3>Capacidad</h3></center>
-                    <center><p:inputText  id= "capacidad" type="String" binding = "#{capacidad}"   class="form-control" style="width:40%; height:50%"/></center>
+                    <center><p:inputText  id= "capacidad" type="int" binding= "#{capacidad}"   class="form-control" style="width:40%; height:50%"/></center>
                 </div>
                 <div>
                     <center><h3>Ubicación</h3></center>
-                    <center><p:inputText  id= "Ubicacion" type="String" binding = "#{Ubicacion}"   class="form-control" style="width:40%; height:50%"/></center>
+                    <center><p:inputText  id= "Ubicacion" type="String" binding= "#{Ubicacion}"   class="form-control" style="width:40%; height:50%"/></center>
                 </div>
             </div>
             <div>
-            <center><h:commandButton update= "recursos"  value="Registrar" actionListener="#{registrarRecursosBean.registrar(nombre.value, habilitado.value, Ubicacion.value, tipo.value, capacidad.value)}" style="color:#ffffff;
+            <center><h:commandButton value="Registrar" actionListener="#{registrarRecursosBean.registrar(nombre.value, habilitado.value, Ubicacion.value, tipo.value, capacidad.value)}" style="color:#ffffff;
             background-color:#990000; width:50%; height:50%; font-size:120%; position:relative; top:120px" /></center>
             </div>
         </div>
