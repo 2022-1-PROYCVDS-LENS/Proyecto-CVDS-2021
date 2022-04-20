@@ -50,19 +50,8 @@
         </div>
         <div>
           <div style="text-align: center;"><h3>Ubicacion del recurso</h3></div>
-          <center><h:selectOneMenu value="#{consultarRecursosBean.ubicacion}">
-            <f:selectItem itemLabel="Seleccione Ubicación" itemValue=""/>
-            <f:selectItem itemValue="biblioteca" itemLabel="Biblioteca" />
-            <f:selectItem itemValue="bloque_a" itemLabel="Bloque A" />
-            <f:selectItem itemValue="bloque_b" itemLabel="Bloque B" />
-            <f:selectItem itemValue="bloque_c" itemLabel="Bloque C" />
-            <f:selectItem itemValue="bloque_d" itemLabel="Bloque D" />
-            <f:selectItem itemValue="bloque_e" itemLabel="Bloque E" />
-            <f:selectItem itemValue="bloque_f" itemLabel="Bloque F" />
-            <f:selectItem itemValue="bloque_g" itemLabel="Bloque G" />
-            <f:selectItem itemValue="bloque_h" itemLabel="Bloque H" />
-            <f:selectItem itemValue="bloque_i" itemLabel="Bloque I" />
-          </h:selectOneMenu></center>
+          <center><h:inputText value="#{consultarRecursosBean.ubicacion}">
+          </h:inputText></center>
         </div>
         <div style = "display:flex; align-items:end">
           <p:commandButton  value="Buscar" action="#{consultarRecursosBean.filtrarLosRecursos}" update="tabla" style="color:#ffffff; background-color:#990000; width:50%; height:50%; font-size:120% " />
