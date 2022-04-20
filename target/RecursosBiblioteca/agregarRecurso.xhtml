@@ -17,7 +17,7 @@
     </style>
 </head>
 
-<h:body>
+<h:body><h:form>
     <div style = "background-color:#990000" >
         <center><h:outputText style = "color:#ffffff;font-size:220%;font-family:sans-serif" value = "Escuela Colombiana de ingieneria Julio Garavito: Recursos de biblioteca"/></center>
     </div>
@@ -31,27 +31,31 @@
 
                 <div>
                     <center><h3>Nombre</h3></center>
-                    <center><p:inputText  id= "nombre" type="String" binding= "#{nombre}"  class="form-control" style="width:40%; height:50%"/></center>
+                    <center><p:inputText  id= "nombre" type="String" value="#{registrarRecursosBean.nombre}"  class="form-control" style="width:40%; height:50%"/></center>
                 </div>
                 <div>
                     <center><h3>Habilitado</h3></center>
-                    <center><p:inputText  id= "habilitado" type="String" binding= "#{habilitado}"   class="form-control" style="width:40%; height:50%"/></center>
+                    <center><p:inputText  id= "habilitado" type="String" value="#{registrarRecursosBean.habilitado}"   class="form-control" style="width:40%; height:50%"/></center>
                 </div>
                 <div>
                     <center><h3>Tipo</h3></center>
-                    <center><p:inputText  id= "tipo" type="String" binding= "#{tipo}"   class="form-control" style="width:40%; height:50%"/></center>
+                    <center><p:inputText  id= "tipo" type="String" value="#{registrarRecursosBean.tipo}"   class="form-control" style="width:40%; height:50%"/></center>
                 </div>
                 <div>
                     <center><h3>Capacidad</h3></center>
-                    <center><p:inputText  id= "capacidad" type="int" binding= "#{capacidad}"   class="form-control" style="width:40%; height:50%"/></center>
+                    <center><p:inputText  id= "capacidad" type="int"  value="#{registrarRecursosBean.capacidad}"  class="form-control" style="width:40%; height:50%"/></center>
                 </div>
                 <div>
                     <center><h3>Ubicación</h3></center>
-                    <center><p:inputText  id= "Ubicacion" type="String" binding= "#{Ubicacion}"   class="form-control" style="width:40%; height:50%"/></center>
+                    <center><p:inputText  id= "ubicacion" type="String" value="#{registrarRecursosBean.ubicacion}"   class="form-control" style="width:40%; height:50%"/></center>
+                </div>
+                <div>
+                    <center><h3>Ejemplares</h3></center>
+                    <center><p:inputText  id= "ejemplar" type="int" value="#{registrarRecursosBean.ejemplar}"   class="form-control" style="width:40%; height:50%"/></center>
                 </div>
             </div>
             <div>
-            <center><h:commandButton value="Registrar" actionListener="#{registrarRecursosBean.registrar(nombre.value, habilitado.value, Ubicacion.value, tipo.value, capacidad.value)}" style="color:#ffffff;
+            <center><h:commandButton value="Registrar" actionListener="#{registrarRecursosBean.registrar}" style="color:#ffffff;
             background-color:#990000; width:50%; height:50%; font-size:120%; position:relative; top:120px" /></center>
             </div>
         </div>
@@ -59,7 +63,7 @@
             <end><h:graphicImage library="imagenes" name="derecho.png" height = "105%" style = "float:left"/></end>
         </div>
     </div>
-</h:body>
+</h:form></h:body>
 
 
 </html>

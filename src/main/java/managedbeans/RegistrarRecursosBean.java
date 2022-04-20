@@ -25,6 +25,7 @@ public class RegistrarRecursosBean extends BasePageBean{
     @Getter @Setter String tipo;
     @Getter @Setter int capacidad;
     @Getter @Setter String ubicacion;
+    @Getter @Setter int ejemplar;
 
     private final List<String> pos = Arrays.asList("libro", "sala de estudio", "Equipo de computo");
     @Inject
@@ -34,7 +35,7 @@ public class RegistrarRecursosBean extends BasePageBean{
             TipoRecurso tipor = new TipoRecurso();
             tipor.setId(pos.indexOf(this.tipo) + 1);
             tipor.setNombre(this.tipo);
-            recursosBiblioteca.registrarRecurso(this.nombre, this.habilitado, this.ubicacion, tipor, this.capacidad);
+            recursosBiblioteca.registrarRecurso(this.nombre, this.habilitado, this.ubicacion, this.ejemplar, tipor, this.capacidad);
         }catch (Exception e){
             FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR,"Error ",e.getMessage()));
         }
