@@ -3,6 +3,8 @@ package managedbeans;
 import com.google.inject.Inject;
 import entities.Recurso;
 import entities.TipoRecurso;
+import lombok.Getter;
+import lombok.Setter;
 import services.ExceptionRecursosBiblioteca;
 import services.RecursosBiblioteca;
 
@@ -17,18 +19,25 @@ import java.util.List;
 @ManagedBean(name = "registrarRecursosBean")
 @SessionScoped
 public class RegistrarRecursosBean extends BasePageBean{
+
+    @Getter @Setter String nombre;
+    @Getter @Setter String habilitado;
+    @Getter @Setter String tipo;
+    @Getter @Setter int capacidad;
+    @Getter @Setter String ubicacion;
+    @Getter @Setter int ejemplar;
+
     private final List<String> pos = Arrays.asList("libro", "sala de estudio", "Equipo de computo");
     @Inject
     private RecursosBiblioteca recursosBiblioteca;
-    public void registrar(String nombre, String habilitado, String ubicacion, String tipo, int capacidad) throws ExceptionRecursosBiblioteca {
-        System.out.println(pos.indexOf(tipo) + 1);
+    public void registrar() throws ExceptionRecursosBiblioteca {
         try{
             TipoRecurso tipor = new TipoRecurso();
-            tipor.setId(pos.indexOf(tipo) + 1);
-            tipor.setNombre(tipo);
-            recursosBiblioteca.registrarRecurso(nombre, habilitado, ubicacion, tipor, capacidad);
+            tipor.setId(pos.indexOf(this.tipo) + 1);
+            tipor.setNombre(this.tipo);
+            recursosBiblioteca.registrarRecurso(this.nombre, this.habilitado, this.ubicacion, this.ejemplar, tipor, this.capacidad);
         }catch (Exception e){
-            FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR,"Error recurso", "Información no valida"));
+            FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR,"Error ",e.getMessage()));
         }
 
     }

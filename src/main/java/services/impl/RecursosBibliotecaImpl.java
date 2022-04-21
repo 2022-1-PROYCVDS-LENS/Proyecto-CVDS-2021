@@ -51,9 +51,9 @@ public class RecursosBibliotecaImpl implements RecursosBiblioteca {
     }
 
     @Override
-    public void registrarRecurso(String nombre, String habilitado, String ubicacion, TipoRecurso tipo, int capacidad) throws ExceptionRecursosBiblioteca {
+    public void registrarRecurso(String nombre, String habilitado, String ubicacion, int ejemplar, TipoRecurso tipo, int capacidad) throws ExceptionRecursosBiblioteca{
         try{
-            recursoDAO.registrarRecurso(nombre, habilitado, ubicacion, tipo, capacidad);
+            recursoDAO.registrarRecurso(nombre, habilitado, ubicacion, ejemplar, tipo, capacidad);
         }catch (Exception e){
             throw new ExceptionRecursosBiblioteca("Error");
         }
