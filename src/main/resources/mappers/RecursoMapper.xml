@@ -25,7 +25,6 @@
         rec.capacidad,
         rec.ejemplares,
         tr.tipo,
-        ho.horas,
         ho.estado
         from public.recursos as rec
         left join TiposRecursos as tr
@@ -43,7 +42,6 @@
             rec.capacidad,
             rec.ejemplares,
             tr.tipo,
-            ho.horas,
             ho.estado
         from public.recursos as rec
                  left join TiposRecursos as tr
@@ -62,7 +60,6 @@
             rec.capacidad,
             rec.ejemplares,
             tr.tipo,
-            ho.horas,
             ho.estado
         from public.recursos as rec
                  left join TiposRecursos as tr
@@ -82,7 +79,6 @@
             rec.capacidad,
             rec.ejemplares,
             tr.tipo,
-            ho.horas,
             ho.estado
         from public.recursos as rec
                  left join TiposRecursos as tr
@@ -101,7 +97,6 @@
             rec.capacidad,
             rec.ejemplares,
             tr.tipo,
-            ho.horas,
             ho.estado
         from public.recursos as rec
                  left join TiposRecursos as tr
@@ -121,7 +116,6 @@
             rec.capacidad,
             rec.ejemplares,
             tr.tipo,
-            ho.horas,
             ho.estado
         from public.recursos as rec
                  left join TiposRecursos as tr
@@ -141,7 +135,6 @@
             rec.capacidad,
             rec.ejemplares,
             tr.tipo,
-            ho.horas,
             ho.estado
         from public.recursos as rec
                  left join TiposRecursos as tr
@@ -161,7 +154,6 @@
             rec.capacidad,
             rec.ejemplares,
             tr.tipo,
-            ho.horas,
             ho.estado
         from public.recursos as rec
                  left join TiposRecursos as tr

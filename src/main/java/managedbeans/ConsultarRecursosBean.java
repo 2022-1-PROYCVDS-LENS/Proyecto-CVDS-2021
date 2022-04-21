@@ -4,11 +4,11 @@ package managedbeans;
 import com.google.inject.Inject;
 import entities.Recurso;
 import services.RecursosBiblioteca;
-
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 import java.io.Serializable;
 import java.util.List;
+import java.util.Locale;
 
 /**
  * Bean para la interfaz de usuario de la consulta de recursos
@@ -47,6 +47,7 @@ public class ConsultarRecursosBean extends BasePageBean {
     }
 
     public void setUbicacion(String ubicacion) {
+        this.ubicacion = ubicacion.toLowerCase();
         this.ubicacion = ubicacion;
     }
 
