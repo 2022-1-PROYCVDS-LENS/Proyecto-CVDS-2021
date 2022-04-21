@@ -2,8 +2,10 @@ package persistence;
 
 import entities.Horario;
 
+import java.util.List;
+
 public interface HorarioDAO {
 
     public void save(Horario horario);
-    public Horario load(int id);
+    public List<Horario> load(int id);
 }

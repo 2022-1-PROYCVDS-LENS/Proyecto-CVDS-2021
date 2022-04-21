@@ -5,6 +5,8 @@ import entities.Horario;
 import persistence.HorarioDAO;
 import persistence.mybatisimpl.mappers.HorarioMapper;
 
+import java.util.List;
+
 public class MyBATISHorarioDAO implements HorarioDAO {
     @Inject
     private HorarioMapper horarioMapper;
@@ -15,7 +17,8 @@ public class MyBATISHorarioDAO implements HorarioDAO {
     }
 
     @Override
-    public Horario load(int id) {
-        return null;
+    public List<Horario> load(int id) {
+        System.out.println("llego al mybatisDao");
+        return horarioMapper.consultarHorario(id);
     }
 }

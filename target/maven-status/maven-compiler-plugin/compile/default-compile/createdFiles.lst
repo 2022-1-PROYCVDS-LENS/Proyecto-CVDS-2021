@@ -1,3 +1,4 @@
+managedbeans\ConsultarHorariosBean.class
 managedbeans\BasePageBean.class
 persistence\TipoRecursoDAO.class
 persistence\mybatisimpl\MyBATISRecursoDAO.class

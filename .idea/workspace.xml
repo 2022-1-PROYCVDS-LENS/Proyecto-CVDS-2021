@@ -4,48 +4,45 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-<<<<<<< HEAD
     <list default="true" id="c751ae0c-3655-4d5a-a6d8-7691fd6b1546" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/administrador.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/comunidad.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/managedbeans/LoginBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/managedbeans/LoginBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-=======
-    <list default="true" id="18d6bf6c-79e1-4fd7-b089-41be31e17046" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/managedbeans/LoginBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/managedbeans/LoginBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/RecursosBiblioteca/WEB-INF/classes/config.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/RecursosBiblioteca/WEB-INF/classes/mappers/HorarioMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/RecursosBiblioteca/WEB-INF/classes/mappers/RecursoMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/RecursosBiblioteca/WEB-INF/classes/mappers/ReservaMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/RecursosBiblioteca/WEB-INF/classes/mappers/ReservaRecurrenteMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/RecursosBiblioteca/WEB-INF/classes/mappers/TipoRecursoMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/RecursosBiblioteca/WEB-INF/classes/mappers/UsuarioMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/RecursosBiblioteca/WEB-INF/classes/mybatis-config.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/RecursosBiblioteca/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/RecursosBiblioteca/agregarRecurso.xhtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/RecursosBiblioteca/consultarRecurso.xhtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/RecursosBiblioteca/index.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/RecursosBiblioteca/index.xhtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/RecursosBiblioteca/resources/imagenes/derecho.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/RecursosBiblioteca/resources/imagenes/eci.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/RecursosBiblioteca/resources/imagenes/escuela-colombiana-de-ingenier-a-julio-garavito-002155_large.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/RecursosBiblioteca/resources/imagenes/fondoconsulta.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/RecursosBiblioteca/resources/imagenes/izquierdo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entities/Horario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/Horario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/persistence/HorarioDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/persistence/HorarioDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/persistence/mybatisimpl/MyBATISHorarioDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/persistence/mybatisimpl/MyBATISHorarioDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/persistence/mybatisimpl/mappers/HorarioMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/persistence/mybatisimpl/mappers/HorarioMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/RecursosBiblioteca.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/RecursosBiblioteca.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/impl/RecursosBibliotecaImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/impl/RecursosBibliotecaImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/HorarioMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/HorarioMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/RecursoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/RecursoMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/RecursosBiblioteca-1.0-SNAPSHOT/WEB-INF/classes/config.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/RecursosBiblioteca-1.0-SNAPSHOT/WEB-INF/classes/mappers/HorarioMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/RecursosBiblioteca-1.0-SNAPSHOT/WEB-INF/classes/mappers/RecursoMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/RecursosBiblioteca-1.0-SNAPSHOT/WEB-INF/classes/mappers/ReservaMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/RecursosBiblioteca-1.0-SNAPSHOT/WEB-INF/classes/mappers/ReservaRecurrenteMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/RecursosBiblioteca-1.0-SNAPSHOT/WEB-INF/classes/mappers/TipoRecursoMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/RecursosBiblioteca-1.0-SNAPSHOT/WEB-INF/classes/mappers/UsuarioMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/RecursosBiblioteca-1.0-SNAPSHOT/WEB-INF/classes/mybatis-config.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/RecursosBiblioteca-1.0-SNAPSHOT/WEB-INF/shiro.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/RecursosBiblioteca-1.0-SNAPSHOT/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/RecursosBiblioteca-1.0-SNAPSHOT/administrador.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/RecursosBiblioteca-1.0-SNAPSHOT/agregarRecurso.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/RecursosBiblioteca-1.0-SNAPSHOT/comunidad.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/RecursosBiblioteca-1.0-SNAPSHOT/consultarRecurso.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/RecursosBiblioteca-1.0-SNAPSHOT/index.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/RecursosBiblioteca-1.0-SNAPSHOT/login.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/RecursosBiblioteca-1.0-SNAPSHOT/resources/imagenes/derecho.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/RecursosBiblioteca-1.0-SNAPSHOT/resources/imagenes/eci.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/RecursosBiblioteca-1.0-SNAPSHOT/resources/imagenes/escuela-colombiana-de-ingenier-a-julio-garavito-002155_large.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/RecursosBiblioteca-1.0-SNAPSHOT/resources/imagenes/fondoLogin.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/RecursosBiblioteca-1.0-SNAPSHOT/resources/imagenes/fondoconsulta.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/RecursosBiblioteca-1.0-SNAPSHOT/resources/imagenes/izquierdo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mappers/HorarioMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mappers/HorarioMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mappers/RecursoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mappers/RecursoMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/conf/logging.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/conf/logging.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/conf/tomcat-users.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/conf/tomcat-users.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/conf/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/conf/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2022-04-16" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2022-04-18" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2022-04-19" beforeDir="false" />
->>>>>>> 13a8ed23da43f8ec52c569ede8e291de12a7fcf0
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,6 +87,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
@@ -99,6 +97,26 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\Documentos\Documentos E\7mo semestre\CVDS\Proyecto-CVDS-2021\src\main\webapp" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="services.main" />
+      <module name="Proyecto-CVDS-2021" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">

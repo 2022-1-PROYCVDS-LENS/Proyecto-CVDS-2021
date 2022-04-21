@@ -1,6 +1,7 @@
 package services;
 
 
+import entities.Horario;
 import entities.Recurso;
 import entities.TipoRecurso;
 
@@ -15,25 +16,30 @@ public class main {
 //        }catch (Exception e){
 //            System.out.println("error");
 //        }
-        System.out.println("sin filtrar");
-        List<Recurso> recursos = instance.consultarRecursos();
-        for(Recurso r: recursos){
-            System.out.println(r.toString());
-        }
-        System.out.println("por tipo");
-        recursos = instance.consultarRecursosPorTipo(1);
-            for(Recurso r: recursos){
-            System.out.println(r.toString());
-        }
-        System.out.println("por capacidad");
-        recursos = instance.consultarRecursosPorCapacidad(4);
-        for(Recurso r: recursos){
-            System.out.println(r.toString());
-        }
-        System.out.println("por ubicacion");
-        recursos = instance.consultarRecursosPorUbicacion("biblioteca");
-        for(Recurso r: recursos){
-            System.out.println(r.toString());
+//        System.out.println("sin filtrar");
+//        List<Recurso> recursos = instance.consultarRecursos();
+//        for(Recurso r: recursos){
+//            System.out.println(r.toString());
+//        }
+//        System.out.println("por tipo");
+//        recursos = instance.consultarRecursosPorTipo(1);
+//            for(Recurso r: recursos){
+//            System.out.println(r.toString());
+//        }
+//        System.out.println("por capacidad");
+//        recursos = instance.consultarRecursosPorCapacidad(4);
+//        for(Recurso r: recursos){
+//            System.out.println(r.toString());
+//        }
+//        System.out.println("por ubicacion");
+//        recursos = instance.consultarRecursosPorUbicacion("biblioteca");
+//        for(Recurso r: recursos){
+//            System.out.println(r.toString());
+//        }
+        System.out.println("prueba horarios");
+        List<Horario> horarios = instance.consultarHorario(3);
+        for(Horario h: horarios){
+            System.out.println(h.toString());
         }
 
 

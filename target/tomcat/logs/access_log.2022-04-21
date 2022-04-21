@@ -1,0 +1,10 @@
+0:0:0:0:0:0:0:1 - - [21/Apr/2022:16:26:53 -0500] "GET / HTTP/1.1" 200 2920 http-bio-8080-exec-1 281
+0:0:0:0:0:0:0:1 - - [21/Apr/2022:16:26:53 -0500] "GET /recursosBiblioteca/javax.faces.resource/jquery/jquery.js?ln=primefaces&v=8.0 HTTP/1.1" 200 88237 http-bio-8080-exec-2 10
+0:0:0:0:0:0:0:1 - - [21/Apr/2022:16:26:53 -0500] "GET /recursosBiblioteca/javax.faces.resource/core.js?ln=primefaces&v=8.0 HTTP/1.1" 200 43146 http-bio-8080-exec-4 7
+0:0:0:0:0:0:0:1 - - [21/Apr/2022:16:26:53 -0500] "GET /recursosBiblioteca/javax.faces.resource/components.js?ln=primefaces&v=8.0 HTTP/1.1" 200 435082 http-bio-8080-exec-5 12
+0:0:0:0:0:0:0:1 - - [21/Apr/2022:16:26:53 -0500] "GET /recursosBiblioteca/javax.faces.resource/components.css?ln=primefaces&v=8.0 HTTP/1.1" 200 96300 http-bio-8080-exec-3 52
+0:0:0:0:0:0:0:1 - - [21/Apr/2022:16:26:53 -0500] "GET /resources/imagenes/fondoLogin.jpg HTTP/1.1" 304 - http-bio-8080-exec-9 3
+0:0:0:0:0:0:0:1 - - [21/Apr/2022:16:27:02 -0500] "GET /recursosBiblioteca/agregarRecurso.xhtml HTTP/1.1" 200 4755 http-bio-8080-exec-1 64
+0:0:0:0:0:0:0:1 - - [21/Apr/2022:16:27:25 -0500] "POST /recursosBiblioteca/agregarRecurso.xhtml HTTP/1.1" 200 4831 http-bio-8080-exec-5 1508
+0:0:0:0:0:0:0:1 - - [21/Apr/2022:16:27:40 -0500] "GET /recursosBiblioteca/consultarRecurso.xhtml HTTP/1.1" 200 5987 http-bio-8080-exec-8 88
+0:0:0:0:0:0:0:1 - - [21/Apr/2022:16:27:41 -0500] "POST /recursosBiblioteca/consultarRecurso.xhtml HTTP/1.1" 200 16209 http-bio-8080-exec-8 264

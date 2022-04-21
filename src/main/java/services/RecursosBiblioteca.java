@@ -5,7 +5,7 @@ import entities.*;
 import java.util.List;
 
 public interface RecursosBiblioteca {
-    public abstract Horario consultarHorario(int id);
+    List<Horario> consultarHorario(int id);
     public abstract  void registratHorario(//Parametros de gorario);
     );
     public abstract void registrarHorario(Horario h);
@@ -34,4 +34,8 @@ public interface RecursosBiblioteca {
     List<Recurso> consultarRecursosPorCapacidad(int i);
 
     List<Recurso> consultarRecursosPorUbicacion(String ubi);
+
+
+
+
 }
