@@ -8,8 +8,8 @@ import javax.faces.application.FacesMessage;
 import javax.faces.bean.*;
 import javax.faces.context.FacesContext;
 
-
 import com.sun.org.slf4j.internal.LoggerFactory;
+import jdk.internal.loader.AbstractClassLoaderValue;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.*;
 import org.apache.shiro.crypto.hash.Sha256Hash;
@@ -83,6 +83,21 @@ public class LoginBean implements Serializable{
         } catch (IOException ex) {
             java.util.logging.Logger.getLogger(LoginBean.class.getName()).log(Level.SEVERE, null, ex);
         }
+    }
+
+    public void redirect(){
+        try {
+            Subject usuario = SecurityUtils.getSubject();
+            if (usuario.hasRole("Administrador")) {
+                FacesContext.getCurrentInstance().getExternalContext().redirect("/faces/administrador.xhtml");
+            } else if (usuario.hasRole("Comunidad")) {
+                FacesContext.getCurrentInstance().getExternalContext().redirect("/faces/comunidad.xhtml");
+            }
+        }catch (IOException e){
+            error("Error desconocido: " + e.getMessage());
+            log.error(e.getMessage(), e);
+        }
+
     }
     
 }
