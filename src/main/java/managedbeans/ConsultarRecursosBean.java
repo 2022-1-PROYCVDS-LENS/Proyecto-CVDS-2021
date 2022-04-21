@@ -22,7 +22,6 @@ public class ConsultarRecursosBean extends BasePageBean {
     private RecursosBiblioteca recursosBiblioteca;
 
     List<Recurso> recursos;
-
     int tipo = -1;
     int capacidad = -1;
     String ubicacion = "";
@@ -60,18 +59,38 @@ public class ConsultarRecursosBean extends BasePageBean {
     }
 
     /**
-     * Guarda en los recursos del bean, todos los recursos disponibles
+     * Guarda en los recursos del bean, los recursos indicados según el filtro
      */
     public void filtrarLosRecursos(){
-        if (tipo != -1){
+        //Si todos los elementos de filtro estan definidos buscamos por todas las caracteristicas
+        if(tipo!=-1 && capacidad != -1 && !ubicacion.equals("")){
+            recursos = recursosBiblioteca.consultarRecursosPorTipoCapacidadUbicacion(tipo,capacidad,ubicacion);
+        }
+        //Filtramos por tipo y capacidad
+        else if(tipo != -1 && capacidad !=-1){
+            recursos = recursosBiblioteca.consultarRecursosPorTipoYCapacidad(tipo,capacidad);
+        }
+        //Filtramos por tipo y ubicacion
+        else if(tipo != -1 && !ubicacion.equals("")){
+            recursos = recursosBiblioteca.consultarRecursosPorTipoYUbicacion(tipo,ubicacion);
+        }
+        //Filtramos por ubicacion y capacidad
+        else if(!ubicacion.equals("") && capacidad!=-1){
+            recursos = recursosBiblioteca.consultarRecursosPorUbicacionYCapacidad(ubicacion,capacidad);
+        }
+        //Filtramos por tipo
+        else if (tipo != -1){
             recursos = recursosBiblioteca.consultarRecursosPorTipo(tipo);
         }
+        //Filtramos por capacidad
         else if (capacidad != -1){
             recursos = recursosBiblioteca.consultarRecursosPorCapacidad(capacidad);
         }
+        //Filtramos por ubicacion
         else if (!ubicacion.equals("")){
             recursos = recursosBiblioteca.consultarRecursosPorUbicacion(ubicacion);
         }
+        //En caso de que no se incluya ningun filtro buscamos todos los recursos
         else {
             recursos = recursosBiblioteca.consultarRecursos();
         }
