@@ -16,8 +16,10 @@ import org.apache.shiro.crypto.hash.Sha256Hash;
 import org.apache.shiro.subject.Subject;
 import com.sun.org.slf4j.internal.Logger;
 
+@SuppressWarnings("deprecation")
 @ManagedBean(name="loginBean")
 @SessionScoped
+
 
 public class LoginBean implements Serializable{
     private static final Logger log = LoggerFactory.getLogger(LoginBean.class);
@@ -31,7 +33,7 @@ public class LoginBean implements Serializable{
         try{
             usuarioActual.login(uPToken);
             usuarioActual.getSession().setAttribute("correo", usuario);
-            redirect();
+//            redirect();
             setLogeado(true);
         } catch (UnknownAccountException ex) {
             String errorMessage = "El usuario no se encuentra registrado";
