@@ -4,6 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="c751ae0c-3655-4d5a-a6d8-7691fd6b1546" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/src/main/webapp/administrador.xhtml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/webapp/comunidad.xhtml" afterDir="false" />
@@ -11,6 +12,40 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/managedbeans/LoginBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/managedbeans/LoginBean.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+=======
+    <list default="true" id="18d6bf6c-79e1-4fd7-b089-41be31e17046" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/managedbeans/LoginBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/managedbeans/LoginBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/RecursosBiblioteca/WEB-INF/classes/config.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/RecursosBiblioteca/WEB-INF/classes/mappers/HorarioMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/RecursosBiblioteca/WEB-INF/classes/mappers/RecursoMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/RecursosBiblioteca/WEB-INF/classes/mappers/ReservaMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/RecursosBiblioteca/WEB-INF/classes/mappers/ReservaRecurrenteMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/RecursosBiblioteca/WEB-INF/classes/mappers/TipoRecursoMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/RecursosBiblioteca/WEB-INF/classes/mappers/UsuarioMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/RecursosBiblioteca/WEB-INF/classes/mybatis-config.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/RecursosBiblioteca/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/RecursosBiblioteca/agregarRecurso.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/RecursosBiblioteca/consultarRecurso.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/RecursosBiblioteca/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/RecursosBiblioteca/index.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/RecursosBiblioteca/resources/imagenes/derecho.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/RecursosBiblioteca/resources/imagenes/eci.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/RecursosBiblioteca/resources/imagenes/escuela-colombiana-de-ingenier-a-julio-garavito-002155_large.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/RecursosBiblioteca/resources/imagenes/fondoconsulta.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/RecursosBiblioteca/resources/imagenes/izquierdo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/conf/logging.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/conf/logging.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/conf/tomcat-users.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/conf/tomcat-users.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/conf/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/conf/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2022-04-16" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2022-04-18" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2022-04-19" beforeDir="false" />
+>>>>>>> 13a8ed23da43f8ec52c569ede8e291de12a7fcf0
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +67,18 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="JpbToolWindowState">
+    <option name="myId2FirstActivated">
+      <map>
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+      </map>
+    </option>
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
+      </map>
+    </option>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -44,6 +91,14 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Documentos\Documentos E\7mo semestre\CVDS\Proyecto-CVDS-2021" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Documentos\Documentos E\7mo semestre\CVDS\Proyecto-CVDS-2021\src\main\webapp" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -66,5 +121,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

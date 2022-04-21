@@ -9,17 +9,19 @@ import javax.faces.bean.*;
 import javax.faces.context.FacesContext;
 
 import com.sun.org.slf4j.internal.LoggerFactory;
-import jdk.internal.loader.AbstractClassLoaderValue;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.*;
 import org.apache.shiro.crypto.hash.Sha256Hash;
 import org.apache.shiro.subject.Subject;
 import com.sun.org.slf4j.internal.Logger;
 
+@SuppressWarnings("deprecation")
 @ManagedBean(name="loginBean")
 @SessionScoped
 
+
 public class LoginBean implements Serializable{
+
     private static final Logger log = LoggerFactory.getLogger(LoginBean.class);
     private String usuario;
     private String contrasena;
@@ -27,18 +29,22 @@ public class LoginBean implements Serializable{
 
     public void login(){
         Subject usuarioActual = SecurityUtils.getSubject();
-        UsernamePasswordToken uPToken = new UsernamePasswordToken(getUser(), new Sha256Hash(getPasswd()).toHex());
+        UsernamePasswordToken uPToken = new UsernamePasswordToken(getUsuario(), new Sha256Hash(getContrasena()).toHex());
         try{
             usuarioActual.login(uPToken);
-            usuarioActual.getSession().setAttribute("correo", usuario);
+            usuarioActual.getSession().setAttribute("Correo", usuario);
             redirect();
             setLogeado(true);
         } catch (UnknownAccountException ex) {
-            String errorMessage = "El usuario no se encuentra registrado";
+            String errorMessage = "El usuario no esta registrado";
             error(errorMessage);
             log.error(ex.getMessage(), ex);
         } catch (IncorrectCredentialsException ex) {
-            String errorMessage = "La contraseña que ingreso no es correcta";
+            String errorMessage = "La contraseña que ingreso es incorrecta";
+            error(errorMessage);
+            log.error(ex.getMessage(), ex);
+        } catch (LockedAccountException ex) {
+            String errorMessage = "El usuario esta deshabilitado";
             error(errorMessage);
             log.error(ex.getMessage(), ex);
         } catch (AuthenticationException ex) {
@@ -47,19 +53,19 @@ public class LoginBean implements Serializable{
             log.error(ex.getMessage(), ex);
         }
     }
-    public String getUser() {
+    public String getUsuario() {
         return usuario;
     }
 
-    public void setUser(String user) {
+    public void setUsuario(String user) {
         this.usuario = user;
     }
 
-    public String getPasswd() {
+    public String getContrasena() {
         return contrasena;
     }
 
-    public void setPasswd(String passwd) {
+    public void setContrasena(String passwd) {
         this.contrasena = passwd;
     }
 
