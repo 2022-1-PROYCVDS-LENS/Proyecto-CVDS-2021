@@ -65,35 +65,49 @@
           </h:selectOneMenu></center>
         </div>
         <div style = "display:flex; align-items:end">
-
+          <p:commandButton  value="Buscar" action="#{consultarRecursosBean.filtrarLosRecursos()}" update="tabla" style="color:#ffffff; background-color:#990000; width:50%; height:50%; font-size:120% " />
         </div>
       </div>
       <div style = "display:flex; align-items:center; justify-content: center ;
                         position: relative;top: 100px;" >
         <!--                Insertar aca lista de recursos-->
         <div style="text-align: center;">
-          <p:commandButton  value="Filtrar" action="#{consultarRecursosBean.filtrarLosRecursos}" update="tabla" style="color:#ffffff; background-color:#990000; width:50%; height:50%; font-size:120% " />
-          <p:dataTable id="tabla" value="#{consultarRecursosBean.recursos}" var = "recurso" border = "4" style ="background-color:#ebeff4" >
-          <p:column>
-            <f:facet name = "header">Nombre</f:facet>
+          <p:dataTable id="tabla" value="#{consultarRecursosBean.recursos}" var = "recurso" border = "4" style ="background-color:#ebeff4;" >
+          <p:column style = "border: 1px solid black; border-collapse: collapse; width:60% ; padding-left: 30px;padding-right: 30px; background-color:#cce6ff" >
+            <f:facet name = "header">
+              <h:outputText value="Nombre" style="background-color:#990000; color:#ffffff; font-size:120%;"/>
+            </f:facet>
             <!--                        {recurso.nombre}-->
             <h:outputText value = "#{recurso.nombre}"/>
           </p:column>
-          <p:column>
-            <f:facet name = "header">Tipo</f:facet>
+          <p:column style = "border: 1px solid black; border-collapse: collapse; width:40%; padding-left: 8px; padding-right: 8px">
+            <f:facet name = "header">
+              <h:outputText value="Tipo" style="background-color:#990000; color:#ffffff; font-size:120%"/>
+            </f:facet>
             <!--                        {recurso.tipo}-->
-            <h:outputText value = "#{recurso.tipo}"/>
+            <h:outputText value = "#{recurso.tipo.getNombre()}"/>
           </p:column>
-          <p:column>
-            <f:facet name = "header">Capacidad</f:facet>
+          <p:column style = "border: 1px solid black; border-collapse: collapse; width:40% ; padding-left: 5px; padding-right: 5px ; background-color:#cce6ff">
+            <f:facet name = "header">
+              <h:outputText value="Capacidad" style="background-color:#990000; color:#ffffff; font-size:120%"/>
+            </f:facet>
             <!--                        {recurso.capacidad}-->
             <h:outputText value = "#{recurso.capacidad}"/>
           </p:column>
-          <p:column>
-            <f:facet name = "header">Ubicación</f:facet>
+          <p:column style = "border: 1px solid black; border-collapse: collapse; width:40% ; padding-left: 15px ; padding-right: 15px">
+            <f:facet name = "header" >
+              <h:outputText value="Ubicación" style="background-color:#990000; color:#ffffff; font-size:120%"/>
+            </f:facet>
             <!--                        {recurso.ubicacion}-->
             <h:outputText value = "#{recurso.ubicacion}"/>
-          </p:column>
+          </p:column >
+            <p:column style = "border: 1px solid black; border-collapse: collapse; width:40% ; padding-left: 15px ; padding-right: 15px">
+              <f:facet name = "header" >
+                <h:outputText value="Reservar" style="background-color:#990000; color:#ffffff; font-size:120%"/>
+              </f:facet>
+              <input type = "checkbox" id="cbox1"/>
+
+            </p:column >
         </p:dataTable>
         </div>
 

@@ -14,7 +14,7 @@
     <url-pattern>/recursosBiblioteca/*</url-pattern>
   </servlet-mapping>
   <welcome-file-list>
-    <welcome-file>recursosBiblioteca/agregarRecurso.xhtml</welcome-file>
+    <welcome-file>recursosBiblioteca/consultarRecurso.xhtml</welcome-file>
   </welcome-file-list>
   <listener>
     <listener-class>guice.GuiceContextListener</listener-class>
