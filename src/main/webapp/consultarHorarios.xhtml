@@ -26,44 +26,37 @@
             <h:graphicImage library="imagenes" name="izquierdo.png" height = "105%"/>
         </div>
         <div>
-            <center><h1>Agregar un nuevo recurso</h1></center>
-            <div style = "display:grid; grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;height:60%">
-
-                <div>
-                    <center><h3>Nombre</h3></center>
-                    <center><p:inputText  id= "nombre" type="String" value="#{registrarRecursosBean.nombre}"  class="form-control" style="width:40%; height:50%"/></center>
-                </div>
-                <div>
-                    <center><h3>Habilitado</h3></center>
-                    <center><h:selectOneMenu value="#{registrarRecursosBean.habilitado}" class="form-control" style="width:40%; height:50%">
-                        <f:selectItem itemLabel="Seleccione estado" itemValue="-1"/>
-                        <f:selectItem itemValue="habilitado" itemLabel="habilitado" />
-                        <f:selectItem itemValue="dañado" itemLabel="dañado" />
-                    </h:selectOneMenu></center>
-                </div>
-                <div>
-                    <center><h3>Tipo</h3></center>
-                    <center><p:inputText  id= "tipo" type="String" value="#{registrarRecursosBean.tipo}"   class="form-control" style="width:40%; height:50%"/></center>
-                </div>
-                <div>
-                    <center><h3>Capacidad</h3></center>
-                    <center><p:inputText  id= "capacidad" type="int"  value="#{registrarRecursosBean.capacidad}"  class="form-control" style="width:40%; height:50%"/></center>
-                </div>
-                <div>
-                    <center><h3>Ubicación</h3></center>
-                    <center><p:inputText  id= "ubicacion" type="String" value="#{registrarRecursosBean.ubicacion}"   class="form-control" style="width:40%; height:50%"/></center>
-                </div>
-                <div>
-                    <center><h3>Ejemplares</h3></center>
-                    <center><p:inputText  id= "ejemplar" type="int" value="#{registrarRecursosBean.ejemplar}"   class="form-control" style="width:40%; height:50%"/></center>
-                </div>
-                <div>
-                    <center><h:commandButton value="Registrar" actionListener="#{registrarRecursosBean.registrar}" style="color:#ffffff;
-            background-color:#990000; width:50%; height:50%; font-size:120%; position:relative; top:50px" /></center>
+            <center><h1>Horarios disponibles</h1></center>
+            <div style = "display:flex; align-items:center; justify-content: center ;
+                        position: relative;top: 100px;">
+                <p:dataTable id="tabla" value="#{consultarHorariosBean.horarios}" var = "horario" border = "4" style ="background-color:#ebeff4;" >
+                    <p:column style = "border: 1px solid black; border-collapse: collapse; width:60% ; padding-left: 30px;padding-right: 30px; background-color:#cce6ff" >
+                        <f:facet name = "header">
+                            <h:outputText value="Reservar" style="background-color:#990000; color:#ffffff; font-size:120%;"/>
+                        </f:facet>
+                        <h:outputText value = "hola"/>
+                    </p:column>
+                    <p:column style = "border: 1px solid black; border-collapse: collapse; width:60% ; padding-left: 30px;padding-right: 30px; background-color:#cce6ff" >
+                        <f:facet name = "header">
+                            <h:outputText value="Hora inicio" style="background-color:#990000; color:#ffffff; font-size:120%;"/>
+                        </f:facet>
+                        <h:outputText value = "#{horario.hora_ini}"/>
+                    </p:column>
+                    <p:column style = "border: 1px solid black; border-collapse: collapse; width:60% ; padding-left: 30px;padding-right: 30px; background-color:#cce6ff" >
+                        <f:facet name = "header">
+                            <h:outputText value="Hora fin" style="background-color:#990000; color:#ffffff; font-size:120%;"/>
+                        </f:facet>
+                        <h:outputText value = "#{horario.hora_fin}"/>
+                    </p:column>
+                </p:dataTable>
+                <div style = "display:flex; align-items:end">
+                    <p:commandButton  value="Buscar" action="#{consultarHorariosBean.consultarHorario(consultarRecursosBean.recurso.id)}" style="color:#ffffff;
+                    background-color:#990000; width:100%; height:55%; font-size:120%; position:relative; top:180px" />
                 </div>
             </div>
 
         </div>
+
         <div>
             <end><h:graphicImage library="imagenes" name="derecho.png" height = "105%" style = "float:left"/></end>
         </div>

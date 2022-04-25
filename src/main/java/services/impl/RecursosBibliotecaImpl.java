@@ -32,7 +32,6 @@ public class RecursosBibliotecaImpl implements RecursosBiblioteca {
 
     @Override
     public List<Horario> consultarHorario(int id) {
-        System.out.println("llego al impl");
         return horarioDAO.load(id);
     }
 

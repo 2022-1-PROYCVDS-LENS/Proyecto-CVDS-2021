@@ -61,7 +61,7 @@
                         position: relative;top: 100px;" >
         <!--                Insertar aca lista de recursos-->
         <div style="text-align: center;">
-          <p:dataTable id="tabla" value="#{consultarRecursosBean.recursos}" var = "recurso" border = "4" style ="background-color:#ebeff4;" >
+          <p:dataTable id="tabla" value="#{consultarRecursosBean.filtrarLosRecursos()}" var = "recurso" selectionMode="single" selection="#{consultarRecursosBean.recurso}" rowKey="#{recurso.nombre}" border = "4" style ="background-color:#ebeff4;" >
             <p:column style = "border: 1px solid black; border-collapse: collapse; width:60% ; padding-left: 30px;padding-right: 30px; background-color:#cce6ff" >
               <f:facet name = "header">
                 <h:outputText value="Nombre" style="background-color:#990000; color:#ffffff; font-size:120%;"/>
@@ -94,19 +94,16 @@
               <f:facet name = "header" >
                 <h:outputText value="Reservar" style="background-color:#990000; color:#ffffff; font-size:120%"/>
               </f:facet>
-              <input type = "checkbox" id="cbox1"/>
-
+              <h:commandButton value="Ver horarios" action="consultarHorarios?faces-redirect = true"/>
             </p:column >
           </p:dataTable>
         </div>
       </div>
       <div>
-        <center><h:commandButton value="Reservar" actionListener=".." style="color:#ffffff;
+        <center><h:commandButton value="Reservar" action=".." style="color:#ffffff;
             background-color:#990000; width:25%; height:55%; font-size:120%; position:relative; top:180px" /></center>
-
       </div>
     </div>
-
     <div>
       <end><h:graphicImage library="imagenes" name="derecho.png" height = "105%" style = "float:left"/></end>
     </div>

@@ -18,7 +18,6 @@ public class MyBATISHorarioDAO implements HorarioDAO {
 
     @Override
     public List<Horario> load(int id) {
-        System.out.println("llego al mybatisDao");
         return horarioMapper.consultarHorario(id);
     }
 }

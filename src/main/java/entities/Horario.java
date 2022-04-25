@@ -17,7 +17,7 @@ public class Horario implements Serializable {
     private @Getter @Setter int id;
     private @Getter @Setter Recurso idRecurso;
     private @Getter @Setter String estado;
-    private @Getter @Setter LocalTime hora_ini;
+    private @Getter @Setter Time hora_ini;
     private @Getter @Setter Time hora_fin;
 
     @Override
