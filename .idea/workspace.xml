@@ -4,18 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c751ae0c-3655-4d5a-a6d8-7691fd6b1546" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entities/Horario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/Horario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/managedbeans/ConsultarHorariosBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/managedbeans/ConsultarHorariosBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/managedbeans/ConsultarRecursosBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/managedbeans/ConsultarRecursosBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/persistence/mybatisimpl/MyBATISHorarioDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/persistence/mybatisimpl/MyBATISHorarioDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/impl/RecursosBibliotecaImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/impl/RecursosBibliotecaImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/consultarHorarios.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/consultarHorarios.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/consultarRecurso.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/consultarRecurso.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2022-04-21" beforeDir="false" />
-    </list>
+    <list default="true" id="c751ae0c-3655-4d5a-a6d8-7691fd6b1546" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -106,7 +95,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650576591720</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="cambio consultas">
+      <created>1650845967745</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1650845967745</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -123,6 +119,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="horarios" />
-    <option name="LAST_COMMIT_MESSAGE" value="horarios" />
+    <MESSAGE value="cambio consultas" />
+    <option name="LAST_COMMIT_MESSAGE" value="cambio consultas" />
   </component>
 </project>
