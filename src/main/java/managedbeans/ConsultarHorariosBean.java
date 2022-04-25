@@ -20,14 +20,15 @@ public class ConsultarHorariosBean extends BasePageBean{
     @Getter @Setter String hora_fin;
     @Getter @Setter int id;
     @Getter @Setter List<Horario> horarios;
+    @Getter @Setter Horario horario;
 
 
 
     @Inject
     private RecursosBiblioteca recursosBiblioteca;
-    public void consultarHorario(int id){
+    public List<Horario> consultarHorario(int id){
         horarios = recursosBiblioteca.consultarHorario(id);
-
+        return horarios;
     }
 
     public void prueba(){

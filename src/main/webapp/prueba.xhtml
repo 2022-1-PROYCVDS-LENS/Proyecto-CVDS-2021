@@ -21,7 +21,13 @@
 <!--}-->
 <!--</style>-->
 <h:body>
-    <div class="container">
+    <div style = "background-color:#990000">
+        <center><h:outputText style = "color:#ffffff;font-size:220%;font-family:sans-serif" value = "Escuela Colombiana de ingieneria Julio Garavito: Recursos de biblioteca"/></center>
+    </div>
+    <div class="container" style = "display:grid; grid-template-columns: 1fr 10fr 1fr; grid-gap: 40px">
+        <div>
+            <h:graphicImage library="imagenes" name="izquierdo.png" height = "105%"/>
+        </div>
         <h:form id="Recursos">
             <p:panel header="filtros" style="text-align: center" name="panel1" id="panel1">
                 <div style="display:grid; grid-template-columns: 1fr 1fr 1fr 1fr">
@@ -76,6 +82,9 @@
                 <h:commandButton id="select" value="Seleccionar" action="consultarHorarios?faces-redirect = true" style="margin-top: 10px"/>
             </p:panel>
         </h:form>
+        <div>
+            <h:graphicImage library="imagenes" name="derecho.png" height = "105%" style = "float:left"/>
+        </div>
     </div>
 </h:body>
 </html>
