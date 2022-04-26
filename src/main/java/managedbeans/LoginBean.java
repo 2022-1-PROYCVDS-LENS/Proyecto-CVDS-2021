@@ -16,6 +16,7 @@ import org.apache.shiro.crypto.hash.Sha256Hash;
 import org.apache.shiro.subject.Subject;
 import org.slf4j.Logger;
 
+@SuppressWarnings("deprecation")
 @ManagedBean(name = "loginBean")
 @SessionScoped
 public class LoginBean extends BasePageBean{

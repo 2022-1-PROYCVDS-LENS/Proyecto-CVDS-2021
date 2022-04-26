@@ -19,6 +19,7 @@
 </h:head>
 
 <h:body>
+    <h:form>
     <div style = "background-color:#990000" >
         <center><h:outputText style = "color:#ffffff;font-size:220%;font-family:sans-serif" value = "Escuela Colombiana de ingieneria Julio Garavito: Recursos de biblioteca"/></center>
     </div>
@@ -34,7 +35,7 @@
                 <div><p:panelMenu style="width:500px" >
                     <p:submenu label="Recursos">
                         <p:menuitem value="Agregar recurso" action="agregarRecurso?recursosBiblioteca-redirect = true"/>
-                        <p:menuitem value="Consultar recurso" action="consultarRecurso?recursosBiblioteca-redirect = true"/>
+                        <p:menuitem value="Consultar recurso" action="prueba?recursosBiblioteca-redirect = true"/>
                     </p:submenu>
                 </p:panelMenu></div>
                 <div><h:commandButton value="Cerrar Sesión" style="color:#ffffff;
@@ -45,6 +46,7 @@
             <end><h:graphicImage library="imagenes" name="derecho.png" height = "100%" style = "float:left"/></end>
         </div>
     </div>
+    </h:form>
 </h:body>
 
 
