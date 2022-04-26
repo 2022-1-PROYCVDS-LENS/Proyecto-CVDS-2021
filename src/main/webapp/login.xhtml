@@ -32,10 +32,11 @@ xhtml de la pagina principal de recursos biblioteca en donde se redireccionara a
       <center><div style = "box-sizing: content-box; width: 40%; background-color:#b8c3ff ;
                         position: relative;top: 150px; display:grid; grid-template-rows:1fr 1fr 1fr 1fr;border-radius: 20px ">
         <div><h3>Iniciar sesión</h3></div>
-        <div><p:inputText placeholder="Usuario" ></p:inputText></div>
-        <div><p:inputText placeholder="Contraseña" ></p:inputText></div>
-        <div><h:commandButton value="Ingresar" style="color:#ffffff;
-            background-color:#990000; width:50%; height:50%; font-size:120%;" /></div>
+        <div><p:inputText id="usuario_nombre" placeholder="Usuario" value="#{loginBean.usuario}"></p:inputText>
+          <p:watermark for="usuario_nombre" value="example@mail.com"></p:watermark></div>
+        <div><p:inputText placeholder="Contraseña" type="password" value="#{loginBean.contrasena}"></p:inputText></div>
+        <div><p:commandButton value="Ingresar" style="color:#ffffff;
+            background-color:#990000; width:50%; height:50%; font-size:120%;" action="#{loginBean.login}"/></div>
       </div></center>
     </div>
     <div>

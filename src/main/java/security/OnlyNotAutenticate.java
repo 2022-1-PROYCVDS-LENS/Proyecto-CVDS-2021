@@ -21,7 +21,7 @@ public class OnlyNotAutenticate extends AccessControlFilter{
 
     @Override
     protected boolean onAccessDenied(ServletRequest servletRequest, ServletResponse servletResponse) throws Exception {
-        welcomeUrl = "/faces/login.xhtml";
+        welcomeUrl = "/recursosBiblioteca/login.xhtml";
         WebUtils.issueRedirect(servletRequest, servletResponse, welcomeUrl);
         return false;
     }
