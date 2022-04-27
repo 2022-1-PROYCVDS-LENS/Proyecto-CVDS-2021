@@ -5,7 +5,7 @@ import entities.*;
 import java.util.List;
 
 public interface RecursosBiblioteca {
-    List<Horario> consultarHorario(int id);
+    List<Horario> consultarHorario(int id) throws ExceptionRecursosBiblioteca;
     public abstract  void registratHorario(//Parametros de gorario);
     );
     public abstract void registrarHorario(Horario h);

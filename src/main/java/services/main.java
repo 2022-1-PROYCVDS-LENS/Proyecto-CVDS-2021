@@ -11,11 +11,11 @@ public class main {
     public static  void main(String[] args){
         RecursosBiblioteca instance = RecursosBibliotecaFactory.getInstance().getRecursosBiblioteca();
 //        System.out.println(instance.consultarCliente(2165711).toString());
-//        try{
-//            instance.registrarRecurso("sala 1", "disponible", "biblioteca", new TipoRecurso(2, "sala de estudio"), 3);
-//        }catch (Exception e){
-//            System.out.println("error");
-//        }
+        try{
+            instance.registrarRecurso("1", "disponible", "biblioteca", 1, new TipoRecurso(2, "sala de estudio"), 3);
+        }catch (Exception e){
+            System.out.println("error");
+        }
 //        System.out.println("sin filtrar");
 //        List<Recurso> recursos = instance.consultarRecursos();
 //        for(Recurso r: recursos){
@@ -36,11 +36,11 @@ public class main {
 //        for(Recurso r: recursos){
 //            System.out.println(r.toString());
 //        }
-        System.out.println("prueba horarios");
-        List<Horario> horarios = instance.consultarHorario(3);
-        for(Horario h: horarios){
-            System.out.println(h.toString());
-        }
+//        System.out.println("prueba horarios");
+//        List<Horario> horarios = instance.consultarHorario(3);
+//        for(Horario h: horarios){
+//            System.out.println(h.toString());
+//        }
 
 
     }

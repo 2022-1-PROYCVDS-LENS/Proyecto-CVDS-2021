@@ -31,8 +31,13 @@ public class RecursosBibliotecaImpl implements RecursosBiblioteca {
     private UsuarioDAO usuarioDAO;
 
     @Override
-    public List<Horario> consultarHorario(int id) {
-        return horarioDAO.load(id);
+    public List<Horario> consultarHorario(int id) throws ExceptionRecursosBiblioteca {
+        try {
+            return horarioDAO.load(id);
+        } catch (ExceptionRecursosBiblioteca e){
+            throw new ExceptionRecursosBiblioteca("error");
+        }
+
     }
 
     @Override
