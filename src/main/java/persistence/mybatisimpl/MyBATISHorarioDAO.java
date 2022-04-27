@@ -4,10 +4,16 @@ import com.google.inject.Inject;
 import entities.Horario;
 import persistence.HorarioDAO;
 import persistence.mybatisimpl.mappers.HorarioMapper;
+import services.ExceptionRecursosBiblioteca;
+import services.RecursosBiblioteca;
+
+import java.util.List;
 
 public class MyBATISHorarioDAO implements HorarioDAO {
     @Inject
     private HorarioMapper horarioMapper;
+
+    List<Horario> horarios;
 
     @Override
     public void save(Horario horario) {
@@ -15,7 +21,11 @@ public class MyBATISHorarioDAO implements HorarioDAO {
     }
 
     @Override
-    public Horario load(int id) {
-        return null;
+    public List<Horario> load(int id) throws ExceptionRecursosBiblioteca {
+        horarios = horarioMapper.consultarHorario(id);
+        if (horarios.size() == 0){
+            throw new ExceptionRecursosBiblioteca("error");
+        }
+        return horarios;
     }
 }

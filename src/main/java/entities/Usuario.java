@@ -14,6 +14,8 @@ public class Usuario implements Serializable {
     private @Getter @Setter String tipoUsuario;
     private @Getter @Setter String nombre;
     private @Getter @Setter String programa;
+    private @Getter @Setter String correo;
+    private @Getter @Setter String contrasena;
 
     @Override
     public String toString(){

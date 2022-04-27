@@ -3,6 +3,7 @@ package services.impl;
 import com.google.inject.Inject;
 import entities.*;
 import persistence.*;
+import services.ExceptionRecursosBiblioteca;
 import services.RecursosBiblioteca;
 
 import javax.ejb.Singleton;
@@ -30,8 +31,13 @@ public class RecursosBibliotecaImpl implements RecursosBiblioteca {
     private UsuarioDAO usuarioDAO;
 
     @Override
-    public Horario consultarHorario(int id) {
-        return horarioDAO.load(id);
+    public List<Horario> consultarHorario(int id) throws ExceptionRecursosBiblioteca {
+        try {
+            return horarioDAO.load(id);
+        } catch (ExceptionRecursosBiblioteca e){
+            throw new ExceptionRecursosBiblioteca("error");
+        }
+
     }
 
     @Override
@@ -50,8 +56,13 @@ public class RecursosBibliotecaImpl implements RecursosBiblioteca {
     }
 
     @Override
-    public void registrarRecurso(String nombre, String ubicacion, TipoRecurso tipo, int capacidad) {
-        recursoDAO.registrarRecurso(nombre, ubicacion, tipo, capacidad);
+    public void registrarRecurso(String nombre, String habilitado, String ubicacion, int ejemplar, TipoRecurso tipo, int capacidad) throws ExceptionRecursosBiblioteca{
+        try{
+            recursoDAO.registrarRecurso(nombre, habilitado, ubicacion, ejemplar, tipo, capacidad);
+        }catch (Exception e){
+            throw new ExceptionRecursosBiblioteca("Error");
+        }
+
     }
 
     @Override

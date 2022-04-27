@@ -5,12 +5,12 @@ import entities.*;
 import java.util.List;
 
 public interface RecursosBiblioteca {
-    public abstract Horario consultarHorario(int id);
+    List<Horario> consultarHorario(int id) throws ExceptionRecursosBiblioteca;
     public abstract  void registratHorario(//Parametros de gorario);
     );
     public abstract void registrarHorario(Horario h);
     public abstract Recurso consultarRecurso(int id);
-    public abstract  void registrarRecurso(String nombre, String ubicacion, TipoRecurso tipo, int capacidad);
+    public abstract  void registrarRecurso(String nombre, String habilitado, String ubicacion, int ejemplar, TipoRecurso tipo, int capacidad) throws ExceptionRecursosBiblioteca;
 
     public abstract void registrarRegusrso(Recurso r);
     public abstract List<Recurso> consultarRecursos();
@@ -34,4 +34,8 @@ public interface RecursosBiblioteca {
     List<Recurso> consultarRecursosPorCapacidad(int i);
 
     List<Recurso> consultarRecursosPorUbicacion(String ubi);
+
+
+
+
 }

@@ -18,7 +18,9 @@ public interface RecursoMapper {
      * @param capacidad la capacidad del nuevo recurso
      */
      void registrarRecurso(@Param("name") String nombre,
+                           @Param("enable") String habilitado,
                            @Param("location") String ubicacion,
+                           @Param("item") int ejemplar,
                            @Param("type") TipoRecurso tipo,
                            @Param("capacity") int capacidad);
 

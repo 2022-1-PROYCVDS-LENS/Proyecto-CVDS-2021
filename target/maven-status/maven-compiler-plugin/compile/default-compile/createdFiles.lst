@@ -1,6 +1,8 @@
+managedbeans\ConsultarHorariosBean.class
 managedbeans\BasePageBean.class
 persistence\TipoRecursoDAO.class
 persistence\mybatisimpl\MyBATISRecursoDAO.class
+managedbeans\RegistrarRecursosBean.class
 persistence\mybatisimpl\mappers\HorarioMapper.class
 persistence\mybatisimpl\mappers\ReservaRecurrenteMapper.class
 persistence\mybatisimpl\mappers\TipoRecursoMapper.class
@@ -13,10 +15,12 @@ persistence\mybatisimpl\MyBATISUsuarioDAO.class
 persistence\mybatisimpl\MyBATISTipoRecursoDAO.class
 persistence\UsuarioDAO.class
 entities\Horario.class
+security\OnlyNotAutenticate.class
 services\RecursosBibliotecaFactory$1.class
 services\RecursosBibliotecaFactory.class
 persistence\mybatisimpl\mappers\RecursoMapper.class
 services\ExceptionRecursosBiblioteca.class
+managedbeans\LoginBean.class
 persistence\mybatisimpl\mappers\ReservaMapper.class
 entities\ReservaRecurrente.class
 guice\GuiceContextListener.class

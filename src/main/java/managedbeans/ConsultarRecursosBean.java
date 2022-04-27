@@ -22,10 +22,19 @@ public class ConsultarRecursosBean extends BasePageBean {
     private RecursosBiblioteca recursosBiblioteca;
 
     List<Recurso> recursos;
+    Recurso recurso;
 
     int tipo = -1;
     int capacidad = -1;
     String ubicacion = "";
+
+    public Recurso getRecurso() {
+        return recurso;
+    }
+
+    public void setRecurso(Recurso recurso) {
+        this.recurso = recurso;
+    }
 
     public int getTipo() {
         return tipo;
@@ -62,7 +71,7 @@ public class ConsultarRecursosBean extends BasePageBean {
     /**
      * Guarda en los recursos del bean, todos los recursos disponibles
      */
-    public void filtrarLosRecursos(){
+    public List<Recurso> filtrarLosRecursos(){
         if (tipo != -1){
             recursos = recursosBiblioteca.consultarRecursosPorTipo(tipo);
         }
@@ -75,7 +84,9 @@ public class ConsultarRecursosBean extends BasePageBean {
         else {
             recursos = recursosBiblioteca.consultarRecursos();
         }
+        return recursos;
 
     }
+
 
 }
