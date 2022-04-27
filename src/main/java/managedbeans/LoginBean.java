@@ -92,9 +92,9 @@ public class LoginBean extends BasePageBean{
     public void redirect(){
         try {
             Subject usuario = SecurityUtils.getSubject();
-            if (usuario.hasRole("Administrador")) {
+            if (usuario.hasRole("administrador")) {
                 FacesContext.getCurrentInstance().getExternalContext().redirect("/recursosBiblioteca/administrador.xhtml");
-            } else if (usuario.hasRole("Comunidad")) {
+            } else if (usuario.hasRole("comunidad")) {
                 FacesContext.getCurrentInstance().getExternalContext().redirect("/recursosBiblioteca/comunidad.xhtml");
             }
         }catch (IOException e){
