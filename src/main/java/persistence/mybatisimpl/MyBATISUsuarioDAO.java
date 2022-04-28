@@ -18,4 +18,14 @@ public class MyBATISUsuarioDAO implements UsuarioDAO {
             throw new PersistenceException(e.getMessage());
         }
     }
+
+    @Override
+    public Usuario load(int id) {
+        return null;
+    }
+
+    @Override
+    public void save(Usuario u) {
+
+    }
 }
