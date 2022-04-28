@@ -2,6 +2,7 @@ package services.impl;
 
 import com.google.inject.Inject;
 import entities.*;
+import org.apache.ibatis.exceptions.PersistenceException;
 import persistence.*;
 import services.ExceptionRecursosBiblioteca;
 import services.RecursosBiblioteca;
@@ -29,6 +30,16 @@ public class RecursosBibliotecaImpl implements RecursosBiblioteca {
 
     @Inject
     private UsuarioDAO usuarioDAO;
+
+    @Override
+    public Usuario buscarUsuario(String correo) throws ExceptionRecursosBiblioteca {
+        try{
+            System.out.println(usuarioDAO);
+            return usuarioDAO.buscarUsuario(correo);
+        }catch (PersistenceException e){
+            throw new ExceptionRecursosBiblioteca("Error al buscar ese usuario: " + correo, e);
+        }
+    }
 
     @Override
     public List<Horario> consultarHorario(int id) throws ExceptionRecursosBiblioteca {

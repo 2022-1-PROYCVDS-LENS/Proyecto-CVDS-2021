@@ -1,10 +1,13 @@
 package services;
 
 import entities.*;
-
+import entities.Usuario;
 import java.util.List;
 
 public interface RecursosBiblioteca {
+
+    public Usuario buscarUsuario(String correo) throws ExceptionRecursosBiblioteca;
+
     List<Horario> consultarHorario(int id) throws ExceptionRecursosBiblioteca;
     public abstract  void registratHorario(//Parametros de gorario);
     );

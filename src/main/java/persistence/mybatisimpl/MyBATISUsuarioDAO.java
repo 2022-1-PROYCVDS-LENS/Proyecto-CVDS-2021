@@ -2,6 +2,7 @@ package persistence.mybatisimpl;
 
 import com.google.inject.Inject;
 import entities.Usuario;
+import org.apache.ibatis.exceptions.PersistenceException;
 import persistence.UsuarioDAO;
 import persistence.mybatisimpl.mappers.UsuarioMapper;
 
@@ -10,12 +11,11 @@ public class MyBATISUsuarioDAO implements UsuarioDAO {
     private UsuarioMapper usuarioMapper;
 
     @Override
-    public void save(Usuario usuario) {
-
-    }
-
-    @Override
-    public Usuario load(int id) {
-        return null;
+    public Usuario buscarUsuario(String correo) throws PersistenceException {
+        try{
+            return usuarioMapper.buscarUsuarioxCorreo(correo);
+        }catch (Exception e){
+            throw new PersistenceException(e.getMessage());
+        }
     }
 }
