@@ -18,4 +18,9 @@
         <collection property="usuarios" ofType="Usuario" resultMap="sampleprj.dao.dato.mybatis.mappers.UsuarioMapper.UsuarioResult.UsuarioResult"/>
     </resultMap>
 
+    <insert parameterType="map" id="reservarRecurso">
+        insert into reservas(id, id_usuario, id_recurso, inicio, fin, recurrente, estado, solicitud)
+        values (nextval('reservas_id') #{id_usuario}, #{id_recurso}, #{inicio}, #{fin}, #{recurrente}, #{estado}, #{solicitud})
+    </insert>
+
 </mapper>

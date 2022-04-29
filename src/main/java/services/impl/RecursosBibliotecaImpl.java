@@ -55,7 +55,7 @@ public class RecursosBibliotecaImpl implements RecursosBiblioteca {
     }
 
     @Override
-    public void registrarRegusrso(Recurso r) {
+    public void registrarRecusrso(Recurso r) {
         recursoDAO.save(r);
     }
 
@@ -122,5 +122,10 @@ public class RecursosBibliotecaImpl implements RecursosBiblioteca {
     @Override
     public List<Recurso> consultarRecursosPorUbicacion(String ubi) {
         return recursoDAO.consultarRecursosPorUbicacion(ubi);
+    }
+
+    @Override
+    public void reservarRecurso(int id_usuario, int id_recurso, String inicio, String fin, boolean recurrente, String estado, String solicitud) {
+        reservaDAO.reservarRecurso(id_usuario, id_recurso, inicio, fin, recurrente, estado, solicitud);
     }
 }
