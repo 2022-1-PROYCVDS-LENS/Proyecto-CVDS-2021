@@ -145,4 +145,24 @@ public class RecursosBibliotecaImpl implements RecursosBiblioteca {
     public List<Recurso> consultarRecursosPorUbicacion(String ubi) {
         return recursoDAO.consultarRecursosPorUbicacion(ubi);
     }
+
+    @Override
+    public List<Recurso> consultarRecursosPorTipoCapacidadUbicacion(int tipo, int capacidad, String ubicacion) {
+        return recursoDAO.consultarRecursosPorTipoCapacidadUbicacion(tipo,capacidad,ubicacion);
+    }
+
+    @Override
+    public List<Recurso> consultarRecursosPorTipoYCapacidad(int tipo, int capacidad) {
+        return recursoDAO.consultarRecursosPorTipoYCapacidad(tipo,capacidad);
+    }
+
+    @Override
+    public List<Recurso> consultarRecursosPorTipoYUbicacion(int tipo, String ubicacion) {
+        return recursoDAO.consultarRecursosPorTipoYUbicacion(tipo,ubicacion);
+    }
+
+    @Override
+    public List<Recurso> consultarRecursosPorUbicacionYCapacidad(String ubicacion, int capacidad) {
+        return recursoDAO.consultarRecursosPorUbicacionYCapacidad(ubicacion,capacidad);
+    }
 }
