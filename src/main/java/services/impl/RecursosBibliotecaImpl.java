@@ -2,7 +2,9 @@ package services.impl;
 
 import com.google.inject.Inject;
 import entities.*;
+import org.apache.ibatis.exceptions.PersistenceException;
 import persistence.*;
+import services.ExceptionRecursosBiblioteca;
 import services.RecursosBiblioteca;
 
 import javax.ejb.Singleton;
@@ -30,8 +32,23 @@ public class RecursosBibliotecaImpl implements RecursosBiblioteca {
     private UsuarioDAO usuarioDAO;
 
     @Override
-    public Horario consultarHorario(int id) {
-        return horarioDAO.load(id);
+    public Usuario buscarUsuario(String correo) throws ExceptionRecursosBiblioteca {
+        try{
+            System.out.println(usuarioDAO);
+            return usuarioDAO.buscarUsuario(correo);
+        }catch (PersistenceException e){
+            throw new ExceptionRecursosBiblioteca("Error al buscar ese usuario: " + correo, e);
+        }
+    }
+
+    @Override
+    public List<Horario> consultarHorario(int id) throws ExceptionRecursosBiblioteca {
+        try {
+            return horarioDAO.load(id);
+        } catch (ExceptionRecursosBiblioteca e){
+            throw new ExceptionRecursosBiblioteca("error");
+        }
+
     }
 
     @Override
@@ -50,12 +67,17 @@ public class RecursosBibliotecaImpl implements RecursosBiblioteca {
     }
 
     @Override
-    public void registrarRecurso(String nombre, String ubicacion, TipoRecurso tipo, int capacidad) {
-        recursoDAO.registrarRecurso(nombre, ubicacion, tipo, capacidad);
+    public void registrarRecurso(String nombre, String habilitado, String ubicacion, int ejemplar, TipoRecurso tipo, int capacidad) throws ExceptionRecursosBiblioteca{
+        try{
+            recursoDAO.registrarRecurso(nombre, habilitado, ubicacion, ejemplar, tipo, capacidad);
+        }catch (Exception e){
+            throw new ExceptionRecursosBiblioteca("Error");
+        }
+
     }
 
     @Override
-    public void registrarRecusrso(Recurso r) {
+    public void registrarRegusrso(Recurso r) {
         recursoDAO.save(r);
     }
 
@@ -122,10 +144,5 @@ public class RecursosBibliotecaImpl implements RecursosBiblioteca {
     @Override
     public List<Recurso> consultarRecursosPorUbicacion(String ubi) {
         return recursoDAO.consultarRecursosPorUbicacion(ubi);
-    }
-
-    @Override
-    public void reservarRecurso(int id_usuario, int id_recurso, String inicio, String fin, boolean recurrente, String estado, String solicitud) {
-        reservaDAO.reservarRecurso(id_usuario, id_recurso, inicio, fin, recurrente, estado, solicitud);
     }
 }

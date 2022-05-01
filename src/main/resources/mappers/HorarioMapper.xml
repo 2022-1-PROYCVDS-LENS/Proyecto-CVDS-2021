@@ -7,9 +7,20 @@
 
     <resultMap type="Horario" id="HorarioResult">
         <id property="id" column="id_horario"/>
-        <result property="horario" column="horas"/>
+        <result property="id" column="id_recurso"/>
         <result property="estado" column="estado"/>
-        <association property="idRecurso" javaType="Recurso" resultMap="sampleprj.dao.dato.mybatis.mappers.RecursoMapper.RecursoResult"/>
+        <result property="hora_ini" column="hora_ini"/>
+        <result property="hora_fin" column="hora_fin"/>
+        <association property="idRecurso" javaType="Recurso" resultMap="persistence.mybatisimpl.mappers.RecursoMapper.RecursoResult"/>
     </resultMap>
+
+    <select id="consultarHorario" resultMap="HorarioResult">
+        select
+            hor.hora_ini,
+            hor.hora_fin
+        from public.horarios as hor
+        where (hor.estado = 'disponible') and (hor.id_recurso = #{element})
+        order by hor.hora_ini
+    </select>
 
 </mapper>
