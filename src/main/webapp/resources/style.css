@@ -1,5 +1,6 @@
 html,body {
     height: 100%;
+    background-color:#ffffff;
 }
 /*visibility: hidden;*/
 
@@ -8,6 +9,7 @@ body {
     background-attachment: fixed;
     background-size: cover;
     margin: 0;
+
 }
 
 #header{
@@ -29,7 +31,7 @@ body {
     color: white;
 }
 
-.text{
+.text,h1,h2,h3 {
     color:black;
     font-family:sans-serif;
 }
@@ -40,10 +42,55 @@ body {
     box-sizing: content-box;
     width: 40%;
     height: 40%;
-    background-color:#b8c3ff ;
+    background-color: #939dd9;
     position: relative;
     top: 20%;
     display:grid;
-    grid-template-rows:1fr 1fr 1fr;
+    grid-template-rows:auto;
+    border-radius: 20px;
+}
+
+.button {
+    color:#ffffff;
+    background-color:#990000;
+    width:50%;
+    height:50%;
+    font-size:120%;
+    margin: auto;
+}
+
+.menu {
+    margin: auto;
+    height: 100%;
+    width: 30%;
+}
+
+#agregarRecursosBox{
+    width: 40%;
+    height: 80%;
+    top: 5%;
+}
+
+.container{
+    margin :auto;
+    width: 80%;
+}
+
+#sub_box_container{
+    margin: auto;
+    box-sizing: content-box;
+    width: 40%;
+    background-color:#b8c3ff;
+    position: relative;
+    display:grid;
+    grid-template-rows:1fr 1fr 1fr 1fr;
     border-radius: 20px
 }
+
+.inputBox{
+    margin: auto;
+    width: 60%;
+    height: 60%;
+}
+
+

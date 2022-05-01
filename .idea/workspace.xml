@@ -4,15 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c751ae0c-3655-4d5a-a6d8-7691fd6b1546" name="Changes" comment="cambio consultas">
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
+    <list default="true" id="c751ae0c-3655-4d5a-a6d8-7691fd6b1546" name="Changes" comment="mejorando vistas">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_24_4_2022_20_26__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_24_4_2022_20_26__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24_04_2022_7_22_p__m___Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24_04_2022_7_22_p__m___Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_04_2022_1_18_p__m___Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_04_2022_1_18_p__m___Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/managedbeans/LoginBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/managedbeans/LoginBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/persistence/UsuarioDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/persistence/UsuarioDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/persistence/mybatisimpl/MyBATISUsuarioDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/persistence/mybatisimpl/MyBATISUsuarioDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/RecursosBiblioteca.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/RecursosBiblioteca.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/impl/RecursosBibliotecaImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/impl/RecursosBibliotecaImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/administrador.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/administrador.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/agregarRecurso.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/agregarRecurso.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/comunidad.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/comunidad.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/consultarHorarios.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/consultarHorarios.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/consultarRecurso.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/consultarRecurso.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/login.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/prueba.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/prueba.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/conf/logging.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/conf/logging.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/conf/tomcat-users.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/conf/tomcat-users.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/conf/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/conf/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2022-04-28" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,6 +113,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.LoginBean" />
@@ -160,6 +183,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="horarios" />
