@@ -5,14 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c751ae0c-3655-4d5a-a6d8-7691fd6b1546" name="Changes" comment="cambio consultas">
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_24_4_2022_20_26__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_24_4_2022_20_26__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24_04_2022_7_22_p__m___Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24_04_2022_7_22_p__m___Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_04_2022_1_18_p__m___Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_04_2022_1_18_p__m___Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/managedbeans/LoginBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/managedbeans/LoginBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/persistence/UsuarioDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/persistence/UsuarioDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/persistence/mybatisimpl/MyBATISUsuarioDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/persistence/mybatisimpl/MyBATISUsuarioDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entities/Reserva.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/Reserva.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/managedbeans/ConsultarRecursosBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/managedbeans/ConsultarRecursosBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/persistence/ReservaDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/persistence/ReservaDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/persistence/mybatisimpl/MyBATISReservaDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/persistence/mybatisimpl/MyBATISReservaDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/persistence/mybatisimpl/mappers/ReservaMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/persistence/mybatisimpl/mappers/ReservaMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/services/RecursosBiblioteca.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/RecursosBiblioteca.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/services/impl/RecursosBibliotecaImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/impl/RecursosBibliotecaImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/ReservaMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/ReservaMapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +46,13 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
+  </component>
+  <component name="GithubProjectSettings">
+    <option name="branchProtectionPatterns">
+      <list>
+        <option value="main" />
+      </list>
+    </option>
   </component>
   <component name="JpbToolWindowState">
     <option name="myId2FirstActivated">
@@ -160,6 +172,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="horarios" />

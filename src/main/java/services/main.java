@@ -4,6 +4,7 @@ package services;
 import entities.Horario;
 import entities.Recurso;
 import entities.TipoRecurso;
+import entities.Usuario;
 
 import java.util.List;
 
@@ -42,6 +43,15 @@ public class main {
 //            System.out.println(h.toString());
 //        }
 
+//        try {
+//            Usuario u = new Usuario(1,"estudiante","Esteban Torres",null,"esteban.torres@escuelaing.edu.co","12345e");
+//            List<Recurso> rec = instance.consultarRecursos();
+//            Recurso recurso = null;
+//            for(Recurso r:rec){
+//                if (r.getId() == 7)  recurso = r;
+//            }
+//            instance.reservarRecursos(u,recurso, );
+//        }
 
     }
 }

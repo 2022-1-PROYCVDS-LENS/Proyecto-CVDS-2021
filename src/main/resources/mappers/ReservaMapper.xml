@@ -19,8 +19,8 @@
     </resultMap>
 
     <insert parameterType="map" id="reservarRecurso">
-        insert into reservas(id, id_usuario, id_recurso, inicio, fin, recurrente, estado, solicitud)
-        values (nextval('reservas_id') #{id_usuario}, #{id_recurso}, #{inicio}, #{fin}, #{recurrente}, #{estado}, #{solicitud})
+        insert into reservas(id_reserva, id_usuario, id_recurso, inicio, fin, recurrente, estado, solicitud)
+        values (nextval('reservas_id') #{usuario.id}, #{recurso.id}, #{inicio}, #{fin}, #{recurrente}, #{estado}, #{solicitud})
     </insert>
 
 </mapper>

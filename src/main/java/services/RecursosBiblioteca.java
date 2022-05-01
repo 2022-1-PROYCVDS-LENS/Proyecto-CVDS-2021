@@ -2,6 +2,8 @@ package services;
 
 import entities.*;
 import entities.Usuario;
+
+import java.sql.Time;
 import java.util.List;
 
 public interface RecursosBiblioteca {
@@ -38,7 +40,7 @@ public interface RecursosBiblioteca {
 
     List<Recurso> consultarRecursosPorUbicacion(String ubi);
 
-
+    public abstract  void reservarRecursos(Usuario usuario, Recurso recurso, Time inicio, Time fin, boolean recurrente, String estado, String solicitud)throws ExceptionRecursosBiblioteca;
 
 
 }

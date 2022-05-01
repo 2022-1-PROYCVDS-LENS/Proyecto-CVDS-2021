@@ -1,9 +1,13 @@
 package persistence.mybatisimpl;
 
 import com.google.inject.Inject;
+import entities.Recurso;
 import entities.Reserva;
+import entities.Usuario;
 import persistence.ReservaDAO;
 import persistence.mybatisimpl.mappers.ReservaMapper;
+
+import java.sql.Time;
 
 public class MyBATISReservaDAO implements ReservaDAO {
     @Inject
@@ -20,7 +24,7 @@ public class MyBATISReservaDAO implements ReservaDAO {
     }
 
     @Override
-    public void reservarRecurso(int id_usuario, int id_recurso, String inicio, String fin, boolean recurrente, String estado, String solicitud) {
-        reservaMapper.reservarRecurso(id_usuario,id_recurso,inicio,fin,recurrente,estado,solicitud );
+    public void reservarRecurso(Usuario usuario, Recurso recurso, Time inicio, Time fin, boolean recurrente, String estado, String solicitud) {
+        reservaMapper.reservarRecurso(usuario,recurso,inicio,fin,recurrente,estado,solicitud );
     }
 }

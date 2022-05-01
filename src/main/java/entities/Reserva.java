@@ -26,4 +26,5 @@ public class Reserva implements Serializable {
     public String toString(){
         return "Reserva" + "id=" + id + "idUsuario=" + idUsuario + "idRecurso=" + idRecurso + "inicio=" + inicio + "fin=" + fin + "recurrente=" + recurrente+"estado=" + estado+"solicitud="+solicitud+"reservaRecurrentes=\n\t" + reservaRecurrentes + "usuarios=\n\t" + usuarios+"}";
     }
+
 }

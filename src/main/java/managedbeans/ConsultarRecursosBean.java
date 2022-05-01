@@ -3,6 +3,8 @@ package managedbeans;
 
 import com.google.inject.Inject;
 import entities.Recurso;
+import lombok.Getter;
+import lombok.Setter;
 import services.RecursosBiblioteca;
 
 import javax.faces.bean.ManagedBean;
@@ -21,57 +23,17 @@ public class ConsultarRecursosBean extends BasePageBean {
     @Inject
     private RecursosBiblioteca recursosBiblioteca;
 
-    List<Recurso> recursos;
-    Recurso recurso;
+    @Getter @Setter List<Recurso> recursos;
 
-    int tipo = -1;
-    int capacidad = -1;
-    String ubicacion = "";
+    @Getter @Setter int tipo = -1;
+    @Getter @Setter int capacidad = -1;
+    @Getter @Setter String ubicacion = "";
 
-    public Recurso getRecurso() {
-        return recurso;
-    }
-
-    public void setRecurso(Recurso recurso) {
-        this.recurso = recurso;
-    }
-
-    public int getTipo() {
-        return tipo;
-    }
-
-    public void setTipo(int tipo) {
-        this.tipo = tipo;
-    }
-
-    public int getCapacidad() {
-        return capacidad;
-    }
-
-    public void setCapacidad(int capacidad) {
-        this.capacidad = capacidad;
-    }
-
-    public String getUbicacion() {
-        return ubicacion;
-    }
-
-    public void setUbicacion(String ubicacion) {
-        this.ubicacion = ubicacion;
-    }
-
-    /**
-     * Retorna la lista de recursos del bean
-     * @return lista de recursos del bean
-     */
-    public List<Recurso> getRecursos() {
-        return recursos;
-    }
 
     /**
      * Guarda en los recursos del bean, todos los recursos disponibles
      */
-    public List<Recurso> filtrarLosRecursos(){
+    public void filtrarLosRecursos(){
         if (tipo != -1){
             recursos = recursosBiblioteca.consultarRecursosPorTipo(tipo);
         }
@@ -84,9 +46,7 @@ public class ConsultarRecursosBean extends BasePageBean {
         else {
             recursos = recursosBiblioteca.consultarRecursos();
         }
-        return recursos;
 
     }
-
 
 }
