@@ -3,6 +3,7 @@ package managedbeans;
 import java.io.IOException;
 import java.util.logging.Level;
 
+import javax.annotation.PostConstruct;
 import javax.faces.bean.SessionScoped;
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
@@ -17,21 +18,37 @@ import org.apache.shiro.authc.*;
 import org.apache.shiro.crypto.hash.Sha256Hash;
 import org.apache.shiro.subject.Subject;
 import org.slf4j.Logger;
-import services.ExceptionRecursosBiblioteca;
 import services.RecursosBiblioteca;
+import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.authc.*;
+import org.apache.shiro.config.IniSecurityManagerFactory;
+import org.apache.shiro.mgt.SecurityManager;
+import org.apache.shiro.session.Session;
+import org.apache.shiro.subject.Subject;
+import org.apache.shiro.util.Factory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 @SuppressWarnings("deprecation")
 @ManagedBean(name = "loginBean")
 @SessionScoped
-public class LoginBean extends BasePageBean{
+public class LoginBean extends BasePageBean {
 
-    private static final Logger log = LoggerFactory.getLogger(RecursosBiblioteca.class);
+    private static final Logger log = LoggerFactory.getLogger(LoginBean.class);
     private String usuario;
     private String contrasena;
     public boolean logeado = false;
 
     @Inject
     private RecursosBiblioteca rebi;
+
+    public void managerStarter(){
+        log.info("My First Apache Shiro Application");
+        Factory<SecurityManager> factory = new IniSecurityManagerFactory("classpath:shiro.ini");
+        SecurityManager securityManager = factory.getInstance();
+        SecurityUtils.setSecurityManager(securityManager);
+        System.exit(0);
+    }
 
     public void login() throws Exception{
         Subject usuarioActual = SecurityUtils.getSubject();

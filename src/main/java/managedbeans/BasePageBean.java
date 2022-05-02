@@ -27,7 +27,7 @@ public abstract class BasePageBean implements Serializable {
     }
 
     @PostConstruct
-    public void init() {
+    public void init() throws Exception {
         getInjector().injectMembers(this);
     }
 }
