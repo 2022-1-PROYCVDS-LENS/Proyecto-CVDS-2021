@@ -1,4 +1,0 @@
-0:0:0:0:0:0:0:1 - - [27/Apr/2022:16:58:10 -0500] "GET / HTTP/1.1" 200 11635 http-bio-8080-exec-1 2357
-0:0:0:0:0:0:0:1 - - [27/Apr/2022:16:58:20 -0500] "GET /recursosBiblioteca/agregarRecurso.xhtml HTTP/1.1" 500 3246 http-bio-8080-exec-4 47
-0:0:0:0:0:0:0:1 - - [27/Apr/2022:16:58:31 -0500] "GET /recursosBiblioteca/agregarRecurso.xhtml HTTP/1.1" 200 5482 http-bio-8080-exec-6 23
-0:0:0:0:0:0:0:1 - - [27/Apr/2022:17:43:59 -0500] "GET /recursosBiblioteca/agregarRecurso.xhtml HTTP/1.1" 200 5483 http-bio-8080-exec-9 40

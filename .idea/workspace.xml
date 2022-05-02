@@ -7,18 +7,47 @@
     <list default="true" id="c751ae0c-3655-4d5a-a6d8-7691fd6b1546" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_24_4_2022_20_26__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_24_4_2022_20_26__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24_04_2022_7_22_p__m___Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24_04_2022_7_22_p__m___Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_04_2022_1_18_p__m___Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_04_2022_1_18_p__m___Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/managedbeans/LoginBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/managedbeans/LoginBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/administrador.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/administrador.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/agregarRecurso.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/agregarRecurso.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/comunidad.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/comunidad.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entities/Reserva.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/Reserva.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/persistence/ReservaDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/persistence/ReservaDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/persistence/mybatisimpl/MyBATISReservaDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/persistence/mybatisimpl/MyBATISReservaDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/persistence/mybatisimpl/mappers/ReservaMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/persistence/mybatisimpl/mappers/ReservaMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/RecursosBiblioteca.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/RecursosBiblioteca.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/impl/RecursosBibliotecaImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/impl/RecursosBibliotecaImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/ReservaMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/ReservaMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/prueba.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/prueba.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/RecursosBiblioteca/WEB-INF/classes/config.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/RecursosBiblioteca/WEB-INF/classes/mappers/HorarioMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/RecursosBiblioteca/WEB-INF/classes/mappers/RecursoMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/RecursosBiblioteca/WEB-INF/classes/mappers/ReservaMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/RecursosBiblioteca/WEB-INF/classes/mappers/ReservaRecurrenteMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/RecursosBiblioteca/WEB-INF/classes/mappers/TipoRecursoMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/RecursosBiblioteca/WEB-INF/classes/mappers/UsuarioMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/RecursosBiblioteca/WEB-INF/classes/mybatis-config.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/RecursosBiblioteca/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/RecursosBiblioteca/consultarRecurso.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/RecursosBiblioteca/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/RecursosBiblioteca/index.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/RecursosBiblioteca/registrarRecursos.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/RecursosBiblioteca/resources/imagenes/derecho.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/RecursosBiblioteca/resources/imagenes/eci.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/RecursosBiblioteca/resources/imagenes/escuela-colombiana-de-ingenier-a-julio-garavito-002155_large.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/RecursosBiblioteca/resources/imagenes/fondoconsulta.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/RecursosBiblioteca/resources/imagenes/izquierdo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mappers/ReservaMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mappers/ReservaMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/conf/logging.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/conf/logging.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/conf/tomcat-users.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/conf/tomcat-users.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/conf/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/conf/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2022-04-26" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/logs/access_log.2022-04-26" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2022-04-16" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2022-04-18" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2022-04-19" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2022-04-26" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2022-04-27" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/SESSIONS.ser" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,6 +98,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="Git.Branch.Popup.ShowAllRemotes" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -82,7 +112,7 @@
       <recent name="E:\Documentos\Documentos E\7mo semestre\CVDS\Proyecto-CVDS-2021\src\main\webapp" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.LoginBean">
+  <component name="RunManager" selected="Application.main">
     <configuration name="LoginBean" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="managedbeans.LoginBean" />
       <module name="Proyecto-CVDS-2021" />
@@ -111,8 +141,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.LoginBean" />
         <item itemvalue="Application.main" />
+        <item itemvalue="Application.LoginBean" />
       </list>
     </recent_temporary>
   </component>

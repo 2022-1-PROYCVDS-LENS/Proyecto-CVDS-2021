@@ -35,6 +35,8 @@ public interface RecursosBiblioteca {
 
     List<Recurso> consultarRecursosPorUbicacion(String ubi);
 
+    List<Reserva> consultarReservas();
+
 
 
 

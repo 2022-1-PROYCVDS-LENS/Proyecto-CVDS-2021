@@ -5,6 +5,8 @@ import entities.Reserva;
 import persistence.ReservaDAO;
 import persistence.mybatisimpl.mappers.ReservaMapper;
 
+import java.util.List;
+
 public class MyBATISReservaDAO implements ReservaDAO {
     @Inject
     private ReservaMapper reservaMapper;
@@ -17,5 +19,10 @@ public class MyBATISReservaDAO implements ReservaDAO {
     @Override
     public Reserva load(int id) {
         return null;
+    }
+
+    @Override
+    public List<Reserva> consultarReservas(){
+        return reservaMapper.consultarReservas();
     }
 }

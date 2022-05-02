@@ -12,10 +12,18 @@
         <result property="recurrente" column="recurrente"/>
         <result property="estado" column="estado"/>
         <result property="solicitud" column="solicitud"/>
-        <association property="recurso" javaType="Recurso" resultMap="sampleprj.dao.dato.mybatis.mappers.RecursoMapper.RecursoResult.RecursoResult"/>
-        <association property="usuario" javaType="Usuario" resultMap="sampleprj.dao.dato.mybatis.mappers.UsuarioMapper.UsuarioResult.UsuarioResult"/>
-        <collection property="reservaRecurrentes" ofType="ReservaRecurrente" resultMap="persistence.mybatisimpl.mappers.ReservaRecurrenteMapper.TipoRecursoResult"/>
-        <collection property="usuarios" ofType="Usuario" resultMap="sampleprj.dao.dato.mybatis.mappers.UsuarioMapper.UsuarioResult.UsuarioResult"/>
+        <association property="idRecurso" javaType="Recurso" resultMap="persistence.mybatisimpl.mappers.RecursoMapper.RecursoResult"/>
+        <association property="idUsuario" javaType="Usuario" resultMap="persistence.mybatisimpl.mappers.UsuarioMapper.UsuarioResult"/>
+<!--        <collection property="reservaRecurrentes" ofType="ReservaRecurrente" resultMap="persistence.mybatisimpl.mappers.ReservaRecurrenteMapper.TipoRecursoResult"/>-->
+<!--        <collection property="usuarios" ofType="Usuario" resultMap="sampleprj.dao.dato.mybatis.mappers.UsuarioMapper.UsuarioResult.UsuarioResult"/>-->
     </resultMap>
+
+    <select id="consultarReservas" resultMap="ReservaResult">
+        select
+        res.inicio,
+        res.fin
+        from public.reservas as res
+        where res.id_reserva = 4;
+    </select>
 
 </mapper>

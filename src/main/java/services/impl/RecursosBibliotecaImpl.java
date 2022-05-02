@@ -134,4 +134,9 @@ public class RecursosBibliotecaImpl implements RecursosBiblioteca {
     public List<Recurso> consultarRecursosPorUbicacion(String ubi) {
         return recursoDAO.consultarRecursosPorUbicacion(ubi);
     }
+
+    @Override
+    public List<Reserva> consultarReservas(){
+        return reservaDAO.consultarReservas();
+    }
 }
