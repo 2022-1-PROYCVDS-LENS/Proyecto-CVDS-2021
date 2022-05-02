@@ -3,14 +3,12 @@ package managedbeans;
 
 import com.google.inject.Inject;
 import entities.Recurso;
-import lombok.Getter;
-import lombok.Setter;
 import services.RecursosBiblioteca;
-
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 import java.io.Serializable;
 import java.util.List;
+import java.util.Locale;
 
 /**
  * Bean para la interfaz de usuario de la consulta de recursos
@@ -23,26 +21,77 @@ public class ConsultarRecursosBean extends BasePageBean {
     @Inject
     private RecursosBiblioteca recursosBiblioteca;
 
-    @Getter @Setter List<Recurso> recursos;
+    List<Recurso> recursos;
+    int tipo = -1;
+    int capacidad = -1;
+    String ubicacion = "";
 
-    @Getter @Setter int tipo = -1;
-    @Getter @Setter int capacidad = -1;
-    @Getter @Setter String ubicacion = "";
+    public int getTipo() {
+        return tipo;
+    }
 
+    public void setTipo(int tipo) {
+        this.tipo = tipo;
+    }
+
+    public int getCapacidad() {
+        return capacidad;
+    }
+
+    public void setCapacidad(int capacidad) {
+        this.capacidad = capacidad;
+    }
+
+    public String getUbicacion() {
+        return ubicacion;
+    }
+
+    public void setUbicacion(String ubicacion) {
+        this.ubicacion = ubicacion.toLowerCase();
+        this.ubicacion = ubicacion;
+    }
 
     /**
-     * Guarda en los recursos del bean, todos los recursos disponibles
+     * Retorna la lista de recursos del bean
+     * @return lista de recursos del bean
+     */
+    public List<Recurso> getRecursos() {
+        return recursos;
+    }
+
+    /**
+     * Guarda en los recursos del bean, los recursos indicados según el filtro
      */
     public void filtrarLosRecursos(){
-        if (tipo != -1){
+        //Si todos los elementos de filtro estan definidos buscamos por todas las caracteristicas
+        if(tipo!=-1 && capacidad != -1 && !ubicacion.equals("")){
+            recursos = recursosBiblioteca.consultarRecursosPorTipoCapacidadUbicacion(tipo,capacidad,ubicacion);
+        }
+        //Filtramos por tipo y capacidad
+        else if(tipo != -1 && capacidad !=-1){
+            recursos = recursosBiblioteca.consultarRecursosPorTipoYCapacidad(tipo,capacidad);
+        }
+        //Filtramos por tipo y ubicacion
+        else if(tipo != -1 && !ubicacion.equals("")){
+            recursos = recursosBiblioteca.consultarRecursosPorTipoYUbicacion(tipo,ubicacion);
+        }
+        //Filtramos por ubicacion y capacidad
+        else if(!ubicacion.equals("") && capacidad!=-1){
+            recursos = recursosBiblioteca.consultarRecursosPorUbicacionYCapacidad(ubicacion,capacidad);
+        }
+        //Filtramos por tipo
+        else if (tipo != -1){
             recursos = recursosBiblioteca.consultarRecursosPorTipo(tipo);
         }
+        //Filtramos por capacidad
         else if (capacidad != -1){
             recursos = recursosBiblioteca.consultarRecursosPorCapacidad(capacidad);
         }
+        //Filtramos por ubicacion
         else if (!ubicacion.equals("")){
             recursos = recursosBiblioteca.consultarRecursosPorUbicacion(ubicacion);
         }
+        //En caso de que no se incluya ningun filtro buscamos todos los recursos
         else {
             recursos = recursosBiblioteca.consultarRecursos();
         }
