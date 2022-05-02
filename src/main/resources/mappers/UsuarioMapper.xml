@@ -10,6 +10,14 @@
         <result property="tipoUsuario" column="tipo"/>
         <result property="nombre" column="nombre"/>
         <result property="programa" column="programa"/>
+        <result property="correo" column="correo"/>
+        <result property="contrasena" column="contraseña"/>
     </resultMap>
+
+    <select parameterType="map" id="buscarUsuarioxCorreo" resultMap="UsuarioResult">
+        select
+        u.nombre
+        from usuarios as u where u.correo = #{Correo};
+    </select>
 
 </mapper>

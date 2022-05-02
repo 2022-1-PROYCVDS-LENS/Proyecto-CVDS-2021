@@ -1,16 +1,19 @@
 package services;
 
 import entities.*;
-
+import entities.Usuario;
 import java.util.List;
 
 public interface RecursosBiblioteca {
-    public abstract Horario consultarHorario(int id);
+
+    public Usuario buscarUsuario(String correo) throws ExceptionRecursosBiblioteca;
+
+    List<Horario> consultarHorario(int id) throws ExceptionRecursosBiblioteca;
     public abstract  void registratHorario(//Parametros de gorario);
     );
     public abstract void registrarHorario(Horario h);
     public abstract Recurso consultarRecurso(int id);
-    public abstract  void registrarRecurso(String nombre, String ubicacion, TipoRecurso tipo, int capacidad);
+    public abstract  void registrarRecurso(String nombre, String habilitado, String ubicacion, int ejemplar, TipoRecurso tipo, int capacidad) throws ExceptionRecursosBiblioteca;
 
     public abstract void registrarRegusrso(Recurso r);
     public abstract List<Recurso> consultarRecursos();
@@ -34,4 +37,14 @@ public interface RecursosBiblioteca {
     List<Recurso> consultarRecursosPorCapacidad(int i);
 
     List<Recurso> consultarRecursosPorUbicacion(String ubi);
+
+
+
+    List<Recurso> consultarRecursosPorTipoCapacidadUbicacion(int tipo, int capacidad, String ubicacion);
+
+    List<Recurso> consultarRecursosPorTipoYCapacidad(int tipo, int capacidad);
+
+    List<Recurso> consultarRecursosPorTipoYUbicacion(int tipo, String ubicacion);
+
+    List<Recurso> consultarRecursosPorUbicacionYCapacidad(String ubicacion, int capacidad);
 }

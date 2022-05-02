@@ -62,35 +62,35 @@
         <!--                Insertar aca lista de recursos-->
         <div style="text-align: center;">
           <p:dataTable id="tabla" value="#{consultarRecursosBean.recursos}" var = "recurso" border = "4" style ="background-color:#ebeff4;" >
-          <p:column style = "border: 1px solid black; border-collapse: collapse; width:60% ; padding-left: 30px;padding-right: 30px; background-color:#cce6ff" >
-            <f:facet name = "header">
-              <h:outputText value="Nombre" style="background-color:#990000; color:#ffffff; font-size:120%;"/>
-            </f:facet>
-            <!--                        {recurso.nombre}-->
-            <h:outputText value = "#{recurso.nombre}"/>
-          </p:column>
-          <p:column style = "border: 1px solid black; border-collapse: collapse; width:40%; padding-left: 8px; padding-right: 8px">
-            <f:facet name = "header">
-              <h:outputText value="Tipo" style="background-color:#990000; color:#ffffff; font-size:120%"/>
-            </f:facet>
-            <!--                        {recurso.tipo}-->
-            <h:outputText value = "#{recurso.tipo.getNombre()}"/>
-          </p:column>
-          <p:column style = "border: 1px solid black; border-collapse: collapse; width:40% ; padding-left: 5px; padding-right: 5px ; background-color:#cce6ff">
-            <f:facet name = "header">
-              <h:outputText value="Capacidad" style="background-color:#990000; color:#ffffff; font-size:120%"/>
-            </f:facet>
-            <!--                        {recurso.capacidad}-->
-            <h:outputText value = "#{recurso.capacidad}"/>
-          </p:column>
-          <p:column style = "border: 1px solid black; border-collapse: collapse; width:40% ; padding-left: 15px ; padding-right: 15px">
-            <f:facet name = "header" >
-              <h:outputText value="Ubicación" style="background-color:#990000; color:#ffffff; font-size:120%"/>
-            </f:facet>
-            <!--                        {recurso.ubicacion}-->
-            <h:outputText value = "#{recurso.ubicacion}"/>
-          </p:column >
-        </p:dataTable>
+            <p:column style = "border: 1px solid black; border-collapse: collapse; width:60% ; padding-left: 30px;padding-right: 30px; background-color:#cce6ff" >
+              <f:facet name = "header">
+                <h:outputText value="Nombre" style="background-color:#990000; color:#ffffff; font-size:120%;"/>
+              </f:facet>
+              <!--                        {recurso.nombre}-->
+              <h:outputText value = "#{recurso.nombre}"/>
+            </p:column>
+            <p:column style = "border: 1px solid black; border-collapse: collapse; width:40%; padding-left: 8px; padding-right: 8px">
+              <f:facet name = "header">
+                <h:outputText value="Tipo" style="background-color:#990000; color:#ffffff; font-size:120%"/>
+              </f:facet>
+              <!--                        {recurso.tipo}-->
+              <h:outputText value = "#{recurso.tipo.getNombre()}"/>
+            </p:column>
+            <p:column style = "border: 1px solid black; border-collapse: collapse; width:40% ; padding-left: 5px; padding-right: 5px ; background-color:#cce6ff">
+              <f:facet name = "header">
+                <h:outputText value="Capacidad" style="background-color:#990000; color:#ffffff; font-size:120%"/>
+              </f:facet>
+              <!--                        {recurso.capacidad}-->
+              <h:outputText value = "#{recurso.capacidad}"/>
+            </p:column>
+            <p:column style = "border: 1px solid black; border-collapse: collapse; width:40% ; padding-left: 15px ; padding-right: 15px">
+              <f:facet name = "header" >
+                <h:outputText value="Ubicación" style="background-color:#990000; color:#ffffff; font-size:120%"/>
+              </f:facet>
+              <!--                        {recurso.ubicacion}-->
+              <h:outputText value = "#{recurso.ubicacion}"/>
+            </p:column >
+          </p:dataTable>
         </div>
 
       </div>

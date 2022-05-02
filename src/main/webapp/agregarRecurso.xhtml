@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>
+            <ui:insert name="title">Recursos biblioteca</ui:insert>
+        </title>
+        <link href="./resources/style.css" rel="stylesheet"/>
+    </h:head>
+
+    <h:body>
+
+        <div id = "header" >
+            <h:graphicImage id="header_logo" library="imagenes" name="logo-ecijg.width-380.png"/>
+            <h:outputText id = "header_text" class = "text" value = "Escuela Colombiana de ingieneria Julio Garavito: Recursos de biblioteca"/>
+        </div>
+
+        <div class = "box_container" id="agregarRecursosBox">
+            <h:form><h:commandButton value="Atras" action="administrador?recursosBiblioteca-redirect = true" class="button"/></h:form>
+            <h2>Agregar un nuevo recurso</h2>
+            <h3>Nombre</h3>
+            <h:form><p:inputText id= "nombre" type="String" value="#{registrarRecursosBean.nombre}"  class="form-control" /></h:form>
+            <h3>Habilitado</h3>
+            <h:form><h:selectOneMenu value="#{registrarRecursosBean.habilitado}" class="form-control" styleClass="menu">
+                <f:selectItem itemLabel="Seleccione estado" itemValue="-1"/>
+                <f:selectItem itemValue="habilitado" itemLabel="habilitado" />
+                <f:selectItem itemValue="dañado" itemLabel="dañado" />
+            </h:selectOneMenu></h:form>
+            <h3>Tipo</h3>
+            <h:form><p:inputText id= "tipo" type="String" value="#{registrarRecursosBean.tipo}"   class="form-control" /></h:form>
+            <h3>Capacidad</h3>
+            <h:form><p:inputText id= "capacidad" type="int"  value="#{registrarRecursosBean.capacidad}"  class="form-control" /></h:form>
+            <h3>Ubicación</h3>
+            <h:form><p:inputText id= "ubicacion" type="String" value="#{registrarRecursosBean.ubicacion}"   class="form-control" /></h:form>
+            <h3>Ejemplares</h3>
+            <h:form><p:inputText id= "ejemplar" type="int" value="#{registrarRecursosBean.ejemplar}"   class="form-control" /></h:form>
+            <h:commandButton value="Registrar" actionListener="#{registrarRecursosBean.registrar}" class="button" />
+        </div>
+
+    </h:body>
+
+</html>

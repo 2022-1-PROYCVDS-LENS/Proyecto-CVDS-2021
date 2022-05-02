@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!--
+xhtml de la pagina principal de recursos biblioteca en donde se redireccionara a las distintas paginas
+-->
+<html
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+  <h:head>
+    <title>
+      <ui:insert name="title">Recursos biblioteca</ui:insert>
+    </title>
+    <link href="./resources/style.css" rel="stylesheet"/>
+  </h:head>
+
+  <h:body>
+    <div id = "header" >
+      <h:graphicImage id="header_logo" library="imagenes" name="logo-ecijg.width-380.png"/>
+      <h:outputText id = "header_text" class = "text" value = "Escuela Colombiana de ingieneria Julio Garavito: Recursos de biblioteca"/>
+    </div>
+    <div class = "box_container">
+        <div id = "sub_box_container" >
+            <div><h3>Iniciar sesión</h3></div>
+            <div>
+              <p:inputText id="usuario_nombre" placeholder="Usuario" value="#{loginBean.usuario}"></p:inputText>
+              <p:watermark for="usuario_nombre" value="example@mail.com"></p:watermark>
+            </div>
+            <div>
+              <p:inputText placeholder="Contraseña" type="password" value="#{loginBean.contrasena}"></p:inputText>
+            </div>
+            <div><p:commandButton value="Ingresar" class="button" action="#{loginBean.login}"/></div>
+        </div>
+    </div>
+  </h:body>
+
+
+</html>
