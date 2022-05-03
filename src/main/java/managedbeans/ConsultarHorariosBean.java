@@ -29,12 +29,13 @@ public class ConsultarHorariosBean extends BasePageBean {
     private RecursosBiblioteca recursosBiblioteca;
 
     public List<Horario> consultarHorario(int id) throws ExceptionRecursosBiblioteca {
-        try {
-            horarios = recursosBiblioteca.consultarHorario(id);
-            return horarios;
-        } catch (Exception e) {
-            FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR,"Error ",e.getMessage()));
-        }
+        horarios = recursosBiblioteca.consultarHorario(id);
+//        try {
+//            horarios = recursosBiblioteca.consultarHorario(id);
+//            return horarios;
+//        } catch (Exception e) {
+//            FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR,"Error ",e.getMessage()));
+//        }
         return horarios;
     }
 }

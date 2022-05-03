@@ -12,7 +12,7 @@ import java.util.Date;
 import java.util.List;
 
 public class main {
-    public static  void main(String[] args){
+    public static  void main(String[] args) throws ExceptionRecursosBiblioteca {
         RecursosBiblioteca instance = RecursosBibliotecaFactory.getInstance().getRecursosBiblioteca();
 //        System.out.println(instance.consultarCliente(2165711).toString());
 //        try{
@@ -40,15 +40,15 @@ public class main {
 //        for(Recurso r: recursos){
 //            System.out.println(r.toString());
 //        }
-//        System.out.println("prueba horarios");
-//        List<Horario> horarios = instance.consultarHorario(3);
-//        for(Horario h: horarios){
-//            System.out.println(h.toString());
-//        }
-        List<Reserva> reservas = instance.consultarReservas();
-        for (Reserva r : reservas){
-            System.out.println(r.toString());
+        System.out.println("prueba horarios");
+        List<Horario> horarios = instance.consultarHorario(3);
+        for(Horario h: horarios){
+            System.out.println(h.toString());
         }
+//        List<Reserva> reservas = instance.consultarReservas();
+//        for (Reserva r : reservas){
+//            System.out.println(r.toString());
+//        }
 //        Date in = new Date();
 //        LocalDateTime ldt = LocalDateTime.ofInstant(in.toInstant(), ZoneId.systemDefault());
 //        Date out = Date.from(ldt.atZone(ZoneId.systemDefault()).toInstant());

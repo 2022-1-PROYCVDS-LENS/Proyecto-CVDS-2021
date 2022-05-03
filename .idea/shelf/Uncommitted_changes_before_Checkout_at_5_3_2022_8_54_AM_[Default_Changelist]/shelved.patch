@@ -1,0 +1,89 @@
+Index: target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>E:\\Documentos\\Documentos E\\7mo semestre\\CVDS\\proyecto\\Proyecto-CVDS-2021\\src\\main\\java\\persistence\\mybatisimpl\\mappers\\ReservaRecurrenteMapper.java\r\nE:\\Documentos\\Documentos E\\7mo semestre\\CVDS\\proyecto\\Proyecto-CVDS-2021\\src\\main\\java\\entities\\ReservaRecurrente.java\r\nE:\\Documentos\\Documentos E\\7mo semestre\\CVDS\\proyecto\\Proyecto-CVDS-2021\\src\\main\\java\\persistence\\mybatisimpl\\mappers\\TipoRecursoMapper.java\r\nE:\\Documentos\\Documentos E\\7mo semestre\\CVDS\\proyecto\\Proyecto-CVDS-2021\\src\\main\\java\\managedbeans\\BasePageBean.java\r\nE:\\Documentos\\Documentos E\\7mo semestre\\CVDS\\proyecto\\Proyecto-CVDS-2021\\src\\main\\java\\services\\impl\\RecursosBibliotecaImpl.java\r\nE:\\Documentos\\Documentos E\\7mo semestre\\CVDS\\proyecto\\Proyecto-CVDS-2021\\src\\main\\java\\exceptions\\recursosBibliotecaException.java\r\nE:\\Documentos\\Documentos E\\7mo semestre\\CVDS\\proyecto\\Proyecto-CVDS-2021\\src\\main\\java\\services\\RecursosBiblioteca.java\r\nE:\\Documentos\\Documentos E\\7mo semestre\\CVDS\\proyecto\\Proyecto-CVDS-2021\\src\\main\\java\\persistence\\RecursoDAO.java\r\nE:\\Documentos\\Documentos E\\7mo semestre\\CVDS\\proyecto\\Proyecto-CVDS-2021\\src\\main\\java\\services\\RecursosBibliotecaFactory.java\r\nE:\\Documentos\\Documentos E\\7mo semestre\\CVDS\\proyecto\\Proyecto-CVDS-2021\\src\\main\\java\\persistence\\ReservaDAO.java\r\nE:\\Documentos\\Documentos E\\7mo semestre\\CVDS\\proyecto\\Proyecto-CVDS-2021\\src\\main\\java\\persistence\\TipoRecursoDAO.java\r\nE:\\Documentos\\Documentos E\\7mo semestre\\CVDS\\proyecto\\Proyecto-CVDS-2021\\src\\main\\java\\entities\\TipoRecurso.java\r\nE:\\Documentos\\Documentos E\\7mo semestre\\CVDS\\proyecto\\Proyecto-CVDS-2021\\src\\main\\java\\persistence\\mybatisimpl\\MyBATISHorarioDAO.java\r\nE:\\Documentos\\Documentos E\\7mo semestre\\CVDS\\proyecto\\Proyecto-CVDS-2021\\src\\main\\java\\managedbeans\\ReservarRecursoBean.java\r\nE:\\Documentos\\Documentos E\\7mo semestre\\CVDS\\proyecto\\Proyecto-CVDS-2021\\src\\main\\java\\persistence\\mybatisimpl\\MyBATISReservaRecurrenteDAO.java\r\nE:\\Documentos\\Documentos E\\7mo semestre\\CVDS\\proyecto\\Proyecto-CVDS-2021\\src\\main\\java\\services\\ExceptionRecursosBiblioteca.java\r\nE:\\Documentos\\Documentos E\\7mo semestre\\CVDS\\proyecto\\Proyecto-CVDS-2021\\src\\main\\java\\persistence\\ReservaRecurrenteDAO.java\r\nE:\\Documentos\\Documentos E\\7mo semestre\\CVDS\\proyecto\\Proyecto-CVDS-2021\\src\\main\\java\\persistence\\mybatisimpl\\mappers\\UsuarioMapper.java\r\nE:\\Documentos\\Documentos E\\7mo semestre\\CVDS\\proyecto\\Proyecto-CVDS-2021\\src\\main\\java\\entities\\Usuario.java\r\nE:\\Documentos\\Documentos E\\7mo semestre\\CVDS\\proyecto\\Proyecto-CVDS-2021\\src\\main\\java\\entities\\Horario.java\r\nE:\\Documentos\\Documentos E\\7mo semestre\\CVDS\\proyecto\\Proyecto-CVDS-2021\\src\\main\\java\\entities\\Reserva.java\r\nE:\\Documentos\\Documentos E\\7mo semestre\\CVDS\\proyecto\\Proyecto-CVDS-2021\\src\\main\\java\\persistence\\mybatisimpl\\MyBATISRecursoDAO.java\r\nE:\\Documentos\\Documentos E\\7mo semestre\\CVDS\\proyecto\\Proyecto-CVDS-2021\\src\\main\\java\\persistence\\mybatisimpl\\MyBATISUsuarioDAO.java\r\nE:\\Documentos\\Documentos E\\7mo semestre\\CVDS\\proyecto\\Proyecto-CVDS-2021\\src\\main\\java\\persistence\\mybatisimpl\\mappers\\RecursoMapper.java\r\nE:\\Documentos\\Documentos E\\7mo semestre\\CVDS\\proyecto\\Proyecto-CVDS-2021\\src\\main\\java\\persistence\\mybatisimpl\\mappers\\ReservaMapper.java\r\nE:\\Documentos\\Documentos E\\7mo semestre\\CVDS\\proyecto\\Proyecto-CVDS-2021\\src\\main\\java\\services\\main.java\r\nE:\\Documentos\\Documentos E\\7mo semestre\\CVDS\\proyecto\\Proyecto-CVDS-2021\\src\\main\\java\\persistence\\mybatisimpl\\MyBATISReservaDAO.java\r\nE:\\Documentos\\Documentos E\\7mo semestre\\CVDS\\proyecto\\Proyecto-CVDS-2021\\src\\main\\java\\security\\OnlyNotAutenticate.java\r\nE:\\Documentos\\Documentos E\\7mo semestre\\CVDS\\proyecto\\Proyecto-CVDS-2021\\src\\main\\java\\entities\\Recurso.java\r\nE:\\Documentos\\Documentos E\\7mo semestre\\CVDS\\proyecto\\Proyecto-CVDS-2021\\src\\main\\java\\persistence\\mybatisimpl\\mappers\\HorarioMapper.java\r\nE:\\Documentos\\Documentos E\\7mo semestre\\CVDS\\proyecto\\Proyecto-CVDS-2021\\src\\main\\java\\guice\\GuiceContextListener.java\r\nE:\\Documentos\\Documentos E\\7mo semestre\\CVDS\\proyecto\\Proyecto-CVDS-2021\\src\\main\\java\\persistence\\HorarioDAO.java\r\nE:\\Documentos\\Documentos E\\7mo semestre\\CVDS\\proyecto\\Proyecto-CVDS-2021\\src\\main\\java\\managedbeans\\RegistrarRecursosBean.java\r\nE:\\Documentos\\Documentos E\\7mo semestre\\CVDS\\proyecto\\Proyecto-CVDS-2021\\src\\main\\java\\persistence\\UsuarioDAO.java\r\nE:\\Documentos\\Documentos E\\7mo semestre\\CVDS\\proyecto\\Proyecto-CVDS-2021\\src\\main\\java\\managedbeans\\ConsultarHorariosBean.java\r\nE:\\Documentos\\Documentos E\\7mo semestre\\CVDS\\proyecto\\Proyecto-CVDS-2021\\src\\main\\java\\managedbeans\\ConsultarRecursosBean.java\r\nE:\\Documentos\\Documentos E\\7mo semestre\\CVDS\\proyecto\\Proyecto-CVDS-2021\\src\\main\\java\\persistence\\mybatisimpl\\MyBATISTipoRecursoDAO.java\r\nE:\\Documentos\\Documentos E\\7mo semestre\\CVDS\\proyecto\\Proyecto-CVDS-2021\\src\\main\\java\\managedbeans\\LoginBean.java\r\nE:\\Documentos\\Documentos E\\7mo semestre\\CVDS\\proyecto\\Proyecto-CVDS-2021\\src\\main\\java\\test\\bibliotecaTest.java\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst b/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
+--- a/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst	(revision 899be7e06e455aa4f83af88796740b9556b3204d)
++++ b/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst	(date 1651585911720)
+@@ -1,39 +1,39 @@
+-E:\Documentos\Documentos E\7mo semestre\CVDS\proyecto\Proyecto-CVDS-2021\src\main\java\persistence\mybatisimpl\mappers\ReservaRecurrenteMapper.java
+-E:\Documentos\Documentos E\7mo semestre\CVDS\proyecto\Proyecto-CVDS-2021\src\main\java\entities\ReservaRecurrente.java
+-E:\Documentos\Documentos E\7mo semestre\CVDS\proyecto\Proyecto-CVDS-2021\src\main\java\persistence\mybatisimpl\mappers\TipoRecursoMapper.java
+-E:\Documentos\Documentos E\7mo semestre\CVDS\proyecto\Proyecto-CVDS-2021\src\main\java\managedbeans\BasePageBean.java
+-E:\Documentos\Documentos E\7mo semestre\CVDS\proyecto\Proyecto-CVDS-2021\src\main\java\services\impl\RecursosBibliotecaImpl.java
+-E:\Documentos\Documentos E\7mo semestre\CVDS\proyecto\Proyecto-CVDS-2021\src\main\java\exceptions\recursosBibliotecaException.java
+-E:\Documentos\Documentos E\7mo semestre\CVDS\proyecto\Proyecto-CVDS-2021\src\main\java\services\RecursosBiblioteca.java
+-E:\Documentos\Documentos E\7mo semestre\CVDS\proyecto\Proyecto-CVDS-2021\src\main\java\persistence\RecursoDAO.java
+-E:\Documentos\Documentos E\7mo semestre\CVDS\proyecto\Proyecto-CVDS-2021\src\main\java\services\RecursosBibliotecaFactory.java
+-E:\Documentos\Documentos E\7mo semestre\CVDS\proyecto\Proyecto-CVDS-2021\src\main\java\persistence\ReservaDAO.java
+-E:\Documentos\Documentos E\7mo semestre\CVDS\proyecto\Proyecto-CVDS-2021\src\main\java\persistence\TipoRecursoDAO.java
+-E:\Documentos\Documentos E\7mo semestre\CVDS\proyecto\Proyecto-CVDS-2021\src\main\java\entities\TipoRecurso.java
+-E:\Documentos\Documentos E\7mo semestre\CVDS\proyecto\Proyecto-CVDS-2021\src\main\java\persistence\mybatisimpl\MyBATISHorarioDAO.java
+-E:\Documentos\Documentos E\7mo semestre\CVDS\proyecto\Proyecto-CVDS-2021\src\main\java\managedbeans\ReservarRecursoBean.java
+-E:\Documentos\Documentos E\7mo semestre\CVDS\proyecto\Proyecto-CVDS-2021\src\main\java\persistence\mybatisimpl\MyBATISReservaRecurrenteDAO.java
+-E:\Documentos\Documentos E\7mo semestre\CVDS\proyecto\Proyecto-CVDS-2021\src\main\java\services\ExceptionRecursosBiblioteca.java
+-E:\Documentos\Documentos E\7mo semestre\CVDS\proyecto\Proyecto-CVDS-2021\src\main\java\persistence\ReservaRecurrenteDAO.java
+-E:\Documentos\Documentos E\7mo semestre\CVDS\proyecto\Proyecto-CVDS-2021\src\main\java\persistence\mybatisimpl\mappers\UsuarioMapper.java
+-E:\Documentos\Documentos E\7mo semestre\CVDS\proyecto\Proyecto-CVDS-2021\src\main\java\entities\Usuario.java
+-E:\Documentos\Documentos E\7mo semestre\CVDS\proyecto\Proyecto-CVDS-2021\src\main\java\entities\Horario.java
+-E:\Documentos\Documentos E\7mo semestre\CVDS\proyecto\Proyecto-CVDS-2021\src\main\java\entities\Reserva.java
+-E:\Documentos\Documentos E\7mo semestre\CVDS\proyecto\Proyecto-CVDS-2021\src\main\java\persistence\mybatisimpl\MyBATISRecursoDAO.java
+-E:\Documentos\Documentos E\7mo semestre\CVDS\proyecto\Proyecto-CVDS-2021\src\main\java\persistence\mybatisimpl\MyBATISUsuarioDAO.java
+-E:\Documentos\Documentos E\7mo semestre\CVDS\proyecto\Proyecto-CVDS-2021\src\main\java\persistence\mybatisimpl\mappers\RecursoMapper.java
+-E:\Documentos\Documentos E\7mo semestre\CVDS\proyecto\Proyecto-CVDS-2021\src\main\java\persistence\mybatisimpl\mappers\ReservaMapper.java
+-E:\Documentos\Documentos E\7mo semestre\CVDS\proyecto\Proyecto-CVDS-2021\src\main\java\services\main.java
+-E:\Documentos\Documentos E\7mo semestre\CVDS\proyecto\Proyecto-CVDS-2021\src\main\java\persistence\mybatisimpl\MyBATISReservaDAO.java
+-E:\Documentos\Documentos E\7mo semestre\CVDS\proyecto\Proyecto-CVDS-2021\src\main\java\security\OnlyNotAutenticate.java
+-E:\Documentos\Documentos E\7mo semestre\CVDS\proyecto\Proyecto-CVDS-2021\src\main\java\entities\Recurso.java
+-E:\Documentos\Documentos E\7mo semestre\CVDS\proyecto\Proyecto-CVDS-2021\src\main\java\persistence\mybatisimpl\mappers\HorarioMapper.java
+-E:\Documentos\Documentos E\7mo semestre\CVDS\proyecto\Proyecto-CVDS-2021\src\main\java\guice\GuiceContextListener.java
+-E:\Documentos\Documentos E\7mo semestre\CVDS\proyecto\Proyecto-CVDS-2021\src\main\java\persistence\HorarioDAO.java
+-E:\Documentos\Documentos E\7mo semestre\CVDS\proyecto\Proyecto-CVDS-2021\src\main\java\managedbeans\RegistrarRecursosBean.java
+-E:\Documentos\Documentos E\7mo semestre\CVDS\proyecto\Proyecto-CVDS-2021\src\main\java\persistence\UsuarioDAO.java
+-E:\Documentos\Documentos E\7mo semestre\CVDS\proyecto\Proyecto-CVDS-2021\src\main\java\managedbeans\ConsultarHorariosBean.java
+-E:\Documentos\Documentos E\7mo semestre\CVDS\proyecto\Proyecto-CVDS-2021\src\main\java\managedbeans\ConsultarRecursosBean.java
+-E:\Documentos\Documentos E\7mo semestre\CVDS\proyecto\Proyecto-CVDS-2021\src\main\java\persistence\mybatisimpl\MyBATISTipoRecursoDAO.java
+-E:\Documentos\Documentos E\7mo semestre\CVDS\proyecto\Proyecto-CVDS-2021\src\main\java\managedbeans\LoginBean.java
+-E:\Documentos\Documentos E\7mo semestre\CVDS\proyecto\Proyecto-CVDS-2021\src\main\java\test\bibliotecaTest.java
++C:\Users\enrique.gonzalez-s\Documents\Proyecto-CVDS-2021\src\main\java\managedbeans\ConsultarHorariosBean.java
++C:\Users\enrique.gonzalez-s\Documents\Proyecto-CVDS-2021\src\main\java\persistence\ReservaDAO.java
++C:\Users\enrique.gonzalez-s\Documents\Proyecto-CVDS-2021\src\main\java\services\main.java
++C:\Users\enrique.gonzalez-s\Documents\Proyecto-CVDS-2021\src\main\java\persistence\mybatisimpl\MyBATISReservaDAO.java
++C:\Users\enrique.gonzalez-s\Documents\Proyecto-CVDS-2021\src\main\java\persistence\ReservaRecurrenteDAO.java
++C:\Users\enrique.gonzalez-s\Documents\Proyecto-CVDS-2021\src\main\java\test\bibliotecaTest.java
++C:\Users\enrique.gonzalez-s\Documents\Proyecto-CVDS-2021\src\main\java\persistence\mybatisimpl\MyBATISRecursoDAO.java
++C:\Users\enrique.gonzalez-s\Documents\Proyecto-CVDS-2021\src\main\java\persistence\UsuarioDAO.java
++C:\Users\enrique.gonzalez-s\Documents\Proyecto-CVDS-2021\src\main\java\persistence\mybatisimpl\MyBATISUsuarioDAO.java
++C:\Users\enrique.gonzalez-s\Documents\Proyecto-CVDS-2021\src\main\java\persistence\RecursoDAO.java
++C:\Users\enrique.gonzalez-s\Documents\Proyecto-CVDS-2021\src\main\java\entities\Usuario.java
++C:\Users\enrique.gonzalez-s\Documents\Proyecto-CVDS-2021\src\main\java\entities\Reserva.java
++C:\Users\enrique.gonzalez-s\Documents\Proyecto-CVDS-2021\src\main\java\persistence\mybatisimpl\mappers\ReservaRecurrenteMapper.java
++C:\Users\enrique.gonzalez-s\Documents\Proyecto-CVDS-2021\src\main\java\managedbeans\LoginBean.java
++C:\Users\enrique.gonzalez-s\Documents\Proyecto-CVDS-2021\src\main\java\services\RecursosBiblioteca.java
++C:\Users\enrique.gonzalez-s\Documents\Proyecto-CVDS-2021\src\main\java\exceptions\recursosBibliotecaException.java
++C:\Users\enrique.gonzalez-s\Documents\Proyecto-CVDS-2021\src\main\java\persistence\mybatisimpl\MyBATISHorarioDAO.java
++C:\Users\enrique.gonzalez-s\Documents\Proyecto-CVDS-2021\src\main\java\persistence\mybatisimpl\mappers\HorarioMapper.java
++C:\Users\enrique.gonzalez-s\Documents\Proyecto-CVDS-2021\src\main\java\persistence\mybatisimpl\mappers\RecursoMapper.java
++C:\Users\enrique.gonzalez-s\Documents\Proyecto-CVDS-2021\src\main\java\services\impl\RecursosBibliotecaImpl.java
++C:\Users\enrique.gonzalez-s\Documents\Proyecto-CVDS-2021\src\main\java\persistence\mybatisimpl\MyBATISTipoRecursoDAO.java
++C:\Users\enrique.gonzalez-s\Documents\Proyecto-CVDS-2021\src\main\java\entities\TipoRecurso.java
++C:\Users\enrique.gonzalez-s\Documents\Proyecto-CVDS-2021\src\main\java\persistence\mybatisimpl\mappers\ReservaMapper.java
++C:\Users\enrique.gonzalez-s\Documents\Proyecto-CVDS-2021\src\main\java\security\OnlyNotAutenticate.java
++C:\Users\enrique.gonzalez-s\Documents\Proyecto-CVDS-2021\src\main\java\managedbeans\BasePageBean.java
++C:\Users\enrique.gonzalez-s\Documents\Proyecto-CVDS-2021\src\main\java\persistence\HorarioDAO.java
++C:\Users\enrique.gonzalez-s\Documents\Proyecto-CVDS-2021\src\main\java\persistence\mybatisimpl\mappers\UsuarioMapper.java
++C:\Users\enrique.gonzalez-s\Documents\Proyecto-CVDS-2021\src\main\java\services\RecursosBibliotecaFactory.java
++C:\Users\enrique.gonzalez-s\Documents\Proyecto-CVDS-2021\src\main\java\managedbeans\ReservarRecursoBean.java
++C:\Users\enrique.gonzalez-s\Documents\Proyecto-CVDS-2021\src\main\java\persistence\TipoRecursoDAO.java
++C:\Users\enrique.gonzalez-s\Documents\Proyecto-CVDS-2021\src\main\java\persistence\mybatisimpl\mappers\TipoRecursoMapper.java
++C:\Users\enrique.gonzalez-s\Documents\Proyecto-CVDS-2021\src\main\java\managedbeans\ConsultarRecursosBean.java
++C:\Users\enrique.gonzalez-s\Documents\Proyecto-CVDS-2021\src\main\java\services\ExceptionRecursosBiblioteca.java
++C:\Users\enrique.gonzalez-s\Documents\Proyecto-CVDS-2021\src\main\java\entities\Recurso.java
++C:\Users\enrique.gonzalez-s\Documents\Proyecto-CVDS-2021\src\main\java\entities\ReservaRecurrente.java
++C:\Users\enrique.gonzalez-s\Documents\Proyecto-CVDS-2021\src\main\java\guice\GuiceContextListener.java
++C:\Users\enrique.gonzalez-s\Documents\Proyecto-CVDS-2021\src\main\java\persistence\mybatisimpl\MyBATISReservaRecurrenteDAO.java
++C:\Users\enrique.gonzalez-s\Documents\Proyecto-CVDS-2021\src\main\java\managedbeans\RegistrarRecursosBean.java
++C:\Users\enrique.gonzalez-s\Documents\Proyecto-CVDS-2021\src\main\java\entities\Horario.java

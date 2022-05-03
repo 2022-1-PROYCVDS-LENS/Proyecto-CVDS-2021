@@ -31,6 +31,10 @@ public class RegistrarRecursosBean extends BasePageBean{
     @Inject
     private RecursosBiblioteca recursosBiblioteca;
     public void registrar() throws ExceptionRecursosBiblioteca {
+        System.out.println("xd");
+        System.out.println(nombre + habilitado + tipo + ubicacion);
+        System.out.println(capacidad);
+        System.out.println(ejemplar);
         try{
             TipoRecurso tipor = new TipoRecurso();
             tipor.setId(pos.indexOf(this.tipo) + 1);
