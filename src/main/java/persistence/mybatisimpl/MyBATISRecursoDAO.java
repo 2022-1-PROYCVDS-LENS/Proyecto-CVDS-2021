@@ -45,6 +45,26 @@ public class MyBATISRecursoDAO implements RecursoDAO {
     }
 
     @Override
+    public List<Recurso> consultarRecursosPorTipoCapacidadUbicacion(int tipo, int capacidad, String ubicacion) {
+        return recursoMapper.consultarRecursosTipoCapaUbi(tipo,capacidad,ubicacion);
+    }
+
+    @Override
+    public List<Recurso> consultarRecursosPorTipoYCapacidad(int tipo, int capacidad) {
+        return recursoMapper.consultarRecursosTipoCapa(tipo,capacidad);
+    }
+
+    @Override
+    public List<Recurso> consultarRecursosPorTipoYUbicacion(int tipo, String ubicacion) {
+        return recursoMapper.consultarRecursosTipoUbi(tipo,ubicacion);
+    }
+
+    @Override
+    public List<Recurso> consultarRecursosPorUbicacionYCapacidad(String ubicacion, int capacidad) {
+        return recursoMapper.consultarRecursosCapaUbi(capacidad, ubicacion);
+    }
+
+    @Override
     public void registrarRecurso(String nombre, String habilitado, String ubicacion, int ejemplar, TipoRecurso tipo, int capacidad) throws ExceptionRecursosBiblioteca{
         try{
             recursoMapper.registrarRecurso(nombre, habilitado, ubicacion, ejemplar, tipo, capacidad);
@@ -53,4 +73,7 @@ public class MyBATISRecursoDAO implements RecursoDAO {
         }
 
     }
+
+
+
 }

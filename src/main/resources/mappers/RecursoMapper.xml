@@ -92,6 +92,81 @@
         where
             #{ubi} = rec.ubicacion
     </select>
+    <select id="consultarRecursosTipoCapaUbi" resultMap="RecursoResult">
+        select
+        rec.id_recurso,
+        rec.nombre,
+        rec.habilitado,
+        rec.ubicacion,
+        rec.capacidad,
+        rec.ejemplares,
+        tr.tipo,
+        ho.estado
+        from public.recursos as rec
+        left join TiposRecursos as tr
+        ON rec.id_tiporecurso = tr.id_tiporecurso
+        left join Horarios as ho
+        ON rec.id_recurso = ho.id_recurso
+        where
+        #{ubi} = rec.ubicacion AND #{cap} = rec.capacidad AND #{tipo} = tr.id_tiporecurso
+    </select>
+
+    <select id="consultarRecursosTipoUbi" resultMap="RecursoResult">
+        select
+        rec.id_recurso,
+        rec.nombre,
+        rec.habilitado,
+        rec.ubicacion,
+        rec.capacidad,
+        rec.ejemplares,
+        tr.tipo,
+        ho.estado
+        from public.recursos as rec
+        left join TiposRecursos as tr
+        ON rec.id_tiporecurso = tr.id_tiporecurso
+        left join Horarios as ho
+        ON rec.id_recurso = ho.id_recurso
+        where
+        #{ubi} = rec.ubicacion AND #{tipo} = tr.id_tiporecurso
+    </select>
+
+    <select id="consultarRecursosTipoCapa" resultMap="RecursoResult">
+        select
+        rec.id_recurso,
+        rec.nombre,
+        rec.habilitado,
+        rec.ubicacion,
+        rec.capacidad,
+        rec.ejemplares,
+        tr.tipo,
+        ho.estado
+        from public.recursos as rec
+        left join TiposRecursos as tr
+        ON rec.id_tiporecurso = tr.id_tiporecurso
+        left join Horarios as ho
+        ON rec.id_recurso = ho.id_recurso
+        where
+        #{cap} = rec.capacidad AND #{tipo} = tr.id_tiporecurso
+    </select>
+
+    <select id="consultarRecursosCapaUbi" resultMap="RecursoResult">
+        select
+        rec.id_recurso,
+        rec.nombre,
+        rec.habilitado,
+        rec.ubicacion,
+        rec.capacidad,
+        rec.ejemplares,
+        tr.tipo,
+        ho.estado
+        from public.recursos as rec
+        left join TiposRecursos as tr
+        ON rec.id_tiporecurso = tr.id_tiporecurso
+        left join Horarios as ho
+        ON rec.id_recurso = ho.id_recurso
+        where
+        #{cap} = rec.capacidad AND #{ubi} = rec.ubicacion
+    </select>
 
 
 
