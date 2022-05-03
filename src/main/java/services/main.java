@@ -1,9 +1,7 @@
 package services;
 
 
-<<<<<<<<< Temporary merge branch 1
 import entities.Recurso;
-=========
 import entities.Horario;
 import entities.Recurso;
 import entities.TipoRecurso;
@@ -15,7 +13,6 @@ public class main {
     public static  void main(String[] args){
         RecursosBiblioteca instance = RecursosBibliotecaFactory.getInstance().getRecursosBiblioteca();
 //        System.out.println(instance.consultarCliente(2165711).toString());
-<<<<<<<<< Temporary merge branch 1
         System.out.println("sin filtrar");
         List<Recurso> recursos = instance.consultarRecursos();
         for(Recurso r: recursos){
@@ -36,7 +33,7 @@ public class main {
         for(Recurso r: recursos){
             System.out.println(r.toString());
         }
-=========
+
         try{
             instance.registrarRecurso("1", "disponible", "biblioteca", 1, new TipoRecurso(2, "sala de estudio"), 3);
         }catch (Exception e){
@@ -67,7 +64,7 @@ public class main {
 //        for(Horario h: horarios){
 //            System.out.println(h.toString());
 //        }
->>>>>>>>> Temporary merge branch 2
+
 
 //        try {
 //            Usuario u = new Usuario(1,"estudiante","Esteban Torres",null,"esteban.torres@escuelaing.edu.co","12345e");
