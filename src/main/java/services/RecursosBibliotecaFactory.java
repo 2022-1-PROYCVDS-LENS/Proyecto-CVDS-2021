@@ -40,18 +40,16 @@ public class RecursosBibliotecaFactory {
         if (!optInjector.isPresent()) {
             optInjector = Optional.of(myBatisInjector("development","mybatis-config.xml"));
         }
-
         return optInjector.get().getInstance(RecursosBiblioteca.class);
     }
 
 
-//    public RecursosBiblioteca getServiciosAlquilerTesting(){
-//        if (!optInjector.isPresent()) {
-//            optInjector = Optional.of(myBatisInjector("test","mybatis-config-h2.xml"));
-//        }
-//
-//        return optInjector.get().getInstance(ServiciosAlquiler.class);
-//    }
+    public RecursosBiblioteca getServiciosAlquilerTesting(){
+        if (!optInjector.isPresent()) {
+            optInjector = Optional.of(myBatisInjector("test","mybatis-config-h2.xml"));
+        }
+        return optInjector.get().getInstance(RecursosBiblioteca.class);
+    }
 
 
     public static RecursosBibliotecaFactory getInstance(){
