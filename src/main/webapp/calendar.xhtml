@@ -1,86 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html>
-<html style = "background-color:#ffffff"
-      xmlns="http://www.w3c.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:p="http://primefaces.org/ui"
-      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
-      xmlns:f="http://xmlns.jcp.org/jsf/core">
-    <f:metadata>
-        <h:form>
-        <f:event type = "preRenderView" listener = "#{calendarioBean.consultarReservas}" />
-        </h:form>
-    </f:metadata>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:c="http://java.sun.com/jsp/jstl/core"
+      xmlns:p="http://primefaces.org/ui">
 <h:head>
     <title>Schedule Example</title>
 </h:head>
-<h:form>
-    <p:growl id="messages" showDetail="true" />
+<h:body>
+    <h:form>
+        <p:growl id="messages" showDetail="true"/>
+        #{calendarioBean.loadEvents()}
+        <h:panelGrid columnClasses="value">
+            <p:schedule id="schedule" value="#{calendarioBean.eventModel}" widgetVar="myschedule"
+                        rightHeaderTemplate="agendaDay,agendaWeek,month,listYear"
+                        timeZone="ZoneId.systemDefault()" clientTimeZone="local" draggable="false">
 
-    <h:panelGrid columnClasses="value">
-        <h3 style="margin-top: 0">Editable Schedule</h3>
-        <p:schedule id="schedule" value="#{calendarioBean.eventModel}" widgetVar="myschedule" timeZone="GMT+2">
+                <p:ajax event="eventSelect" listener="#{calendarioBean.onEventSelect}" update="eventDetails1"
+                        oncomplete="PF('eventDetails1').show();" />
 
-<!--            <p:ajax event="dateSelect" listener="#{calendarioBean.onDateSelect}" update="eventDetails" oncomplete="PF('eventDialog').show();" />-->
-<!--            <p:ajax event="eventSelect" listener="#{calendarioBean.onEventSelect}" update="eventDetails" oncomplete="PF('eventDialog').show();" />-->
-<!--            <p:ajax event="eventMove" listener="#{calendarioBean.onEventMove}" update="messages" />-->
-<!--            <p:ajax event="eventResize" listener="#{calendarioBean.onEventResize}" update="messages" />-->
+                <p:ajax event="eventMove" listener="#{calendarioBean.onEventMove}" update="messages"/>
 
-        </p:schedule>
+                <p:ajax event="eventResize" listener="#{calendarioBean.onEventResize}" update="messages"/>
 
-<!--        <h3>Locale Support ( Example: Turkish )</h3>-->
-<!--        <p:schedule id="scheduleLocale" value="#{calendarioBean.eventModel}" locale="tr" />-->
-
-<!--        <h3>Lazy Schedule</h3>-->
-<!--        <p:schedule value="#{calendarioBean.lazyEventModel}" />-->
-    </h:panelGrid>
-
-    <p:dialog widgetVar="eventDialog" header="Event Details" showEffect="clip" hideEffect="clip">
-        <h:panelGrid id="eventDetails" columns="2">
-<!--            <p:outputLabel for="title" value="Titles:" />-->
-<!--            <p:inputText id="title" value="#{calendarioBean.event.title}" required="true" />-->
-
-<!--            <p:outputLabel for="from" value="From:" />-->
-<!--            <p:calendar id="from" value="#{calendarioBean.event.startDate}" timeZone="GMT+2" pattern="dd/MM/yyyy HH:mm"/>-->
-
-<!--            <p:outputLabel for="to" value="To:" />-->
-<!--            <p:calendar id="to" value="#{calendarioBean.event.endDate}" timeZone="GMT+2" pattern="dd/MM/yyyy HH:mm"/>-->
-
-<!--            <p:outputLabel for="allDay" value="All Day:" />-->
-<!--            <h:selectBooleanCheckbox id="allDay" value="#{calendarioBean.event.allDay}" />-->
-
-            <p:commandButton type="reset" value="Reset" />
-            <p:commandButton id="addButton" value="Save" actionListener="#{calendarioBean.addEvent}" oncomplete="PF('myschedule').update();PF('eventDialog').hide();" />
+            </p:schedule>
         </h:panelGrid>
-    </p:dialog>
-</h:form>
 
-<script type="text/javascript">
-    PrimeFaces.locales['tr'] = {
-        closeText: 'kapat',
-        prevText: 'geri',
-        nextText: 'ileri',
-        currentText: 'bugün',
-        monthNames: ['Ocak','Şubat','Mart','Nisan','Mayıs','Haziran',
-            'Temmuz','Ağustos','Eylül','Ekim','Kasım','Aralık'],
-        monthNamesShort: ['Oca','Şub','Mar','Nis','May','Haz',
-            'Tem','Ağu','Eyl','Eki','Kas','Ara'],
-        dayNames: ['Pazar','Pazartesi','Salı','Çarşamba','Perşembe','Cuma','Cumartesi'],
-        dayNamesShort: ['Pz','Pt','Sa','Ça','Pe','Cu','Ct'],
-        dayNamesMin: ['Pz','Pt','Sa','Ça','Pe','Cu','Ct'],
-        weekHeader: 'Hf',
-        firstDay: 1,
-        isRTL: false,
-        showMonthAfterYear: false,
-        yearSuffix: '',
-        month: 'Ay',
-        week: 'Hafta',
-        day: 'Gün',
-        allDayText : 'Tüm Gün'
-    };
-</script>
-<style type="text/css">
-    .value {
-        width: 1000px;
-    }
-</style>
+        <p:dialog widgetVar="eventDetails1" header="Horario de reserva" showEffect="clip" hideEffect="clip"
+                  modal="true">
+
+            <h:panelGrid id="eventDetails1" border="1" columns="2" styleClass="table-style">
+                <h:outputLabel for="it-nombre-1" value="Id Recurso: " />
+                <h:outputLabel id="it-nombre-1" value="  #{calendarioBean.eventId}"/>
+
+                <h:outputLabel for="it-apellido-1" value="Apellido: " />
+                <h:inputText id="it-apellido-1" />
+            </h:panelGrid>
+
+        </p:dialog>
+
+    </h:form>
+</h:body>
 </html>

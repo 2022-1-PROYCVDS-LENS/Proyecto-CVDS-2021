@@ -1,0 +1,13 @@
+0:0:0:0:0:0:0:1 - - [03/May/2022:22:31:58 -0500] "GET / HTTP/1.1" 200 4547 http-bio-8080-exec-1 1972
+0:0:0:0:0:0:0:1 - - [03/May/2022:22:31:58 -0500] "GET /recursosBiblioteca/javax.faces.resource/jquery/jquery.js;jsessionid=EC2D7096541FA99210C03CEA59526873?ln=primefaces&v=6.2 HTTP/1.1" 200 86931 http-bio-8080-exec-2 15
+0:0:0:0:0:0:0:1 - - [03/May/2022:22:31:58 -0500] "GET /recursosBiblioteca/javax.faces.resource/jquery/jquery-plugins.js;jsessionid=EC2D7096541FA99210C03CEA59526873?ln=primefaces&v=6.2 HTTP/1.1" 200 261371 http-bio-8080-exec-4 13
+0:0:0:0:0:0:0:1 - - [03/May/2022:22:31:58 -0500] "GET /recursosBiblioteca/javax.faces.resource/moment/moment.js;jsessionid=EC2D7096541FA99210C03CEA59526873?ln=primefaces&v=6.2 HTTP/1.1" 200 57966 http-bio-8080-exec-8 7
+0:0:0:0:0:0:0:1 - - [03/May/2022:22:31:58 -0500] "GET /recursosBiblioteca/javax.faces.resource/core.js;jsessionid=EC2D7096541FA99210C03CEA59526873?ln=primefaces&v=6.2 HTTP/1.1" 200 31279 http-bio-8080-exec-6 22
+0:0:0:0:0:0:0:1 - - [03/May/2022:22:31:58 -0500] "GET /recursosBiblioteca/javax.faces.resource/components.js;jsessionid=EC2D7096541FA99210C03CEA59526873?ln=primefaces&v=6.2 HTTP/1.1" 200 409040 http-bio-8080-exec-7 23
+0:0:0:0:0:0:0:1 - - [03/May/2022:22:31:58 -0500] "GET /recursosBiblioteca/javax.faces.resource/schedule/schedule.css;jsessionid=EC2D7096541FA99210C03CEA59526873?ln=primefaces&v=6.2 HTTP/1.1" 200 13987 http-bio-8080-exec-5 29
+0:0:0:0:0:0:0:1 - - [03/May/2022:22:31:58 -0500] "GET /recursosBiblioteca/javax.faces.resource/schedule/schedule.js;jsessionid=EC2D7096541FA99210C03CEA59526873?ln=primefaces&v=6.2 HTTP/1.1" 200 137772 http-bio-8080-exec-9 16
+0:0:0:0:0:0:0:1 - - [03/May/2022:22:31:58 -0500] "GET /recursosBiblioteca/javax.faces.resource/components.css;jsessionid=EC2D7096541FA99210C03CEA59526873?ln=primefaces&v=6.2 HTTP/1.1" 200 85460 http-bio-8080-exec-3 57
+0:0:0:0:0:0:0:1 - - [03/May/2022:22:31:58 -0500] "POST /recursosBiblioteca/calendar.xhtml;jsessionid=EC2D7096541FA99210C03CEA59526873 HTTP/1.1" 200 288 http-bio-8080-exec-8 18
+0:0:0:0:0:0:0:1 - - [03/May/2022:22:31:58 -0500] "GET /favicon.ico HTTP/1.1" 404 973 http-bio-8080-exec-8 3
+0:0:0:0:0:0:0:1 - - [03/May/2022:22:32:01 -0500] "POST /recursosBiblioteca/calendar.xhtml;jsessionid=EC2D7096541FA99210C03CEA59526873 HTTP/1.1" 200 288 http-bio-8080-exec-4 9
+0:0:0:0:0:0:0:1 - - [03/May/2022:22:32:03 -0500] "POST /recursosBiblioteca/calendar.xhtml;jsessionid=EC2D7096541FA99210C03CEA59526873 HTTP/1.1" 200 288 http-bio-8080-exec-4 8

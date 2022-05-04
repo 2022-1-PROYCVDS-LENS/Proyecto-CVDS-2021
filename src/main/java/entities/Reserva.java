@@ -7,6 +7,7 @@ import lombok.Setter;
 
 import java.io.Serializable;
 import java.sql.Time;
+import java.sql.Timestamp;
 import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.List;
@@ -20,8 +21,8 @@ public class Reserva implements Serializable {
     private @Getter @Setter boolean recurrente;
     private @Getter @Setter String estado;
     private @Getter @Setter Date solicitud;
-    private @Getter @Setter Date inicio;
-    private @Getter @Setter Date fin;
+    private @Getter @Setter Timestamp inicio;
+    private @Getter @Setter Timestamp fin;
 
     @Override
     public String toString(){

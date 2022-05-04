@@ -23,7 +23,7 @@
         res.inicio,
         res.fin
         from public.reservas as res
-        where res.id_reserva = 4;
+        where res.id_recurso = 4;
     </select>
 
 </mapper>

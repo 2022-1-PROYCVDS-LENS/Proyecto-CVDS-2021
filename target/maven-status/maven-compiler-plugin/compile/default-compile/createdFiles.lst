@@ -1,3 +1,4 @@
+entities\CustomScheduleEvent.class
 managedbeans\ConsultarHorariosBean.class
 managedbeans\BasePageBean.class
 persistence\mybatisimpl\MyBATISRecursoDAO.class
@@ -19,7 +20,6 @@ services\RecursosBiblioteca.class
 persistence\HorarioDAO.class
 persistence\TipoRecursoDAO.class
 managedbeans\RegistrarRecursosBean.class
-managedbeans\CalendarioBean$1.class
 services\main.class
 persistence\ReservaDAO.class
 services\impl\RecursosBibliotecaImpl.class
@@ -31,7 +31,6 @@ security\OnlyNotAutenticate.class
 services\RecursosBibliotecaFactory$1.class
 services\RecursosBibliotecaFactory.class
 persistence\mybatisimpl\mappers\RecursoMapper.class
-test\bibliotecaTest.class
 persistence\RecursoDAO.class
 persistence\ReservaRecurrenteDAO.class
 entities\Recurso.class
