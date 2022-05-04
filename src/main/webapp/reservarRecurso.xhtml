@@ -22,12 +22,12 @@
 
     <div class = "box_container" id="agregarRecursosBox">
         <h:form><h:commandButton value="Atras" action="prueba?recursosBiblioteca-redirect = true" class="button"/></h:form>
-        <h2>Reservar recurso</h2>
+        <h2>Reservar recurso: #{consultarRecursosBean.recurso.nombre}</h2>
         <h3>Inicio</h3>
         <h:form>
-            <p:calendar value="#{reservarRecursoBean.inicio}" pattern="MM-dd-yyyy HH:mm:00"/></h:form>
+            <p:calendar value="#{reservarRecursoBean.inicio}" pattern="MM-dd-yyyy #{consultarHorariosBean.horario.hora_ini}"/></h:form>
         <h3>Fin</h3>
-        <h:form><p:calendar value="#{reservarRecursoBean.fin}" pattern="MM-dd-yyyy HH:mm:00"/></h:form>
+        <h:form><h:outputText value="#{consultarHorariosBean.horario.hora_fin}" style="font-size:150%; font-type:solid; background-color:#ffffff"/></h:form>
         <h3>Recurrente</h3>
         <h:form><h:selectOneMenu value="#{reservarRecursoBean.recurrente}" class="form-control" styleClass="menu">
             <f:selectItem itemValue="true" itemLabel="Recurrente" />
@@ -35,7 +35,7 @@
         </h:selectOneMenu></h:form>
         <h3>Estado</h3>
         <h:form><h:selectOneMenu value="#{reservarRecursoBean.recurrente}" class="form-control" styleClass="menu">
-            <f:selectItem itemValue="activa" itemLabel="activa" />
+            <f:selectItem itemValue="disponible" itemLabel="activa" />
             <f:selectItem itemValue="finalizada" itemLabel="finalizada" />
             <f:selectItem itemValue="cancelada" itemLabel="cancelada" />
         </h:selectOneMenu></h:form>
@@ -43,7 +43,7 @@
         <h:form><h:outputText value = "Fecha solicitud: " style="font-size:150%; font-type:solid"/><h:outputText value="#{session.lastAccessedTime}" style="font-size:150%; font-type:solid">
             <f:convertDateTime pattern="MM/dd/yyyy" type="date" />
         </h:outputText></h:form>
-        <h:commandButton value="Reservar" actionListener="#{reservarRecursoBean.reservarRecurso}" class="button" />
+        <h:form><h:commandButton value="Reservar" actionListener="#{reservarRecursoBean.reservarRecurso}" class="button" /></h:form>
     </div>
 
 </h:body>

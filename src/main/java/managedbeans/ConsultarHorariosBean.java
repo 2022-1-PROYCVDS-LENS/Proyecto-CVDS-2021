@@ -11,6 +11,7 @@ import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 import javax.faces.context.FacesContext;
+import java.sql.Time;
 import java.util.List;
 
 @SuppressWarnings("deprecation")
@@ -18,8 +19,8 @@ import java.util.List;
 @SessionScoped
 public class ConsultarHorariosBean extends BasePageBean {
 
-    @Getter @Setter String hora_ini;
-    @Getter @Setter String hora_fin;
+    @Getter @Setter Time hora_ini;
+    @Getter @Setter Time hora_fin;
     @Getter @Setter int id;
     @Getter @Setter List<Horario> horarios;
     @Getter @Setter Horario horario;
