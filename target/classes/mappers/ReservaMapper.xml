@@ -20,6 +20,7 @@
 
     <select id="consultarReservas" resultMap="ReservaResult">
         select
+        res.id_reserva,
         res.inicio,
         res.fin
         from public.reservas as res

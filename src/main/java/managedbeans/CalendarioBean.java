@@ -2,6 +2,7 @@ package managedbeans;
 
 import java.util.List;
 import javax.enterprise.context.ApplicationScoped;
+import javax.enterprise.context.RequestScoped;
 import javax.enterprise.context.SessionScoped;
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.*;
@@ -22,17 +23,17 @@ import services.RecursosBiblioteca;
 
 @SuppressWarnings("deprecation")
 @ManagedBean(name = "calendarioBean")
-@ApplicationScoped
+@SessionScoped
 public class CalendarioBean extends BasePageBean {
-
-    private ScheduleModel eventModel = new DefaultScheduleModel();
-
-    private ScheduleEvent event = new DefaultScheduleEvent();
-
-    private ScheduleEvent eventAux = new DefaultScheduleEvent();
 
     @Inject
     private RecursosBiblioteca recursosBiblioteca;
+
+    private ScheduleModel eventModel;
+
+    private ScheduleEvent event;
+
+    private ScheduleEvent eventAux = new DefaultScheduleEvent();
 
     private int eventId = 0;
 
@@ -41,10 +42,13 @@ public class CalendarioBean extends BasePageBean {
         List<Reserva> reservas = recursosBiblioteca.consultarReservas();
         System.out.println(reservas.size());
         for (Reserva h : reservas){
+            System.out.println(h.getInicio().toString() + h.getFin().toString());
             event = new DefaultScheduleEvent("prueba", h.getInicio(), h.getFin());
             eventModel.addEvent(event);
 //            event.setId("1");
+            System.out.println(h.getId());
             event.setId(String.valueOf(h.getId()));
+
         }
         System.out.println(eventModel.getEventCount());
     }

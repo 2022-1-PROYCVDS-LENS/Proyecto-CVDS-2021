@@ -1,4 +1,3 @@
-entities\CustomScheduleEvent.class
 managedbeans\ConsultarHorariosBean.class
 managedbeans\BasePageBean.class
 persistence\mybatisimpl\MyBATISRecursoDAO.class
