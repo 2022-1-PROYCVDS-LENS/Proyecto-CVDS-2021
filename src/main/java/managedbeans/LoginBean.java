@@ -34,10 +34,15 @@ public class LoginBean extends BasePageBean{
     private RecursosBiblioteca rebi;
 
     public void login() throws Exception{
+
         Subject usuarioActual = SecurityUtils.getSubject();
-        UsernamePasswordToken uPToken = new UsernamePasswordToken(getUsuario(), new Sha256Hash(getContrasena()).toHex());
+
+        UsernamePasswordToken uPToken = new UsernamePasswordToken(getUsuario(), getContrasena());
+
         try{
+
             Usuario user = rebi.buscarUsuario(usuario);
+
             if (user != null){
                 usuarioActual.login(uPToken);
                 usuarioActual.getSession().setAttribute("Correo", usuario);
@@ -45,24 +50,30 @@ public class LoginBean extends BasePageBean{
                 setLogeado(true);
             }else{
              error("EL usuario no existe");
+                System.out.println("_____ccccccaaaaaaaaaaaa_____________");
             }
         } catch (UnknownAccountException e) {
+            System.out.println("_____cccccccaaaaaaaaa111111111_____________");
             String errorMensaje = "El usuario no esta registrado";
             error(errorMensaje);
             log.error(e.getMessage(), e);
         } catch (IncorrectCredentialsException e) {
+            System.out.println("_____cccccccccbbbbbbbbbbb_____________");
             String errorMensaje = "La contraseña que ingreso es incorrecta";
             error(errorMensaje);
             log.error(e.getMessage(), e);
         } catch (LockedAccountException e) {
+            System.out.println("_____cccccddddddddd_____________");
             String errorMensaje = "El usuario esta deshabilitado";
             error(errorMensaje);
             log.error(e.getMessage(), e);
         } catch (AuthenticationException e) {
+            System.out.println("_____cccccccceeeeeeeeee_____________");
             String errorMensaje = "Error inesperado";
             error(errorMensaje);
             log.error(e.getMessage(), e);
         }finally {
+            System.out.println("entro");
             uPToken.clear();
         }
     }

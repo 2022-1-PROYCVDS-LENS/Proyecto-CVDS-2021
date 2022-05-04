@@ -1,0 +1,2 @@
+0:0:0:0:0:0:0:1 - - [04/May/2022:12:41:22 -0500] "GET / HTTP/1.1" 200 4028 http-bio-8080-exec-1 276
+0:0:0:0:0:0:0:1 - - [04/May/2022:12:41:32 -0500] "POST /recursosBiblioteca/login.xhtml HTTP/1.1" 200 261 http-bio-8080-exec-3 1199

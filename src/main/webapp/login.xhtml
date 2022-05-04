@@ -26,9 +26,9 @@ xhtml de la pagina principal de recursos biblioteca en donde se redireccionara a
               <p:watermark for="usuario_nombre" value="example@mail.com"></p:watermark>
             </div>
             <div>
-              <p:inputText placeholder="Contraseña" type="password" value="#{loginBean.contrasena}"></p:inputText>
+                <h:form><p:inputText placeholder="Contraseña" type="password" value="#{loginBean.contrasena}"></p:inputText></h:form>
             </div>
-            <div><p:commandButton value="Ingresar" class="button" action="#{loginBean.login}"/></div>
+            <h:form><div><p:commandButton value="Ingresar" class="button" action="#{loginBean.login}"/></div></h:form>
         </div>
     </div>
   </h:body>

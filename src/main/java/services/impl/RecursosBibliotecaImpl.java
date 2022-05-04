@@ -35,7 +35,6 @@ public class RecursosBibliotecaImpl implements RecursosBiblioteca {
     @Override
     public Usuario buscarUsuario(String correo) throws ExceptionRecursosBiblioteca {
         try{
-            System.out.println(usuarioDAO);
             return usuarioDAO.buscarUsuario(correo);
         }catch (PersistenceException e){
             throw new ExceptionRecursosBiblioteca("Error al buscar ese usuario: " + correo, e);
