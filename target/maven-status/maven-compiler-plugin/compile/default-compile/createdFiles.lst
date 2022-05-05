@@ -13,6 +13,7 @@ persistence\mybatisimpl\mappers\ReservaMapper.class
 entities\ReservaRecurrente.class
 guice\GuiceContextListener.class
 persistence\mybatisimpl\mappers\UsuarioMapper.class
+managedbeans\visualizarReservaBean.class
 services\RecursosBiblioteca.class
 exceptions\recursosBibliotecaException.class
 persistence\HorarioDAO.class

@@ -23,4 +23,17 @@
         values (nextval('reservas_id') #{usuario.id}, #{recurso.id}, #{inicio}, #{fin}, #{recurrente}, #{estado}, #{solicitud})
     </insert>
 
+    <select id="consultarReservasActivas" resultMap="ReservaResult">
+        select * from reservas WHERE reservas.estado = "activa" AND reservas.id_usuario = #{id}
+    </select>
+
+    <select id="consultarReservasCanceladas" resultMap="ReservaResult">
+        select * from reservas WHERE reservas.estado = "cancelada" AND reservas.id_usuario = #{id}
+    </select>
+
+    <select id="consultarReservasPasadas" resultMap="ReservaResult">
+        select * from reservas WHERE reservas.estado = "finalizada" AND reservas.id_usuario = #{id}
+    </select>
+
+
 </mapper>
