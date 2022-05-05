@@ -50,7 +50,7 @@ public class LoginBean extends BasePageBean {
         System.exit(0);
     }
 
-    public void login() throws Exception{
+    public void login(){
         Subject usuarioActual = SecurityUtils.getSubject();
         UsernamePasswordToken uPToken = new UsernamePasswordToken(getUsuario(), new Sha256Hash(getContrasena()).toHex());
         try{
@@ -79,7 +79,12 @@ public class LoginBean extends BasePageBean {
             String errorMensaje = "Error inesperado";
             error(errorMensaje);
             log.error(e.getMessage(), e);
-        }finally {
+        }catch (Exception e){
+            String errorMensaje = "Error";
+            error(errorMensaje);
+            log.error(e.getMessage(), e);
+        }
+        finally {
             uPToken.clear();
         }
     }
