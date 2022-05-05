@@ -37,15 +37,11 @@ public class ReservarRecursoBean extends BasePageBean {
 
     public void reservarRecurso(int idRecurso) throws ExceptionRecursosBiblioteca{
         try{
-            Timestamp t = inicio;
 
             List<Recurso> rec = recursosBiblioteca.consultarRecursos();
             for (Recurso r : rec) {
                 if (r.getId() == idRecurso) recurso = r;
             }
-            fin = t;
-            estado = "activa";
-            System.out.println(sdf.format(inicio));
             System.out.println(usuario + " " + recurso + " " + inicio + " " + fin +" "+recurrente+" "+estado+" "+solicitud);
             recursosBiblioteca.reservarRecursos(usuario,recurso,inicio,fin,recurrente,estado,solicitud);
             System.out.println("aaaaaaaaaaa");
