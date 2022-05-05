@@ -26,7 +26,8 @@
         <h3>Inicio</h3>
         <h:form>
             <p:calendar value="#{reservarRecursoBean.inicio}" pattern="MM-dd-yyyy #{consultarHorariosBean.horario.hora_ini}"/></h:form>
-
+        <h3>Fin</h3>
+        <h:form><p:calendar value="#{reservarRecursoBean.fin}" pattern="MM-dd-yyyy #{consultarHorariosBean.horario.hora_fin}"/></h:form>
         <h3>Recurrente</h3>
         <h:form><h:selectOneMenu value="#{reservarRecursoBean.recurrente}" class="form-control" styleClass="menu">
             <f:selectItem itemValue="true" itemLabel="Recurrente" />
