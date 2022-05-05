@@ -10,6 +10,7 @@ import javax.faces.context.FacesContext;
 
 
 import com.google.inject.Inject;
+
 import entities.Usuario;
 import org.slf4j.LoggerFactory;
 import org.apache.shiro.SecurityUtils;
@@ -19,6 +20,7 @@ import org.apache.shiro.subject.Subject;
 import org.slf4j.Logger;
 import services.ExceptionRecursosBiblioteca;
 import services.RecursosBiblioteca;
+
 
 @SuppressWarnings("deprecation")
 @ManagedBean(name = "loginBean")
@@ -33,47 +35,40 @@ public class LoginBean extends BasePageBean{
     @Inject
     private RecursosBiblioteca rebi;
 
-    public void login() throws Exception{
-
+    public void login(){
         Subject usuarioActual = SecurityUtils.getSubject();
-
         UsernamePasswordToken uPToken = new UsernamePasswordToken(getUsuario(), getContrasena());
-
         try{
-
             Usuario user = rebi.buscarUsuario(usuario);
-
             if (user != null){
                 usuarioActual.login(uPToken);
                 usuarioActual.getSession().setAttribute("Correo", usuario);
                 redirect();
                 setLogeado(true);
             }else{
-             error("EL usuario no existe");
-                System.out.println("_____ccccccaaaaaaaaaaaa_____________");
+                error("EL usuario no existe");
             }
         } catch (UnknownAccountException e) {
-            System.out.println("_____cccccccaaaaaaaaa111111111_____________");
             String errorMensaje = "El usuario no esta registrado";
             error(errorMensaje);
             log.error(e.getMessage(), e);
         } catch (IncorrectCredentialsException e) {
-            System.out.println("_____cccccccccbbbbbbbbbbb_____________");
             String errorMensaje = "La contraseña que ingreso es incorrecta";
             error(errorMensaje);
             log.error(e.getMessage(), e);
         } catch (LockedAccountException e) {
-            System.out.println("_____cccccddddddddd_____________");
             String errorMensaje = "El usuario esta deshabilitado";
             error(errorMensaje);
             log.error(e.getMessage(), e);
         } catch (AuthenticationException e) {
-            System.out.println("_____cccccccceeeeeeeeee_____________");
             String errorMensaje = "Error inesperado";
             error(errorMensaje);
             log.error(e.getMessage(), e);
-        }finally {
-            System.out.println("entro");
+        } catch (ExceptionRecursosBiblioteca e) {
+            String errorMensaje = "Error inesperado 2";
+            error(errorMensaje);
+            log.error(e.getMessage(), e);
+        } finally {
             uPToken.clear();
         }
     }
