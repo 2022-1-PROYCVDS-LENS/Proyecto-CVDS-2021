@@ -176,4 +176,9 @@ public class RecursosBibliotecaImpl implements RecursosBiblioteca {
     public List<Recurso> consultarRecursosPorUbicacionYCapacidad(String ubicacion, int capacidad) {
         return recursoDAO.consultarRecursosPorUbicacionYCapacidad(ubicacion,capacidad);
     }
+
+    @Override
+    public List<Reserva> consultarReservas(){
+        return reservaDAO.consultarReservas();
+    }
 }

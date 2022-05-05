@@ -7,6 +7,7 @@ persistence\mybatisimpl\mappers\ReservaRecurrenteMapper.class
 persistence\mybatisimpl\mappers\TipoRecursoMapper.class
 managedbeans\ConsultarRecursosBean.class
 persistence\mybatisimpl\MyBATISUsuarioDAO.class
+managedbeans\CalendarioBean.class
 services\ExceptionRecursosBiblioteca.class
 managedbeans\LoginBean.class
 persistence\mybatisimpl\mappers\ReservaMapper.class

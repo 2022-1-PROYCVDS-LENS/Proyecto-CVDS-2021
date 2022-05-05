@@ -51,4 +51,5 @@ public interface RecursosBiblioteca {
     List<Recurso> consultarRecursosPorTipoYUbicacion(int tipo, String ubicacion);
 
     List<Recurso> consultarRecursosPorUbicacionYCapacidad(String ubicacion, int capacidad);
+    List<Reserva> consultarReservas();
 }

@@ -1,11 +1,13 @@
 package persistence.mybatisimpl.mappers;
 
 import entities.Recurso;
+import entities.Reserva;
 import entities.Usuario;
 import org.apache.ibatis.annotations.Param;
 
 import java.sql.Time;
 import java.sql.Timestamp;
+import java.util.List;
 
 public interface ReservaMapper {
 
@@ -26,4 +28,6 @@ public interface ReservaMapper {
                          @Param("recurrente") boolean recurrente,
                          @Param("estado") String estado,
                          @Param("solicitud") String solicitud );
+
+    List<Reserva> consultarReservas();
 }
