@@ -35,6 +35,7 @@ public class LoginBean extends BasePageBean{
 
     public Usuario getUser() {
         return user;
+        //raise esception si no hay usuario
     }
 
     public void setUser(Usuario user) {
