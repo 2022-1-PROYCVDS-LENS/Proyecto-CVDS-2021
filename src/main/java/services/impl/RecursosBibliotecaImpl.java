@@ -8,6 +8,7 @@ import services.ExceptionRecursosBiblioteca;
 import services.RecursosBiblioteca;
 
 import javax.ejb.Singleton;
+import java.sql.Time;
 import java.util.List;
 
 @Singleton
@@ -34,7 +35,6 @@ public class RecursosBibliotecaImpl implements RecursosBiblioteca {
     @Override
     public Usuario buscarUsuario(String correo) throws ExceptionRecursosBiblioteca {
         try{
-            System.out.println(usuarioDAO);
             return usuarioDAO.buscarUsuario(correo);
         }catch (PersistenceException e){
             throw new ExceptionRecursosBiblioteca("Error al buscar ese usuario: " + correo, e);
@@ -144,6 +144,16 @@ public class RecursosBibliotecaImpl implements RecursosBiblioteca {
     @Override
     public List<Recurso> consultarRecursosPorUbicacion(String ubi) {
         return recursoDAO.consultarRecursosPorUbicacion(ubi);
+    }
+
+    @Override
+    public void reservarRecursos(Usuario usuario, Recurso recurso, Time inicio, Time fin, boolean recurrente, String estado, String solicitud)throws ExceptionRecursosBiblioteca{
+        try{
+            reservaDAO.reservarRecurso(usuario,recurso,inicio,fin,recurrente,estado,solicitud);
+        }catch (Exception e){
+            throw new ExceptionRecursosBiblioteca("Error");
+        }
+
     }
 
     @Override
