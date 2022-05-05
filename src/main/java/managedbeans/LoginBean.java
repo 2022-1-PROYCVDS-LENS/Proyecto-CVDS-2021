@@ -31,6 +31,15 @@ public class LoginBean extends BasePageBean{
     private String usuario;
     private String contrasena;
     public boolean logeado = false;
+    private Usuario user;
+
+    public Usuario getUser() {
+        return user;
+    }
+
+    public void setUser(Usuario user) {
+        this.user = user;
+    }
 
     @Inject
     private RecursosBiblioteca rebi;
@@ -39,7 +48,7 @@ public class LoginBean extends BasePageBean{
         Subject usuarioActual = SecurityUtils.getSubject();
         UsernamePasswordToken uPToken = new UsernamePasswordToken(getUsuario(), getContrasena());
         try{
-            Usuario user = rebi.buscarUsuario(usuario);
+            user = rebi.buscarUsuario(usuario);
             if (user != null){
                 usuarioActual.login(uPToken);
                 usuarioActual.getSession().setAttribute("Correo", usuario);
