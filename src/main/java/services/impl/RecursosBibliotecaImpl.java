@@ -9,6 +9,7 @@ import services.RecursosBiblioteca;
 
 import javax.ejb.Singleton;
 import java.sql.Time;
+import java.sql.Timestamp;
 import java.util.List;
 
 @Singleton
@@ -147,7 +148,7 @@ public class RecursosBibliotecaImpl implements RecursosBiblioteca {
     }
 
     @Override
-    public void reservarRecursos(Usuario usuario, Recurso recurso, Time inicio, Time fin, boolean recurrente, String estado, String solicitud)throws ExceptionRecursosBiblioteca{
+    public void reservarRecursos(Usuario usuario, Recurso recurso, Timestamp inicio, Timestamp fin, boolean recurrente, String estado, String solicitud)throws ExceptionRecursosBiblioteca{
         try{
             reservaDAO.reservarRecurso(usuario,recurso,inicio,fin,recurrente,estado,solicitud);
         }catch (Exception e){

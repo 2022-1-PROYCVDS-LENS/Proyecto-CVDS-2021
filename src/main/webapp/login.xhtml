@@ -19,21 +19,22 @@ xhtml de la pagina principal de recursos biblioteca en donde se redireccionara a
         <h:outputText id = "header_text" class = "text" value = "Escuela Colombiana de ingieneria Julio Garavito: Recursos de biblioteca"/>
     </div>
     <div class = "box_container">
+    <h:form>
         <div id = "sub_box_container" >
                     <div><h3>Iniciar sesión</h3></div>
                     <div>
-                        <h:form><p:inputText id="usuario_nombre" placeholder="Usuario" value="#{loginBean.usuario}"></p:inputText></h:form>
+                        <p:inputText id="usuario_nombre" placeholder="Usuario" value="#{loginBean.usuario}"></p:inputText>
                     </div>
                     <div>
-                        <h:form><p:password placeholder="Contraseña" value="#{loginBean.contrasena}"></p:password></h:form>
+                        <p:password placeholder="Contraseña" value="#{loginBean.contrasena}"></p:password>
                     </div>
                     <div>
-                        <h:form><p:commandButton value="Ingresar" class = "button" actionListener="#{loginBean.login()}"/></h:form>
+                        <p:commandButton value="Ingresar" class = "button" actionListener="#{loginBean.login()}"/>
                     </div>
             <div><h:form><p:commandButton value="Consultar recursos" class = "button" action="prueba?faces-redirect = true"/></h:form></div>
 
         </div>
-
+    </h:form>
     </div>
 </h:body>
 
