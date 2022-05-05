@@ -1,18 +1,22 @@
 package services;
 
 
+import entities.*;
 import entities.Recurso;
-import entities.Horario;
-import entities.Recurso;
-import entities.TipoRecurso;
-import entities.Usuario;
 
 import java.util.List;
 
 public class main {
-    public static  void main(String[] args){
+    public static  void main(String[] args) {
         RecursosBiblioteca instance = RecursosBibliotecaFactory.getInstance().getRecursosBiblioteca();
 //        System.out.println(instance.consultarCliente(2165711).toString());
+
+        System.out.println("reservas");
+        List<Reserva> reservas = instance.consultarReservasActivas(1);
+        for (Reserva r: reservas){
+            System.out.println(r.toString());
+        }
+
         System.out.println("sin filtrar");
         List<Recurso> recursos = instance.consultarRecursos();
         for(Recurso r: recursos){

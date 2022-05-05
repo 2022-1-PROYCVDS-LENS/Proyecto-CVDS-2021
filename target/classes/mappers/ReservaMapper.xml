@@ -12,10 +12,10 @@
         <result property="recurrente" column="recurrente"/>
         <result property="estado" column="estado"/>
         <result property="solicitud" column="solicitud"/>
-        <association property="recurso" javaType="Recurso" resultMap="sampleprj.dao.dato.mybatis.mappers.RecursoMapper.RecursoResult.RecursoResult"/>
-        <association property="usuario" javaType="Usuario" resultMap="sampleprj.dao.dato.mybatis.mappers.UsuarioMapper.UsuarioResult.UsuarioResult"/>
-        <collection property="reservaRecurrentes" ofType="ReservaRecurrente" resultMap="persistence.mybatisimpl.mappers.ReservaRecurrenteMapper.TipoRecursoResult"/>
-        <collection property="usuarios" ofType="Usuario" resultMap="sampleprj.dao.dato.mybatis.mappers.UsuarioMapper.UsuarioResult.UsuarioResult"/>
+        <association property="idRecurso" javaType="Recurso" resultMap="persistence.mybatisimpl.mappers.RecursoMapper.RecursoResult"/>
+        <association property="idUsuario" javaType="Usuario" resultMap="persistence.mybatisimpl.mappers.UsuarioMapper.UsuarioResult"/>
+        <collection property="reservaRecurrentes" ofType="ReservaRecurrente" resultMap="persistence.mybatisimpl.mappers.ReservaRecurrenteMapper.ReservaRecurrenteResult"/>
+        <collection property="usuarios" ofType="Usuario" resultMap="persistence.mybatisimpl.mappers.UsuarioMapper.UsuarioResult"/>
     </resultMap>
 
     <insert parameterType="map" id="reservarRecurso">
@@ -24,15 +24,33 @@
     </insert>
 
     <select id="consultarReservasActivas" resultMap="ReservaResult">
-        select * from reservas WHERE reservas.estado = "activa" AND reservas.id_usuario = #{id}
+        select
+        res.estado,
+        res.solicitud,
+        res.inicio,
+        res.fin
+        from public.reservas as res
+        WHERE res.estado = 'activa' AND res.id_usuario = #{id}
     </select>
 
     <select id="consultarReservasCanceladas" resultMap="ReservaResult">
-        select * from reservas WHERE reservas.estado = "cancelada" AND reservas.id_usuario = #{id}
+        select
+            res.estado,
+            res.solicitud,
+            res.inicio,
+            res.fin
+        from public.res as res
+        WHERE res.estado = 'cancelada' AND res.id_usuario = #{id}
     </select>
 
     <select id="consultarReservasPasadas" resultMap="ReservaResult">
-        select * from reservas WHERE reservas.estado = "finalizada" AND reservas.id_usuario = #{id}
+        select
+            res.estado,
+            res.solicitud,
+            res.inicio,
+            res.fin
+        from public.reservas as res
+        WHERE res.estado = 'finalizada' AND res.id_usuario = #{id}
     </select>
 
 

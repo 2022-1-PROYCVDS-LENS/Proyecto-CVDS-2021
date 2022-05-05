@@ -14,7 +14,7 @@ import java.util.List;
 @SuppressWarnings("deprecation")
 @ManagedBean
 @SessionScoped
-public class visualizarReservaBean extends BasePageBean{
+public class VisualizarReservaBean extends BasePageBean{
 
     @Inject
     private RecursosBiblioteca rebi;
@@ -35,4 +35,5 @@ public class visualizarReservaBean extends BasePageBean{
         reservasCanceladas = rebi.consultarReservasCanceladas(usuario.getId());
         reservasPasadas = rebi.consultarReservasPasadas(usuario.getId());
     }
+
 }
