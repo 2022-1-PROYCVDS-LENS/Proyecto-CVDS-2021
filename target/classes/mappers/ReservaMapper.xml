@@ -23,6 +23,13 @@
         values (nextval('reservas_id') #{usuario.id}, #{recurso.id}, #{inicio}, #{fin}, #{recurrente}, #{estado}, #{solicitud})
     </insert>
 
+    <select id="consultarReservas" resultMap="ReservaResult">
+        select
+        res.id_reserva,
+        res.inicio,
+        res.fin
+        from public.reservas as res;
+    </select>
     <select id="consultarReservasActivas" resultMap="ReservaResult">
         select
         res.estado,
