@@ -1,4 +1,4 @@
-package entities;
+package edu.eci.cvds.entities;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -7,8 +7,6 @@ import lombok.Setter;
 
 import java.io.Serializable;
 import java.sql.Time;
-import java.time.LocalDate;
-import java.time.LocalTime;
 
 @NoArgsConstructor
 @AllArgsConstructor

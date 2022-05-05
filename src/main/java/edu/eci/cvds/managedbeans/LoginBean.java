@@ -1,9 +1,8 @@
-package managedbeans;
+package edu.eci.cvds.managedbeans;
 
 import java.io.IOException;
 import java.util.logging.Level;
 
-import javax.annotation.PostConstruct;
 import javax.faces.bean.SessionScoped;
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
@@ -11,30 +10,26 @@ import javax.faces.context.FacesContext;
 
 
 import com.google.inject.Inject;
-import entities.Usuario;
+import edu.eci.cvds.entities.Usuario;
+import edu.eci.cvds.services.ExceptionRecursosBiblioteca;
+import edu.eci.cvds.services.RecursosBiblioteca;
 import org.slf4j.LoggerFactory;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.*;
 import org.apache.shiro.crypto.hash.Sha256Hash;
 import org.apache.shiro.subject.Subject;
 import org.slf4j.Logger;
-import services.RecursosBiblioteca;
-import org.apache.shiro.SecurityUtils;
-import org.apache.shiro.authc.*;
 import org.apache.shiro.config.IniSecurityManagerFactory;
 import org.apache.shiro.mgt.SecurityManager;
-import org.apache.shiro.session.Session;
-import org.apache.shiro.subject.Subject;
 import org.apache.shiro.util.Factory;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+
 
 @SuppressWarnings("deprecation")
 @ManagedBean(name = "loginBean")
 @SessionScoped
-public class LoginBean extends BasePageBean {
+public class LoginBean extends BasePageBean{
 
-    private static final Logger log = LoggerFactory.getLogger(LoginBean.class);
+    private static final Logger log = LoggerFactory.getLogger(RecursosBiblioteca.class);
     private String usuario;
     private String contrasena;
     public boolean logeado = false;
@@ -42,17 +37,9 @@ public class LoginBean extends BasePageBean {
     @Inject
     private RecursosBiblioteca rebi;
 
-    public void managerStarter(){
-        log.info("My First Apache Shiro Application");
-        Factory<SecurityManager> factory = new IniSecurityManagerFactory("classpath:shiro.ini");
-        SecurityManager securityManager = factory.getInstance();
-        SecurityUtils.setSecurityManager(securityManager);
-        System.exit(0);
-    }
-
     public void login(){
         Subject usuarioActual = SecurityUtils.getSubject();
-        UsernamePasswordToken uPToken = new UsernamePasswordToken(getUsuario(), new Sha256Hash(getContrasena()).toHex());
+        UsernamePasswordToken uPToken = new UsernamePasswordToken(getUsuario(), getContrasena());
         try{
             Usuario user = rebi.buscarUsuario(usuario);
             if (user != null){
@@ -61,7 +48,7 @@ public class LoginBean extends BasePageBean {
                 redirect();
                 setLogeado(true);
             }else{
-             error("EL usuario no existe");
+                error("EL usuario no existe");
             }
         } catch (UnknownAccountException e) {
             String errorMensaje = "El usuario no esta registrado";
@@ -79,12 +66,11 @@ public class LoginBean extends BasePageBean {
             String errorMensaje = "Error inesperado";
             error(errorMensaje);
             log.error(e.getMessage(), e);
-        }catch (Exception e){
-            String errorMensaje = "Error";
+        } catch (ExceptionRecursosBiblioteca e) {
+            String errorMensaje = "Error inesperado 2";
             error(errorMensaje);
             log.error(e.getMessage(), e);
-        }
-        finally {
+        } finally {
             uPToken.clear();
         }
     }

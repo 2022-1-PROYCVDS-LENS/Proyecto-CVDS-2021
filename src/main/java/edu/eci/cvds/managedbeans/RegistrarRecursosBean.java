@@ -1,12 +1,11 @@
-package managedbeans;
+package edu.eci.cvds.managedbeans;
 
 import com.google.inject.Inject;
-import entities.Recurso;
-import entities.TipoRecurso;
+import edu.eci.cvds.entities.TipoRecurso;
+import edu.eci.cvds.services.ExceptionRecursosBiblioteca;
+import edu.eci.cvds.services.RecursosBiblioteca;
 import lombok.Getter;
 import lombok.Setter;
-import services.ExceptionRecursosBiblioteca;
-import services.RecursosBiblioteca;
 
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;

@@ -1,11 +1,7 @@
-package services;
+package edu.eci.cvds.services;
 
 
-import entities.Horario;
-import entities.Recurso;
-import entities.TipoRecurso;
-
-import java.util.List;
+import edu.eci.cvds.entities.TipoRecurso;
 
 public class main {
     public static  void main(String[] args){

@@ -1,7 +1,7 @@
-package persistence.mybatisimpl.mappers;
+package edu.eci.cvds.persistence.mybatisimpl.mappers;
 
+import edu.eci.cvds.entities.Usuario;
 import org.apache.ibatis.annotations.Param;
-import entities.Usuario;
 
 public interface UsuarioMapper {
 

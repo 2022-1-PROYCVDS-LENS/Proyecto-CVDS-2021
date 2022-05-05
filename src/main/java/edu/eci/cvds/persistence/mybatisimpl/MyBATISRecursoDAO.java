@@ -1,11 +1,11 @@
-package persistence.mybatisimpl;
+package edu.eci.cvds.persistence.mybatisimpl;
 
 import com.google.inject.Inject;
-import entities.Recurso;
-import entities.TipoRecurso;
-import persistence.RecursoDAO;
-import persistence.mybatisimpl.mappers.RecursoMapper;
-import services.ExceptionRecursosBiblioteca;
+import edu.eci.cvds.entities.Recurso;
+import edu.eci.cvds.entities.TipoRecurso;
+import edu.eci.cvds.services.ExceptionRecursosBiblioteca;
+import edu.eci.cvds.persistence.RecursoDAO;
+import edu.eci.cvds.persistence.mybatisimpl.mappers.RecursoMapper;
 
 
 import java.util.List;
@@ -65,7 +65,7 @@ public class MyBATISRecursoDAO implements RecursoDAO {
     }
 
     @Override
-    public void registrarRecurso(String nombre, String habilitado, String ubicacion, int ejemplar, TipoRecurso tipo, int capacidad) throws ExceptionRecursosBiblioteca{
+    public void registrarRecurso(String nombre, String habilitado, String ubicacion, int ejemplar, TipoRecurso tipo, int capacidad) throws ExceptionRecursosBiblioteca {
         try{
             recursoMapper.registrarRecurso(nombre, habilitado, ubicacion, ejemplar, tipo, capacidad);
         }catch (Exception e){

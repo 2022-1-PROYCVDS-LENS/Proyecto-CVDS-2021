@@ -1,7 +1,7 @@
-package persistence;
+package edu.eci.cvds.persistence;
 
 
-import entities.TipoRecurso;
+import edu.eci.cvds.entities.TipoRecurso;
 
 public interface TipoRecursoDAO {
     public void save(TipoRecurso tipoRecurso);

@@ -1,11 +1,10 @@
-package persistence.mybatisimpl;
+package edu.eci.cvds.persistence.mybatisimpl;
 
 import com.google.inject.Inject;
-import entities.Horario;
-import persistence.HorarioDAO;
-import persistence.mybatisimpl.mappers.HorarioMapper;
-import services.ExceptionRecursosBiblioteca;
-import services.RecursosBiblioteca;
+import edu.eci.cvds.entities.Horario;
+import edu.eci.cvds.persistence.HorarioDAO;
+import edu.eci.cvds.services.ExceptionRecursosBiblioteca;
+import edu.eci.cvds.persistence.mybatisimpl.mappers.HorarioMapper;
 
 import java.util.List;
 

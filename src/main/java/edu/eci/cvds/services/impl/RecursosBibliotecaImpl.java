@@ -1,11 +1,11 @@
-package services.impl;
+package edu.eci.cvds.services.impl;
 
 import com.google.inject.Inject;
-import entities.*;
+import edu.eci.cvds.entities.*;
+import edu.eci.cvds.persistence.*;
+import edu.eci.cvds.services.ExceptionRecursosBiblioteca;
+import edu.eci.cvds.services.RecursosBiblioteca;
 import org.apache.ibatis.exceptions.PersistenceException;
-import persistence.*;
-import services.ExceptionRecursosBiblioteca;
-import services.RecursosBiblioteca;
 
 import javax.ejb.Singleton;
 import java.util.List;

@@ -1,4 +1,4 @@
-package persistence.mybatisimpl.mappers;
+package edu.eci.cvds.persistence.mybatisimpl.mappers;
 
 public interface TipoRecursoMapper {
 }

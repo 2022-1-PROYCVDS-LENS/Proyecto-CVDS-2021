@@ -1,4 +1,4 @@
-package services;
+package edu.eci.cvds.services;
 
 public class ExceptionRecursosBiblioteca extends Exception{
 

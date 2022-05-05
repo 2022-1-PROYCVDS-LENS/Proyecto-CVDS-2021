@@ -3,7 +3,7 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="persistence.mybatisimpl.mappers.RecursoMapper">
+<mapper namespace="edu.eci.cvds.persistence.mybatisimpl.mappers.RecursoMapper">
 
     <resultMap type="Recurso" id="RecursoResult">
         <id property="id" column="id_recurso"/>
@@ -12,8 +12,8 @@
         <result property="ubicacion" column="ubicacion"/>
         <result property="ejemplares" column="ejemplares"/>
         <result property="capacidad" column="capacidad"/>
-        <association property="tipo" javaType="TipoRecurso" resultMap="persistence.mybatisimpl.mappers.TipoRecursoMapper.TipoRecursoResult"/>
-        <collection property="horarios" ofType="Horario" resultMap="persistence.mybatisimpl.mappers.HorarioMapper.HorarioResult" columnPrefix="ho_"/>
+        <association property="tipo" javaType="TipoRecurso" resultMap="edu.eci.cvds.persistence.mybatisimpl.mappers.TipoRecursoMapper.TipoRecursoResult"/>
+        <collection property="horarios" ofType="Horario" resultMap="edu.eci.cvds.persistence.mybatisimpl.mappers.HorarioMapper.HorarioResult" columnPrefix="ho_"/>
     </resultMap>
 
     <select id="consultarRecursos" resultMap="RecursoResult">

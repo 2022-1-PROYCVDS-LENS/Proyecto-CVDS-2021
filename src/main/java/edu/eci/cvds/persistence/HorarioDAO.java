@@ -1,7 +1,7 @@
-package persistence;
+package edu.eci.cvds.persistence;
 
-import entities.Horario;
-import services.ExceptionRecursosBiblioteca;
+import edu.eci.cvds.entities.Horario;
+import edu.eci.cvds.services.ExceptionRecursosBiblioteca;
 
 import java.util.List;
 

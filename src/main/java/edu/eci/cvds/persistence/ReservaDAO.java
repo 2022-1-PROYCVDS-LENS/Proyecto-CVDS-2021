@@ -1,7 +1,7 @@
-package persistence;
+package edu.eci.cvds.persistence;
 
 
-import entities.Reserva;
+import edu.eci.cvds.entities.Reserva;
 
 public interface ReservaDAO {
     public void save(Reserva reserva);

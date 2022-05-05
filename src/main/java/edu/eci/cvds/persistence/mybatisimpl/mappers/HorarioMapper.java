@@ -1,8 +1,7 @@
-package persistence.mybatisimpl.mappers;
+package edu.eci.cvds.persistence.mybatisimpl.mappers;
 
-import entities.Horario;
+import edu.eci.cvds.entities.Horario;
 import org.apache.ibatis.annotations.Param;
-import services.ExceptionRecursosBiblioteca;
 
 import java.util.List;
 

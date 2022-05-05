@@ -1,4 +1,4 @@
-package entities;
+package edu.eci.cvds.entities;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

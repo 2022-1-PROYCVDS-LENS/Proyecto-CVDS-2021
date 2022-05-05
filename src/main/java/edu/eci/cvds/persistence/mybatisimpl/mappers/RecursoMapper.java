@@ -1,7 +1,7 @@
-package persistence.mybatisimpl.mappers;
+package edu.eci.cvds.persistence.mybatisimpl.mappers;
 
-import entities.Recurso;
-import entities.TipoRecurso;
+import edu.eci.cvds.entities.Recurso;
+import edu.eci.cvds.entities.TipoRecurso;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;

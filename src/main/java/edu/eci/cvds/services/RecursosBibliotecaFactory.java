@@ -1,10 +1,11 @@
-package services;
+package edu.eci.cvds.services;
 
 import com.google.inject.Injector;
+import edu.eci.cvds.persistence.*;
+import edu.eci.cvds.persistence.mybatisimpl.*;
+import edu.eci.cvds.services.impl.RecursosBibliotecaImpl;
 import org.mybatis.guice.XMLMyBatisModule;
-import persistence.*;
-import persistence.mybatisimpl.*;
-import services.impl.*;
+
 
 import java.util.Optional;
 
@@ -40,19 +41,22 @@ public class RecursosBibliotecaFactory {
         if (!optInjector.isPresent()) {
             optInjector = Optional.of(myBatisInjector("development","mybatis-config.xml"));
         }
+
         return optInjector.get().getInstance(RecursosBiblioteca.class);
     }
 
 
-    public RecursosBiblioteca getServiciosAlquilerTesting(){
-        if (!optInjector.isPresent()) {
-            optInjector = Optional.of(myBatisInjector("test","mybatis-config-h2.xml"));
-        }
-        return optInjector.get().getInstance(RecursosBiblioteca.class);
-    }
+//    public RecursosBiblioteca getServiciosAlquilerTesting(){
+//        if (!optInjector.isPresent()) {
+//            optInjector = Optional.of(myBatisInjector("com.eci.test","mybatis-config-h2.xml"));
+//        }
+//
+//        return optInjector.get().getInstance(ServiciosAlquiler.class);
+//    }
 
 
     public static RecursosBibliotecaFactory getInstance(){
         return instance;
     }
 }
+

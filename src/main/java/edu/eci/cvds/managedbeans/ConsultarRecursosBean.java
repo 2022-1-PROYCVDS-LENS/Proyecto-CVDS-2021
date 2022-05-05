@@ -1,14 +1,13 @@
-package managedbeans;
+package edu.eci.cvds.managedbeans;
 
 
 import com.google.inject.Inject;
-import entities.Recurso;
-import services.RecursosBiblioteca;
+import edu.eci.cvds.entities.Recurso;
+import edu.eci.cvds.services.RecursosBiblioteca;
+
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
-import java.io.Serializable;
 import java.util.List;
-import java.util.Locale;
 
 /**
  * Bean para la interfaz de usuario de la consulta de recursos

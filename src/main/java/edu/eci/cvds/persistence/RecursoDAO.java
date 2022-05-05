@@ -1,8 +1,8 @@
-package persistence;
+package edu.eci.cvds.persistence;
 
-import entities.Recurso;
-import entities.TipoRecurso;
-import services.ExceptionRecursosBiblioteca;
+import edu.eci.cvds.entities.Recurso;
+import edu.eci.cvds.entities.TipoRecurso;
+import edu.eci.cvds.services.ExceptionRecursosBiblioteca;
 
 import java.util.List;
 

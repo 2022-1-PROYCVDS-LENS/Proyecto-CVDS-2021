@@ -1,9 +1,9 @@
-package persistence.mybatisimpl;
+package edu.eci.cvds.persistence.mybatisimpl;
 
 import com.google.inject.Inject;
-import entities.ReservaRecurrente;
-import persistence.ReservaRecurrenteDAO;
-import persistence.mybatisimpl.mappers.ReservaRecurrenteMapper;
+import edu.eci.cvds.entities.ReservaRecurrente;
+import edu.eci.cvds.persistence.ReservaRecurrenteDAO;
+import edu.eci.cvds.persistence.mybatisimpl.mappers.ReservaRecurrenteMapper;
 
 public class MyBATISReservaRecurrenteDAO implements ReservaRecurrenteDAO {
     @Inject

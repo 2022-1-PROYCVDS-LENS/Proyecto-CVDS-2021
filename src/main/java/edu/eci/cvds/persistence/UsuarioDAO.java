@@ -1,7 +1,7 @@
-package persistence;
+package edu.eci.cvds.persistence;
 
 
-import entities.Usuario;
+import edu.eci.cvds.entities.Usuario;
 import org.apache.ibatis.exceptions.PersistenceException;
 
 public interface UsuarioDAO {

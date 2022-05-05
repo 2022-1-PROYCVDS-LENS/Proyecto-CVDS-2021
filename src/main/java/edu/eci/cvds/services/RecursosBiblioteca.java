@@ -1,7 +1,6 @@
-package services;
+package edu.eci.cvds.services;
 
-import entities.*;
-import entities.Usuario;
+import edu.eci.cvds.entities.*;
 import java.util.List;
 
 public interface RecursosBiblioteca {

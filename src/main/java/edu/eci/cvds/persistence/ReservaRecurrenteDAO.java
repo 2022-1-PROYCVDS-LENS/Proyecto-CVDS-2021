@@ -1,7 +1,7 @@
-package persistence;
+package edu.eci.cvds.persistence;
 
 
-import entities.ReservaRecurrente;
+import edu.eci.cvds.entities.ReservaRecurrente;
 
 public interface ReservaRecurrenteDAO {
     public void save(ReservaRecurrente reservaRecurrente);

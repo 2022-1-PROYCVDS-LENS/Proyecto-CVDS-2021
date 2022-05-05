@@ -1,10 +1,10 @@
-package persistence.mybatisimpl;
+package edu.eci.cvds.persistence.mybatisimpl;
 
 import com.google.inject.Inject;
-import entities.Usuario;
+import edu.eci.cvds.entities.Usuario;
+import edu.eci.cvds.persistence.UsuarioDAO;
 import org.apache.ibatis.exceptions.PersistenceException;
-import persistence.UsuarioDAO;
-import persistence.mybatisimpl.mappers.UsuarioMapper;
+import edu.eci.cvds.persistence.mybatisimpl.mappers.UsuarioMapper;
 
 public class MyBATISUsuarioDAO implements UsuarioDAO {
     @Inject

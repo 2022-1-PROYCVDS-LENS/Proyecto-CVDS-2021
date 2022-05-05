@@ -1,4 +1,4 @@
-package managedbeans;
+package edu.eci.cvds.managedbeans;
 
 import java.io.Serializable;
 

@@ -1,4 +1,4 @@
-package security;
+package edu.eci.cvds.security;
 
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
