@@ -6,6 +6,7 @@ import entities.Usuario;
 import org.apache.ibatis.annotations.Param;
 
 import java.sql.Time;
+import java.util.List;
 import java.sql.Timestamp;
 import java.util.List;
 
@@ -30,4 +31,10 @@ public interface ReservaMapper {
                          @Param("solicitud") String solicitud );
 
     List<Reserva> consultarReservas();
+
+    List<Reserva> consultarReservasActivas(@Param("id") int id);
+
+    List<Reserva> consultarReservasCanceladas(@Param("id") int id);
+
+    List<Reserva> consultarReservasPasadas(@Param("id") int id);
 }

@@ -10,6 +10,7 @@ import persistence.mybatisimpl.mappers.ReservaMapper;
 import java.sql.Time;
 import java.sql.Timestamp;
 import java.util.List;
+import java.util.List;
 
 public class MyBATISReservaDAO implements ReservaDAO {
     @Inject
@@ -33,5 +34,20 @@ public class MyBATISReservaDAO implements ReservaDAO {
     @Override
     public List<Reserva> consultarReservas(){
         return reservaMapper.consultarReservas();
+    }
+
+    @Override
+    public List<Reserva> consultarReservasActivas(int id) {
+        return reservaMapper.consultarReservasActivas(id);
+    }
+
+    @Override
+    public List<Reserva> consultarReservasCanceladas(int id) {
+        return reservaMapper.consultarReservasCanceladas(id);
+    }
+
+    @Override
+    public List<Reserva> consultarReservasPasadas(int id) {
+        return reservaMapper.consultarReservasPasadas(id);
     }
 }
