@@ -13,7 +13,6 @@ persistence\mybatisimpl\mappers\ReservaMapper.class
 entities\ReservaRecurrente.class
 guice\GuiceContextListener.class
 persistence\mybatisimpl\mappers\UsuarioMapper.class
-managedbeans\visualizarReservaBean.class
 services\RecursosBiblioteca.class
 exceptions\recursosBibliotecaException.class
 persistence\HorarioDAO.class
@@ -33,6 +32,7 @@ persistence\mybatisimpl\mappers\RecursoMapper.class
 test\bibliotecaTest.class
 persistence\RecursoDAO.class
 persistence\ReservaRecurrenteDAO.class
+managedbeans\VisualizarReservaBean.class
 entities\Recurso.class
 persistence\mybatisimpl\MyBATISReservaDAO.class
 guice\GuiceContextListener$1.class

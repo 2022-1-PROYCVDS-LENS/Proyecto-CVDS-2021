@@ -30,7 +30,7 @@ public class VisualizarReservaBean extends BasePageBean{
     String solicitud;
 
     public Usuario getUser() {
-        return
+        return user;
     }
 
     public void setUser(Usuario user) {
@@ -46,21 +46,21 @@ public class VisualizarReservaBean extends BasePageBean{
      * Asigna a reservas las activas del usuario
      */
     public void consAct(){
-        reservas= rebi.consultarReservasActivas(usuario.getId());
+        reservas= rebi.consultarReservasActivas(user.getId());
     }
 
     /**
      * Asigna a reservas las canceladas del usuario
      */
     public void consCanc(){
-        reservas = rebi.consultarReservasCanceladas(usuario.getId());
+        reservas = rebi.consultarReservasCanceladas(user.getId());
     }
 
     /**
      * Asigna a reservas las pasadas del usuario
      */
     public void consPas(){
-        reservas = rebi.consultarReservasPasadas(usuario.getId());
+        reservas = rebi.consultarReservasPasadas(user.getId());
     }
 
 }
