@@ -18,29 +18,31 @@ import java.util.Map;
 @ManagedBean(name = "visualizarReservaBean")
 @SessionScoped
 public class VisualizarReservaBean extends BasePageBean{
-    @ManagedProperty(value = "#{user}")
+    @ManagedProperty(value = "#{loginBean}")
+    private LoginBean loginBean;
+
+
     @Inject
     private RecursosBiblioteca rebi;
-    Usuario user;
     Recurso recurso;
+
+
+
     Time inicio = new Time(System.currentTimeMillis());
     Time fin;
     boolean recurrente;
     String estado;
+    private Usuario user;
     String solicitud;
-
-    public Usuario getUser() {
-        return user;
-    }
-
-    public void setUser(Usuario user) {
-        this.user = user;
-    }
-
     List<Reserva> reservas;
 
+    public void setLoginBean(LoginBean loginBean) {
+        this.loginBean = loginBean;
+    }
 
-
+    public void init(){
+        this.user = loginBean.getUser();
+    }
 
     /**
      * Asigna a reservas las activas del usuario

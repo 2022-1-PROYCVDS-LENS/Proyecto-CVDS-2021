@@ -13,12 +13,6 @@ xhtml de la pagina principal de recursos biblioteca en donde se redireccionara a
         <ui:insert name="title">Recursos biblioteca</ui:insert>
     </title>
     <link href="./resources/style.css" rel="stylesheet"/>
-    <f:metadata>
-        <f:viewParam name="usuario" value="#{loginBean.getUser}" />
-        <f:viewAction action="#{bean.onload}" />
-        <f:setPropertyActionListener target = "#{visualizarReservaBean.usuario}"
-                                     value = "#{loginBean.getUser}" />
-    </f:metadata>
 </h:head>
 
 <h:body>
