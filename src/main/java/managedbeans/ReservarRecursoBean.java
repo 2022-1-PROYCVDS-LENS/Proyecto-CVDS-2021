@@ -13,6 +13,9 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 import javax.faces.context.FacesContext;
 import java.sql.Time;
+import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
+import java.util.List;
 
 
 @SuppressWarnings("deprecation")
@@ -20,26 +23,31 @@ import java.sql.Time;
 @SessionScoped
 public class ReservarRecursoBean extends BasePageBean {
 
-    @Getter @Setter Usuario usuario;
+    @Getter @Setter Usuario usuario =  new Usuario(1, "estudiante", "Esteban Torres", null, "esteban.torres@escuelaing.edu.co", "12345e");
     @Getter @Setter Recurso recurso;
-    @Getter @Setter Time inicio = new Time(System.currentTimeMillis());
-    @Getter @Setter Time fin;
+    @Getter @Setter Timestamp inicio;
+    @Getter @Setter Timestamp fin;
     @Getter @Setter boolean recurrente;
     @Getter @Setter String estado;
-    @Getter @Setter String solicitud;
+    @Getter @Setter String solicitud = new Timestamp(System.currentTimeMillis()).toString();
+     SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
     @Inject
     private RecursosBiblioteca recursosBiblioteca;
 
-    public void reservarRecurso() throws ExceptionRecursosBiblioteca{
+    public void reservarRecurso(int idRecurso) throws ExceptionRecursosBiblioteca{
         try{
-            Time t = new Time(inicio.getTime());
-            t.setTime(inicio.getTime() + 3600000);
-            fin = t;
+
+            List<Recurso> rec = recursosBiblioteca.consultarRecursos();
+            for (Recurso r : rec) {
+                if (r.getId() == idRecurso) recurso = r;
+            }
+            System.out.println(usuario + " " + recurso + " " + inicio + " " + fin +" "+recurrente+" "+estado+" "+solicitud);
             recursosBiblioteca.reservarRecursos(usuario,recurso,inicio,fin,recurrente,estado,solicitud);
             System.out.println("aaaaaaaaaaa");
         }catch (Exception e){
         FacesContext.getCurrentInstance().addMessage("No se pudo reservar el recurso", new FacesMessage(FacesMessage.SEVERITY_ERROR,"Error Cliente", "No se pudo reservar el recurso"));
+        e.printStackTrace();
         }
     }
 

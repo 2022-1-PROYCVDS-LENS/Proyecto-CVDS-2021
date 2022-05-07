@@ -7,6 +7,8 @@ import org.apache.ibatis.annotations.Param;
 
 import java.sql.Time;
 import java.util.List;
+import java.sql.Timestamp;
+import java.util.List;
 
 public interface ReservaMapper {
 
@@ -22,11 +24,13 @@ public interface ReservaMapper {
      */
     void reservarRecurso(@Param("usuario") Usuario usuario,
                          @Param("recurso") Recurso recurso,
-                         @Param("inicio") Time inicio,
-                         @Param("fin") Time fin,
+                         @Param("inicio") Timestamp inicio,
+                         @Param("fin") Timestamp fin,
                          @Param("recurrente") boolean recurrente,
                          @Param("estado") String estado,
                          @Param("solicitud") String solicitud );
+
+    List<Reserva> consultarReservas();
 
     List<Reserva> consultarReservasActivas(@Param("id") int id);
 
