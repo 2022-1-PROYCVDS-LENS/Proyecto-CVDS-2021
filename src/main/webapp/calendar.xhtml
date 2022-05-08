@@ -1,10 +1,14 @@
-<!DOCTYPE html>
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:f="http://java.sun.com/jsf/core"
       xmlns:ui="http://java.sun.com/jsf/facelets"
-      xmlns:p="http://primefaces.org/ui">
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:jsf="http://xmlns.jcp.org/jsf">
 <h:head>
+    <meta charset="UTF-8" />
     <title>
         <ui:insert name="title">Recursos biblioteca</ui:insert>
     </title><title>Schedule Example</title>
@@ -15,14 +19,12 @@
         <h:graphicImage id="header_logo" library="imagenes" name="logo-ecijg.width-380.png"/>
         <h:outputText id = "header_text" class = "text" value = "Escuela Colombiana de ingieneria Julio Garavito: Recursos de biblioteca"/>
     </div>
-    <h:form id="Calendar">
+    <h:form class="formulario">
         <p:growl id="messages" showDetail="true"/>
-
         <h:panelGrid columnClasses="value">
-            #{calendarioBean.loadEvents()}
-            <p:schedule id="schedule" value="#{calendarioBean.eventModel}" widgetVar="myschedule"
+            <p:schedule id="schedule" value="#{calendarioBean.consultar()}" widgetVar="myschedule"
                         rightHeaderTemplate="agendaDay,agendaWeek,month,listYear"
-                        timeZone="ZoneId.systemDefault()" clientTimeZone="local" draggable="false">
+                        timeZone="ZoneId.systemDefault()" clientTimeZone="local" draggable="false" style="background:#ffffff;">
 
                 <p:ajax event="eventSelect" listener="#{calendarioBean.onEventSelect}" update="eventDetails1"
                         oncomplete="PF('eventDetails1').show();" />
@@ -34,15 +36,19 @@
             </p:schedule>
         </h:panelGrid>
 
-        <p:dialog widgetVar="eventDetails1" header="Horario de reserva" showEffect="clip" hideEffect="clip"
+        <p:dialog widgetVar="eventDetails1" header="Información de la reserva" showEffect="clip" hideEffect="clip"
                   modal="true">
 
             <h:panelGrid id="eventDetails1" border="1" columns="2" styleClass="table-style">
                 <h:outputLabel for="it-nombre-1" value="Id Recurso: " />
                 <h:outputLabel id="it-nombre-1" value="  #{calendarioBean.eventId}"/>
 
-                <h:outputLabel for="it-apellido-1" value="Apellido: " />
-                <h:inputText id="it-apellido-1" />
+
+                <h:outputLabel for="it-FechaInicio-1" value="Fecha Inicio: " />
+                <h:outputLabel id="it-FechaInicio-1" value = "#{calendarioBean.getInicio()}" />
+
+                <h:outputLabel for="it-FechaFin-1" value="Fecha Fin: " />
+                <h:outputLabel id="it-FechaFin-1" value = "#{calendarioBean.getFin()}" />
             </h:panelGrid>
 
         </p:dialog>

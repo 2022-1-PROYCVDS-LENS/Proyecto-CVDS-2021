@@ -1,6 +1,7 @@
 package managedbeans;
 
 import java.sql.Timestamp;
+import java.util.Date;
 import java.util.List;
 import javax.enterprise.context.ApplicationScoped;
 import javax.enterprise.context.RequestScoped;
@@ -31,9 +32,9 @@ public class CalendarioBean extends BasePageBean {
     @Inject
     private RecursosBiblioteca recursosBiblioteca;
 
-    private ScheduleModel eventModel = new DefaultScheduleModel();;
+    private ScheduleModel eventModel = new DefaultScheduleModel();
 
-    private ScheduleEvent event = new DefaultScheduleEvent();;
+    private ScheduleEvent event = new DefaultScheduleEvent();
 
     private ScheduleEvent eventAux = new DefaultScheduleEvent();
 
@@ -48,17 +49,34 @@ public class CalendarioBean extends BasePageBean {
         return reservas;
     }
 
+    public ScheduleModel consultar(){
+        loadEvents();
+        return eventModel;
+    }
+
+    public Date getInicio(){
+        return event.getStartDate();
+    }
+
+    public Date getFin(){
+        return event.getEndDate();
+    }
+
     public void loadEvents() {
         eventModel = new DefaultScheduleModel();
         reservas = recursosBiblioteca.consultarReservas();
-//        Timestamp inicio = new Timestamp(2022, 5, 4, 7, 0, 0, 0);
-//        Timestamp fin = new Timestamp(2022, 5, 4, 9, 0, 0, 0);
+//        Timestamp inicio = new Timestamp(122, 4, 7, 7, 0, 0, 0);
+//        Timestamp fin = new Timestamp(122, 4, 7, 9, 0, 0, 0);
 //        event = new DefaultScheduleEvent("prueba", inicio, fin);
-        eventModel.addEvent(event);
+//        eventModel.addEvent(event);
+//        System.out.println(inicio);
+//        System.out.println("--------------------------");
+//        System.out.println(reservas.get(0).getInicio());
         for (Reserva h : reservas){
-            event = new DefaultScheduleEvent("prueba", h.getInicio(), h.getFin());
+            event = new DefaultScheduleEvent(" " + h.getIdUsuario().getNombre(), h.getInicio(), h.getFin());
+//            System.out.println(h.getInicio());
             eventModel.addEvent(event);
-            event.setId("1");
+//            event.setId("1");
             event.setId(String.valueOf(h.getId()));
         }
     }
@@ -74,6 +92,7 @@ public class CalendarioBean extends BasePageBean {
     public void onEventSelect(SelectEvent selectEvent) {
         this.event = (ScheduleEvent) selectEvent.getObject();
         this.eventId = Integer.parseInt(event.getId());
+//        this.event.getStartDate();
     }
 
     public void onEventMove(ScheduleEntryMoveEvent event) {

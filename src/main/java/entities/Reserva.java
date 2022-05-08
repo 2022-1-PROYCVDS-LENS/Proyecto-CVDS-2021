@@ -16,8 +16,8 @@ import java.util.List;
 @AllArgsConstructor
 public class Reserva implements Serializable {
     private @Getter @Setter int id;
-    private @Getter @Setter int idUsuario;
-    private @Getter @Setter int idRecurso;
+    private @Getter @Setter Usuario idUsuario;
+    private @Getter @Setter Recurso idRecurso;
     private @Getter @Setter boolean recurrente;
     private @Getter @Setter String estado;
     private @Getter @Setter Date solicitud;
@@ -25,6 +25,7 @@ public class Reserva implements Serializable {
     private @Getter @Setter Timestamp fin;
     private @Getter @Setter List<ReservaRecurrente> reservaRecurrentes;
     private @Getter @Setter List<Usuario> usuarios;
+    private @Getter @Setter List<Recurso> recursos;
 
     @Override
     public String toString(){

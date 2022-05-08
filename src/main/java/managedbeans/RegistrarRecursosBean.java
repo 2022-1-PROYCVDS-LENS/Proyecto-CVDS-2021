@@ -36,6 +36,8 @@ public class RegistrarRecursosBean extends BasePageBean{
             tipor.setId(pos.indexOf(this.tipo) + 1);
             tipor.setNombre(this.tipo);
             recursosBiblioteca.registrarRecurso(this.nombre, this.habilitado, this.ubicacion, this.ejemplar, tipor, this.capacidad);
+            FacesMessage message = new FacesMessage("bien");
+            FacesContext.getCurrentInstance().addMessage("bien", message);
         }catch (Exception e){
             FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR,"Error Cliente", "ya hay un cliente registrado igual"));
         }
