@@ -8,6 +8,8 @@ import javax.enterprise.context.RequestScoped;
 import javax.enterprise.context.SessionScoped;
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.*;
+
+import entities.Recurso;
 import lombok.Getter;
 import lombok.Setter;
 import com.google.inject.Inject;
@@ -42,6 +44,8 @@ public class CalendarioBean extends BasePageBean {
 
     @Getter @Setter private Reserva reserva;
 
+    @Getter @Setter public Recurso recurso;
+
     private int eventId = 0;
 
     public List<Reserva> consul(){
@@ -74,7 +78,7 @@ public class CalendarioBean extends BasePageBean {
 //        System.out.println(reservas.get(0).getInicio());
         for (Reserva h : reservas){
             event = new DefaultScheduleEvent(" " + h.getIdUsuario().getNombre(), h.getInicio(), h.getFin());
-//            System.out.println(h.getInicio());
+            System.out.println(h.getIdRecurso().getNombre());
             eventModel.addEvent(event);
 //            event.setId("1");
             event.setId(String.valueOf(h.getId()));
