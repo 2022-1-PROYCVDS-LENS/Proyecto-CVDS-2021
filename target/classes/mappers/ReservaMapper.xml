@@ -14,17 +14,23 @@
         <result property="solicitud" column="solicitud"/>
         <association property="idRecurso" javaType="Recurso" resultMap="persistence.mybatisimpl.mappers.RecursoMapper.RecursoResult"/>
         <association property="idUsuario" javaType="Usuario" resultMap="persistence.mybatisimpl.mappers.UsuarioMapper.UsuarioResult"/>
-<!--        <collection property="reservaRecurrentes" ofType="ReservaRecurrente" resultMap="persistence.mybatisimpl.mappers.ReservaRecurrenteMapper.TipoRecursoResult"/>-->
-<!--        <collection property="usuarios" ofType="Usuario" resultMap="sampleprj.dao.dato.mybatis.mappers.UsuarioMapper.UsuarioResult.UsuarioResult"/>-->
+<!--        <collection property="reservaRecurrentes" ofType="ReservaRecurrente" resultMap="persistence.mybatisimpl.mappers.ReservaRecurrenteMapper.ReservaRecurrenteResult"/>-->
+<!--        <collection property="usuarios" ofType="Usuario" resultMap="persistence.mybatisimpl.mappers.UsuarioMapper.UsuarioResult"/>-->
+<!--        <collection property="recursos" ofType="Recurso" resultMap="persistence.mybatisimpl.mappers.RecursoMapper.RecursoResult" columnPrefix="rec_"/>-->
     </resultMap>
 
     <select id="consultarReservas" resultMap="ReservaResult">
         select
         res.id_reserva,
         res.inicio,
-        res.fin
+        res.fin,
+        usu.nombre,
+        rec.nombre
         from public.reservas as res
-        where res.id_recurso = 4;
+        join recursos as rec
+        ON res.id_recurso = rec.id_recurso
+        join usuarios as usu
+        ON res.id_usuario = usu.id_usuarios;
     </select>
 
 </mapper>
