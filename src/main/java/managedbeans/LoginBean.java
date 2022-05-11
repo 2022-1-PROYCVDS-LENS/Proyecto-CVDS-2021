@@ -45,6 +45,9 @@ public class LoginBean extends BasePageBean{
     @Inject
     private RecursosBiblioteca rebi;
 
+    public int getUserId(){
+        return user.getId();
+    }
     public void login(){
         Subject usuarioActual = SecurityUtils.getSubject();
         UsernamePasswordToken uPToken = new UsernamePasswordToken(getUsuario(), getContrasena());
@@ -55,6 +58,7 @@ public class LoginBean extends BasePageBean{
                 usuarioActual.getSession().setAttribute("Correo", usuario);
                 redirect();
                 setLogeado(true);
+                FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("user",user);
             }else{
                 error("EL usuario no existe");
             }

@@ -8,8 +8,8 @@ import entities.Usuario;
 import services.RecursosBiblioteca;
 
 import javax.faces.bean.ManagedBean;
-import javax.faces.bean.ManagedProperty;
 import javax.faces.bean.SessionScoped;
+import javax.faces.context.FacesContext;
 import java.sql.Time;
 import java.util.List;
 
@@ -18,8 +18,6 @@ import java.util.List;
 @ManagedBean(name = "visualizarReservaBean")
 @SessionScoped
 public class VisualizarReservaBean extends BasePageBean{
-    @ManagedProperty(value = "#{loginBean}")
-    private LoginBean loginBean;
 
     @Inject
     private RecursosBiblioteca recursosBiblioteca;
@@ -32,29 +30,33 @@ public class VisualizarReservaBean extends BasePageBean{
     private Usuario user;
     private int userId;
     String solicitud;
+
+    public int getUserId() {
+        return userId;
+    }
+
+    public void setUserId(int userId) {
+        this.userId = userId;
+    }
+
     List<Reserva> reservas;
     Reserva reserva;
-
-    public void setLoginBean(LoginBean loginBean) {
-        this.loginBean = loginBean;
-    }
-
-    public void init(){
-        this.user = loginBean.getUser();
-        reservas = recursosBiblioteca.consultarReservasActivas(user.getId());
-    }
 
     /**
      * Asigna a reservas las activas del usuario
      */
     public void consAct(){
-        reservas= recursosBiblioteca.consultarReservasActivas(user.getId());
+        user = (Usuario) FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("user");
+        userId = user.getId();
+        reservas= recursosBiblioteca.consultarReservasActivas(1);
     }
 
     /**
      * Asigna a reservas las canceladas del usuario
      */
     public void consCanc(){
+        user = (Usuario) FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("user");
+        userId = user.getId();
         reservas = recursosBiblioteca.consultarReservasCanceladas(user.getId());
     }
 
@@ -62,6 +64,8 @@ public class VisualizarReservaBean extends BasePageBean{
      * Asigna a reservas las pasadas del usuario
      */
     public void consPas(){
+        user = (Usuario) FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("user");
+        userId = user.getId();
         reservas = recursosBiblioteca.consultarReservasPasadas(user.getId());
     }
 
