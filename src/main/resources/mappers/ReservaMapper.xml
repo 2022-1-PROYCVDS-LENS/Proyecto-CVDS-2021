@@ -46,7 +46,7 @@
             res.solicitud,
             res.inicio,
             res.fin
-        from public.res as res
+        from public.reservas as res
         WHERE res.estado = 'cancelada' AND res.id_usuario = #{id}
     </select>
 
