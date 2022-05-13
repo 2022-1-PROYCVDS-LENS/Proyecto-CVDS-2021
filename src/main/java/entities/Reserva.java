@@ -16,11 +16,13 @@ import java.util.List;
 @AllArgsConstructor
 public class Reserva implements Serializable {
     private @Getter @Setter int id;
-    private @Getter @Setter Usuario idUsuario;
-    private @Getter @Setter Recurso idRecurso;
+    private @Getter @Setter int idUsuario;
+    private @Getter @Setter int idRecurso;
+    private @Getter @Setter Usuario Usuario;
+    private @Getter @Setter Recurso Recurso;
     private @Getter @Setter boolean recurrente;
     private @Getter @Setter String estado;
-    private @Getter @Setter Date solicitud;
+    private @Getter @Setter String solicitud;
     private @Getter @Setter Timestamp inicio;
     private @Getter @Setter Timestamp fin;
     private @Getter @Setter List<ReservaRecurrente> reservaRecurrentes;
@@ -29,6 +31,6 @@ public class Reserva implements Serializable {
 
     @Override
     public String toString(){
-        return "Reserva: " + "id = " + id + " inicio: " + inicio.toString() + " Usuario: " + idUsuario.getNombre() + " Recurso: " + idRecurso.getNombre() + "}";
+        return "Reserva: " + "id = " + id + " inicio: " + inicio.toString() + " Usuario: " + Usuario.getNombre() + " Recurso: " + Recurso.getNombre() + "}";
     }
 }

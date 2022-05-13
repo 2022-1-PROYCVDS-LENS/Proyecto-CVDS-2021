@@ -1,0 +1,21 @@
+Index: target/classes/mappers/ReservaMapper.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\" ?>\r\n<!DOCTYPE mapper\r\n        PUBLIC \"-//mybatis.org//DTD Mapper 3.0//EN\"\r\n        \"http://mybatis.org/dtd/mybatis-3-mapper.dtd\">\r\n\r\n<mapper namespace=\"persistence.mybatisimpl.mappers.ReservaMapper\">\r\n\r\n    <resultMap type=\"Reserva\" id=\"ReservaResult\">\r\n        <id property=\"id\" column=\"id_reserva\"/>\r\n        <result property=\"inicio\" column=\"inicio\"/>\r\n        <result property=\"fin\" column=\"fin\"/>\r\n        <result property=\"recurrente\" column=\"recurrente\"/>\r\n        <result property=\"estado\" column=\"estado\"/>\r\n        <result property=\"solicitud\" column=\"solicitud\"/>\r\n        <association property=\"idRecurso\" javaType=\"Recurso\" resultMap=\"persistence.mybatisimpl.mappers.RecursoMapper.RecursoResult\"/>\r\n        <association property=\"idUsuario\" javaType=\"Usuario\" resultMap=\"persistence.mybatisimpl.mappers.UsuarioMapper.UsuarioResult\"/>\r\n        <collection property=\"reservaRecurrentes\" ofType=\"ReservaRecurrente\" resultMap=\"persistence.mybatisimpl.mappers.ReservaRecurrenteMapper.ReservaRecurrenteResult\"/>\r\n        <collection property=\"usuarios\" ofType=\"Usuario\" resultMap=\"persistence.mybatisimpl.mappers.UsuarioMapper.UsuarioResult\"/>\r\n        <collection property=\"recursos\" ofType=\"Recurso\" resultMap=\"persistence.mybatisimpl.mappers.RecursoMapper.RecursoResult\"/>\r\n    </resultMap>\r\n\r\n    <insert parameterType=\"map\" id=\"reservarRecurso\">\r\n        insert into reservas(id_reserva, id_usuario, id_recurso, inicio, fin, recurrente, estado, solicitud)\r\n        values (nextval('reservas_id') #{usuario.id}, #{recurso.id}, #{inicio}, #{fin}, #{recurrente}, #{estado}, #{solicitud})\r\n    </insert>\r\n\r\n    <select id=\"consultarReservas\" resultMap=\"ReservaResult\">\r\n        select\r\n        res.id_reserva,\r\n        res.inicio,\r\n        res.fin,\r\n        usu.nombre,\r\n        rec.nombre\r\n        from public.reservas as res\r\n        left join usuarios as usu\r\n        ON res.id_usuario = usu.id_usuarios\r\n        left join recursos as rec\r\n        ON rec.id_recurso = res.id_recurso;\r\n    </select>\r\n    <select id=\"consultarReservasActivas\" resultMap=\"ReservaResult\">\r\n        select\r\n        res.estado,\r\n        res.solicitud,\r\n        res.inicio,\r\n        res.fin\r\n        from public.reservas as res\r\n        WHERE res.estado = 'activa' AND res.id_usuario = #{id}\r\n    </select>\r\n\r\n    <select id=\"consultarReservasCanceladas\" resultMap=\"ReservaResult\">\r\n        select\r\n            res.estado,\r\n            res.solicitud,\r\n            res.inicio,\r\n            res.fin\r\n        from public.res as res\r\n        WHERE res.estado = 'cancelada' AND res.id_usuario = #{id}\r\n    </select>\r\n\r\n    <select id=\"consultarReservasPasadas\" resultMap=\"ReservaResult\">\r\n        select\r\n            res.estado,\r\n            res.solicitud,\r\n            res.inicio,\r\n            res.fin\r\n        from public.reservas as res\r\n        WHERE res.estado = 'finalizada' AND res.id_usuario = #{id}\r\n    </select>\r\n\r\n\r\n</mapper>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/target/classes/mappers/ReservaMapper.xml b/target/classes/mappers/ReservaMapper.xml
+--- a/target/classes/mappers/ReservaMapper.xml	(revision 0e72506f8b81aa466321859504f268428885ebe4)
++++ b/target/classes/mappers/ReservaMapper.xml	(date 1652199759652)
+@@ -29,8 +29,8 @@
+         res.id_reserva,
+         res.inicio,
+         res.fin,
+-        usu.nombre,
+-        rec.nombre
++        rec.nombre,
++        usu.nombre
+         from public.reservas as res
+         left join usuarios as usu
+         ON res.id_usuario = usu.id_usuarios

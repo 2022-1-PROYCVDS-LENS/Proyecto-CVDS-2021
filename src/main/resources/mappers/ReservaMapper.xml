@@ -12,25 +12,21 @@
         <result property="recurrente" column="recurrente"/>
         <result property="estado" column="estado"/>
         <result property="solicitud" column="solicitud"/>
-        <association property="idRecurso" javaType="Recurso" resultMap="persistence.mybatisimpl.mappers.RecursoMapper.RecursoResult"/>
-        <association property="idUsuario" javaType="Usuario" resultMap="persistence.mybatisimpl.mappers.UsuarioMapper.UsuarioResult"/>
+        <result property="idUsuario" column="id_usuario"/>
+        <result property="idRecurso" column="id_recurso"/>
+        <association property="recurso" javaType="Recurso" resultMap="persistence.mybatisimpl.mappers.RecursoMapper.RecursoResult"/>
+        <association property="usuario" javaType="Usuario" resultMap="persistence.mybatisimpl.mappers.UsuarioMapper.UsuarioResult"/>
 <!--        <collection property="reservaRecurrentes" ofType="ReservaRecurrente" resultMap="persistence.mybatisimpl.mappers.ReservaRecurrenteMapper.ReservaRecurrenteResult"/>-->
 <!--        <collection property="usuarios" ofType="Usuario" resultMap="persistence.mybatisimpl.mappers.UsuarioMapper.UsuarioResult"/>-->
 <!--        <collection property="recursos" ofType="Recurso" resultMap="persistence.mybatisimpl.mappers.RecursoMapper.RecursoResult" columnPrefix="rec_"/>-->
     </resultMap>
 
     <select id="consultarReservas" resultMap="ReservaResult">
-        select
-        res.id_reserva,
-        res.inicio,
-        res.fin,
-        usu.nombre,
-        rec.nombre
-        from public.reservas as res
-        join recursos as rec
-        ON res.id_recurso = rec.id_recurso
-        join usuarios as usu
-        ON res.id_usuario = usu.id_usuarios;
+        SELECT *
+        FROM public.reservas
+        INNER JOIN public.usuarios ON public.usuarios.id_usuarios = public.reservas.id_usuario
+        INNER JOIN public.recursos ON public.recursos.id_recurso = public.reservas.id_recurso
+        ;
     </select>
 
 </mapper>
