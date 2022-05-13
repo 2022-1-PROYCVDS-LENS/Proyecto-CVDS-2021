@@ -17,6 +17,7 @@ guice\GuiceContextListener.class
 persistence\mybatisimpl\mappers\UsuarioMapper.class
 services\impl\ExtenderService.class
 services\RecursosBiblioteca.class
+exceptions\recursosBibliotecaException.class
 persistence\HorarioDAO.class
 persistence\TipoRecursoDAO.class
 managedbeans\RegistrarRecursosBean.class

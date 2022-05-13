@@ -175,4 +175,11 @@
         values (nextval('recursos_id'), #{name}, #{enable}, #{location}, #{item}, #{capacity}, #{type.id})
     </insert>
 
+    <select id="consultarNombreRecurso" resultMap="RecursoResult">
+        select
+        rec.nombre
+        from public.recursos as rec
+        where #{id} = rec.id_recurso;
+    </select>
+
 </mapper>

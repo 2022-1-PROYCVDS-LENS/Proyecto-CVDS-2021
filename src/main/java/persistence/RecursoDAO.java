@@ -27,4 +27,6 @@ public interface RecursoDAO {
     List<Recurso> consultarRecursosPorUbicacionYCapacidad(String ubicacion, int capacidad);
 
     void registrarRecurso(String nombre, String habilitado, String ubicacion, int ejemplar, TipoRecurso tipo, int capacidad) throws ExceptionRecursosBiblioteca;
+
+    Recurso consultarNombreRecurso(int id);
 }

@@ -196,4 +196,9 @@ public class RecursosBibliotecaImpl implements RecursosBiblioteca {
     public List<Reserva> consultarReservasPasadas(int id) {
         return reservaDAO.consultarReservasPasadas(id);
     }
+
+    @Override
+    public Recurso consultarNombreRecurso(int id){
+        return recursoDAO.consultarNombreRecurso(id);
+    }
 }

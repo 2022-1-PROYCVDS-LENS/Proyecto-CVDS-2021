@@ -58,4 +58,5 @@ public interface RecursosBiblioteca {
 
     List<Reserva> consultarReservasPasadas(int id);
     List<Reserva> consultarReservas();
+    Recurso consultarNombreRecurso(int id);
 }

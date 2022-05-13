@@ -85,4 +85,6 @@ public interface RecursoMapper {
     List<Recurso> consultarRecursosCapaUbi(@Param("cap")int cap, @Param("ubi") String ubi);
 
     void registrarRecurso(String nombre, String ubicacion, TipoRecurso tipo, int capacidad);
+
+    Recurso consultarNombreRecurso(@Param("id") int id);
 }

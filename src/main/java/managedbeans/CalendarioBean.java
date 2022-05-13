@@ -1,6 +1,7 @@
 package managedbeans;
 
 import java.sql.Timestamp;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import javax.enterprise.context.ApplicationScoped;
@@ -36,7 +37,7 @@ public class CalendarioBean extends BasePageBean {
 
     private ScheduleModel eventModel = new DefaultScheduleModel();
 
-    private ScheduleEvent event = new DefaultScheduleEvent();
+    private DefaultScheduleEvent event = new DefaultScheduleEvent();
 
     private ScheduleEvent eventAux = new DefaultScheduleEvent();
 
@@ -45,6 +46,14 @@ public class CalendarioBean extends BasePageBean {
     @Getter @Setter private Reserva reserva;
 
     @Getter @Setter public Recurso recurso;
+
+    @Getter @Setter private ArrayList<String> recursos;
+
+    @Getter @Setter private ArrayList<String> solicitudes;
+
+    @Getter @Setter private String nombreR;
+
+    @Getter @Setter private String solicitud;
 
     private int eventId = 0;
 
@@ -67,21 +76,19 @@ public class CalendarioBean extends BasePageBean {
     }
 
     public void loadEvents() {
+        recursos = new ArrayList<String>();
+        solicitudes = new ArrayList<String>();
         eventModel = new DefaultScheduleModel();
         reservas = recursosBiblioteca.consultarReservas();
-//        Timestamp inicio = new Timestamp(122, 4, 7, 7, 0, 0, 0);
-//        Timestamp fin = new Timestamp(122, 4, 7, 9, 0, 0, 0);
-//        event = new DefaultScheduleEvent("prueba", inicio, fin);
-//        eventModel.addEvent(event);
-//        System.out.println(inicio);
-//        System.out.println("--------------------------");
-//        System.out.println(reservas.get(0).getInicio());
+        int pos = 0;
         for (Reserva h : reservas){
-            event = new DefaultScheduleEvent(" " + h.getIdUsuario().getNombre(), h.getInicio(), h.getFin());
-            System.out.println(h.getIdRecurso().getNombre());
+            event = new DefaultScheduleEvent(" " + h.getUsuario().getNombre(), h.getInicio(), h.getFin());
+            recursos.add(recursosBiblioteca.consultarNombreRecurso(h.getIdRecurso()).getNombre());
+            solicitudes.add(h.getSolicitud().toString());
+            event.setDescription(recursosBiblioteca.consultarNombreRecurso(h.getIdRecurso()).getNombre());
             eventModel.addEvent(event);
-//            event.setId("1");
-            event.setId(String.valueOf(h.getId()));
+            event.setId(String.valueOf(pos));
+            pos ++;
         }
     }
 
@@ -94,12 +101,10 @@ public class CalendarioBean extends BasePageBean {
     }
 
     public void onEventSelect(SelectEvent selectEvent) {
-        this.event = (ScheduleEvent) selectEvent.getObject();
+        this.event = (DefaultScheduleEvent) selectEvent.getObject();
         this.eventId = Integer.parseInt(event.getId());
-<<<<<<< HEAD
-=======
-//        this.event.getStartDate();
->>>>>>> branch-rozo
+        this.nombreR = recursos.get(eventId);
+        this.solicitud = solicitudes.get(eventId);
     }
 
     public void onEventMove(ScheduleEntryMoveEvent event) {

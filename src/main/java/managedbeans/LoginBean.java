@@ -54,6 +54,7 @@ public class LoginBean extends BasePageBean{
                 usuarioActual.getSession().setAttribute("Correo", usuario);
                 redirect();
                 setLogeado(true);
+                FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("user", user);
             }else{
                 error("EL usuario no existe");
             }

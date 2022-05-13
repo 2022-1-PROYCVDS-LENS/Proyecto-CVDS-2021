@@ -73,4 +73,9 @@ public class MyBATISRecursoDAO implements RecursoDAO {
         }
 
     }
+
+    @Override
+    public Recurso consultarNombreRecurso(int id){
+        return recursoMapper.consultarNombreRecurso(id);
+    }
 }

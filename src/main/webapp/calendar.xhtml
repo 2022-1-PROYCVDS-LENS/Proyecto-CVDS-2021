@@ -19,6 +19,7 @@
         <h:graphicImage id="header_logo" library="imagenes" name="logo-ecijg.width-380.png"/>
         <h:outputText id = "header_text" class = "text" value = "Escuela Colombiana de ingieneria Julio Garavito: Recursos de biblioteca"/>
     </div>
+
     <h:form class="formulario">
         <p:growl id="messages" showDetail="true"/>
         <h:panelGrid columnClasses="value">
@@ -50,26 +51,14 @@
                 <h:outputLabel for="it-FechaFin-1" value="Fecha Fin: " />
                 <h:outputLabel id="it-FechaFin-1" value = "#{calendarioBean.getFin()}" />
 
-<!--                <h:outputLabel for="it-recurso-1" value="Recurso solicitado: " />-->
-<!--                <h:outputLabel id="it-recurso-1" value = "#{calendarioBean.getRecurso()}" />-->
+                <h:outputLabel for="it-recurso-1" value="Recurso solicitado: " />
+                <h:outputLabel id="it-recurso-1" value = "#{calendarioBean.nombreR}" />
+
+                <h:outputLabel for="it-solicitud-1" value="Fecha solicitado: " />
+                <h:outputLabel id="it-solicitud-1" value = "#{calendarioBean.solicitud}" />
             </h:panelGrid>
 
         </p:dialog>
-
-        <p:panel header="Reservas" style="text-align: center" name="panel2" id="panel2">
-            <p:dataTable  id="reservas" var="reserva" value="#{calendarioBean.consul()}" selectionMode="single" selection="#{calendarioBean.reserva}" rowKey="#{reserva.id}" rows="10" paginator="true"
-                          paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink}" currentPageReportTemplate="{startRecord}-{endRecord} of {totalRecords} records" style="text-align: left; align: center">
-                <p:column headerText="Nombre">
-                    <h:outputText value="#{reserva.id}" />
-                </p:column>
-                <p:column headerText="Inicio">
-                    <h:outputText value="#{reserva.inicio}" />
-                </p:column>
-                <p:column headerText="Fin">
-                    <h:outputText value="#{reserva.fin}" />
-                </p:column>
-            </p:dataTable>
-        </p:panel>
     </h:form>
 </h:body>
 </html>
