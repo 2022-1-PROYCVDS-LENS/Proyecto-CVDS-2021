@@ -20,7 +20,7 @@ public class Reserva implements Serializable {
     private @Getter @Setter int idRecurso;
     private @Getter @Setter boolean recurrente;
     private @Getter @Setter String estado;
-    private @Getter @Setter Date solicitud;
+    private @Getter @Setter String solicitud;
     private @Getter @Setter Timestamp inicio;
     private @Getter @Setter Timestamp fin;
     private @Getter @Setter List<ReservaRecurrente> reservaRecurrentes;

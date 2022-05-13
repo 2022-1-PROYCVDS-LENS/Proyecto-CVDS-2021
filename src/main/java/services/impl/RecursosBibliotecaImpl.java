@@ -12,7 +12,6 @@ import java.sql.Time;
 import java.sql.Timestamp;
 import java.util.List;
 
-@Singleton
 public class RecursosBibliotecaImpl implements RecursosBiblioteca {
 
     @Inject
