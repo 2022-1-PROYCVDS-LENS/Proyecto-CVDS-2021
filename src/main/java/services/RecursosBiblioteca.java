@@ -1,10 +1,17 @@
 package services;
 
 import entities.*;
+import entities.Usuario;
+import org.bouncycastle.util.Times;
 
+import java.sql.Time;
+import java.sql.Timestamp;
 import java.util.List;
 
 public interface RecursosBiblioteca {
+
+    public Usuario buscarUsuario(String correo) throws ExceptionRecursosBiblioteca;
+
     List<Horario> consultarHorario(int id) throws ExceptionRecursosBiblioteca;
     public abstract  void registratHorario(//Parametros de gorario);
     );
@@ -35,7 +42,7 @@ public interface RecursosBiblioteca {
 
     List<Recurso> consultarRecursosPorUbicacion(String ubi);
 
-    List<Reserva> consultarReservas();
+    public abstract  void reservarRecursos(Usuario usuario, Recurso recurso, Timestamp inicio, Timestamp fin, boolean recurrente, String estado, String solicitud)throws ExceptionRecursosBiblioteca;
 
     List<Recurso> consultarRecursosPorTipoCapacidadUbicacion(int tipo, int capacidad, String ubicacion);
 
@@ -45,7 +52,10 @@ public interface RecursosBiblioteca {
 
     List<Recurso> consultarRecursosPorUbicacionYCapacidad(String ubicacion, int capacidad);
 
+    List<Reserva> consultarReservasActivas(int id);
 
+    List<Reserva> consultarReservasCanceladas(int id);
 
-
+    List<Reserva> consultarReservasPasadas(int id);
+    List<Reserva> consultarReservas();
 }

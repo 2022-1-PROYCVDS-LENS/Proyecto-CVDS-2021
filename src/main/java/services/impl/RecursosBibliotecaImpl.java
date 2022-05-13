@@ -2,11 +2,14 @@ package services.impl;
 
 import com.google.inject.Inject;
 import entities.*;
+import org.apache.ibatis.exceptions.PersistenceException;
 import persistence.*;
 import services.ExceptionRecursosBiblioteca;
 import services.RecursosBiblioteca;
 
 import javax.ejb.Singleton;
+import java.sql.Time;
+import java.sql.Timestamp;
 import java.util.List;
 
 @Singleton
@@ -29,6 +32,15 @@ public class RecursosBibliotecaImpl implements RecursosBiblioteca {
 
     @Inject
     private UsuarioDAO usuarioDAO;
+
+    @Override
+    public Usuario buscarUsuario(String correo) throws ExceptionRecursosBiblioteca {
+        try{
+            return usuarioDAO.buscarUsuario(correo);
+        }catch (PersistenceException e){
+            throw new ExceptionRecursosBiblioteca("Error al buscar ese usuario: " + correo, e);
+        }
+    }
 
     @Override
     public List<Horario> consultarHorario(int id) throws ExceptionRecursosBiblioteca {
@@ -136,8 +148,13 @@ public class RecursosBibliotecaImpl implements RecursosBiblioteca {
     }
 
     @Override
-    public List<Reserva> consultarReservas(){
-        return reservaDAO.consultarReservas();
+    public void reservarRecursos(Usuario usuario, Recurso recurso, Timestamp inicio, Timestamp fin, boolean recurrente, String estado, String solicitud)throws ExceptionRecursosBiblioteca{
+        try{
+            reservaDAO.reservarRecurso(usuario,recurso,inicio,fin,recurrente,estado,solicitud);
+        }catch (Exception e){
+            throw new ExceptionRecursosBiblioteca("Error");
+        }
+
     }
 
     @Override
@@ -158,5 +175,25 @@ public class RecursosBibliotecaImpl implements RecursosBiblioteca {
     @Override
     public List<Recurso> consultarRecursosPorUbicacionYCapacidad(String ubicacion, int capacidad) {
         return recursoDAO.consultarRecursosPorUbicacionYCapacidad(ubicacion,capacidad);
+    }
+
+    @Override
+    public List<Reserva> consultarReservas(){
+        return reservaDAO.consultarReservas();
+    }
+
+    @Override
+    public List<Reserva> consultarReservasActivas(int id) {
+        return reservaDAO.consultarReservasActivas(id);
+    }
+
+    @Override
+    public List<Reserva> consultarReservasCanceladas(int id) {
+        return reservaDAO.consultarReservasCanceladas(id);
+    }
+
+    @Override
+    public List<Reserva> consultarReservasPasadas(int id) {
+        return reservaDAO.consultarReservasPasadas(id);
     }
 }

@@ -41,7 +41,7 @@ body {
     text-align: center;
     box-sizing: content-box;
     width: 40%;
-    height: 40%;
+    height: 0%;
     background-color: #939dd9;
     position: relative;
     top: 20%;
@@ -67,7 +67,7 @@ body {
 
 #agregarRecursosBox{
     width: 40%;
-    height: 80%;
+    height: 90%;
     top: 5%;
 }
 
@@ -92,3 +92,5 @@ body {
     width: 60%;
     height: 60%;
 }
+
+

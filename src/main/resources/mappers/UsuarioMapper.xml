@@ -16,7 +16,8 @@
 
     <select parameterType="map" id="buscarUsuarioxCorreo" resultMap="UsuarioResult">
         select
-        u.nombre
+        u.id_usuarios,u.tipo,u.nombre, u.programa,u.correo, u.contraseña
+
         from usuarios as u where u.correo = #{Correo};
     </select>
 

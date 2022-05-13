@@ -18,7 +18,7 @@
     <div class="box_container" >
         <h:form id="Horarios">
             <p:panel header="Horarios disponibles" style="text-align: center" name="panel1" id="panel1">
-                <p:dataTable  id="horarios" var="horario" value="#{consultarHorariosBean.consultarHorario(consultarRecursosBean.recurso.id)}" selectionMode="single" selection="#{consultarHorariosBean.horario}" rowKey="#{horario.id}" rows="10" paginator="true"
+                <p:dataTable  id="horarios" var="horario" value="#{consultarHorariosBean.consultarHorario(consultarRecursosBean.recurso.id)}" selectionMode="single" selection="#{consultarHorariosBean.horario}" rowKey="#{horario.id}" rows="6" paginator="true"
                               paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink}" currentPageReportTemplate="{startRecord}-{endRecord} of {totalRecords} records" style="text-align: left; align: center">
                     <p:column headerText="Hora inicio">
                         <h:outputText value="#{horario.hora_ini}" />
@@ -27,7 +27,7 @@
                         <h:outputText value="#{horario.hora_fin}" />
                     </p:column>
                 </p:dataTable>
-                <!--                <h:commandButton update="Horarios" value="Seleccionar" action="#{consultarHorariosBean.consultarHorario(consultarRecursosBean.recurso.id)}" style="margin-top: 10px"/>-->
+                                <h:commandButton update="Horarios" value="Seleccionar" action="reservarRecurso?faces-redirect = true" style="margin-top: 10px"/>
             </p:panel>
         </h:form>
     </div>

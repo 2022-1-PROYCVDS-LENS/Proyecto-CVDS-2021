@@ -61,7 +61,7 @@
             </p:panel>
 
             <p:panel header="Recursos disponibles" style="text-align: center" name="panel2" id="panel2">
-                <p:dataTable  id="recursos" var="recurso" value="#{consultarRecursosBean.filtrarLosRecursos()}" selectionMode="single" selection="#{consultarRecursosBean.recurso}" rowKey="#{recurso.nombre}" rows="10" paginator="true"
+                <p:dataTable  id="recursos" var="recurso" value="#{consultarRecursosBean.filtrarLosRecursos()}" selectionMode="single" selection="#{consultarRecursosBean.recurso}" rowKey="#{recurso.nombre}" rows="4" paginator="true"
                               paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink}" currentPageReportTemplate="{startRecord}-{endRecord} of {totalRecords} records" style="text-align: left; align: center">
                     <p:column headerText="Nombre">
                         <h:outputText value="#{recurso.nombre}" />
@@ -76,7 +76,8 @@
                         <h:outputText value="#{recurso.ubicacion}" />
                     </p:column>
                 </p:dataTable>
-                <h:commandButton id="select" value="Seleccionar" action="consultarHorarios?faces-redirect = true" style="margin-top: 10px"/>
+                <h:commandButton id="select" value="Reservar" action="consultarHorarios?faces-redirect = true" style="margin-top: 10px"/>
+                <h:commandButton value="Ver reservas" action="calendar?faces-redirect = true" style="margin-top: 10px"/>
             </p:panel>
         </h:form>
     </div>

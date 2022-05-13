@@ -2,8 +2,12 @@ package persistence;
 
 
 import entities.Usuario;
+import org.apache.ibatis.exceptions.PersistenceException;
 
 public interface UsuarioDAO {
-    public void save(Usuario usuario);
-    public Usuario load(int id);
+    public Usuario buscarUsuario(String correo) throws PersistenceException;
+
+    Usuario load(int id);
+
+    void save(Usuario u);
 }
