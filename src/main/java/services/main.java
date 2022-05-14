@@ -12,10 +12,14 @@ public class main {
 //        System.out.println(instance.consultarCliente(2165711).toString());
 
         System.out.println("reservas");
-        List<Reserva> reservas = instance.consultarReservasActivas(1);
+        List<Reserva> reservas = instance.consultarReservasActivas(7);
         for (Reserva r: reservas){
             System.out.println(r.toString());
         }
+
+        instance.cancelarReserva(7);
+
+
 
         System.out.println("sin filtrar");
         List<Recurso> recursos = instance.consultarRecursos();

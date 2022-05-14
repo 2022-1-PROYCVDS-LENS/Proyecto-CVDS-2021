@@ -37,4 +37,6 @@ public interface ReservaMapper {
     List<Reserva> consultarReservasCanceladas(@Param("id") int id);
 
     List<Reserva> consultarReservasPasadas(@Param("id") int id);
+
+    void cancelarReserva(@Param("idReserva")int id);
 }

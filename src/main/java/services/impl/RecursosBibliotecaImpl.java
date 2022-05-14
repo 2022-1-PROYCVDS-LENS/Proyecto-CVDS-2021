@@ -182,6 +182,11 @@ public class RecursosBibliotecaImpl implements RecursosBiblioteca {
     }
 
     @Override
+    public void cancelarReserva(int idReserva) {
+        reservaDAO.cancelarReserva(idReserva);
+    }
+
+    @Override
     public List<Reserva> consultarReservasActivas(int id) {
         return reservaDAO.consultarReservasActivas(id);
     }
