@@ -5,6 +5,7 @@ import entities.Recurso;
 import entities.Reserva;
 import entities.Usuario;
 
+import java.sql.ResultSet;
 import java.sql.Time;
 import java.sql.Timestamp;
 import java.util.List;
@@ -22,4 +23,6 @@ public interface ReservaDAO {
     List<Reserva> consultarReservasCanceladas(int id);
 
     List<Reserva> consultarReservasPasadas(int id);
+
+    List<Reserva> consultarReservasPorUsuario(int id);
 }

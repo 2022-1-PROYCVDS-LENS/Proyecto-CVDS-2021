@@ -201,4 +201,9 @@ public class RecursosBibliotecaImpl implements RecursosBiblioteca {
     public Recurso consultarNombreRecurso(int id){
         return recursoDAO.consultarNombreRecurso(id);
     }
+
+    @Override
+    public List<Reserva> consultarReservasPorUsuario(int id){
+        return reservaDAO.consultarReservasPorUsuario(id);
+    }
 }

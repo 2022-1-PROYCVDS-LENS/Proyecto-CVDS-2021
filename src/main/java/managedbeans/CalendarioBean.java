@@ -9,14 +9,17 @@ import javax.enterprise.context.RequestScoped;
 import javax.enterprise.context.SessionScoped;
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.*;
+import javax.faces.context.FacesContext;
 
 import entities.Recurso;
+import entities.Usuario;
 import lombok.Getter;
 import lombok.Setter;
 import com.google.inject.Inject;
 import entities.Horario;
 import entities.Reserva;
 import org.primefaces.PrimeFaces;
+import org.primefaces.component.submenu.UISubmenu;
 import org.primefaces.event.ScheduleEntryMoveEvent;
 import org.primefaces.event.ScheduleEntryResizeEvent;
 import org.primefaces.event.SelectEvent;
@@ -75,11 +78,24 @@ public class CalendarioBean extends BasePageBean {
         return event.getEndDate();
     }
 
+    public void consultarReservas(){
+
+        if(FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("user") != null){
+            Usuario user = (Usuario) FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("user");
+        }
+
+    }
+
     public void loadEvents() {
         recursos = new ArrayList<String>();
         solicitudes = new ArrayList<String>();
         eventModel = new DefaultScheduleModel();
-        reservas = recursosBiblioteca.consultarReservas();
+        if(FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("user") != null){
+            Usuario user = (Usuario) FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("user");
+            reservas = recursosBiblioteca.consultarReservasPorUsuario(user.getId());
+        }else {
+            reservas = recursosBiblioteca.consultarReservas();
+        }
         int pos = 0;
         for (Reserva h : reservas){
             event = new DefaultScheduleEvent(" " + h.getUsuario().getNombre(), h.getInicio(), h.getFin());
