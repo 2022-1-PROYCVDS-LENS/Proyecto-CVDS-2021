@@ -29,6 +29,15 @@ public class ConsultarHorariosBean extends BasePageBean {
     @Inject
     private RecursosBiblioteca recursosBiblioteca;
 
+    public void loadHorarios(int id) {
+        try {
+            horarios = recursosBiblioteca.consultarHorario(id);
+            redirect();
+        } catch (Exception e) {
+            FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, "Error ", e.getMessage()));
+        }
+    }
+
     public List<Horario> consultarHorario(int id) throws ExceptionRecursosBiblioteca {
         horarios = recursosBiblioteca.consultarHorario(id);
 //        try {
@@ -38,5 +47,14 @@ public class ConsultarHorariosBean extends BasePageBean {
 //            FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR,"Error ",e.getMessage()));
 //        }
         return horarios;
+    }
+
+    private void redirect(){
+        try{
+            FacesContext.getCurrentInstance().getExternalContext().redirect("/recursosBiblioteca/consultarHorarios.xhtml");
+        }catch (Exception e){
+            System.out.println("no fue posible");
+        }
+
     }
 }

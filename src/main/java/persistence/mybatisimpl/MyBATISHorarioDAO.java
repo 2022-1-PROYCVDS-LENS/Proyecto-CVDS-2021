@@ -24,7 +24,7 @@ public class MyBATISHorarioDAO implements HorarioDAO {
     public List<Horario> load(int id) throws ExceptionRecursosBiblioteca {
         horarios = horarioMapper.consultarHorario(id);
         if (horarios.size() == 0){
-            throw new ExceptionRecursosBiblioteca("error");
+            throw new ExceptionRecursosBiblioteca("Este recurso no tiene horarios diponibles");
         }
         return horarios;
     }

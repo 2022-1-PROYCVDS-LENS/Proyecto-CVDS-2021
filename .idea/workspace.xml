@@ -6,13 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="a2219495-0812-4cc8-acaa-e793337b9dc5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/managedbeans/CalendarioBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/managedbeans/CalendarioBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/managedbeans/RegistrarRecursosBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/managedbeans/RegistrarRecursosBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/managedbeans/ConsultarHorariosBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/managedbeans/ConsultarHorariosBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/managedbeans/ConsultarRecursosBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/managedbeans/ConsultarRecursosBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/persistence/mybatisimpl/MyBATISHorarioDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/persistence/mybatisimpl/MyBATISHorarioDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/services/impl/RecursosBibliotecaImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/impl/RecursosBibliotecaImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/agregarRecurso.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/agregarRecurso.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/calendar.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/calendar.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/login.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2022-05-14" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/consultarHorarios.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/consultarHorarios.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/prueba.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/prueba.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2022-05-16" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/logs/access_log.2022-05-16" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,7 +175,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652556092067</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Muestra de errores, cambios en calendario y base de datos">
+      <created>1652739555132</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1652739555132</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -197,6 +204,7 @@
     <MESSAGE value="cambios" />
     <MESSAGE value="cambios base de datos y visualizar horarios reserva" />
     <MESSAGE value="visualizar por usuarios" />
-    <option name="LAST_COMMIT_MESSAGE" value="visualizar por usuarios" />
+    <MESSAGE value="Muestra de errores, cambios en calendario y base de datos" />
+    <option name="LAST_COMMIT_MESSAGE" value="Muestra de errores, cambios en calendario y base de datos" />
   </component>
 </project>

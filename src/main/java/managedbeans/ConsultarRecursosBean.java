@@ -71,22 +71,6 @@ public class ConsultarRecursosBean extends BasePageBean {
     /**
      * Guarda en los recursos del bean, todos los recursos disponibles
      */
-//    public List<Recurso> filtrarLosRecursos(){
-//        if (tipo != -1){
-//            recursos = recursosBiblioteca.consultarRecursosPorTipo(tipo);
-//        }
-//        else if (capacidad != -1){
-//            recursos = recursosBiblioteca.consultarRecursosPorCapacidad(capacidad);
-//        }
-//        else if (!ubicacion.equals("")){
-//            recursos = recursosBiblioteca.consultarRecursosPorUbicacion(ubicacion);
-//        }
-//        else {
-//            recursos = recursosBiblioteca.consultarRecursos();
-//        }
-//        return recursos;
-//
-//    }
 
     public List<Recurso> filtrarLosRecursos(){
         //Si todos los elementos de filtro estan definidos buscamos por todas las caracteristicas

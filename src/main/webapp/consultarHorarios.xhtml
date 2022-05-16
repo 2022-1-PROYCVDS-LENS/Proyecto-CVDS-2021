@@ -10,6 +10,9 @@
     <link href="./resources/style.css" rel="stylesheet"/>
 </h:head>
 <h:body>
+    <p:messages id="messages" showDetail="true" closable="ture">
+        <p:autoUpdate/>
+    </p:messages>
 
     <div id = "header" >
         <h:graphicImage id="header_logo" library="imagenes" name="logo-ecijg.width-380.png"/>
@@ -18,7 +21,7 @@
     <div class="box_container" >
         <h:form id="Horarios">
             <p:panel header="Horarios disponibles" style="text-align: center" name="panel1" id="panel1">
-                <p:dataTable  id="horarios" var="horario" value="#{consultarHorariosBean.consultarHorario(consultarRecursosBean.recurso.id)}" selectionMode="single" selection="#{consultarHorariosBean.horario}" rowKey="#{horario.id}" rows="6" paginator="true"
+                <p:dataTable  id="horarios" var="horario" value="#{consultarHorariosBean.horarios}" selectionMode="single" selection="#{consultarHorariosBean.horario}" rowKey="#{horario.id}" rows="6" paginator="true"
                               paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink}" currentPageReportTemplate="{startRecord}-{endRecord} of {totalRecords} records" style="text-align: left; align: center">
                     <p:column headerText="Hora inicio">
                         <h:outputText value="#{horario.hora_ini}" />

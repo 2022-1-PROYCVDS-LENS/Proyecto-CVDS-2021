@@ -47,8 +47,8 @@ public class RecursosBibliotecaImpl implements RecursosBiblioteca {
     public List<Horario> consultarHorario(int id) throws ExceptionRecursosBiblioteca {
         try {
             return horarioDAO.load(id);
-        } catch (ExceptionRecursosBiblioteca e){
-            throw new ExceptionRecursosBiblioteca("error");
+        } catch (Exception e){
+            throw new ExceptionRecursosBiblioteca("Este recurso no tiene horarios diponibles");
         }
 
     }
