@@ -5,19 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a2219495-0812-4cc8-acaa-e793337b9dc5" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_6_05_2022_4_44_p__m__[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_6_05_2022_4_44_p__m___Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/managedbeans/CalendarioBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/managedbeans/CalendarioBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/persistence/ReservaDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/persistence/ReservaDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/persistence/mybatisimpl/MyBATISReservaDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/persistence/mybatisimpl/MyBATISReservaDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/persistence/mybatisimpl/mappers/ReservaMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/persistence/mybatisimpl/mappers/ReservaMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/RecursosBiblioteca.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/RecursosBiblioteca.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/managedbeans/RegistrarRecursosBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/managedbeans/RegistrarRecursosBean.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/services/impl/RecursosBibliotecaImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/impl/RecursosBibliotecaImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/ReservaMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/ReservaMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mappers/ReservaMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mappers/ReservaMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2022-05-12" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/SESSIONS.ser" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/agregarRecurso.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/agregarRecurso.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/calendar.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/calendar.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/login.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2022-05-14" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,7 +168,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652414342132</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="visualizar por usuarios">
+      <created>1652556092067</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1652556092067</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -194,6 +196,7 @@
     <MESSAGE value="redireccionamiento entrre administrador/comunidad" />
     <MESSAGE value="cambios" />
     <MESSAGE value="cambios base de datos y visualizar horarios reserva" />
-    <option name="LAST_COMMIT_MESSAGE" value="cambios base de datos y visualizar horarios reserva" />
+    <MESSAGE value="visualizar por usuarios" />
+    <option name="LAST_COMMIT_MESSAGE" value="visualizar por usuarios" />
   </component>
 </project>

@@ -11,6 +11,7 @@ import javax.ejb.Singleton;
 import java.sql.Time;
 import java.sql.Timestamp;
 import java.util.List;
+import java.util.Objects;
 
 @Singleton
 public class RecursosBibliotecaImpl implements RecursosBiblioteca {
@@ -72,9 +73,15 @@ public class RecursosBibliotecaImpl implements RecursosBiblioteca {
         try{
             recursoDAO.registrarRecurso(nombre, habilitado, ubicacion, ejemplar, tipo, capacidad);
         }catch (Exception e){
-            throw new ExceptionRecursosBiblioteca("Error");
+            if (Objects.equals(nombre, "")){
+                throw new ExceptionRecursosBiblioteca("Falta información");
+            }else if(capacidad < 0 || capacidad > 15){
+                throw new ExceptionRecursosBiblioteca("Valor de la capacidad invalido");
+            }
+            else{
+                throw new ExceptionRecursosBiblioteca("El recurso ya existe");
+            }
         }
-
     }
 
     @Override

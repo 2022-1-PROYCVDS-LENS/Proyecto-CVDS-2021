@@ -31,20 +31,14 @@ public class RegistrarRecursosBean extends BasePageBean{
     @Inject
     private RecursosBiblioteca recursosBiblioteca;
     public void registrar() throws ExceptionRecursosBiblioteca {
-        System.out.println("xd");
-        System.out.println(nombre + habilitado + tipo + ubicacion);
-        System.out.println(capacidad);
-        System.out.println(ejemplar);
         try{
             TipoRecurso tipor = new TipoRecurso();
             tipor.setId(pos.indexOf(this.tipo) + 1);
             tipor.setNombre(this.tipo);
             recursosBiblioteca.registrarRecurso(this.nombre, this.habilitado, this.ubicacion, this.ejemplar, tipor, this.capacidad);
-            FacesMessage message = new FacesMessage("bien");
-            FacesContext.getCurrentInstance().addMessage("bien", message);
+            FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO,"Correcto", "El recurso fue registrado"));
         }catch (Exception e){
-            FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR,"Error Cliente", "ya hay un cliente registrado igual"));
+            FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR,"Error", e.getMessage()));
         }
-
     }
 }

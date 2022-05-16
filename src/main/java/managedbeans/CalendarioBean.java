@@ -4,6 +4,7 @@ import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Objects;
 import javax.enterprise.context.ApplicationScoped;
 import javax.enterprise.context.RequestScoped;
 import javax.enterprise.context.SessionScoped;
@@ -90,10 +91,15 @@ public class CalendarioBean extends BasePageBean {
         recursos = new ArrayList<String>();
         solicitudes = new ArrayList<String>();
         eventModel = new DefaultScheduleModel();
+
         if(FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("user") != null){
             Usuario user = (Usuario) FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("user");
-            reservas = recursosBiblioteca.consultarReservasPorUsuario(user.getId());
-        }else {
+            if(Objects.equals(user.getTipoUsuario(), "estudiante")){
+                reservas = recursosBiblioteca.consultarReservasPorUsuario(user.getId());
+            }else{
+                reservas = recursosBiblioteca.consultarReservas();
+            }
+        }else{
             reservas = recursosBiblioteca.consultarReservas();
         }
         int pos = 0;

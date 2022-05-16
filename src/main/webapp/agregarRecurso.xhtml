@@ -12,6 +12,9 @@
 </h:head>
 
 <h:body><h:form>
+    <p:messages id="messages" showDetail="true" closable="ture">
+        <p:autoUpdate/>
+    </p:messages>
     <div style = "background-color:#990000" >
         <center><h:outputText style = "color:#ffffff;font-size:220%;font-family:sans-serif" value = "Escuela Colombiana de ingieneria Julio Garavito: Recursos de biblioteca"/></center>
     </div>
@@ -25,7 +28,7 @@
             <center><h1>Agregar un nuevo recurso</h1></center>
             <div>
                 <center><h3>Nombre</h3></center>
-                <center><p:inputText  id= "nombre" type="String" value="#{registrarRecursosBean.nombre}"  class="form-control" style="width:40%; height:50%"/></center>
+                <center><p:inputText  id= "nombre" type="String" value="#{registrarRecursosBean.nombre}" class="form-control" style="width:40%; height:50%"/></center>
             </div>
             <div>
                 <center><h3>Habilitado</h3></center>
@@ -37,7 +40,12 @@
             </div>
             <div>
                 <center><h3>Tipo</h3></center>
-                <center><p:inputText  id= "tipo" type="String" value="#{registrarRecursosBean.tipo}"   class="form-control" style="width:40%; height:50%"/></center>
+                <center><h:selectOneMenu value="#{registrarRecursosBean.tipo}" class="form-control" style="width:40%; height:50%">
+                    <f:selectItem itemLabel="Seleccione tipo" itemValue="-1"/>
+                    <f:selectItem itemValue="libro" itemLabel="libro" />
+                    <f:selectItem itemValue="sala de estudio" itemLabel="sala de estudio" />
+                    <f:selectItem itemValue="Equipo de computo" itemLabel="Equipo de computo" />
+                </h:selectOneMenu></center>
             </div>
             <div>
                 <center><h3>Capacidad</h3></center>
@@ -45,7 +53,19 @@
             </div>
             <div>
                 <center><h3>Ubicación</h3></center>
-                <center><p:inputText  id= "ubicacion" type="String" value="#{registrarRecursosBean.ubicacion}"   class="form-control" style="width:40%; height:50%"/></center>
+                <center><h:selectOneMenu value="#{registrarRecursosBean.ubicacion}" class="form-control" style="width:40%; height:50%">
+                    <f:selectItem itemLabel="Seleccione Ubicación" itemValue="-1"/>
+                    <f:selectItem itemValue="Bloque A" itemLabel="Bloque A" />
+                    <f:selectItem itemValue="Bloque B" itemLabel="Bloque B" />
+                    <f:selectItem itemValue="Bloque C" itemLabel="Bloque C" />
+                    <f:selectItem itemValue="Bloque D" itemLabel="Bloque D" />
+                    <f:selectItem itemValue="Bloque E" itemLabel="Bloque E" />
+                    <f:selectItem itemValue="Bloque F" itemLabel="Bloque F" />
+                    <f:selectItem itemValue="Bloque G" itemLabel="Bloque G" />
+                    <f:selectItem itemValue="Bloque H" itemLabel="Bloque H" />
+                    <f:selectItem itemValue="Bloque I" itemLabel="Bloque I" />
+                    <f:selectItem itemValue="Bliblioteca" itemLabel="Bliblioteca" />
+                </h:selectOneMenu></center>
             </div>
             <div>
                 <center><h3>Ejemplares</h3></center>
