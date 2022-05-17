@@ -31,7 +31,6 @@ public class MyBATISHorarioDAO implements HorarioDAO {
     }
 
     public void guardar(Time hora_ini, Time hora_fin){
-        System.out.println("llega al Dao");
         horarioMapper.guardar(hora_ini, hora_fin);
     }
 }

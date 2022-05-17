@@ -222,7 +222,6 @@ public class RecursosBibliotecaImpl implements RecursosBiblioteca {
             lista = Arrays.asList(h.split(":"));
             Time hora_ini = new Time(Integer.parseInt(lista.get(0)), Integer.parseInt(lista.get(1)), 0);
             Time hora_fin = new Time(Integer.parseInt(lista.get(0)) + 1, Integer.parseInt(lista.get(1)), 0);
-            System.out.println(hora_fin);
             horarioDAO.guardar(hora_ini, hora_fin);
         }
     }
