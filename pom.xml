@@ -223,8 +223,8 @@
         </dependencies>
         <configuration>
           <driver>org.h2.Driver</driver>
-          <url>jdbc:h2:file:./target/db/testdb;MODE=MYSQL</url>
-          <username>sa</username>
+          <url>jdbc:h2:file:./target/db/testdb;MODE=PostgreSQL</url>
+          <username>hola</username>
           <password></password>
           <autocommit>false</autocommit>
           <skip>${maven.test.skip}</skip>
