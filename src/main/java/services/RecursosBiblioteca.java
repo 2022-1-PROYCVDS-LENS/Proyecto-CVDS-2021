@@ -61,4 +61,6 @@ public interface RecursosBiblioteca {
     Recurso consultarNombreRecurso(int id);
 
     List<Reserva> consultarReservasPorUsuario(int id);
+
+    void agregarHorarios(String[] horarios);
 }

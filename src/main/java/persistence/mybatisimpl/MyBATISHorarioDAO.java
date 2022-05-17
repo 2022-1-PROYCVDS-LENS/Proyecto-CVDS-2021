@@ -7,6 +7,7 @@ import persistence.mybatisimpl.mappers.HorarioMapper;
 import services.ExceptionRecursosBiblioteca;
 import services.RecursosBiblioteca;
 
+import java.sql.Time;
 import java.util.List;
 
 public class MyBATISHorarioDAO implements HorarioDAO {
@@ -27,5 +28,10 @@ public class MyBATISHorarioDAO implements HorarioDAO {
             throw new ExceptionRecursosBiblioteca("Este recurso no tiene horarios diponibles");
         }
         return horarios;
+    }
+
+    public void guardar(Time hora_ini, Time hora_fin){
+        System.out.println("llega al Dao");
+        horarioMapper.guardar(hora_ini, hora_fin);
     }
 }

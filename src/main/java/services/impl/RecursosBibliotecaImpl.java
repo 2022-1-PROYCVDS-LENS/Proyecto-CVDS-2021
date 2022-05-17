@@ -10,6 +10,7 @@ import services.RecursosBiblioteca;
 import javax.ejb.Singleton;
 import java.sql.Time;
 import java.sql.Timestamp;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 
@@ -212,5 +213,17 @@ public class RecursosBibliotecaImpl implements RecursosBiblioteca {
     @Override
     public List<Reserva> consultarReservasPorUsuario(int id){
         return reservaDAO.consultarReservasPorUsuario(id);
+    }
+
+    @Override
+    public void agregarHorarios(String[] horarios){
+        for(String h : horarios){
+            List<String> lista;
+            lista = Arrays.asList(h.split(":"));
+            Time hora_ini = new Time(Integer.parseInt(lista.get(0)), Integer.parseInt(lista.get(1)), 0);
+            Time hora_fin = new Time(Integer.parseInt(lista.get(0)) + 1, Integer.parseInt(lista.get(1)), 0);
+            System.out.println(hora_fin);
+            horarioDAO.guardar(hora_ini, hora_fin);
+        }
     }
 }
