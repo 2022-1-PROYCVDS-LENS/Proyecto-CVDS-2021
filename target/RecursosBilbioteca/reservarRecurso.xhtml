@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html
+        xmlns:h="http://xmlns.jcp.org/jsf/html"
+        xmlns:p="http://primefaces.org/ui"
+        xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+        xmlns:f="http://xmlns.jcp.org/jsf/core"
+        xmlns:o="http://omnifaces.org/ui"
+        xmlns:of="http://omnifaces.org/functions">
+<h:head>
+    <title>
+        <ui:insert name="title">Recursos biblioteca</ui:insert>
+    </title>
+    <link href="./resources/style.css" rel="stylesheet"/>
+</h:head>
+
+<h:body>
+
+    <div id = "header" >
+        <h:graphicImage id="header_logo" library="imagenes" name="logo-ecijg.width-380.png"/>
+        <h:outputText id = "header_text" class = "text" value = "Escuela Colombiana de ingieneria Julio Garavito: Recursos de biblioteca"/>
+    </div>
+
+    <div class = "box_container" id="agregarRecursosBox">
+        <h:form><h:commandButton value="Atras" action="prueba?recursosBiblioteca-redirect = true" class="button"/></h:form>
+        <h2>Reservar recurso: #{consultarRecursosBean.recurso.nombre}</h2>
+        <h3>Inicio</h3>
+        <h:form>
+            <p:calendar value="#{reservarRecursoBean.inicio}" pattern="MM-dd-yyyy #{consultarHorariosBean.horario.hora_ini}"/></h:form>
+        <h3>Fin</h3>
+        <h:form><p:calendar value="#{reservarRecursoBean.fin}" pattern="MM-dd-yyyy #{consultarHorariosBean.horario.hora_fin}"/></h:form>
+        <h3>Recurrente</h3>
+        <h:form><h:selectOneMenu value="#{reservarRecursoBean.recurrente}" class="form-control" styleClass="menu">
+            <f:selectItem itemValue="true" itemLabel="Recurrente" />
+            <f:selectItem itemValue="false" itemLabel="No recurrente" />
+        </h:selectOneMenu></h:form>
+        <br/>
+        <h:form><h:outputText value = "Fecha solicitud: " style="font-size:150%; font-type:solid"/><h:outputText value="#{session.lastAccessedTime}" style="font-size:150%; font-type:solid">
+            <f:convertDateTime pattern="MM/dd/yyyy" type="date" />
+        </h:outputText></h:form>
+        <h:form><h:commandButton value="Reservar" actionListener="#{reservarRecursoBean.reservarRecurso(consultarRecursosBean.recurso.id)}" class="button" /></h:form>
+    </div>
+
+</h:body>
+
+</html>
