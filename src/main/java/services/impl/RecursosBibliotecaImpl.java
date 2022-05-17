@@ -147,11 +147,13 @@ public class RecursosBibliotecaImpl implements RecursosBiblioteca {
     }
 
     @Override
-    public void reservarRecursos(Usuario usuario, Recurso recurso, Timestamp inicio, Timestamp fin, boolean recurrente, String estado, String solicitud)throws ExceptionRecursosBiblioteca{
+    public void reservarRecursos(int usuario, int recurso, Timestamp inicio, Timestamp fin, boolean recurrente, String estado,Time hIni,Time hFin, Timestamp solicitud)throws ExceptionRecursosBiblioteca{
         try{
-            reservaDAO.reservarRecurso(usuario,recurso,inicio,fin,recurrente,estado,solicitud);
+            reservaDAO.reservarRecurso(usuario,recurso,inicio,fin,recurrente,estado, hIni,hFin,solicitud);
         }catch (Exception e){
+            e.printStackTrace();
             throw new ExceptionRecursosBiblioteca("Error");
+
         }
 
     }

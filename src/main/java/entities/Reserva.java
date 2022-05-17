@@ -23,6 +23,8 @@ public class Reserva implements Serializable {
     private @Getter @Setter String solicitud;
     private @Getter @Setter Timestamp inicio;
     private @Getter @Setter Timestamp fin;
+    private @Getter @Setter Time hIni;
+    private @Getter @Setter Time hFin;
     private @Getter @Setter List<ReservaRecurrente> reservaRecurrentes;
     private @Getter @Setter List<Usuario> usuarios;
 

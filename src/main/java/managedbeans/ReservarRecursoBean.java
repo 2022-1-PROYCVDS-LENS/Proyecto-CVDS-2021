@@ -42,7 +42,9 @@ public class ReservarRecursoBean extends BasePageBean {
             for (Recurso r : rec) {
                 if (r.getId() == idRecurso) recurso = r;
             }
+
             System.out.println(usuario + " " + recurso + " " + inicio + " " + fin +" "+recurrente+" "+estado+" "+solicitud);
+
             recursosBiblioteca.reservarRecursos(usuario,recurso,inicio,fin,recurrente,estado,solicitud);
             System.out.println("aaaaaaaaaaa");
         }catch (Exception e){
