@@ -14,6 +14,12 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 
+/**
+ * Implementación de la clase RecursosBiblioteca
+ * @author LENS
+ * @version 1.0
+ */
+
 public class RecursosBibliotecaImpl implements RecursosBiblioteca {
 
     @Inject

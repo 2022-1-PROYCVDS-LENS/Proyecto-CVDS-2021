@@ -1,62 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="3" />
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a2219495-0812-4cc8-acaa-e793337b9dc5" name="Changes" comment="">
+    <list default="true" id="890910ba-f8f9-48be-8924-e2000d716f5b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_27_04_2022_5_52_p__m___Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_27_04_2022_5_52_p__m___Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_3_05_2022_3_41_p__m___Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_3_05_2022_3_41_p__m___Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_3_05_2022_4_14_p__m___Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_3_05_2022_4_14_p__m___Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_3_05_2022_1_47_p__m___Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_3_05_2022_1_47_p__m___Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_3_05_2022_4_02_p__m___Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_3_05_2022_4_02_p__m___Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RecursosBiblioteca.iml" beforeDir="false" afterPath="$PROJECT_DIR$/RecursosBiblioteca.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entities/CustomScheduleEvent.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entities/Horario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/Horario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entities/Recurso.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/Recurso.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entities/Reserva.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/Reserva.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entities/ReservaRecurrente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/ReservaRecurrente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entities/TipoRecurso.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/TipoRecurso.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entities/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/Usuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/exceptions/recursosBibliotecaException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exceptions/recursosBibliotecaException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/guice/GuiceContextListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/guice/GuiceContextListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/managedbeans/BasePageBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/managedbeans/BasePageBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/managedbeans/CalendarioBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/managedbeans/CalendarioBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/managedbeans/ConsultarHorariosBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/managedbeans/ConsultarHorariosBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/managedbeans/ConsultarRecursosBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/managedbeans/ConsultarRecursosBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/managedbeans/LoginBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/managedbeans/LoginBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/managedbeans/RegistrarRecursosBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/managedbeans/RegistrarRecursosBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/managedbeans/ReservarRecursoBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/managedbeans/ReservarRecursoBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/managedbeans/VisualizarReservaBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/managedbeans/VisualizarReservaBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/persistence/HorarioDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/persistence/HorarioDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/persistence/RecursoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/persistence/RecursoDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/persistence/ReservaDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/persistence/ReservaDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/persistence/ReservaRecurrenteDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/persistence/ReservaRecurrenteDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/persistence/TipoRecursoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/persistence/TipoRecursoDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/persistence/UsuarioDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/persistence/UsuarioDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/persistence/mybatisimpl/MyBATISHorarioDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/persistence/mybatisimpl/MyBATISHorarioDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/persistence/mybatisimpl/MyBATISRecursoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/persistence/mybatisimpl/MyBATISRecursoDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/persistence/mybatisimpl/MyBATISReservaDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/persistence/mybatisimpl/MyBATISReservaDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/persistence/mybatisimpl/MyBATISReservaRecurrenteDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/persistence/mybatisimpl/MyBATISReservaRecurrenteDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/persistence/mybatisimpl/MyBATISTipoRecursoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/persistence/mybatisimpl/MyBATISTipoRecursoDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/persistence/mybatisimpl/MyBATISUsuarioDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/persistence/mybatisimpl/MyBATISUsuarioDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/persistence/mybatisimpl/mappers/HorarioMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/persistence/mybatisimpl/mappers/HorarioMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/persistence/mybatisimpl/mappers/RecursoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/persistence/mybatisimpl/mappers/RecursoMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/persistence/mybatisimpl/mappers/ReservaMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/persistence/mybatisimpl/mappers/ReservaMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/persistence/mybatisimpl/mappers/ReservaRecurrenteMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/persistence/mybatisimpl/mappers/ReservaRecurrenteMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/persistence/mybatisimpl/mappers/TipoRecursoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/persistence/mybatisimpl/mappers/TipoRecursoMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/persistence/mybatisimpl/mappers/UsuarioMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/persistence/mybatisimpl/mappers/UsuarioMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/security/OnlyNotAutenticate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/security/OnlyNotAutenticate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/impl/ExtenderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/impl/ExtenderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/ExceptionRecursosBiblioteca.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/ExceptionRecursosBiblioteca.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/RecursosBiblioteca.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/RecursosBiblioteca.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/RecursosBibliotecaFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/RecursosBibliotecaFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/impl/RecursosBibliotecaImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/impl/RecursosBibliotecaImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/config.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mappers/HorarioMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mappers/RecursoMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mappers/ReservaMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mappers/ReservaRecurrenteMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mappers/TipoRecursoMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mappers/UsuarioMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mybatis-config.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/tomcat/conf/logging.properties" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/tomcat/conf/tomcat-users.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/tomcat/conf/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2022-05-17" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/SESSIONS.ser" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,16 +97,19 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Java" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Documentos\Documentos E\7mo semestre\CVDS\proyecto\Proyecto-CVDS-2021" />
+      <recent name="E:\Documentos\Documentos E\7mo semestre\CVDS\proyecto\Proyecto-CVDS-2021\.idea" />
       <recent name="E:\Documentos\Documentos E\7mo semestre\CVDS\Proyecto-CVDS-2021" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\Documentos\Documentos E\7mo semestre\CVDS\Proyecto-CVDS-2021\src\main\webapp" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.bibliotecaTest">
+  <component name="RunManager" selected="Application.LoginBean">
     <configuration name="LoginBean" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="managedbeans.LoginBean" />
       <module name="Proyecto-CVDS-2021" />
@@ -187,7 +164,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="a2219495-0812-4cc8-acaa-e793337b9dc5" name="Changes" comment="" />
+      <changelist id="890910ba-f8f9-48be-8924-e2000d716f5b" name="Changes" comment="" />
       <created>1650503054982</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
