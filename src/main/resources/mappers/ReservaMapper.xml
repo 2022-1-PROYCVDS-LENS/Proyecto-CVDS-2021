@@ -46,8 +46,11 @@
         res.estado,
         res.solicitud,
         res.inicio,
-        res.fin
+        res.fin,
+        rec.nombre
         from public.reservas as res
+        left join recursos as rec
+        ON rec.id_recurso = res.id_recurso
         WHERE res.estado = 'activa' AND res.id_usuario = #{id}
     </select>
 
@@ -56,18 +59,24 @@
             res.estado,
             res.solicitud,
             res.inicio,
-            res.fin
+            res.fin,
+            rec.nombre
         from public.reservas as res
+        left join recursos as rec
+        ON rec.id_recurso = res.id_recurso
         WHERE res.estado = 'cancelada' AND res.id_usuario = #{id}
     </select>
 
     <select id="consultarReservasPasadas" resultMap="ReservaResult">
         select
-            res.estado,
-            res.solicitud,
-            res.inicio,
-            res.fin
+        res.estado,
+        res.solicitud,
+        res.inicio,
+        res.fin,
+        rec.nombre
         from public.reservas as res
+        left join recursos as rec
+        ON rec.id_recurso = res.id_recurso
         WHERE res.estado = 'finalizada' AND res.id_usuario = #{id}
     </select>
 
