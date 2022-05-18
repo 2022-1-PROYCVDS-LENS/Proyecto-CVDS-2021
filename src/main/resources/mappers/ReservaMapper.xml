@@ -60,5 +60,26 @@
         WHERE res.estado = 'finalizada' AND res.id_usuario = #{id}
     </select>
 
+    <select id="consultarReservasExtendidas" resultMap="ReservaResult">
+        select
+            rec.nombre,
+            tr.tipo,
+            res.solicitud,
+            res.inicio,
+            res.fin,
+            us.nombre,
+            us.programa,
+            res.recurrente
+        from public.reservas as res
+        left join Recursos as rec
+        ON res.id_recurso = rec.id_recurso
+        left join TiposRecursos as tr
+        ON rec.id_tiporecurso = tr.id_tiporecurso
+        left join Usuarios as us
+        ON res.id_usuario = us.id_usuarios;
+
+
+    </select>
+
 
 </mapper>
