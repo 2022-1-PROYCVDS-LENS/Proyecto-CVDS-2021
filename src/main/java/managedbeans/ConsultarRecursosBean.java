@@ -4,6 +4,8 @@ package managedbeans;
 import com.google.inject.Inject;
 import entities.Recurso;
 import entities.Usuario;
+import lombok.Getter;
+import lombok.Setter;
 import services.RecursosBiblioteca;
 
 import javax.faces.bean.ManagedBean;
@@ -15,7 +17,11 @@ import java.util.Objects;
 
 /**
  * Bean para la interfaz de usuario de la consulta de recursos
+ *
+ * @author LENS
+ * @version 1.0
  */
+
 @SuppressWarnings("deprecation")
 @ManagedBean(name = "consultarRecursosBean")
 @SessionScoped
@@ -24,44 +30,12 @@ public class ConsultarRecursosBean extends BasePageBean {
     @Inject
     private RecursosBiblioteca recursosBiblioteca;
 
-    List<Recurso> recursos;
-    Recurso recurso;
+    @Getter @Setter List<Recurso> recursos;
+    @Getter @Setter Recurso recurso;
 
-    int tipo = -1;
-    int capacidad = -1;
-    String ubicacion = "";
-
-    public Recurso getRecurso() {
-        return recurso;
-    }
-
-    public void setRecurso(Recurso recurso) {
-        this.recurso = recurso;
-    }
-
-    public int getTipo() {
-        return tipo;
-    }
-
-    public void setTipo(int tipo) {
-        this.tipo = tipo;
-    }
-
-    public int getCapacidad() {
-        return capacidad;
-    }
-
-    public void setCapacidad(int capacidad) {
-        this.capacidad = capacidad;
-    }
-
-    public String getUbicacion() {
-        return ubicacion;
-    }
-
-    public void setUbicacion(String ubicacion) {
-        this.ubicacion = ubicacion;
-    }
+    @Getter @Setter int tipo = -1;
+    @Getter @Setter int capacidad = -1;
+    @Getter @Setter String ubicacion = "";
 
     /**
      * Retorna la lista de recursos del bean
@@ -73,8 +47,8 @@ public class ConsultarRecursosBean extends BasePageBean {
 
     /**
      * Guarda en los recursos del bean, todos los recursos disponibles
+     * @return lista de los recursos
      */
-
     public List<Recurso> filtrarLosRecursos(){
         //Si todos los elementos de filtro estan definidos buscamos por todas las caracteristicas
         if(tipo!=-1 && capacidad != -1 && !ubicacion.equals("")){
@@ -112,6 +86,9 @@ public class ConsultarRecursosBean extends BasePageBean {
         return recursos;
     }
 
+    /**
+     * Metodo que redirecciona a la vista dependiendo de sus credencuiales
+     */
     public void redirect(){
         try{
             if(FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("user") == null){
@@ -130,21 +107,5 @@ public class ConsultarRecursosBean extends BasePageBean {
         }
 
     }
-
-//    private void mostrar(){
-//        int contador = 0;
-//        if(FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("user") != null){
-//            for(Recurso r : recursos){
-//                try{
-//                    recursosBiblioteca.consultarHorario(r.getId());
-//                } catch (Exception e){
-//                    recursos.remove(contador);
-//                    System.out.println("SI?");
-//                }
-//                contador ++;
-//            }
-//        }
-//
-//    }
 
 }

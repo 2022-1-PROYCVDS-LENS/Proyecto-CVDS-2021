@@ -11,6 +11,11 @@ import java.sql.Time;
 import java.sql.Timestamp;
 import java.util.List;
 import java.util.List;
+/**
+ * Implementacion de la clase reservaDAO
+ * @author LENS
+ * @version 1.0
+ */
 
 public class MyBATISReservaDAO implements ReservaDAO {
     @Inject

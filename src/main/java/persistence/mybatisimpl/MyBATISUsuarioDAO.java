@@ -6,6 +6,11 @@ import org.apache.ibatis.exceptions.PersistenceException;
 import persistence.UsuarioDAO;
 import persistence.mybatisimpl.mappers.UsuarioMapper;
 
+/**
+ * Implementacion de la clase UsuarioDAO
+ * @author LENS
+ * @version 1.0
+ */
 public class MyBATISUsuarioDAO implements UsuarioDAO {
     @Inject
     private UsuarioMapper usuarioMapper;

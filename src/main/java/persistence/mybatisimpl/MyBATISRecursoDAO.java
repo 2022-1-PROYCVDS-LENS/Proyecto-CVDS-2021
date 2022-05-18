@@ -10,6 +10,11 @@ import services.ExceptionRecursosBiblioteca;
 
 import java.util.List;
 
+/**
+ * Implementacion de la clase recursoDAO
+ * @author LENS
+ * @version 1.0
+ */
 public class MyBATISRecursoDAO implements RecursoDAO {
     @Inject
     private RecursoMapper recursoMapper;

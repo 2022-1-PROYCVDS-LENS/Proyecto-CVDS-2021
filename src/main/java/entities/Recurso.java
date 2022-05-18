@@ -8,6 +8,13 @@ import lombok.Setter;
 import java.io.Serializable;
 import java.util.List;
 
+
+/**
+ * Clase de recurso de la biblioteca
+ *
+ * @author LENS
+ * @version 1.0
+ */
 @NoArgsConstructor
 @AllArgsConstructor
 public class Recurso implements Serializable {
@@ -21,6 +28,10 @@ public class Recurso implements Serializable {
     private @Getter @Setter List<Horario> horarios;
     private @Getter @Setter List<Reserva> reservas;
 
+    /**
+     * Funcion que ayuda a convertir el objeto a string
+     * @return un String con la informacion del objeto
+     */
     @Override
     public String toString() {
         return "Recurso{" + "id= " + id + " nombre= " + nombre + " habilitado= " + habilitado + " ubicacion= " + ubicacion + " capacidad= "+ capacidad + " ejemplares= " +ejemplares+ " horarios= " + horarios + " reservas= " + reservas + " tipo= " + tipo.getNombre() + "}";

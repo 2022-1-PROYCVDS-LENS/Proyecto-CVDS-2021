@@ -5,6 +5,11 @@ import entities.ReservaRecurrente;
 import persistence.ReservaRecurrenteDAO;
 import persistence.mybatisimpl.mappers.ReservaRecurrenteMapper;
 
+/**
+ * Implementacion de la clase ReservaRecurrenteDAO
+ * @author LENS
+ * @version 1.0
+ */
 public class MyBATISReservaRecurrenteDAO implements ReservaRecurrenteDAO {
     @Inject
     private ReservaRecurrenteMapper reservaRecurrenteMapper;

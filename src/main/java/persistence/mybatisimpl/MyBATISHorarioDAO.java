@@ -10,6 +10,11 @@ import services.RecursosBiblioteca;
 import java.sql.Time;
 import java.util.List;
 
+/**
+ * Implementacion de la clase HorarioDAO
+ * @author LENS
+ * @version 1.0
+ */
 public class MyBATISHorarioDAO implements HorarioDAO {
     @Inject
     private HorarioMapper horarioMapper;

@@ -10,6 +10,12 @@ import java.util.List;
 import java.sql.Timestamp;
 import java.util.List;
 
+/**
+ * Clase correspondinete al reservaMapper.xml, conecta el xml con java
+ * @author LENS
+ * @version 1.0
+ */
+
 public interface ReservaMapper {
 
     /**
@@ -32,13 +38,37 @@ public interface ReservaMapper {
                          @Param("h_fin") Time hFin,
                          @Param("solicitud") Timestamp solicitud );
 
+    /**
+     * Metodo para consuktar todas las reservas
+     * @return lista de todas las reservas
+     */
     List<Reserva> consultarReservas();
 
+    /**
+     * Metodo para consultar las reservas activas
+     * @param id id del recurso al cual se le desean consultar las reservas
+     * @return lista de reservas activas
+     */
     List<Reserva> consultarReservasActivas(@Param("id") int id);
 
+    /**
+     * Metodo para consultar las reservas canceladas
+     * @param id id del recurso al cual se le desean consultar las reservas
+     * @return lista de reservas canceladas
+     */
     List<Reserva> consultarReservasCanceladas(@Param("id") int id);
 
+    /**
+     * Metodo para consultar las reservas pasadas, es decir las que ya vencieron
+     * @param id id del recurso al cual se le desean consultar las reservas
+     * @return lista de reservas pasadas
+     */
     List<Reserva> consultarReservasPasadas(@Param("id") int id);
 
+    /**
+     * Metodo para consultar las reservas de un usuario especificp
+     * @param id id del usuario al cual se le desean consultar las reservas
+     * @return lista de reservas del usuario
+     */
     List<Reserva> consultarReservasPorUsuario(@Param("id") int id);
 }
