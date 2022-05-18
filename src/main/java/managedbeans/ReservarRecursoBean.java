@@ -26,7 +26,7 @@ import java.util.List;
 @SessionScoped
 public class ReservarRecursoBean extends BasePageBean {
 
-    @Getter @Setter Usuario usuario =  new Usuario(1, "estudiante", "Esteban Torres", null, "esteban.torres@escuelaing.edu.co", "12345e");
+    @Getter @Setter Usuario usuario = (Usuario) FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("user");
     @Getter @Setter Recurso recurso;
     @Getter @Setter Date inicio;
     @Getter @Setter Date fin;
@@ -53,7 +53,7 @@ public class ReservarRecursoBean extends BasePageBean {
             Timestamp fechaInicio = new Timestamp(inicio.getTime() + horaIni.getHours()*3600000);
             Timestamp fechaFin = new Timestamp(fin.getTime() + horaFin.getHours()*3600000);
             recursosBiblioteca.reservarRecursos(usuario.getId(),recurso.getId(),fechaInicio,fechaFin,recurrente,"activo",horaIni,horaFin,solicitud);
-
+            FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO,"Correcto", "El recurso fue reservado"));
         }catch (Exception e){
         FacesContext.getCurrentInstance().addMessage("No se pudo reservar el recurso", new FacesMessage(FacesMessage.SEVERITY_ERROR,"Error Cliente", "No se pudo reservar el recurso"));
         e.printStackTrace();
