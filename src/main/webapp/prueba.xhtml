@@ -61,7 +61,7 @@
             </p:panel>
 
             <p:panel header="Recursos disponibles" style="text-align: center" name="panel2" id="panel2">
-                <p:dataTable  id="recursos" var="recurso" value="#{consultarRecursosBean.filtrarLosRecursos()}" selectionMode="single" selection="#{consultarRecursosBean.recurso}" rowKey="#{recurso.nombre}" rows="4" paginator="true"
+                <p:dataTable  id="recursos" var="recurso" value="#{consultarRecursosBean.filtrarLosRecursos()}" selectionMode="single" selection="#{consultarRecursosBean.recurso}" rowKey="#{recurso.nombre}" rows="8" paginator="true"
                               paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink}" currentPageReportTemplate="{startRecord}-{endRecord} of {totalRecords} records" style="text-align: left; align: center">
                     <p:column headerText="Nombre">
                         <h:outputText value="#{recurso.nombre}" />

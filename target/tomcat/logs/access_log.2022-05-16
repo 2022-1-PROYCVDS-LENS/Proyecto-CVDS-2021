@@ -1,8 +1,0 @@
-0:0:0:0:0:0:0:1 - - [16/May/2022:22:25:50 -0500] "GET / HTTP/1.1" 200 4037 http-bio-8080-exec-1 326
-0:0:0:0:0:0:0:1 - - [16/May/2022:22:25:50 -0500] "GET /recursosBiblioteca/javax.faces.resource/components.css;jsessionid=BE6455FA3D4476CA287B7787C3813C10?ln=primefaces&v=7.0 HTTP/1.1" 400 998 http-bio-8080-exec-3 9
-127.0.0.1 - - [16/May/2022:22:25:50 -0500] "GET /recursosBiblioteca/javax.faces.resource/jquery/jquery.js;jsessionid=BE6455FA3D4476CA287B7787C3813C10?ln=primefaces&v=7.0 HTTP/1.1" 400 998 http-bio-8080-exec-2 4
-0:0:0:0:0:0:0:1 - - [16/May/2022:22:25:50 -0500] "GET /recursosBiblioteca/javax.faces.resource/jquery/jquery-plugins.js;jsessionid=BE6455FA3D4476CA287B7787C3813C10?ln=primefaces&v=7.0 HTTP/1.1" 400 998 http-bio-8080-exec-4 4
-0:0:0:0:0:0:0:1 - - [16/May/2022:22:25:50 -0500] "GET /recursosBiblioteca/javax.faces.resource/core.js;jsessionid=BE6455FA3D4476CA287B7787C3813C10?ln=primefaces&v=7.0 HTTP/1.1" 400 998 http-bio-8080-exec-6 2
-0:0:0:0:0:0:0:1 - - [16/May/2022:22:25:50 -0500] "GET /recursosBiblioteca/javax.faces.resource/components.js;jsessionid=BE6455FA3D4476CA287B7787C3813C10?ln=primefaces&v=7.0 HTTP/1.1" 400 998 http-bio-8080-exec-5 2
-0:0:0:0:0:0:0:1 - - [16/May/2022:22:25:50 -0500] "GET /recursosBiblioteca/javax.faces.resource/logo-ecijg.width-380.png;jsessionid=BE6455FA3D4476CA287B7787C3813C10?ln=imagenes HTTP/1.1" 400 998 http-bio-8080-exec-7 3
-0:0:0:0:0:0:0:1 - - [16/May/2022:22:25:50 -0500] "GET /favicon.ico HTTP/1.1" 404 973 http-bio-8080-exec-8 2

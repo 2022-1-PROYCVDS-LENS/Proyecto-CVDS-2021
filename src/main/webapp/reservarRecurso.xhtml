@@ -21,23 +21,31 @@
     </div>
 
     <div class = "box_container" id="agregarRecursosBox">
-        <h:form><h:commandButton value="Atras" action="prueba?recursosBiblioteca-redirect = true" class="button"/></h:form>
-        <h2>Reservar recurso: #{consultarRecursosBean.recurso.nombre}</h2>
-        <h3>Inicio</h3>
         <h:form>
-            <p:calendar value="#{reservarRecursoBean.inicio}" pattern="MM-dd-yyyy #{consultarHorariosBean.horario.hora_ini}"/></h:form>
-        <h3>Fin</h3>
-        <h:form><p:calendar value="#{reservarRecursoBean.fin}" pattern="MM-dd-yyyy #{consultarHorariosBean.horario.hora_fin}"/></h:form>
+        <div><h:commandButton value="Atras" action="prueba?recursosBiblioteca-redirect = true" class="button"/></div>
+            <br/>
+        <h2>Reservar recurso: #{consultarRecursosBean.recurso.nombre}</h2>
+        <h3>Fecha inicio</h3>
+    <div><p:calendar value="#{reservarRecursoBean.inicio}" pattern="MM-dd-yyyy"/></div>
+        <h3>Fecha Fin</h3>
+    <div><p:calendar value="#{reservarRecursoBean.fin}" pattern="MM-dd-yyyy"/></div>
+    <h3>Hora Inicio</h3>
+    <div><h:outputText value="#{consultarHorariosBean.horario.hora_ini}" /></div>
+    <h3>Hora Fin</h3>
+    <div><h:outputText value="#{consultarHorariosBean.horario.hora_fin}" /></div>
         <h3>Recurrente</h3>
-        <h:form><h:selectOneMenu value="#{reservarRecursoBean.recurrente}" class="form-control" styleClass="menu">
+    <div><h:selectOneMenu value="#{reservarRecursoBean.recurrente}" class="form-control" styleClass="menu">
             <f:selectItem itemValue="true" itemLabel="Recurrente" />
             <f:selectItem itemValue="false" itemLabel="No recurrente" />
-        </h:selectOneMenu></h:form>
+        </h:selectOneMenu>
+    </div>
         <br/>
-        <h:form><h:outputText value = "Fecha solicitud: " style="font-size:150%; font-type:solid"/><h:outputText value="#{session.lastAccessedTime}" style="font-size:150%; font-type:solid">
+    <div><h:outputText value = "Fecha solicitud: " style="font-size:150%; font-type:solid"/><h:outputText value="#{session.lastAccessedTime}" style="font-size:150%; font-type:solid">
             <f:convertDateTime pattern="MM/dd/yyyy" type="date" />
-        </h:outputText></h:form>
-        <h:form><h:commandButton value="Reservar" actionListener="#{reservarRecursoBean.reservarRecurso(consultarRecursosBean.recurso.id)}" class="button" /></h:form>
+        </h:outputText></div>
+            <br/>
+    <div><h:commandButton value="Reservar" actionListener="#{reservarRecursoBean.setearHoras(consultarHorariosBean.horario.hora_ini,consultarHorariosBean.horario.hora_fin)}" action="#{reservarRecursoBean.reservarRecurso(consultarRecursosBean.recurso.id)}" class="button" /></div>
+        </h:form>
     </div>
 
 </h:body>

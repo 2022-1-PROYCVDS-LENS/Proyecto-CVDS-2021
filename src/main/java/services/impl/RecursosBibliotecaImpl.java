@@ -151,8 +151,7 @@ public class RecursosBibliotecaImpl implements RecursosBiblioteca {
         try{
             reservaDAO.reservarRecurso(usuario,recurso,inicio,fin,recurrente,estado, hIni,hFin,solicitud);
         }catch (Exception e){
-            e.printStackTrace();
-            throw new ExceptionRecursosBiblioteca("Error");
+            throw new ExceptionRecursosBiblioteca("Error al reservar");
 
         }
 
