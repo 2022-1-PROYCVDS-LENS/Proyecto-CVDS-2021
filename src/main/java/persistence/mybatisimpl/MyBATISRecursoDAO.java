@@ -61,7 +61,7 @@ public class MyBATISRecursoDAO implements RecursoDAO {
 
     @Override
     public List<Recurso> consultarRecursosPorUbicacionYCapacidad(String ubicacion, int capacidad) {
-        return recursoMapper.consultarRecursosCapaUbi(capacidad,ubicacion);
+        return recursoMapper.consultarRecursosCapaUbi(capacidad, ubicacion);
     }
 
     @Override
@@ -72,5 +72,10 @@ public class MyBATISRecursoDAO implements RecursoDAO {
             throw new ExceptionRecursosBiblioteca("error");
         }
 
+    }
+
+    @Override
+    public Recurso consultarNombreRecurso(int id){
+        return recursoMapper.consultarNombreRecurso(id);
     }
 }

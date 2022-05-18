@@ -1,0 +1,12 @@
+0:0:0:0:0:0:0:1 - - [17/May/2022:20:06:25 -0500] "POST /recursosBiblioteca/prueba.xhtml HTTP/1.1" 500 4176 http-bio-8080-exec-1 469
+0:0:0:0:0:0:0:1 - - [17/May/2022:20:06:29 -0500] "GET / HTTP/1.1" 200 3731 http-bio-8080-exec-2 82
+0:0:0:0:0:0:0:1 - - [17/May/2022:20:06:40 -0500] "POST /recursosBiblioteca/login.xhtml HTTP/1.1" 200 165 http-bio-8080-exec-3 2439
+0:0:0:0:0:0:0:1 - - [17/May/2022:20:06:40 -0500] "GET /recursosBiblioteca/administrador.xhtml HTTP/1.1" 200 3118 http-bio-8080-exec-4 116
+0:0:0:0:0:0:0:1 - - [17/May/2022:20:06:43 -0500] "POST /recursosBiblioteca/administrador.xhtml HTTP/1.1" 200 11173 http-bio-8080-exec-5 521
+0:0:0:0:0:0:0:1 - - [17/May/2022:20:07:09 -0500] "POST /recursosBiblioteca/prueba.xhtml HTTP/1.1" 200 1898 http-bio-8080-exec-6 1947
+0:0:0:0:0:0:0:1 - - [17/May/2022:20:07:17 -0500] "POST /recursosBiblioteca/prueba.xhtml HTTP/1.1" 200 10702 http-bio-8080-exec-7 1948
+0:0:0:0:0:0:0:1 - - [17/May/2022:20:07:20 -0500] "POST /recursosBiblioteca/consultarHorarios.xhtml HTTP/1.1" 200 3471 http-bio-8080-exec-8 1262
+0:0:0:0:0:0:0:1 - - [17/May/2022:20:07:35 -0500] "POST /recursosBiblioteca/reservarRecurso.xhtml HTTP/1.1" 200 3829 http-bio-8080-exec-9 461
+0:0:0:0:0:0:0:1 - - [17/May/2022:20:07:35 -0500] "GET /recursosBiblioteca/javax.faces.resource/messages/messages.png?ln=primefaces&v=7.0 HTTP/1.1" 200 16783 http-bio-8080-exec-10 6
+0:0:0:0:0:0:0:1 - - [17/May/2022:20:08:32 -0500] "POST /recursosBiblioteca/reservarRecurso.xhtml HTTP/1.1" 200 3831 http-bio-8080-exec-10 448
+0:0:0:0:0:0:0:1 - - [17/May/2022:20:08:35 -0500] "POST /recursosBiblioteca/reservarRecurso.xhtml HTTP/1.1" 200 3830 http-bio-8080-exec-10 459
