@@ -25,12 +25,14 @@ public class Reserva implements Serializable {
     private @Getter @Setter Timestamp solicitud;
     private @Getter @Setter Timestamp inicio;
     private @Getter @Setter Timestamp fin;
+    private @Getter @Setter Time hIni;
+    private @Getter @Setter Time hFin;
     private @Getter @Setter List<ReservaRecurrente> reservaRecurrentes;
     private @Getter @Setter List<Usuario> usuarios;
     private @Getter @Setter List<Recurso> recursos;
 
     @Override
     public String toString(){
-        return "Reserva: " + "id = " + id + " inicio: " + inicio.toString() + " Usuario: " + Usuario.getNombre() + " Recurso: " + Recurso.getNombre() + "}";
+        return "Reserva" + "id=" + id + "inicio" + inicio.toString() + "}";
     }
 }

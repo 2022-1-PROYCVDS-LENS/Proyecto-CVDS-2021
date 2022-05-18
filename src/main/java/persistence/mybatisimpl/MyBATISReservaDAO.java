@@ -27,8 +27,8 @@ public class MyBATISReservaDAO implements ReservaDAO {
     }
 
     @Override
-    public void reservarRecurso(Usuario usuario, Recurso recurso, Timestamp inicio, Timestamp fin, boolean recurrente, String estado, String solicitud) {
-        reservaMapper.reservarRecurso(usuario,recurso,inicio,fin,recurrente,estado,solicitud );
+    public void reservarRecurso(int usuario, int recurso, Timestamp inicio, Timestamp fin, boolean recurrente, String estado, Time hIni,Time hFin, Timestamp solicitud) {
+        reservaMapper.reservarRecurso(usuario,recurso,inicio,fin,recurrente,estado,hIni,hFin,solicitud );
     }
 
     @Override

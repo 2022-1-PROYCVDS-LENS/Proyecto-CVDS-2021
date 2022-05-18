@@ -22,8 +22,8 @@
     </resultMap>
 
     <insert parameterType="map" id="reservarRecurso">
-        insert into reservas(id_reserva, id_usuario, id_recurso, inicio, fin, recurrente, estado, solicitud)
-        values (nextval('reservas_id') #{usuario.id}, #{recurso.id}, #{inicio}, #{fin}, #{recurrente}, #{estado}, #{solicitud})
+        insert into reservas(id_reserva, id_usuario, id_recurso, inicio, fin, recurrente, estado,h_ini,h_fin, solicitud)
+        values (nextval('reservas_id'), #{id_usuario}, #{id_recurso}, #{inicio}, #{fin}, #{recurrente}, #{estado},#{h_ini},#{h_fin}, #{solicitud})
     </insert>
 
     <select id="consultarReservas" resultMap="ReservaResult">
@@ -57,7 +57,7 @@
             res.solicitud,
             res.inicio,
             res.fin
-        from public.res as res
+        from public.reservas as res
         WHERE res.estado = 'cancelada' AND res.id_usuario = #{id}
     </select>
 

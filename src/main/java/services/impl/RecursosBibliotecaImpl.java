@@ -14,7 +14,6 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 
-@Singleton
 public class RecursosBibliotecaImpl implements RecursosBiblioteca {
 
     @Inject
@@ -156,11 +155,12 @@ public class RecursosBibliotecaImpl implements RecursosBiblioteca {
     }
 
     @Override
-    public void reservarRecursos(Usuario usuario, Recurso recurso, Timestamp inicio, Timestamp fin, boolean recurrente, String estado, String solicitud)throws ExceptionRecursosBiblioteca{
+    public void reservarRecursos(int usuario, int recurso, Timestamp inicio, Timestamp fin, boolean recurrente, String estado,Time hIni,Time hFin, Timestamp solicitud)throws ExceptionRecursosBiblioteca{
         try{
-            reservaDAO.reservarRecurso(usuario,recurso,inicio,fin,recurrente,estado,solicitud);
+            reservaDAO.reservarRecurso(usuario,recurso,inicio,fin,recurrente,estado, hIni,hFin,solicitud);
         }catch (Exception e){
-            throw new ExceptionRecursosBiblioteca("Error");
+            throw new ExceptionRecursosBiblioteca("Error al reservar");
+
         }
 
     }
