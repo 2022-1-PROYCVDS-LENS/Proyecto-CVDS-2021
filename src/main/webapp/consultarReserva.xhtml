@@ -17,34 +17,43 @@
         <h:graphicImage id="header_logo" library="imagenes" name="logo-ecijg.width-380.png"/>
         <h:outputText id = "header_text" class = "text" value = "Escuela Colombiana de ingieneria Julio Garavito: Recursos de biblioteca"/>
     </div>
-
-    <div class="divBody">
-        <center>
-            <h:form id="formConsultarReserva" class="formbox">
-                <h1 class="titulo">Consultar Reserva</h1>
-                <div class="gri">
-                    <h1>Nombre recurso:</h1>
-                    <h:outputText value="#{consultarReservaBean.reserva.nombreRecurso}" class="text" />
-                    <h1>Fecha solicitado:</h1>
-                    <h:outputText value="#{consultarReservaBean.reserva.solicitud}" class="text" />
-                    <h1>Solicitado desde:</h1>
-                    <h:outputText value="#{consultarReservaBean.reserva.inicio}" class="text" />
-                    <h1>Solicitado hasta:</h1>
-                    <h:outputText value="#{consultarReservaBean.reserva.fin}" class="text" />
-                    <h1>Nombre del usuario:</h1>
-                    <h:outputText value="#{consultarReservaBean.reserva.usuario}" class="text" />
-                    <h1>Programa del usuario:</h1>
-                    <h:outputText value="#{consultarReservaBean.reserva.programa}" class="text" />
-                    <h1>Es recurrente:</h1>
-                    <h:outputText value="#{consultarReservaBean.reserva.recurrente}" class="text" />
+    <h:form>
+        <div>
+            <h:commandButton value="Atras" action="comunidad?recursosBiblioteca-redirect = true" style="color:#ffffff;
+            background-color:#990000;font-size:120%; position:relative; top:50px" />
+            <div class="box_container">
+                <center><h1 class="titulo">Consultar Reserva</h1></center>
+                <div>
+                    <center><h3>Nombre recurso:</h3></center>
+                    <center><h:outputText value="#{consultarReservaBean.reserva.nombreRecurso}" class="text" /></center>
                 </div>
-                <br>
-                    <h:commandButton value="Atras" action="administrador?recursosBiblioteca-redirect = true" style="color:#ffffff;
-                background-color:#990000;font-size:120%; position:relative; top:50px" /></br>
-
-            </h:form>
-        </center>
-    </div>
+                <div>
+                    <center><h3>Fecha solicitado:</h3></center>
+                    <center><h:outputText value="#{consultarReservaBean.reserva.solicitud}" class="text" /></center>
+                </div>
+                <div>
+                    <center><h3>Solicitado desde:</h3></center>
+                    <center><h:outputText value="#{consultarReservaBean.reserva.inicio}" class="text" /></center>
+                </div>
+                <div>
+                    <center><h3>Solicitado hasta:</h3></center>
+                    <center><h:outputText value="#{consultarReservaBean.reserva.fin}" class="text" /></center>
+                </div>
+                <div>
+                    <center><h3>Nombre del usuario:</h3></center>
+                    <center><h:outputText value="#{consultarReservaBean.reserva.usuario}" class="text" /></center>
+                </div>
+                <div>
+                    <center><h3>Programa del usuario:</h3></center>
+                    <center><h:outputText value="#{consultarReservaBean.reserva.programa}" class="text" /></center>
+                </div>
+                <div>
+                    <center><h3>Es recurrente:</h3></center>
+                    <center><h:outputText value="#{consultarReservaBean.reserva.recurrente}" class="text" /></center>
+                </div>
+            </div>
+        </div>
+    </h:form>
 
 </h:body>
 

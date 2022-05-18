@@ -35,7 +35,8 @@ public interface RecursosBiblioteca {
 
     public abstract Usuario consultarUsuario(int id);
     public abstract void registrarUsuario(//parametros
-    );
+                                           );
+    public abstract Usuario consultarUsuarioPorId(int id);
     public abstract void registrarUsuario(Usuario u);
 
     List<Recurso> consultarRecursosPorCapacidad(int i);
@@ -59,5 +60,5 @@ public interface RecursosBiblioteca {
     List<Reserva> consultarReservasPasadas(int id);
     List<Reserva> consultarReservas();
 
-    ReservaInformacion consultarReservaExtendida(int id);
+    ReservaInformacion consultarReservaExtendida(int id, Usuario user);
 }

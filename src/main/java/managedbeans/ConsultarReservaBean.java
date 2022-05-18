@@ -1,6 +1,7 @@
 package managedbeans;
 
 import com.google.inject.Inject;
+import entities.Reserva;
 import entities.ReservaInformacion;
 import entities.Usuario;
 import services.RecursosBiblioteca;
@@ -8,6 +9,7 @@ import services.RecursosBiblioteca;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 import javax.faces.context.FacesContext;
+import java.io.IOException;
 import java.util.List;
 
 @ManagedBean(name = "consultarReservaBean")
@@ -25,10 +27,15 @@ public class ConsultarReservaBean extends BasePageBean {
 
     public void setId(int id) {this.id = id;}
 
-    public void consultaExt() {
+    public void consultaExt(int idReserva) {
         user = (Usuario) FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("user");
-        id = user.getId();
-        reserva = recursosBiblioteca.consultarReservaExtendida(user.getId());
+        //id = user.getId();
+        reserva = recursosBiblioteca.consultarReservaExtendida(idReserva, user);
+    }
+
+    public void consultaLoad(int idReserva) throws IOException {
+        consultaExt(idReserva);
+        FacesContext.getCurrentInstance().getExternalContext().redirect("/recursosBiblioteca/consultarReserva.xhtml");
     }
 
     public List<ReservaInformacion> getReservas(){return reservas;}

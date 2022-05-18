@@ -12,8 +12,10 @@
         <result property="recurrente" column="recurrente"/>
         <result property="estado" column="estado"/>
         <result property="solicitud" column="solicitud"/>
-        <association property="idRecurso" javaType="Recurso" resultMap="persistence.mybatisimpl.mappers.RecursoMapper.RecursoResult"/>
-        <association property="idUsuario" javaType="Usuario" resultMap="persistence.mybatisimpl.mappers.UsuarioMapper.UsuarioResult"/>
+
+        <association property="idRecurso" column="id_recurso" javaType="Recurso" resultMap="persistence.mybatisimpl.mappers.RecursoMapper.RecursoResult"/>
+        <association property="idUsuario" column="id_usuario" javaType="Usuario" resultMap="persistence.mybatisimpl.mappers.UsuarioMapper.UsuarioResult"/>
+
         <collection property="reservaRecurrentes" ofType="ReservaRecurrente" resultMap="persistence.mybatisimpl.mappers.ReservaRecurrenteMapper.ReservaRecurrenteResult"/>
         <collection property="usuarios" ofType="Usuario" resultMap="persistence.mybatisimpl.mappers.UsuarioMapper.UsuarioResult"/>
     </resultMap>
@@ -25,23 +27,25 @@
 
     <select id="consultarReservas" resultMap="ReservaResult">
         select
-        res.id_reserva,
-        res.inicio,
-        res.fin
-        from public.reservas as res;
+            res.id_reserva,
+            res.inicio,
+            res.fin
+        from public.reservas as res
     </select>
     <select id="consultarReservasActivas" resultMap="ReservaResult">
         select
-        res.estado,
-        res.solicitud,
-        res.inicio,
-        res.fin
+            res.id_reserva,
+            res.estado,
+            res.solicitud,
+            res.inicio,
+            res.fin
         from public.reservas as res
         WHERE res.estado = 'activa' AND res.id_usuario = #{id}
     </select>
 
     <select id="consultarReservasCanceladas" resultMap="ReservaResult">
         select
+            res.id_reserva,
             res.estado,
             res.solicitud,
             res.inicio,
@@ -52,6 +56,7 @@
 
     <select id="consultarReservasPasadas" resultMap="ReservaResult">
         select
+            res.id_reserva,
             res.estado,
             res.solicitud,
             res.inicio,
@@ -63,14 +68,14 @@
     <select id="consultarReservaExtendida" resultMap="ReservaResult">
         select
             res.id_reserva,
-            res.id_usuario,
             res.id_recurso,
+            res.id_usuario,
             res.solicitud,
             res.inicio,
             res.fin,
             res.recurrente
         from public.reservas as res
-        where res.id_reserva = #{id};
+        where res.id_reserva = #{id}
     </select>
 
 

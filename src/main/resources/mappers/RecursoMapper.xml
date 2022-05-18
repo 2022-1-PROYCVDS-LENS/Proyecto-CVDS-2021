@@ -34,22 +34,16 @@
         ON rec.id_recurso = ho.id_recurso;
     </select>
 
-    <select id="consultarRecursosPorId" resultMap="RecursoResult">
+    <select id="consultarRecursoPorId" resultMap="RecursoResult">
         select
         rec.id_recurso,
         rec.nombre,
         rec.habilitado,
         rec.ubicacion,
         rec.capacidad,
-        rec.ejemplares,
-        tr.tipo,
-        ho.estado
+        rec.ejemplares
         from public.recursos as rec
-        left join TiposRecursos as tr
-        ON rec.id_tiporecurso = tr.id_tiporecurso
-        left join Horarios as ho
-        ON rec.id_recurso = ho.id_recurso
-        where rec.id_recurso = #{id};
+        where rec.id_recurso = #{id}
     </select>
 
     <select id="consultarRecursosPorTipo" resultMap="RecursoResult">
