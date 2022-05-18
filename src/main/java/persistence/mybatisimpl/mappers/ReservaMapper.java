@@ -22,13 +22,15 @@ public interface ReservaMapper {
      * @param estado estado de la reserva
      * @param solicitud fecha que se realizo la solicitud de resevra
      */
-    void reservarRecurso(@Param("usuario") Usuario usuario,
-                         @Param("recurso") Recurso recurso,
+    void reservarRecurso(@Param("id_usuario") int usuario,
+                         @Param("id_recurso") int recurso,
                          @Param("inicio") Timestamp inicio,
                          @Param("fin") Timestamp fin,
                          @Param("recurrente") boolean recurrente,
                          @Param("estado") String estado,
-                         @Param("solicitud") String solicitud );
+                         @Param("h_ini") Time hIni,
+                         @Param("h_fin") Time hFin,
+                         @Param("solicitud") Timestamp solicitud );
 
     List<Reserva> consultarReservas();
 
@@ -37,6 +39,8 @@ public interface ReservaMapper {
     List<Reserva> consultarReservasCanceladas(@Param("id") int id);
 
     List<Reserva> consultarReservasPasadas(@Param("id") int id);
+
+    List<Reserva> consultarReservasPorUsuario(@Param("id") int id);
 
     Reserva consultarReservaExtendida(@Param("id") int id);
 }

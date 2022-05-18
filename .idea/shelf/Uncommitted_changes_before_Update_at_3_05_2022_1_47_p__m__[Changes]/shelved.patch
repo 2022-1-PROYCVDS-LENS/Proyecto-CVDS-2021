@@ -1,0 +1,51 @@
+Index: target/tomcat/logs/access_log.2022-05-01
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>0:0:0:0:0:0:0:1 - - [01/May/2022:22:10:21 -0500] \"GET / HTTP/1.1\" 500 3581 http-bio-8080-exec-1 395\r\n0:0:0:0:0:0:0:1 - - [01/May/2022:22:10:27 -0500] \"GET /recursosBiblioteca/prueba.xhtml HTTP/1.1\" 200 11800 http-bio-8080-exec-3 1826\r\n0:0:0:0:0:0:0:1 - - [01/May/2022:22:10:27 -0500] \"GET /recursosBiblioteca/javax.faces.resource/components.css?ln=primefaces&v=8.0 HTTP/1.1\" 304 - http-bio-8080-exec-5 6\r\n0:0:0:0:0:0:0:1 - - [01/May/2022:22:10:27 -0500] \"GET /recursosBiblioteca/javax.faces.resource/jquery/jquery.js?ln=primefaces&v=8.0 HTTP/1.1\" 304 - http-bio-8080-exec-4 4\r\n0:0:0:0:0:0:0:1 - - [01/May/2022:22:10:27 -0500] \"GET /recursosBiblioteca/javax.faces.resource/touch/touchswipe.js?ln=primefaces&v=8.0 HTTP/1.1\" 304 - http-bio-8080-exec-8 4\r\n0:0:0:0:0:0:0:1 - - [01/May/2022:22:10:27 -0500] \"GET /recursosBiblioteca/javax.faces.resource/jquery/jquery-plugins.js?ln=primefaces&v=8.0 HTTP/1.1\" 304 - http-bio-8080-exec-6 7\r\n0:0:0:0:0:0:0:1 - - [01/May/2022:22:10:27 -0500] \"GET /recursosBiblioteca/javax.faces.resource/core.js?ln=primefaces&v=8.0 HTTP/1.1\" 304 - http-bio-8080-exec-7 6\r\n0:0:0:0:0:0:0:1 - - [01/May/2022:22:10:27 -0500] \"GET /recursosBiblioteca/javax.faces.resource/components.js?ln=primefaces&v=8.0 HTTP/1.1\" 304 - http-bio-8080-exec-9 5\r\n0:0:0:0:0:0:0:1 - - [01/May/2022:22:10:27 -0500] \"GET /recursosBiblioteca/javax.faces.resource/izquierdo.png?ln=imagenes HTTP/1.1\" 304 - http-bio-8080-exec-9 3\r\n0:0:0:0:0:0:0:1 - - [01/May/2022:22:10:27 -0500] \"GET /recursosBiblioteca/javax.faces.resource/derecho.png?ln=imagenes HTTP/1.1\" 304 - http-bio-8080-exec-9 2\r\n0:0:0:0:0:0:0:1 - - [01/May/2022:22:10:32 -0500] \"POST /recursosBiblioteca/prueba.xhtml HTTP/1.1\" 500 3997 http-bio-8080-exec-9 1553\r\n0:0:0:0:0:0:0:1 - - [01/May/2022:22:10:45 -0500] \"POST /recursosBiblioteca/prueba.xhtml HTTP/1.1\" 500 3997 http-bio-8080-exec-5 1496\r\n
+===================================================================
+diff --git a/target/tomcat/logs/access_log.2022-05-01 b/target/tomcat/logs/access_log.2022-05-01
+--- a/target/tomcat/logs/access_log.2022-05-01	
++++ b/target/tomcat/logs/access_log.2022-05-01	
+@@ -1,12 +1,30 @@
+-0:0:0:0:0:0:0:1 - - [01/May/2022:22:10:21 -0500] "GET / HTTP/1.1" 500 3581 http-bio-8080-exec-1 395
+-0:0:0:0:0:0:0:1 - - [01/May/2022:22:10:27 -0500] "GET /recursosBiblioteca/prueba.xhtml HTTP/1.1" 200 11800 http-bio-8080-exec-3 1826
+-0:0:0:0:0:0:0:1 - - [01/May/2022:22:10:27 -0500] "GET /recursosBiblioteca/javax.faces.resource/components.css?ln=primefaces&v=8.0 HTTP/1.1" 304 - http-bio-8080-exec-5 6
+-0:0:0:0:0:0:0:1 - - [01/May/2022:22:10:27 -0500] "GET /recursosBiblioteca/javax.faces.resource/jquery/jquery.js?ln=primefaces&v=8.0 HTTP/1.1" 304 - http-bio-8080-exec-4 4
+-0:0:0:0:0:0:0:1 - - [01/May/2022:22:10:27 -0500] "GET /recursosBiblioteca/javax.faces.resource/touch/touchswipe.js?ln=primefaces&v=8.0 HTTP/1.1" 304 - http-bio-8080-exec-8 4
+-0:0:0:0:0:0:0:1 - - [01/May/2022:22:10:27 -0500] "GET /recursosBiblioteca/javax.faces.resource/jquery/jquery-plugins.js?ln=primefaces&v=8.0 HTTP/1.1" 304 - http-bio-8080-exec-6 7
+-0:0:0:0:0:0:0:1 - - [01/May/2022:22:10:27 -0500] "GET /recursosBiblioteca/javax.faces.resource/core.js?ln=primefaces&v=8.0 HTTP/1.1" 304 - http-bio-8080-exec-7 6
+-0:0:0:0:0:0:0:1 - - [01/May/2022:22:10:27 -0500] "GET /recursosBiblioteca/javax.faces.resource/components.js?ln=primefaces&v=8.0 HTTP/1.1" 304 - http-bio-8080-exec-9 5
+-0:0:0:0:0:0:0:1 - - [01/May/2022:22:10:27 -0500] "GET /recursosBiblioteca/javax.faces.resource/izquierdo.png?ln=imagenes HTTP/1.1" 304 - http-bio-8080-exec-9 3
+-0:0:0:0:0:0:0:1 - - [01/May/2022:22:10:27 -0500] "GET /recursosBiblioteca/javax.faces.resource/derecho.png?ln=imagenes HTTP/1.1" 304 - http-bio-8080-exec-9 2
+-0:0:0:0:0:0:0:1 - - [01/May/2022:22:10:32 -0500] "POST /recursosBiblioteca/prueba.xhtml HTTP/1.1" 500 3997 http-bio-8080-exec-9 1553
+-0:0:0:0:0:0:0:1 - - [01/May/2022:22:10:45 -0500] "POST /recursosBiblioteca/prueba.xhtml HTTP/1.1" 500 3997 http-bio-8080-exec-5 1496
++0:0:0:0:0:0:0:1 - - [01/May/2022:22:13:51 -0500] "GET / HTTP/1.1" 200 11799 http-bio-8080-exec-1 2116
++0:0:0:0:0:0:0:1 - - [01/May/2022:22:13:52 -0500] "GET /recursosBiblioteca/javax.faces.resource/components.css?ln=primefaces&v=8.0 HTTP/1.1" 304 - http-bio-8080-exec-3 5
++0:0:0:0:0:0:0:1 - - [01/May/2022:22:13:52 -0500] "GET /recursosBiblioteca/javax.faces.resource/jquery/jquery.js?ln=primefaces&v=8.0 HTTP/1.1" 304 - http-bio-8080-exec-4 2
++0:0:0:0:0:0:0:1 - - [01/May/2022:22:13:52 -0500] "GET /recursosBiblioteca/javax.faces.resource/jquery/jquery-plugins.js?ln=primefaces&v=8.0 HTTP/1.1" 304 - http-bio-8080-exec-5 3
++0:0:0:0:0:0:0:1 - - [01/May/2022:22:13:52 -0500] "GET /recursosBiblioteca/javax.faces.resource/core.js?ln=primefaces&v=8.0 HTTP/1.1" 304 - http-bio-8080-exec-6 3
++0:0:0:0:0:0:0:1 - - [01/May/2022:22:13:52 -0500] "GET /recursosBiblioteca/javax.faces.resource/touch/touchswipe.js?ln=primefaces&v=8.0 HTTP/1.1" 304 - http-bio-8080-exec-8 4
++0:0:0:0:0:0:0:1 - - [01/May/2022:22:13:52 -0500] "GET /recursosBiblioteca/javax.faces.resource/components.js?ln=primefaces&v=8.0 HTTP/1.1" 304 - http-bio-8080-exec-7 8
++0:0:0:0:0:0:0:1 - - [01/May/2022:22:13:52 -0500] "GET /recursosBiblioteca/javax.faces.resource/components.css?ln=primefaces&v=8.0 HTTP/1.1" 304 - http-bio-8080-exec-7 3
++0:0:0:0:0:0:0:1 - - [01/May/2022:22:13:52 -0500] "GET /recursosBiblioteca/javax.faces.resource/components.js?ln=primefaces&v=8.0 HTTP/1.1" 304 - http-bio-8080-exec-8 3
++0:0:0:0:0:0:0:1 - - [01/May/2022:22:13:52 -0500] "GET /recursosBiblioteca/javax.faces.resource/jquery/jquery-plugins.js?ln=primefaces&v=8.0 HTTP/1.1" 304 - http-bio-8080-exec-2 4
++0:0:0:0:0:0:0:1 - - [01/May/2022:22:13:52 -0500] "GET /recursosBiblioteca/javax.faces.resource/jquery/jquery.js?ln=primefaces&v=8.0 HTTP/1.1" 304 - http-bio-8080-exec-7 5
++0:0:0:0:0:0:0:1 - - [01/May/2022:22:13:52 -0500] "GET /recursosBiblioteca/javax.faces.resource/core.js?ln=primefaces&v=8.0 HTTP/1.1" 304 - http-bio-8080-exec-6 6
++0:0:0:0:0:0:0:1 - - [01/May/2022:22:13:52 -0500] "GET /recursosBiblioteca/javax.faces.resource/touch/touchswipe.js?ln=primefaces&v=8.0 HTTP/1.1" 304 - http-bio-8080-exec-10 5
++0:0:0:0:0:0:0:1 - - [01/May/2022:22:13:52 -0500] "GET /recursosBiblioteca/javax.faces.resource/izquierdo.png?ln=imagenes HTTP/1.1" 304 - http-bio-8080-exec-9 2
++0:0:0:0:0:0:0:1 - - [01/May/2022:22:13:52 -0500] "GET /recursosBiblioteca/javax.faces.resource/derecho.png?ln=imagenes HTTP/1.1" 304 - http-bio-8080-exec-9 3
++0:0:0:0:0:0:0:1 - - [01/May/2022:22:13:52 -0500] "GET /resources/imagenes/fondoconsulta.jpg HTTP/1.1" 304 - http-bio-8080-exec-9 3
++0:0:0:0:0:0:0:1 - - [01/May/2022:22:13:56 -0500] "POST /recursosBiblioteca/prueba.xhtml HTTP/1.1" 500 3997 http-bio-8080-exec-9 1610
++0:0:0:0:0:0:0:1 - - [01/May/2022:22:17:30 -0500] "POST /recursosBiblioteca/prueba.xhtml HTTP/1.1" 200 4497 http-bio-8080-exec-1 2091
++0:0:0:0:0:0:0:1 - - [01/May/2022:22:17:36 -0500] "POST /recursosBiblioteca/prueba.xhtml HTTP/1.1" 200 6442 http-bio-8080-exec-5 2076
++0:0:0:0:0:0:0:1 - - [01/May/2022:22:18:00 -0500] "POST /recursosBiblioteca/prueba.xhtml HTTP/1.1" 500 3997 http-bio-8080-exec-7 1535
++0:0:0:0:0:0:0:1 - - [01/May/2022:22:23:53 -0500] "GET / HTTP/1.1" 200 11824 http-bio-8080-exec-10 402
++0:0:0:0:0:0:0:1 - - [01/May/2022:22:23:53 -0500] "GET /recursosBiblioteca/javax.faces.resource/components.css?ln=primefaces&v=8.0 HTTP/1.1" 304 - http-bio-8080-exec-10 4
++0:0:0:0:0:0:0:1 - - [01/May/2022:22:23:53 -0500] "GET /recursosBiblioteca/javax.faces.resource/jquery/jquery.js?ln=primefaces&v=8.0 HTTP/1.1" 304 - http-bio-8080-exec-2 4
++0:0:0:0:0:0:0:1 - - [01/May/2022:22:23:53 -0500] "GET /recursosBiblioteca/javax.faces.resource/jquery/jquery-plugins.js?ln=primefaces&v=8.0 HTTP/1.1" 304 - http-bio-8080-exec-4 3
++0:0:0:0:0:0:0:1 - - [01/May/2022:22:23:53 -0500] "GET /recursosBiblioteca/javax.faces.resource/touch/touchswipe.js?ln=primefaces&v=8.0 HTTP/1.1" 304 - http-bio-8080-exec-9 2
++0:0:0:0:0:0:0:1 - - [01/May/2022:22:23:53 -0500] "GET /recursosBiblioteca/javax.faces.resource/core.js?ln=primefaces&v=8.0 HTTP/1.1" 304 - http-bio-8080-exec-3 3
++0:0:0:0:0:0:0:1 - - [01/May/2022:22:23:53 -0500] "GET /recursosBiblioteca/javax.faces.resource/components.js?ln=primefaces&v=8.0 HTTP/1.1" 304 - http-bio-8080-exec-10 3
++0:0:0:0:0:0:0:1 - - [01/May/2022:22:23:53 -0500] "GET /recursosBiblioteca/javax.faces.resource/derecho.png?ln=imagenes HTTP/1.1" 304 - http-bio-8080-exec-9 2
++0:0:0:0:0:0:0:1 - - [01/May/2022:22:23:53 -0500] "GET /recursosBiblioteca/javax.faces.resource/izquierdo.png?ln=imagenes HTTP/1.1" 304 - http-bio-8080-exec-10 3
++0:0:0:0:0:0:0:1 - - [01/May/2022:22:23:57 -0500] "POST /recursosBiblioteca/prueba.xhtml HTTP/1.1" 500 3997 http-bio-8080-exec-10 1903

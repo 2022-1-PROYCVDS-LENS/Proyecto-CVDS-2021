@@ -1,0 +1,136 @@
+Index: .idea/modules.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ProjectModuleManager\">\r\n    <modules>\r\n      <module fileurl=\"file://$PROJECT_DIR$/.idea/Proyecto-CVDS-2021.iml\" filepath=\"$PROJECT_DIR$/.idea/Proyecto-CVDS-2021.iml\" />\r\n    </modules>\r\n  </component>\r\n</project>
+===================================================================
+diff --git a/.idea/modules.xml b/.idea/modules.xml
+--- a/.idea/modules.xml	
++++ b/.idea/modules.xml	
+@@ -2,7 +2,7 @@
+ <project version="4">
+   <component name="ProjectModuleManager">
+     <modules>
+-      <module fileurl="file://$PROJECT_DIR$/.idea/Proyecto-CVDS-2021.iml" filepath="$PROJECT_DIR$/.idea/Proyecto-CVDS-2021.iml" />
++      <module fileurl="file://$PROJECT_DIR$/RecursosBiblioteca.iml" filepath="$PROJECT_DIR$/RecursosBiblioteca.iml" />
+     </modules>
+   </component>
+ </project>
+\ No newline at end of file
+Index: RecursosBiblioteca.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule=\"true\" type=\"JAVA_MODULE\" version=\"4\">\r\n  <component name=\"FacetManager\">\r\n    <facet type=\"web\" name=\"Web\">\r\n      <configuration>\r\n        <descriptors>\r\n          <deploymentDescriptor name=\"web.xml\" url=\"file://$MODULE_DIR$/src/main/webapp/WEB-INF/web.xml\" />\r\n        </descriptors>\r\n        <webroots>\r\n          <root url=\"file://$MODULE_DIR$/src/main/webapp\" relative=\"/\" />\r\n        </webroots>\r\n      </configuration>\r\n    </facet>\r\n    <facet type=\"jpa\" name=\"JPA\">\r\n      <configuration>\r\n        <setting name=\"validation-enabled\" value=\"true\" />\r\n        <datasource-mapping>\r\n          <factory-entry name=\"RecursosBiblioteca\" />\r\n        </datasource-mapping>\r\n        <naming-strategy-map />\r\n      </configuration>\r\n    </facet>\r\n  </component>\r\n  <component name=\"NewModuleRootManager\" LANGUAGE_LEVEL=\"JDK_1_8\">\r\n    <output url=\"file://$MODULE_DIR$/target/classes\" />\r\n    <output-test url=\"file://$MODULE_DIR$/target/test-classes\" />\r\n    <content url=\"file://$MODULE_DIR$\">\r\n      <sourceFolder url=\"file://$MODULE_DIR$/src/main/java\" isTestSource=\"false\" />\r\n      <sourceFolder url=\"file://$MODULE_DIR$/src/main/resources\" type=\"java-resource\" />\r\n      <excludeFolder url=\"file://$MODULE_DIR$/target\" />\r\n    </content>\r\n    <orderEntry type=\"inheritedJdk\" />\r\n    <orderEntry type=\"sourceFolder\" forTests=\"false\" />\r\n    <orderEntry type=\"library\" name=\"Maven: junit:junit:4.11\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.hamcrest:hamcrest-core:1.3\" level=\"project\" />\r\n    <orderEntry type=\"library\" scope=\"PROVIDED\" name=\"Maven: javax:javaee-api:8.0\" level=\"project\" />\r\n    <orderEntry type=\"library\" scope=\"PROVIDED\" name=\"Maven: com.sun.mail:javax.mail:1.6.0\" level=\"project\" />\r\n    <orderEntry type=\"library\" scope=\"PROVIDED\" name=\"Maven: javax.activation:activation:1.1\" level=\"project\" />\r\n    <orderEntry type=\"library\" scope=\"PROVIDED\" name=\"Maven: javax:javaee-web-api:7.0\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: com.google.code.gson:gson:2.8.6\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: com.sun.faces:jsf-api:2.2.20\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: com.sun.faces:jsf-impl:2.2.20\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: javax.servlet:jstl:1.2\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.primefaces:primefaces:8.0\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.mybatis:mybatis-guice:3.10\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.mybatis:mybatis:3.4.5\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: com.google.inject:guice:5.1.0\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: javax.inject:javax.inject:1\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: aopalliance:aopalliance:1.0\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: com.google.guava:guava:30.1-jre\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: com.google.guava:failureaccess:1.0.1\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: com.google.code.findbugs:jsr305:3.0.2\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: com.google.errorprone:error_prone_annotations:2.3.4\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: com.google.j2objc:j2objc-annotations:1.3\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.postgresql:postgresql:42.3.3\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.checkerframework:checker-qual:3.5.0\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: com.h2database:h2:1.4.191\" level=\"project\" />\r\n    <orderEntry type=\"library\" scope=\"PROVIDED\" name=\"Maven: org.projectlombok:lombok:1.18.22\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.junit.jupiter:junit-jupiter:5.8.2\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.junit.jupiter:junit-jupiter-api:5.8.2\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.opentest4j:opentest4j:1.2.0\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.junit.platform:junit-platform-commons:1.8.2\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.apiguardian:apiguardian-api:1.1.2\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.junit.jupiter:junit-jupiter-params:5.8.2\" level=\"project\" />\r\n    <orderEntry type=\"library\" scope=\"RUNTIME\" name=\"Maven: org.junit.jupiter:junit-jupiter-engine:5.8.2\" level=\"project\" />\r\n    <orderEntry type=\"library\" scope=\"RUNTIME\" name=\"Maven: org.junit.platform:junit-platform-engine:1.8.2\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.slf4j:slf4j-jdk14:1.7.32\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.slf4j:jcl-over-slf4j:1.7.32\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.slf4j:slf4j-api:1.7.32\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.apache.shiro:shiro-ehcache:1.7.0\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.apache.shiro:shiro-cache:1.7.0\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: net.sf.ehcache:ehcache-core:2.6.11\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.apache.shiro:shiro-core:1.8.0\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.apache.shiro:shiro-lang:1.8.0\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.apache.shiro:shiro-crypto-hash:1.8.0\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.apache.shiro:shiro-crypto-core:1.8.0\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.apache.shiro:shiro-crypto-cipher:1.8.0\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.apache.shiro:shiro-config-core:1.8.0\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.apache.shiro:shiro-config-ogdl:1.8.0\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: commons-beanutils:commons-beanutils:1.9.4\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: commons-collections:commons-collections:3.2.2\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.apache.shiro:shiro-event:1.8.0\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.apache.shiro:shiro-web:1.8.0\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.owasp.encoder:encoder:1.2.2\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: commons-logging:commons-logging:1.2\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.apache.poi:poi:5.0.0\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: commons-codec:commons-codec:1.15\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.apache.commons:commons-collections4:4.4\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.apache.commons:commons-math3:3.6.1\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: com.zaxxer:SparseBitSet:1.2\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.apache.poi:poi-ooxml:5.0.0\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.apache.poi:poi-ooxml-lite:5.0.0\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.apache.xmlbeans:xmlbeans:4.0.0\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.apache.commons:commons-compress:1.20\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: com.github.virtuald:curvesapi:1.06\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.bouncycastle:bcpkix-jdk15on:1.68\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.bouncycastle:bcprov-jdk15on:1.68\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.apache.santuario:xmlsec:2.2.1\" level=\"project\" />\r\n    <orderEntry type=\"library\" scope=\"RUNTIME\" name=\"Maven: com.fasterxml.woodstox:woodstox-core:5.2.1\" level=\"project\" />\r\n    <orderEntry type=\"library\" scope=\"RUNTIME\" name=\"Maven: org.codehaus.woodstox:stax2-api:4.2\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: jakarta.xml.bind:jakarta.xml.bind-api:2.3.2\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: jakarta.activation:jakarta.activation-api:1.2.1\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.apache.xmlgraphics:batik-all:1.13\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.apache.xmlgraphics:batik-anim:1.13\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.apache.xmlgraphics:batik-shared-resources:1.13\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: xml-apis:xml-apis-ext:1.3.04\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.apache.xmlgraphics:batik-awt-util:1.13\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.apache.xmlgraphics:xmlgraphics-commons:2.4\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: commons-io:commons-io:1.3.1\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.apache.xmlgraphics:batik-bridge:1.13\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.apache.xmlgraphics:batik-codec:1.13\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.apache.xmlgraphics:batik-constants:1.13\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.apache.xmlgraphics:batik-css:1.13\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.apache.xmlgraphics:batik-dom:1.13\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: xalan:xalan:2.7.2\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: xalan:serializer:2.7.2\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: xml-apis:xml-apis:1.4.01\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.apache.xmlgraphics:batik-ext:1.13\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.apache.xmlgraphics:batik-extension:1.13\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.apache.xmlgraphics:batik-gui-util:1.13\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.apache.xmlgraphics:batik-gvt:1.13\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.apache.xmlgraphics:batik-i18n:1.13\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.apache.xmlgraphics:batik-parser:1.13\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.apache.xmlgraphics:batik-rasterizer-ext:1.13\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.apache.xmlgraphics:batik-rasterizer:1.13\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.apache.xmlgraphics:batik-script:1.13\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.apache.xmlgraphics:batik-slideshow:1.13\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.apache.xmlgraphics:batik-squiggle-ext:1.13\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.apache.xmlgraphics:batik-squiggle:1.13\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.apache.xmlgraphics:batik-svg-dom:1.13\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.apache.xmlgraphics:batik-svgbrowser:1.13\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.apache.xmlgraphics:batik-svggen:1.13\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.apache.xmlgraphics:batik-svgpp:1.13\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.apache.xmlgraphics:batik-svgrasterizer:1.13\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.apache.xmlgraphics:batik-swing:1.13\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.apache.xmlgraphics:batik-transcoder:1.13\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.apache.xmlgraphics:batik-util:1.13\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.apache.xmlgraphics:batik-ttf2svg:1.13\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.apache.xmlgraphics:batik-xml:1.13\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: de.rototor.pdfbox:graphics2d:0.30\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.apache.pdfbox:pdfbox:2.0.22\" level=\"project\" />\r\n    <orderEntry type=\"library\" name=\"Maven: org.apache.pdfbox:fontbox:2.0.22\" level=\"project\" />\r\n  </component>\r\n</module>
+===================================================================
+diff --git a/RecursosBiblioteca.iml b/RecursosBiblioteca.iml
+--- a/RecursosBiblioteca.iml	
++++ b/RecursosBiblioteca.iml	
+@@ -1,26 +1,5 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
+-  <component name="FacetManager">
+-    <facet type="web" name="Web">
+-      <configuration>
+-        <descriptors>
+-          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/src/main/webapp/WEB-INF/web.xml" />
+-        </descriptors>
+-        <webroots>
+-          <root url="file://$MODULE_DIR$/src/main/webapp" relative="/" />
+-        </webroots>
+-      </configuration>
+-    </facet>
+-    <facet type="jpa" name="JPA">
+-      <configuration>
+-        <setting name="validation-enabled" value="true" />
+-        <datasource-mapping>
+-          <factory-entry name="RecursosBiblioteca" />
+-        </datasource-mapping>
+-        <naming-strategy-map />
+-      </configuration>
+-    </facet>
+-  </component>
+   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
+     <output url="file://$MODULE_DIR$/target/classes" />
+     <output-test url="file://$MODULE_DIR$/target/test-classes" />
+@@ -65,81 +44,5 @@
+     <orderEntry type="library" name="Maven: org.junit.jupiter:junit-jupiter-params:5.8.2" level="project" />
+     <orderEntry type="library" scope="RUNTIME" name="Maven: org.junit.jupiter:junit-jupiter-engine:5.8.2" level="project" />
+     <orderEntry type="library" scope="RUNTIME" name="Maven: org.junit.platform:junit-platform-engine:1.8.2" level="project" />
+-    <orderEntry type="library" name="Maven: org.slf4j:slf4j-jdk14:1.7.32" level="project" />
+-    <orderEntry type="library" name="Maven: org.slf4j:jcl-over-slf4j:1.7.32" level="project" />
+-    <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.32" level="project" />
+-    <orderEntry type="library" name="Maven: org.apache.shiro:shiro-ehcache:1.7.0" level="project" />
+-    <orderEntry type="library" name="Maven: org.apache.shiro:shiro-cache:1.7.0" level="project" />
+-    <orderEntry type="library" name="Maven: net.sf.ehcache:ehcache-core:2.6.11" level="project" />
+-    <orderEntry type="library" name="Maven: org.apache.shiro:shiro-core:1.8.0" level="project" />
+-    <orderEntry type="library" name="Maven: org.apache.shiro:shiro-lang:1.8.0" level="project" />
+-    <orderEntry type="library" name="Maven: org.apache.shiro:shiro-crypto-hash:1.8.0" level="project" />
+-    <orderEntry type="library" name="Maven: org.apache.shiro:shiro-crypto-core:1.8.0" level="project" />
+-    <orderEntry type="library" name="Maven: org.apache.shiro:shiro-crypto-cipher:1.8.0" level="project" />
+-    <orderEntry type="library" name="Maven: org.apache.shiro:shiro-config-core:1.8.0" level="project" />
+-    <orderEntry type="library" name="Maven: org.apache.shiro:shiro-config-ogdl:1.8.0" level="project" />
+-    <orderEntry type="library" name="Maven: commons-beanutils:commons-beanutils:1.9.4" level="project" />
+-    <orderEntry type="library" name="Maven: commons-collections:commons-collections:3.2.2" level="project" />
+-    <orderEntry type="library" name="Maven: org.apache.shiro:shiro-event:1.8.0" level="project" />
+-    <orderEntry type="library" name="Maven: org.apache.shiro:shiro-web:1.8.0" level="project" />
+-    <orderEntry type="library" name="Maven: org.owasp.encoder:encoder:1.2.2" level="project" />
+-    <orderEntry type="library" name="Maven: commons-logging:commons-logging:1.2" level="project" />
+-    <orderEntry type="library" name="Maven: org.apache.poi:poi:5.0.0" level="project" />
+-    <orderEntry type="library" name="Maven: commons-codec:commons-codec:1.15" level="project" />
+-    <orderEntry type="library" name="Maven: org.apache.commons:commons-collections4:4.4" level="project" />
+-    <orderEntry type="library" name="Maven: org.apache.commons:commons-math3:3.6.1" level="project" />
+-    <orderEntry type="library" name="Maven: com.zaxxer:SparseBitSet:1.2" level="project" />
+-    <orderEntry type="library" name="Maven: org.apache.poi:poi-ooxml:5.0.0" level="project" />
+-    <orderEntry type="library" name="Maven: org.apache.poi:poi-ooxml-lite:5.0.0" level="project" />
+-    <orderEntry type="library" name="Maven: org.apache.xmlbeans:xmlbeans:4.0.0" level="project" />
+-    <orderEntry type="library" name="Maven: org.apache.commons:commons-compress:1.20" level="project" />
+-    <orderEntry type="library" name="Maven: com.github.virtuald:curvesapi:1.06" level="project" />
+-    <orderEntry type="library" name="Maven: org.bouncycastle:bcpkix-jdk15on:1.68" level="project" />
+-    <orderEntry type="library" name="Maven: org.bouncycastle:bcprov-jdk15on:1.68" level="project" />
+-    <orderEntry type="library" name="Maven: org.apache.santuario:xmlsec:2.2.1" level="project" />
+-    <orderEntry type="library" scope="RUNTIME" name="Maven: com.fasterxml.woodstox:woodstox-core:5.2.1" level="project" />
+-    <orderEntry type="library" scope="RUNTIME" name="Maven: org.codehaus.woodstox:stax2-api:4.2" level="project" />
+-    <orderEntry type="library" name="Maven: jakarta.xml.bind:jakarta.xml.bind-api:2.3.2" level="project" />
+-    <orderEntry type="library" name="Maven: jakarta.activation:jakarta.activation-api:1.2.1" level="project" />
+-    <orderEntry type="library" name="Maven: org.apache.xmlgraphics:batik-all:1.13" level="project" />
+-    <orderEntry type="library" name="Maven: org.apache.xmlgraphics:batik-anim:1.13" level="project" />
+-    <orderEntry type="library" name="Maven: org.apache.xmlgraphics:batik-shared-resources:1.13" level="project" />
+-    <orderEntry type="library" name="Maven: xml-apis:xml-apis-ext:1.3.04" level="project" />
+-    <orderEntry type="library" name="Maven: org.apache.xmlgraphics:batik-awt-util:1.13" level="project" />
+-    <orderEntry type="library" name="Maven: org.apache.xmlgraphics:xmlgraphics-commons:2.4" level="project" />
+-    <orderEntry type="library" name="Maven: commons-io:commons-io:1.3.1" level="project" />
+-    <orderEntry type="library" name="Maven: org.apache.xmlgraphics:batik-bridge:1.13" level="project" />
+-    <orderEntry type="library" name="Maven: org.apache.xmlgraphics:batik-codec:1.13" level="project" />
+-    <orderEntry type="library" name="Maven: org.apache.xmlgraphics:batik-constants:1.13" level="project" />
+-    <orderEntry type="library" name="Maven: org.apache.xmlgraphics:batik-css:1.13" level="project" />
+-    <orderEntry type="library" name="Maven: org.apache.xmlgraphics:batik-dom:1.13" level="project" />
+-    <orderEntry type="library" name="Maven: xalan:xalan:2.7.2" level="project" />
+-    <orderEntry type="library" name="Maven: xalan:serializer:2.7.2" level="project" />
+-    <orderEntry type="library" name="Maven: xml-apis:xml-apis:1.4.01" level="project" />
+-    <orderEntry type="library" name="Maven: org.apache.xmlgraphics:batik-ext:1.13" level="project" />
+-    <orderEntry type="library" name="Maven: org.apache.xmlgraphics:batik-extension:1.13" level="project" />
+-    <orderEntry type="library" name="Maven: org.apache.xmlgraphics:batik-gui-util:1.13" level="project" />
+-    <orderEntry type="library" name="Maven: org.apache.xmlgraphics:batik-gvt:1.13" level="project" />
+-    <orderEntry type="library" name="Maven: org.apache.xmlgraphics:batik-i18n:1.13" level="project" />
+-    <orderEntry type="library" name="Maven: org.apache.xmlgraphics:batik-parser:1.13" level="project" />
+-    <orderEntry type="library" name="Maven: org.apache.xmlgraphics:batik-rasterizer-ext:1.13" level="project" />
+-    <orderEntry type="library" name="Maven: org.apache.xmlgraphics:batik-rasterizer:1.13" level="project" />
+-    <orderEntry type="library" name="Maven: org.apache.xmlgraphics:batik-script:1.13" level="project" />
+-    <orderEntry type="library" name="Maven: org.apache.xmlgraphics:batik-slideshow:1.13" level="project" />
+-    <orderEntry type="library" name="Maven: org.apache.xmlgraphics:batik-squiggle-ext:1.13" level="project" />
+-    <orderEntry type="library" name="Maven: org.apache.xmlgraphics:batik-squiggle:1.13" level="project" />
+-    <orderEntry type="library" name="Maven: org.apache.xmlgraphics:batik-svg-dom:1.13" level="project" />
+-    <orderEntry type="library" name="Maven: org.apache.xmlgraphics:batik-svgbrowser:1.13" level="project" />
+-    <orderEntry type="library" name="Maven: org.apache.xmlgraphics:batik-svggen:1.13" level="project" />
+-    <orderEntry type="library" name="Maven: org.apache.xmlgraphics:batik-svgpp:1.13" level="project" />
+-    <orderEntry type="library" name="Maven: org.apache.xmlgraphics:batik-svgrasterizer:1.13" level="project" />
+-    <orderEntry type="library" name="Maven: org.apache.xmlgraphics:batik-swing:1.13" level="project" />
+-    <orderEntry type="library" name="Maven: org.apache.xmlgraphics:batik-transcoder:1.13" level="project" />
+-    <orderEntry type="library" name="Maven: org.apache.xmlgraphics:batik-util:1.13" level="project" />
+-    <orderEntry type="library" name="Maven: org.apache.xmlgraphics:batik-ttf2svg:1.13" level="project" />
+-    <orderEntry type="library" name="Maven: org.apache.xmlgraphics:batik-xml:1.13" level="project" />
+-    <orderEntry type="library" name="Maven: de.rototor.pdfbox:graphics2d:0.30" level="project" />
+-    <orderEntry type="library" name="Maven: org.apache.pdfbox:pdfbox:2.0.22" level="project" />
+-    <orderEntry type="library" name="Maven: org.apache.pdfbox:fontbox:2.0.22" level="project" />
+   </component>
+ </module>
+\ No newline at end of file

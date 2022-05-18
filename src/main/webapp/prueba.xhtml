@@ -16,7 +16,9 @@
 <!--}-->
 <!--</style>-->
 <h:body>
-
+    <p:messages id="messages" showDetail="true" closable="ture">
+        <p:autoUpdate/>
+    </p:messages>
     <div id = "header" >
         <h:graphicImage id="header_logo" library="imagenes" name="logo-ecijg.width-380.png"/>
         <h:outputText id = "header_text" class = "text" value = "Escuela Colombiana de ingieneria Julio Garavito: Recursos de biblioteca"/>
@@ -24,7 +26,7 @@
 
     <div class="container" >
         <h:form id="Recursos">
-            <h:commandButton value="Atras" action="administrador?recursosBiblioteca-redirect = true" style="color:#ffffff;
+            <h:commandButton value="Atras" action="#{consultarRecursosBean.redirect}" style="color:#ffffff;
                 background-color:#990000;font-size:120%; position:relative; top:50px" />
             <p:panel header="filtros" style="text-align: center" name="panel1" id="panel1">
                 <div style="display:grid; grid-template-columns: 1fr 1fr 1fr 1fr">
@@ -61,7 +63,7 @@
             </p:panel>
 
             <p:panel header="Recursos disponibles" style="text-align: center" name="panel2" id="panel2">
-                <p:dataTable  id="recursos" var="recurso" value="#{consultarRecursosBean.filtrarLosRecursos()}" selectionMode="single" selection="#{consultarRecursosBean.recurso}" rowKey="#{recurso.nombre}" rows="4" paginator="true"
+                <p:dataTable  id="recursos" var="recurso" value="#{consultarRecursosBean.filtrarLosRecursos()}" selectionMode="single" selection="#{consultarRecursosBean.recurso}" rowKey="#{recurso.nombre}" rows="8" paginator="true"
                               paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink}" currentPageReportTemplate="{startRecord}-{endRecord} of {totalRecords} records" style="text-align: left; align: center">
                     <p:column headerText="Nombre">
                         <h:outputText value="#{recurso.nombre}" />
@@ -76,7 +78,7 @@
                         <h:outputText value="#{recurso.ubicacion}" />
                     </p:column>
                 </p:dataTable>
-                <h:commandButton id="select" value="Reservar" action="consultarHorarios?faces-redirect = true" style="margin-top: 10px"/>
+                <h:commandButton id="select" value="Reservar" action="#{consultarHorariosBean.loadHorarios(consultarRecursosBean.recurso.id)}" style="margin-top: 10px"/>
                 <h:commandButton value="Ver reservas" action="calendar?faces-redirect = true" style="margin-top: 10px"/>
             </p:panel>
         </h:form>
