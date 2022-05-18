@@ -4,7 +4,7 @@
 # target folder
 .target
 .idea
-
+.circleci
 # Log file
 *.log
 
