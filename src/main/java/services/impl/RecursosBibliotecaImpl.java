@@ -10,7 +10,9 @@ import services.RecursosBiblioteca;
 import javax.ejb.Singleton;
 import java.sql.Time;
 import java.sql.Timestamp;
+import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
 
 public class RecursosBibliotecaImpl implements RecursosBiblioteca {
 
@@ -45,8 +47,8 @@ public class RecursosBibliotecaImpl implements RecursosBiblioteca {
     public List<Horario> consultarHorario(int id) throws ExceptionRecursosBiblioteca {
         try {
             return horarioDAO.load(id);
-        } catch (ExceptionRecursosBiblioteca e){
-            throw new ExceptionRecursosBiblioteca("error");
+        } catch (Exception e){
+            throw new ExceptionRecursosBiblioteca("Este recurso no tiene horarios diponibles");
         }
 
     }
@@ -71,9 +73,15 @@ public class RecursosBibliotecaImpl implements RecursosBiblioteca {
         try{
             recursoDAO.registrarRecurso(nombre, habilitado, ubicacion, ejemplar, tipo, capacidad);
         }catch (Exception e){
-            throw new ExceptionRecursosBiblioteca("Error");
+            if (Objects.equals(nombre, "")){
+                throw new ExceptionRecursosBiblioteca("Falta información");
+            }else if(capacidad < 0 || capacidad > 15){
+                throw new ExceptionRecursosBiblioteca("Valor de la capacidad invalido");
+            }
+            else{
+                throw new ExceptionRecursosBiblioteca("El recurso ya existe");
+            }
         }
-
     }
 
     @Override
@@ -147,11 +155,12 @@ public class RecursosBibliotecaImpl implements RecursosBiblioteca {
     }
 
     @Override
-    public void reservarRecursos(Usuario usuario, Recurso recurso, Timestamp inicio, Timestamp fin, boolean recurrente, String estado, String solicitud)throws ExceptionRecursosBiblioteca{
+    public void reservarRecursos(int usuario, int recurso, Timestamp inicio, Timestamp fin, boolean recurrente, String estado,Time hIni,Time hFin, Timestamp solicitud)throws ExceptionRecursosBiblioteca{
         try{
-            reservaDAO.reservarRecurso(usuario,recurso,inicio,fin,recurrente,estado,solicitud);
+            reservaDAO.reservarRecurso(usuario,recurso,inicio,fin,recurrente,estado, hIni,hFin,solicitud);
         }catch (Exception e){
-            throw new ExceptionRecursosBiblioteca("Error");
+            throw new ExceptionRecursosBiblioteca("Error al reservar");
+
         }
 
     }
@@ -194,5 +203,26 @@ public class RecursosBibliotecaImpl implements RecursosBiblioteca {
     @Override
     public List<Reserva> consultarReservasPasadas(int id) {
         return reservaDAO.consultarReservasPasadas(id);
+    }
+
+    @Override
+    public Recurso consultarNombreRecurso(int id){
+        return recursoDAO.consultarNombreRecurso(id);
+    }
+
+    @Override
+    public List<Reserva> consultarReservasPorUsuario(int id){
+        return reservaDAO.consultarReservasPorUsuario(id);
+    }
+
+    @Override
+    public void agregarHorarios(String[] horarios){
+        for(String h : horarios){
+            List<String> lista;
+            lista = Arrays.asList(h.split(":"));
+            Time hora_ini = new Time(Integer.parseInt(lista.get(0)), Integer.parseInt(lista.get(1)), 0);
+            Time hora_fin = new Time(Integer.parseInt(lista.get(0)) + 1, Integer.parseInt(lista.get(1)), 0);
+            horarioDAO.guardar(hora_ini, hora_fin);
+        }
     }
 }

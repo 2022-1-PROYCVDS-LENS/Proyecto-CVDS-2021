@@ -1,18 +1,26 @@
 package managedbeans;
 
 import java.sql.Timestamp;
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
+import java.util.Objects;
 import javax.enterprise.context.ApplicationScoped;
 import javax.enterprise.context.RequestScoped;
 import javax.enterprise.context.SessionScoped;
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.*;
+import javax.faces.context.FacesContext;
+
+import entities.Recurso;
+import entities.Usuario;
 import lombok.Getter;
 import lombok.Setter;
 import com.google.inject.Inject;
 import entities.Horario;
 import entities.Reserva;
 import org.primefaces.PrimeFaces;
+import org.primefaces.component.submenu.UISubmenu;
 import org.primefaces.event.ScheduleEntryMoveEvent;
 import org.primefaces.event.ScheduleEntryResizeEvent;
 import org.primefaces.event.SelectEvent;
@@ -31,15 +39,25 @@ public class CalendarioBean extends BasePageBean {
     @Inject
     private RecursosBiblioteca recursosBiblioteca;
 
-    private ScheduleModel eventModel = new DefaultScheduleModel();;
+    private ScheduleModel eventModel = new DefaultScheduleModel();
 
-    private ScheduleEvent event = new DefaultScheduleEvent();;
+    private DefaultScheduleEvent event = new DefaultScheduleEvent();
 
     private ScheduleEvent eventAux = new DefaultScheduleEvent();
 
     @Getter @Setter private List<Reserva> reservas;
 
     @Getter @Setter private Reserva reserva;
+
+    @Getter @Setter public Recurso recurso;
+
+    @Getter @Setter private ArrayList<String> recursos;
+
+    @Getter @Setter private ArrayList<String> solicitudes;
+
+    @Getter @Setter private String nombreR;
+
+    @Getter @Setter private String solicitud;
 
     private int eventId = 0;
 
@@ -48,18 +66,51 @@ public class CalendarioBean extends BasePageBean {
         return reservas;
     }
 
+    public ScheduleModel consultar(){
+        loadEvents();
+        return eventModel;
+    }
+
+    public Date getInicio(){
+        return event.getStartDate();
+    }
+
+    public Date getFin(){
+        return event.getEndDate();
+    }
+
+    public void consultarReservas(){
+
+        if(FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("user") != null){
+            Usuario user = (Usuario) FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("user");
+        }
+
+    }
+
     public void loadEvents() {
+        recursos = new ArrayList<String>();
+        solicitudes = new ArrayList<String>();
         eventModel = new DefaultScheduleModel();
-        reservas = recursosBiblioteca.consultarReservas();
-//        Timestamp inicio = new Timestamp(2022, 5, 4, 7, 0, 0, 0);
-//        Timestamp fin = new Timestamp(2022, 5, 4, 9, 0, 0, 0);
-//        event = new DefaultScheduleEvent("prueba", inicio, fin);
-        eventModel.addEvent(event);
+
+        if(FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("user") != null){
+            Usuario user = (Usuario) FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("user");
+            if(Objects.equals(user.getTipoUsuario(), "estudiante")){
+                reservas = recursosBiblioteca.consultarReservasPorUsuario(user.getId());
+            }else{
+                reservas = recursosBiblioteca.consultarReservas();
+            }
+        }else{
+            reservas = recursosBiblioteca.consultarReservas();
+        }
+        int pos = 0;
         for (Reserva h : reservas){
-            event = new DefaultScheduleEvent("prueba", h.getInicio(), h.getFin());
+            event = new DefaultScheduleEvent(" " + h.getUsuario().getNombre(), h.getInicio(), h.getFin());
+            recursos.add(recursosBiblioteca.consultarNombreRecurso(h.getIdRecurso()).getNombre());
+            solicitudes.add(h.getSolicitud().toString());
+            event.setDescription(recursosBiblioteca.consultarNombreRecurso(h.getIdRecurso()).getNombre());
             eventModel.addEvent(event);
-            event.setId("1");
-            event.setId(String.valueOf(h.getId()));
+            event.setId(String.valueOf(pos));
+            pos ++;
         }
     }
 
@@ -72,8 +123,10 @@ public class CalendarioBean extends BasePageBean {
     }
 
     public void onEventSelect(SelectEvent selectEvent) {
-        this.event = (ScheduleEvent) selectEvent.getObject();
+        this.event = (DefaultScheduleEvent) selectEvent.getObject();
         this.eventId = Integer.parseInt(event.getId());
+        this.nombreR = recursos.get(eventId);
+        this.solicitud = solicitudes.get(eventId);
     }
 
     public void onEventMove(ScheduleEntryMoveEvent event) {

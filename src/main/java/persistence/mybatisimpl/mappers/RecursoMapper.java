@@ -28,7 +28,7 @@ public interface RecursoMapper {
      * Consultar los recursos disponibles en la plataforma
      * @return lista de los recursos en la plataforma
      */
-    public List<Recurso> consultarRecursos();
+    List<Recurso> consultarRecursos();
 
     /**
      * Consultar los recursos con cierto tipo
@@ -85,4 +85,6 @@ public interface RecursoMapper {
     List<Recurso> consultarRecursosCapaUbi(@Param("cap")int cap, @Param("ubi") String ubi);
 
     void registrarRecurso(String nombre, String ubicacion, TipoRecurso tipo, int capacidad);
+
+    Recurso consultarNombreRecurso(@Param("id") int id);
 }

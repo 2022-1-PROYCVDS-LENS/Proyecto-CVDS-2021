@@ -42,7 +42,7 @@ public interface RecursosBiblioteca {
 
     List<Recurso> consultarRecursosPorUbicacion(String ubi);
 
-    public abstract  void reservarRecursos(Usuario usuario, Recurso recurso, Timestamp inicio, Timestamp fin, boolean recurrente, String estado, String solicitud)throws ExceptionRecursosBiblioteca;
+    public abstract  void reservarRecursos(int usuario, int recurso, Timestamp inicio, Timestamp fin, boolean recurrente, String estado,Time hIni,Time hFin, Timestamp solicitud)throws ExceptionRecursosBiblioteca;
 
     List<Recurso> consultarRecursosPorTipoCapacidadUbicacion(int tipo, int capacidad, String ubicacion);
 
@@ -58,4 +58,9 @@ public interface RecursosBiblioteca {
 
     List<Reserva> consultarReservasPasadas(int id);
     List<Reserva> consultarReservas();
+    Recurso consultarNombreRecurso(int id);
+
+    List<Reserva> consultarReservasPorUsuario(int id);
+
+    void agregarHorarios(String[] horarios);
 }
