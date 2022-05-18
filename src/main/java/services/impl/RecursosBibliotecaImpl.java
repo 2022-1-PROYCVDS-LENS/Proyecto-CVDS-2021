@@ -204,7 +204,7 @@ public class RecursosBibliotecaImpl implements RecursosBiblioteca {
     public ReservaInformacion consultarReservaExtendida(int id, Usuario user) {
         Reserva reservas = reservaDAO.consultarReservaExtendida(id);
 
-        Recurso recurso = consultarRecursosPorId(reservas.getIdRecurso().getId());
+        Recurso recurso = consultarRecursosPorId(reservas.getRecurso().getId());
         ReservaInformacion reserva = (new ReservaInformacion(reservas.getId(), recurso.getNombre(),
                 reservas.getSolicitud(), reservas.getInicio(), reservas.getFin(), user.getNombre(),
                 user.getPrograma(), reservas.isRecurrente()));
