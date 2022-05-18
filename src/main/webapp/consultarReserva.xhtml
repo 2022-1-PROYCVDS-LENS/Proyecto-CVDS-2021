@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html
+        xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:h="http://java.sun.com/jsf/html"
+        xmlns:p="http://primefaces.org/ui"
+        xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+        xmlns:f = "http://java.sun.com/jsf/core">
+<h:head>
+        <title>
+            <ui:insert name="title">Recursos biblioteca</ui:insert>
+        </title>
+        <link href="./resources/style.css" rel="stylesheet"/>
+</h:head>
+
+<h:body>
+    <div id = "header" >
+        <h:graphicImage id="header_logo" library="imagenes" name="logo-ecijg.width-380.png"/>
+        <h:outputText id = "header_text" class = "text" value = "Escuela Colombiana de ingieneria Julio Garavito: Recursos de biblioteca"/>
+    </div>
+
+    <div class="divBody">
+        <center>
+            <h:form id="formConsultarReserva" class="formbox">
+                <h1 class="titulo">Consultar Reserva</h1>
+                <div class="gri">
+                    <h1>Nombre recurso:</h1>
+                    <h:outputText value="#{consultarReservaBean.reserva.nombreRecurso}" class="text" />
+                    <h1>Fecha solicitado:</h1>
+                    <h:outputText value="#{consultarReservaBean.reserva.solicitud}" class="text" />
+                    <h1>Solicitado desde:</h1>
+                    <h:outputText value="#{consultarReservaBean.reserva.inicio}" class="text" />
+                    <h1>Solicitado hasta:</h1>
+                    <h:outputText value="#{consultarReservaBean.reserva.fin}" class="text" />
+                    <h1>Nombre del usuario:</h1>
+                    <h:outputText value="#{consultarReservaBean.reserva.usuario}" class="text" />
+                    <h1>Programa del usuario:</h1>
+                    <h:outputText value="#{consultarReservaBean.reserva.programa}" class="text" />
+                    <h1>Es recurrente:</h1>
+                    <h:outputText value="#{consultarReservaBean.reserva.recurrente}" class="text" />
+                </div>
+                <br>
+                    <h:commandButton value="Atras" action="administrador?recursosBiblioteca-redirect = true" style="color:#ffffff;
+                background-color:#990000;font-size:120%; position:relative; top:50px" /></br>
+
+            </h:form>
+        </center>
+    </div>
+
+</h:body>
+
+</html>

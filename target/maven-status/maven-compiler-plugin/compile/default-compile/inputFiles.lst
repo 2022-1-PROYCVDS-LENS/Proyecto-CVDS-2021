@@ -8,6 +8,7 @@ C:\Users\nicol\CVDS\RecursosBiblioteca\Proyecto-CVDS-2021\src\main\java\managedb
 C:\Users\nicol\CVDS\RecursosBiblioteca\Proyecto-CVDS-2021\src\main\java\managedbeans\LoginBean.java
 C:\Users\nicol\CVDS\RecursosBiblioteca\Proyecto-CVDS-2021\src\main\java\persistence\mybatisimpl\MyBATISHorarioDAO.java
 C:\Users\nicol\CVDS\RecursosBiblioteca\Proyecto-CVDS-2021\src\main\java\managedbeans\CalendarioBean.java
+C:\Users\nicol\CVDS\RecursosBiblioteca\Proyecto-CVDS-2021\src\main\java\entities\ReservaInformacion.java
 C:\Users\nicol\CVDS\RecursosBiblioteca\Proyecto-CVDS-2021\src\main\java\security\OnlyNotAutenticate.java
 C:\Users\nicol\CVDS\RecursosBiblioteca\Proyecto-CVDS-2021\src\main\java\managedbeans\ConsultarHorariosBean.java
 C:\Users\nicol\CVDS\RecursosBiblioteca\Proyecto-CVDS-2021\src\main\java\persistence\mybatisimpl\MyBATISRecursoDAO.java
@@ -37,5 +38,6 @@ C:\Users\nicol\CVDS\RecursosBiblioteca\Proyecto-CVDS-2021\src\main\java\services
 C:\Users\nicol\CVDS\RecursosBiblioteca\Proyecto-CVDS-2021\src\main\java\persistence\mybatisimpl\MyBATISReservaDAO.java
 C:\Users\nicol\CVDS\RecursosBiblioteca\Proyecto-CVDS-2021\src\main\java\exceptions\recursosBibliotecaException.java
 C:\Users\nicol\CVDS\RecursosBiblioteca\Proyecto-CVDS-2021\src\main\java\test\bibliotecaTest.java
+C:\Users\nicol\CVDS\RecursosBiblioteca\Proyecto-CVDS-2021\src\main\java\managedbeans\ConsultarReservaBean.java
 C:\Users\nicol\CVDS\RecursosBiblioteca\Proyecto-CVDS-2021\src\main\java\persistence\mybatisimpl\mappers\TipoRecursoMapper.java
 C:\Users\nicol\CVDS\RecursosBiblioteca\Proyecto-CVDS-2021\src\main\java\persistence\RecursoDAO.java

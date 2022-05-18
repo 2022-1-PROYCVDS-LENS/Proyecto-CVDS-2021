@@ -3,6 +3,7 @@ managedbeans\ConsultarHorariosBean.class
 managedbeans\BasePageBean.class
 persistence\mybatisimpl\MyBATISRecursoDAO.class
 persistence\mybatisimpl\mappers\HorarioMapper.class
+managedbeans\ConsultarReservaBean.class
 persistence\mybatisimpl\mappers\ReservaRecurrenteMapper.class
 persistence\mybatisimpl\mappers\TipoRecursoMapper.class
 managedbeans\ConsultarRecursosBean.class
@@ -26,6 +27,7 @@ entities\TipoRecurso.class
 persistence\mybatisimpl\MyBATISTipoRecursoDAO.class
 persistence\UsuarioDAO.class
 entities\Horario.class
+entities\ReservaInformacion.class
 security\OnlyNotAutenticate.class
 services\RecursosBibliotecaFactory$1.class
 services\RecursosBibliotecaFactory.class

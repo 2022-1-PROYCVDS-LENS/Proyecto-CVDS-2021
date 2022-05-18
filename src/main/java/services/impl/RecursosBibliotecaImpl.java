@@ -182,6 +182,17 @@ public class RecursosBibliotecaImpl implements RecursosBiblioteca {
     }
 
     @Override
+    public ReservaInformacion consultarReservaExtendida(int id) {
+        Reserva reservas = reservaDAO.consultarReservaExtendida(id);
+        Usuario user = consultarUsuario(reservas.getIdUsuario());
+        Recurso recurso = consultarRecurso(reservas.getIdRecurso());
+        ReservaInformacion reserva = (new ReservaInformacion(reservas.getId(), recurso.getNombre(),
+                reservas.getSolicitud(), reservas.getInicio(), reservas.getFin(), user.getNombre(),
+                user.getPrograma(), reservas.isRecurrente()));
+        return reserva;
+    }
+
+    @Override
     public List<Reserva> consultarReservasActivas(int id) {
         return reservaDAO.consultarReservasActivas(id);
     }

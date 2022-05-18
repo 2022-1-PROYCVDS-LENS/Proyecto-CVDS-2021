@@ -1,7 +1,6 @@
 package services;
 
 import entities.*;
-import entities.Usuario;
 import org.bouncycastle.util.Times;
 
 import java.sql.Time;
@@ -58,4 +57,6 @@ public interface RecursosBiblioteca {
 
     List<Reserva> consultarReservasPasadas(int id);
     List<Reserva> consultarReservas();
+
+    ReservaInformacion consultarReservaExtendida(int id);
 }

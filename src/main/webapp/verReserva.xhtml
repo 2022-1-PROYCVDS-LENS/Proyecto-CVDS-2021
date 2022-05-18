@@ -58,7 +58,7 @@ xhtml de la pagina principal de recursos biblioteca en donde se redireccionara a
                 <h:outputText value = "#{reserva.idRecurso}"/>
             </p:column >
             <p:column style = "border: 1px solid black; border-collapse: collapse; width:40% ; padding-left: 15px ; padding-right: 15px">
-                <h:commandButton value ="Detalles" action="consultar reserva por reserva.id"/>
+                <h:commandButton value ="Detalles" action="#{consultarReservaBean.consultaExt()}"/>
             </p:column>
         </h:dataTable>
         </h:form>
