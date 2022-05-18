@@ -67,6 +67,11 @@ public class RecursosBibliotecaImpl implements RecursosBiblioteca {
     }
 
     @Override
+    public Recurso consultarRecursosPorId(int id) {
+        return recursoDAO.consultarRecursosPorId(id);
+    }
+
+    @Override
     public void registrarRecurso(String nombre, String habilitado, String ubicacion, int ejemplar, TipoRecurso tipo, int capacidad) throws ExceptionRecursosBiblioteca{
         try{
             recursoDAO.registrarRecurso(nombre, habilitado, ubicacion, ejemplar, tipo, capacidad);
@@ -185,7 +190,7 @@ public class RecursosBibliotecaImpl implements RecursosBiblioteca {
     public ReservaInformacion consultarReservaExtendida(int id) {
         Reserva reservas = reservaDAO.consultarReservaExtendida(id);
         Usuario user = consultarUsuario(reservas.getIdUsuario());
-        Recurso recurso = consultarRecurso(reservas.getIdRecurso());
+        Recurso recurso = consultarRecursosPorId(reservas.getIdRecurso());
         ReservaInformacion reserva = (new ReservaInformacion(reservas.getId(), recurso.getNombre(),
                 reservas.getSolicitud(), reservas.getInicio(), reservas.getFin(), user.getNombre(),
                 user.getPrograma(), reservas.isRecurrente()));

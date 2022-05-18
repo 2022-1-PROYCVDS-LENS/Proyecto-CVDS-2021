@@ -12,6 +12,8 @@ public interface RecursoDAO {
 
     public List<Recurso> consultarRecursos();
 
+    public Recurso consultarRecursosPorId(int id);
+
     public List<Recurso> consultarRecursosPorTipo(int tipo);
 
     public List<Recurso> consultarRecursosPorCapacidad(int i);

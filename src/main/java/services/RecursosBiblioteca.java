@@ -16,6 +16,7 @@ public interface RecursosBiblioteca {
     );
     public abstract void registrarHorario(Horario h);
     public abstract Recurso consultarRecurso(int id);
+    public abstract Recurso consultarRecursosPorId(int id);
     public abstract  void registrarRecurso(String nombre, String habilitado, String ubicacion, int ejemplar, TipoRecurso tipo, int capacidad) throws ExceptionRecursosBiblioteca;
 
     public abstract void registrarRegusrso(Recurso r);
