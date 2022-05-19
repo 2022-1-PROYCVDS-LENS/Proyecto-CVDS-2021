@@ -20,12 +20,18 @@ xhtml de la pagina principal de recursos biblioteca en donde se redireccionara a
         <h:graphicImage id="header_logo" library="imagenes" name="logo-ecijg.width-380.png"/>
         <h:outputText id = "header_text" class = "text" value = "Escuela Colombiana de ingieneria Julio Garavito: Recursos de biblioteca"/>
     </div>
-
+    <h:form><h:commandButton value="Atras" action="comunidad?recursosBiblioteca-redirect = true" style="color:#ffffff;
+            background-color:#990000;font-size:120%; position:relative; top:50px" /></h:form>
+    <br/>
+    <div><h:form>
+        <h:commandButton style="color:#ffffff;
+            background-color:#990000;font-size:120%; position:relative; top:50px" value="Cerrar Sesión" actionListener="#{loginBean.logOut()}" />
+    </h:form></div>
     <div class = "box_container">
         <h:form>
-            <h:commandButton styleClass="button" value="Reservas Activas" action="#{visualizarReservaBean.consAct()}" />
-            <h:commandButton styleClass="button" value="Reservas Canceladas" action="#{visualizarReservaBean.consCanc}"/>
-            <h:commandButton styleClass="button" value="Reservas Antiguas" action="#{visualizarReservaBean.consPas}"/>
+            <h:commandButton styleClass="button" value="Reservas Activas" actionListener="#{visualizarReservaBean.consAct()}" />
+            <h:commandButton styleClass="button" value="Reservas Canceladas" action="#{visualizarReservaBean.consCanc()}"/>
+            <h:commandButton styleClass="button" value="Reservas Antiguas" action="#{visualizarReservaBean.consPas()}"/>
         </h:form>
         <h:form>
         <h:dataTable value="#{visualizarReservaBean.reservas}" var="reserva" border="4" style ="background-color:#ebeff4;" >

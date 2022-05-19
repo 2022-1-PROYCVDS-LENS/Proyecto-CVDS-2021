@@ -17,6 +17,12 @@ import java.sql.Time;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * Bean correspondiente a la vista de registrar recursos
+ * @author LENS
+ * @version 1.0
+ */
+
 @SuppressWarnings("deprecation")
 @ManagedBean(name = "registrarRecursosBean")
 @SessionScoped
@@ -29,12 +35,16 @@ public class RegistrarRecursosBean extends BasePageBean{
     @Getter @Setter String ubicacion;
     @Getter @Setter int ejemplar;
     @Getter @Setter String[] horariosDisponibles;
-
     private final List<String> pos = Arrays.asList("libro", "sala de estudio", "Equipo de computo");
+
     @Inject
     private RecursosBiblioteca recursosBiblioteca;
+
+    /**
+     * Metodo para registrar un nuevo recurso
+     * @throws ExceptionRecursosBiblioteca error que arroja si hay algun parametro mal
+     */
     public void registrar() throws ExceptionRecursosBiblioteca {
-//        prueba();
         try{
             TipoRecurso tipor = new TipoRecurso();
             tipor.setId(pos.indexOf(this.tipo) + 1);
@@ -47,18 +57,4 @@ public class RegistrarRecursosBean extends BasePageBean{
         }
     }
 
-    private void prueba(){
-        String intento = "12:00";
-        List<String> lista;
-        lista = Arrays.asList(intento.split(":"));
-        Time quiza = new Time(Integer.parseInt(lista.get(0)), Integer.parseInt(lista.get(1)), 0);
-        System.out.println(quiza);
-
-//        Time hola = new Time(12, 20, 30);
-//        String prueba = "hola";
-//        for (int i = 0; i < prueba.length(); i++){
-//            System.out.println(prueba.charAt(i));
-//        }
-//        System.out.println(hola);
-    }
 }

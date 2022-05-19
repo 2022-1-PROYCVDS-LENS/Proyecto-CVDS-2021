@@ -19,26 +19,11 @@ public interface RecursosBiblioteca {
     public abstract Recurso consultarRecursosPorId(int id);
     public abstract  void registrarRecurso(String nombre, String habilitado, String ubicacion, int ejemplar, TipoRecurso tipo, int capacidad) throws ExceptionRecursosBiblioteca;
 
-    public abstract void registrarRegusrso(Recurso r);
     public abstract List<Recurso> consultarRecursos();
     public abstract List<Recurso> consultarRecursosPorTipo(int tipo);
 
-    public abstract ReservaRecurrente consultarReservaRecurrente(int id);
-    public abstract void registrarReservaRecurrente(//Parametros
-    );
-    public abstract void registrarReservaRecurrente(ReservaRecurrente r);
 
-    public abstract TipoRecurso consultarTipo(int id);
-    public abstract void registarrTipo(//partametros
-    );
-    public abstract void registrarTipo(TipoRecurso t);
-
-    public abstract Usuario consultarUsuario(int id);
-    public abstract void registrarUsuario(//parametros
-                                           );
     public abstract Usuario consultarUsuarioPorId(int id);
-    public abstract void registrarUsuario(Usuario u);
-
     List<Recurso> consultarRecursosPorCapacidad(int i);
 
     List<Recurso> consultarRecursosPorUbicacion(String ubi);
@@ -59,6 +44,8 @@ public interface RecursosBiblioteca {
 
     List<Reserva> consultarReservasPasadas(int id);
     List<Reserva> consultarReservas();
+
+    void cancelarReserva(int idReserva);
     Recurso consultarNombreRecurso(int id);
 
     List<Reserva> consultarReservasPorUsuario(int id);
@@ -66,4 +53,8 @@ public interface RecursosBiblioteca {
     void agregarHorarios(String[] horarios);
 
     ReservaInformacion consultarReservaExtendida(int id, Usuario user);
+
+    Reserva consultarReservaPorId(int id);
+    void cambiarRecursoDanado(int id);
+    void cambiarRecursoHabilitado(int id);
 }

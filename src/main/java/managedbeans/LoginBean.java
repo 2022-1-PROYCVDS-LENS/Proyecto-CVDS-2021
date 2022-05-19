@@ -12,6 +12,8 @@ import javax.faces.context.FacesContext;
 import com.google.inject.Inject;
 
 import entities.Usuario;
+import lombok.Getter;
+import lombok.Setter;
 import org.slf4j.LoggerFactory;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.*;
@@ -22,32 +24,39 @@ import services.ExceptionRecursosBiblioteca;
 import services.RecursosBiblioteca;
 
 
+/**
+ * Bean correspondiente a la vista del login de la aplicacion
+ * @author LENS
+ * @version 1.0
+ */
+
 @SuppressWarnings("deprecation")
 @ManagedBean(name = "loginBean")
 @SessionScoped
 public class LoginBean extends BasePageBean{
 
-    private static final Logger log = LoggerFactory.getLogger(RecursosBiblioteca.class);
-    private String usuario;
-    private String contrasena;
-    public boolean logeado = false;
-    private Usuario user;
+    @Getter private static final Logger log = LoggerFactory.getLogger(RecursosBiblioteca.class);
+    @Getter @Setter private String usuario;
+    @Getter @Setter private String contrasena;
+    @Getter @Setter public boolean logeado = false;
+    @Getter @Setter private Usuario user;
 
-    public Usuario getUser() {
-        return user;
-        //raise esception si no hay usuario
-    }
 
-    public void setUser(Usuario user) {
-        this.user = user;
-    }
 
     @Inject
     private RecursosBiblioteca rebi;
 
+    /**
+     * Metodo que retorna el id del usuario
+     * @return entero que corresponde al id del usuario
+     */
     public int getUserId(){
         return user.getId();
     }
+
+    /**
+     * Metodo que verifica las credecniales del usuario y le da ingreso a la aplicacion
+     */
     public void login(){
         Subject usuarioActual = SecurityUtils.getSubject();
         UsernamePasswordToken uPToken = new UsernamePasswordToken(getUsuario(), getContrasena());
@@ -86,34 +95,18 @@ public class LoginBean extends BasePageBean{
             uPToken.clear();
         }
     }
-    public String getUsuario() {
-        return usuario;
-    }
 
-    public void setUsuario(String usuario) {
-        this.usuario = usuario;
-    }
-
-    public String getContrasena() {
-        return contrasena;
-    }
-
-    public void setContrasena(String contrasena) {
-        this.contrasena = contrasena;
-    }
-
-    public boolean isLogeado() {
-        return logeado;
-    }
-
-    public void setLogeado(boolean logeado) {
-        this.logeado = logeado;
-    }
-
+    /**
+     * Metodo que muesra un error en la pantalla del login
+     * @param mensaje mensaje de error que se quiere mostrar
+     */
     private void error(String mensaje) {
         FacesContext.getCurrentInstance().addMessage("Shiro", new FacesMessage(FacesMessage.SEVERITY_ERROR, "Intente de nuevo: ", mensaje));
     }
 
+    /**
+     * Metodo para cerrar sesion en la aplicación
+     */
     public void logOut() {
         setLogeado(false);
         SecurityUtils.getSubject().logout();
@@ -124,6 +117,9 @@ public class LoginBean extends BasePageBean{
         }
     }
 
+    /**
+     * Metodo que redirecciona al usuario dependiendo de sus credenciales
+     */
     public void redirect(){
         try {
             Subject usuario = SecurityUtils.getSubject();

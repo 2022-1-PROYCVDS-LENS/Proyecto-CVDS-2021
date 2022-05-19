@@ -14,6 +14,12 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 
+/**
+ * Implementación de la clase RecursosBiblioteca
+ * @author LENS
+ * @version 1.0
+ */
+
 public class RecursosBibliotecaImpl implements RecursosBiblioteca {
 
     @Inject
@@ -89,10 +95,6 @@ public class RecursosBibliotecaImpl implements RecursosBiblioteca {
         }
     }
 
-    @Override
-    public void registrarRegusrso(Recurso r) {
-        recursoDAO.save(r);
-    }
 
     @Override
     public List<Recurso> consultarRecursos() {
@@ -104,55 +106,12 @@ public class RecursosBibliotecaImpl implements RecursosBiblioteca {
         return recursoDAO.consultarRecursosPorTipo(tipo);
     }
 
-    @Override
-    public ReservaRecurrente consultarReservaRecurrente(int id) {
-        return reservaRecurrenteDAO.load(id);
-    }
-
-    @Override
-    public void registrarReservaRecurrente() {
-
-    }
-
-    @Override
-    public void registrarReservaRecurrente(ReservaRecurrente r) {
-        reservaRecurrenteDAO.save(r);
-    }
-
-    @Override
-    public TipoRecurso consultarTipo(int id) {
-        return tipoRecursoDAO.load(id);
-    }
-
-    @Override
-    public void registarrTipo() {
-
-    }
-
-    @Override
-    public void registrarTipo(TipoRecurso t) {
-        tipoRecursoDAO.save(t);
-    }
-
-    @Override
-    public Usuario consultarUsuario(int id) {
-        return usuarioDAO.load(id);
-    }
-
-    @Override
-    public void registrarUsuario() {
-
-    }
 
     @Override
     public Usuario consultarUsuarioPorId(int id) {
         return usuarioDAO.consultarUsuarioPorId(id);
     }
 
-    @Override
-    public void registrarUsuario(Usuario u) {
-        usuarioDAO.save(u);
-    }
 
     @Override
     public List<Recurso> consultarRecursosPorCapacidad(int i) {
@@ -200,6 +159,22 @@ public class RecursosBibliotecaImpl implements RecursosBiblioteca {
         return reservaDAO.consultarReservas();
     }
 
+
+    @Override
+    public void cambiarRecursoDanado(int id) {
+        recursoDAO.cambiarRecursoDanado(id);
+    }
+
+    @Override
+    public void cambiarRecursoHabilitado(int id) {
+        recursoDAO.cambiarRecursoHabilitado(id);
+    }
+
+    @Override
+    public void cancelarReserva(int idReserva) {
+        reservaDAO.cancelarReserva(idReserva);
+    }
+
     @Override
     public ReservaInformacion consultarReservaExtendida(int id, Usuario user) {
         Reserva reservas = reservaDAO.consultarReservaExtendida(id);
@@ -207,8 +182,13 @@ public class RecursosBibliotecaImpl implements RecursosBiblioteca {
         Recurso recurso = consultarRecursosPorId(reservas.getRecurso().getId());
         ReservaInformacion reserva = (new ReservaInformacion(reservas.getId(), recurso.getNombre(),
                 reservas.getSolicitud(), reservas.getInicio(), reservas.getFin(), user.getNombre(),
-                user.getPrograma(), reservas.isRecurrente()));
+                user.getPrograma(), reservas.isRecurrente(),reservas.getEstado()));
         return reserva;
+    }
+
+    @Override
+    public Reserva consultarReservaPorId(int id) {
+        return reservaDAO.consultarReserva(id);
     }
 
     @Override

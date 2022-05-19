@@ -14,14 +14,30 @@ import services.impl.*;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
+/**
+ * Clase de injeccion de dependencias usando Google guice
+ *
+ * @author LENS
+ * @version 1.0
+ */
+
 
 public class GuiceContextListener implements ServletContextListener {
 
+
+    /**
+     * Metodo que destruye la injeccion de depndencias
+     * @param servletContextEvent
+     */
     public void contextDestroyed(ServletContextEvent servletContextEvent) {
         ServletContext servletContext = servletContextEvent.getServletContext();
         servletContext.removeAttribute(Injector.class.getName());
     }
 
+    /**
+     * Funcion que inicializa la injeccion de dependencias
+     * @param servletContextEvent servletContextEvent
+     */
     public void contextInitialized(ServletContextEvent servletContextEvent) {
         Injector injector = Guice.createInjector(new XMLMyBatisModule() {
             @Override

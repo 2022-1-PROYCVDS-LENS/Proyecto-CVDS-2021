@@ -6,8 +6,17 @@ import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
+/**
+ * Clase correspondinete al recursoMapper.xml, conecta el xml con java
+ * @author LENS
+ * @version 1.0
+ */
 public interface RecursoMapper {
 
+    /**
+     * Metodo para insertar un nuevo recurso
+     * @param recurso recurso que se va a insertar
+     */
     public void insertarRecurso(Recurso recurso);
 
     /**
@@ -91,7 +100,22 @@ public interface RecursoMapper {
      */
     List<Recurso> consultarRecursosCapaUbi(@Param("cap")int cap, @Param("ubi") String ubi);
 
-    void registrarRecurso(String nombre, String ubicacion, TipoRecurso tipo, int capacidad);
-
+    /**
+     * Metodo para consultar eñ nombre de un recurso especifico
+     * @param id id del recurso que se quiere consultar el nombre
+     * @return nombre del recursp
+     */
     Recurso consultarNombreRecurso(@Param("id") int id);
+
+    /**
+     * Metodo que cambia el estado de dañado a habilitado
+     * @param id id del recurso
+     */
+    void cambiarRecursoDanado(@Param("idRecurso")int id);
+
+    /**
+     * Metodo que cambia el estado de habilitado a dañado
+     * @param id id del recurso
+     */
+    void cambiarRecursoHabilitado(@Param("idRecurso")int id);
 }

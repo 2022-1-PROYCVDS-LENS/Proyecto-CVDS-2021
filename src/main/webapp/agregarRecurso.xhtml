@@ -23,6 +23,12 @@
     <div>
         <h:commandButton value="Atras" action="administrador?recursosBiblioteca-redirect = true" style="color:#ffffff;
             background-color:#990000;font-size:120%; position:relative; top:50px" />
+        <br/>
+        <br/>
+        <div><h:form>
+            <h:commandButton style="color:#ffffff;
+            background-color:#990000;font-size:120%; position:relative; top:50px" value="Cerrar Sesión" actionListener="#{loginBean.logOut()}" />
+        </h:form></div>
         <div class = "box_container">
 
             <center><h1>Agregar un nuevo recurso</h1></center>

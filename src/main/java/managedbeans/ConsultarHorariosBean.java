@@ -14,6 +14,14 @@ import javax.faces.context.FacesContext;
 import java.sql.Time;
 import java.util.List;
 
+
+/**
+ * Bean correspondiente a la vista del consultar horarios de reservas
+ *
+ * @author LENS
+ * @version 1.0
+ */
+
 @SuppressWarnings("deprecation")
 @ManagedBean(name = "consultarHorariosBean")
 @SessionScoped

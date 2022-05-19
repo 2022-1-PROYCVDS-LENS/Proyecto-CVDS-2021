@@ -14,10 +14,17 @@
         <p:autoUpdate/>
     </p:messages>
 
+
     <div id = "header" >
         <h:graphicImage id="header_logo" library="imagenes" name="logo-ecijg.width-380.png"/>
         <h:outputText id = "header_text" class = "text" value = "Escuela Colombiana de ingieneria Julio Garavito: Recursos de biblioteca"/>
     </div>
+    <h:form><h:commandButton value="Atras" action="prueba?recursosBiblioteca-redirect = true" style="color:#ffffff;
+            background-color:#990000;font-size:120%; position:relative; top:50px" /></h:form>
+    <div><h:form>
+        <h:commandButton style="color:#ffffff;
+            background-color:#990000;font-size:120%; position:relative; top:50px" value="Cerrar Sesión" actionListener="#{loginBean.logOut()}" />
+    </h:form></div>
     <div class="box_container" >
         <h:form id="Horarios">
             <p:panel header="Horarios disponibles" style="text-align: center" name="panel1" id="panel1">
