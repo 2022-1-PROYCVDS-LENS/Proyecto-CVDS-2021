@@ -3,11 +3,16 @@ package services;
 
 import entities.*;
 import entities.Recurso;
+import entities.Reserva;
+import entities.TipoRecurso;
 
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.util.Date;
 import java.util.List;
 
 public class main {
-    public static  void main(String[] args) {
+    public static  void main(String[] args) throws ExceptionRecursosBiblioteca {
         RecursosBiblioteca instance = RecursosBibliotecaFactory.getInstance().getRecursosBiblioteca();
 //        System.out.println(instance.consultarCliente(2165711).toString());
 

@@ -23,4 +23,9 @@
         order by hor.hora_ini
     </select>
 
+    <insert parameterType="map" id="guardar">
+        insert into horarios(id_horario, id_recurso, estado, hora_ini, hora_fin)
+        values (nextval('horarios_id'), (select max(id_recurso) from recursos), 'disponible', #{hora_ini}, #{hora_fin});
+    </insert>
+
 </mapper>

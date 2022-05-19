@@ -12,31 +12,45 @@
         <result property="recurrente" column="recurrente"/>
         <result property="estado" column="estado"/>
         <result property="solicitud" column="solicitud"/>
-        <association property="idRecurso" javaType="Recurso" resultMap="persistence.mybatisimpl.mappers.RecursoMapper.RecursoResult"/>
-        <association property="idUsuario" javaType="Usuario" resultMap="persistence.mybatisimpl.mappers.UsuarioMapper.UsuarioResult"/>
-        <collection property="reservaRecurrentes" ofType="ReservaRecurrente" resultMap="persistence.mybatisimpl.mappers.ReservaRecurrenteMapper.ReservaRecurrenteResult"/>
-        <collection property="usuarios" ofType="Usuario" resultMap="persistence.mybatisimpl.mappers.UsuarioMapper.UsuarioResult"/>
+        <result property="idUsuario" column="id_usuario"/>
+        <result property="idRecurso" column="id_recurso"/>
+        <association property="recurso" javaType="Recurso" resultMap="persistence.mybatisimpl.mappers.RecursoMapper.RecursoResult"/>
+        <association property="usuario" javaType="Usuario" resultMap="persistence.mybatisimpl.mappers.UsuarioMapper.UsuarioResult"/>
+<!--        <collection property="reservaRecurrentes" ofType="ReservaRecurrente" resultMap="persistence.mybatisimpl.mappers.ReservaRecurrenteMapper.ReservaRecurrenteResult"/>-->
+<!--        <collection property="usuarios" ofType="Usuario" resultMap="persistence.mybatisimpl.mappers.UsuarioMapper.UsuarioResult"/>-->
+<!--        <collection property="recursos" ofType="Recurso" resultMap="persistence.mybatisimpl.mappers.RecursoMapper.RecursoResult" columnPrefix="rec_"/>-->
     </resultMap>
 
     <insert parameterType="map" id="reservarRecurso">
-        insert into reservas(id_reserva, id_usuario, id_recurso, inicio, fin, recurrente, estado, solicitud)
-        values (nextval('reservas_id') #{usuario.id}, #{recurso.id}, #{inicio}, #{fin}, #{recurrente}, #{estado}, #{solicitud})
+        insert into reservas(id_reserva, id_usuario, id_recurso, inicio, fin, recurrente, estado,h_ini,h_fin, solicitud)
+        values (nextval('reservas_id'), #{id_usuario}, #{id_recurso}, #{inicio}, #{fin}, #{recurrente}, #{estado},#{h_ini},#{h_fin}, #{solicitud})
     </insert>
 
     <select id="consultarReservas" resultMap="ReservaResult">
         select
         res.id_reserva,
+        res.id_recurso,
+        res.solicitud,
         res.inicio,
-        res.fin
-        from public.reservas as res;
+        res.fin,
+        usu.nombre,
+        rec.nombre
+        from public.reservas as res
+        left join usuarios as usu
+        ON res.id_usuario = usu.id_usuarios
+        left join recursos as rec
+        ON rec.id_recurso = res.id_recurso;
     </select>
     <select id="consultarReservasActivas" resultMap="ReservaResult">
         select
         res.estado,
         res.solicitud,
         res.inicio,
-        res.fin
+        res.fin,
+        rec.nombre
         from public.reservas as res
+        left join recursos as rec
+        ON rec.id_recurso = res.id_recurso
         WHERE res.estado = 'activa' AND res.id_usuario = #{id}
     </select>
 
@@ -45,21 +59,43 @@
             res.estado,
             res.solicitud,
             res.inicio,
-            res.fin
+            res.fin,
+            rec.nombre
         from public.reservas as res
+        left join recursos as rec
+        ON rec.id_recurso = res.id_recurso
         WHERE res.estado = 'cancelada' AND res.id_usuario = #{id}
     </select>
 
     <select id="consultarReservasPasadas" resultMap="ReservaResult">
         select
-            res.estado,
-            res.solicitud,
-            res.inicio,
-            res.fin
+        res.estado,
+        res.solicitud,
+        res.inicio,
+        res.fin,
+        rec.nombre
         from public.reservas as res
+        left join recursos as rec
+        ON rec.id_recurso = res.id_recurso
         WHERE res.estado = 'finalizada' AND res.id_usuario = #{id}
     </select>
 
+    <select id="consultarReservasPorUsuario" resultMap="ReservaResult">
+        select
+        res.id_reserva,
+        res.id_recurso,
+        res.solicitud,
+        res.inicio,
+        res.fin,
+        usu.nombre,
+        rec.nombre
+        from public.reservas as res
+        left join usuarios as usu
+        ON res.id_usuario = usu.id_usuarios
+        left join recursos as rec
+        ON rec.id_recurso = res.id_recurso
+        where res.id_usuario = #{id};
+    </select>
     <update id="cancelarReserva" >
         update public.reservas
         set estado = 'cancelada'
