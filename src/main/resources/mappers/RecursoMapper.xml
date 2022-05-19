@@ -34,6 +34,18 @@
         ON rec.id_recurso = ho.id_recurso;
     </select>
 
+    <select id="consultarRecursoPorId" resultMap="RecursoResult">
+        select
+        rec.id_recurso,
+        rec.nombre,
+        rec.habilitado,
+        rec.ubicacion,
+        rec.capacidad,
+        rec.ejemplares
+        from public.recursos as rec
+        where rec.id_recurso = #{id}
+    </select>
+
     <select id="consultarRecursosPorTipo" resultMap="RecursoResult">
         select
             rec.id_recurso,

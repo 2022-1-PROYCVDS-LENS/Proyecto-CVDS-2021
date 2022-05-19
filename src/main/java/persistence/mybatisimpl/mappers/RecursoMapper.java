@@ -11,6 +11,13 @@ public interface RecursoMapper {
     public void insertarRecurso(Recurso recurso);
 
     /**
+     * Consular un recurso por ID
+     * @param id id del recurso que queremos buscar
+     * @return recurso con el id especificado
+     */
+    Recurso consultarRecursoPorId(@Param("id") int id);
+
+    /**
      * Registrar un nuevo recurso
      * @param nombre el nombre del nuevo recurso
      * @param ubicacion la ubicación del nuevo recurso

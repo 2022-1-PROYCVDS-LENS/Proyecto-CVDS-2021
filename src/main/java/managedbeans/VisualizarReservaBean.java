@@ -48,7 +48,7 @@ public class VisualizarReservaBean extends BasePageBean{
     public void consAct(){
         user = (Usuario) FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("user");
         userId = user.getId();
-        reservas= recursosBiblioteca.consultarReservasActivas(1);
+        reservas = recursosBiblioteca.consultarReservasActivas(1);
     }
 
     /**

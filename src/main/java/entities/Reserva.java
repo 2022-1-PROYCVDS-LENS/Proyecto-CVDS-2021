@@ -18,8 +18,8 @@ public class Reserva implements Serializable {
     private @Getter @Setter int id;
     private @Getter @Setter int idUsuario;
     private @Getter @Setter int idRecurso;
-    private @Getter @Setter Usuario Usuario;
-    private @Getter @Setter Recurso Recurso;
+    private @Getter @Setter Usuario usuario;
+    private @Getter @Setter Recurso recurso;
     private @Getter @Setter boolean recurrente;
     private @Getter @Setter String estado;
     private @Getter @Setter Timestamp solicitud;
@@ -36,7 +36,4 @@ public class Reserva implements Serializable {
         return "Reserva" + "id=" + id + "inicio" + inicio.toString() + "}";
     }
 
-    public String nombreRecurso(){
-        return Recurso.getNombre();
-    }
 }

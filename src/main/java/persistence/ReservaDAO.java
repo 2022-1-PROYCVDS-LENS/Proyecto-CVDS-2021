@@ -28,4 +28,6 @@ public interface ReservaDAO {
     List<Reserva> consultarReservasPorUsuario(int id);
 
     void cancelarReserva(int id);
+
+    Reserva consultarReservaExtendida(int id);
 }

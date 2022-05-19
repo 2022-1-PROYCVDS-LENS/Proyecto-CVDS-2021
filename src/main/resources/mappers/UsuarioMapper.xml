@@ -16,9 +16,16 @@
 
     <select parameterType="map" id="buscarUsuarioxCorreo" resultMap="UsuarioResult">
         select
-        u.id_usuarios,u.tipo,u.nombre, u.programa,u.correo, u.contraseña
+        u.id_usuarios, u.tipo, u.nombre, u.programa, u.correo, u.contraseña
 
         from usuarios as u where u.correo = #{Correo};
+    </select>
+
+    <select parameterType="map" id="consultarUsuarioPorId" resultMap="UsuarioResult">
+        select
+        u.id_usuarios, u.tipo, u.nombre, u.programa, u.correo, u.contraseña
+
+        from usuarios as u where u.id_usuarios = #{id};
     </select>
 
 </mapper>

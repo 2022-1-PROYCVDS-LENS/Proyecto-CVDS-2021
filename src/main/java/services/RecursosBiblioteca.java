@@ -1,7 +1,6 @@
 package services;
 
 import entities.*;
-import entities.Usuario;
 import org.bouncycastle.util.Times;
 
 import java.sql.Time;
@@ -17,6 +16,7 @@ public interface RecursosBiblioteca {
     );
     public abstract void registrarHorario(Horario h);
     public abstract Recurso consultarRecurso(int id);
+    public abstract Recurso consultarRecursosPorId(int id);
     public abstract  void registrarRecurso(String nombre, String habilitado, String ubicacion, int ejemplar, TipoRecurso tipo, int capacidad) throws ExceptionRecursosBiblioteca;
 
     public abstract void registrarRegusrso(Recurso r);
@@ -35,7 +35,8 @@ public interface RecursosBiblioteca {
 
     public abstract Usuario consultarUsuario(int id);
     public abstract void registrarUsuario(//parametros
-    );
+                                           );
+    public abstract Usuario consultarUsuarioPorId(int id);
     public abstract void registrarUsuario(Usuario u);
 
     List<Recurso> consultarRecursosPorCapacidad(int i);
@@ -65,4 +66,6 @@ public interface RecursosBiblioteca {
     List<Reserva> consultarReservasPorUsuario(int id);
 
     void agregarHorarios(String[] horarios);
+
+    ReservaInformacion consultarReservaExtendida(int id, Usuario user);
 }
