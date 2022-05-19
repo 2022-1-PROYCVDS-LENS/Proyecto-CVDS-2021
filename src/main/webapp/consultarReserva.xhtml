@@ -21,6 +21,10 @@
         <div>
             <h:commandButton value="Atras" action="comunidad?recursosBiblioteca-redirect = true" style="color:#ffffff;
             background-color:#990000;font-size:120%; position:relative; top:50px" />
+            <div><h:form>
+                <h:commandButton style="color:#ffffff;
+            background-color:#990000;font-size:120%; position:relative; top:50px" value="Cerrar Sesión" actionListener="#{loginBean.logOut()}" />
+            </h:form></div>
             <div class="box_container">
                 <center><h1 class="titulo">Consultar Reserva</h1></center>
                 <div>

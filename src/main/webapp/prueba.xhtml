@@ -28,6 +28,12 @@
         <h:form id="Recursos">
             <h:commandButton value="Atras" action="#{consultarRecursosBean.redirect}" style="color:#ffffff;
                 background-color:#990000;font-size:120%; position:relative; top:50px" />
+            <br/>
+            <br/>
+            <div>
+                <h:commandButton style="color:#ffffff;
+            background-color:#990000;font-size:120%; position:relative; top:50px" value="Cerrar Sesión" actionListener="#{loginBean.logOut()}" />
+            </div>
             <p:panel header="filtros" style="text-align: center" name="panel1" id="panel1">
                 <div style="display:grid; grid-template-columns: 1fr 1fr 1fr 1fr">
                     <div>
