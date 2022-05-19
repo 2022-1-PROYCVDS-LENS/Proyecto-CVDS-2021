@@ -6,6 +6,7 @@ import entities.ReservaInformacion;
 import entities.Usuario;
 import services.RecursosBiblioteca;
 
+import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 import javax.faces.context.FacesContext;
@@ -49,6 +50,7 @@ public class ConsultarReservaBean extends BasePageBean {
 
     public void cancelarReserva(int id_reserva){
         recursosBiblioteca.cancelarReserva(id_reserva);
+        FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO,"Correcto", "La reserva fue cancelada exitosamente"));
     }
 
     public boolean esCancelable(){

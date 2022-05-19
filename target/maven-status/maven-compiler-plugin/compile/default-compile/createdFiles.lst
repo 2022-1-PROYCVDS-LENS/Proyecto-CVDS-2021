@@ -32,6 +32,7 @@ security\OnlyNotAutenticate.class
 services\RecursosBibliotecaFactory$1.class
 services\RecursosBibliotecaFactory.class
 persistence\mybatisimpl\mappers\RecursoMapper.class
+managedbeans\CancelarReservaBean.class
 test\bibliotecaTest.class
 persistence\RecursoDAO.class
 persistence\ReservaRecurrenteDAO.class

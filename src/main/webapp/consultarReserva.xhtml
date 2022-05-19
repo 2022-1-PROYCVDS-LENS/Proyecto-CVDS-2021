@@ -17,7 +17,11 @@
         <h:graphicImage id="header_logo" library="imagenes" name="logo-ecijg.width-380.png"/>
         <h:outputText id = "header_text" class = "text" value = "Escuela Colombiana de ingieneria Julio Garavito: Recursos de biblioteca"/>
     </div>
+
     <h:form>
+        <p:messages id="messages" showDetail="true" closable="ture">
+            <p:autoUpdate/>
+        </p:messages>
         <div>
             <h:commandButton value="Atras" action="comunidad?recursosBiblioteca-redirect = true" style="color:#ffffff;
             background-color:#990000;font-size:120%; position:relative; top:50px" />
@@ -54,8 +58,6 @@
                 <div>
                     <center><h3>Es recurrente:</h3></center>
                     <center><h:outputText value="#{consultarReservaBean.reserva.recurrente}" class="text" /></center>
-                </div>
-                <div>
                     <h:commandButton value = "Cancelar Reserva" class = "button" action="#{consultarReservaBean.cancelarReserva(consultarReservaBean.reserva.idReserva)}" />
                 </div>
 

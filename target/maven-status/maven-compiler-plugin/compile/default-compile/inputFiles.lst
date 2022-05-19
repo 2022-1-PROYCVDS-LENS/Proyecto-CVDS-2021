@@ -21,6 +21,7 @@ E:\Documentos\Documentos E\7mo semestre\CVDS\proyecto\Proyecto-CVDS-2021\src\mai
 E:\Documentos\Documentos E\7mo semestre\CVDS\proyecto\Proyecto-CVDS-2021\src\main\java\entities\Usuario.java
 E:\Documentos\Documentos E\7mo semestre\CVDS\proyecto\Proyecto-CVDS-2021\src\main\java\entities\Horario.java
 E:\Documentos\Documentos E\7mo semestre\CVDS\proyecto\Proyecto-CVDS-2021\src\main\java\entities\Reserva.java
+E:\Documentos\Documentos E\7mo semestre\CVDS\proyecto\Proyecto-CVDS-2021\src\main\java\managedbeans\CancelarReservaBean.java
 E:\Documentos\Documentos E\7mo semestre\CVDS\proyecto\Proyecto-CVDS-2021\src\main\java\persistence\mybatisimpl\MyBATISRecursoDAO.java
 E:\Documentos\Documentos E\7mo semestre\CVDS\proyecto\Proyecto-CVDS-2021\src\main\java\persistence\mybatisimpl\MyBATISUsuarioDAO.java
 E:\Documentos\Documentos E\7mo semestre\CVDS\proyecto\Proyecto-CVDS-2021\src\main\java\persistence\mybatisimpl\mappers\RecursoMapper.java
