@@ -50,7 +50,7 @@
         from public.reservas as res
         left join recursos as rec
         ON rec.id_recurso = res.id_recurso
-        WHERE res.estado = 'activa' AND res.id_usuario = #{id}
+        WHERE res.estado = 'activo' AND res.id_usuario = #{id}
     </select>
 
     <select id="consultarReservasCanceladas" resultMap="ReservaResult">

@@ -18,6 +18,7 @@ public class ReservaInformacion implements Serializable{
     private @Getter @Setter String usuario;
     private @Getter @Setter String programa;
     private @Getter @Setter boolean recurrente;
+    private @Getter @Setter String estado;
 
 
     @Override

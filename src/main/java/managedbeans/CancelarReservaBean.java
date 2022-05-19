@@ -10,6 +10,7 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 import java.io.Serializable;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Bean para la interfaz de usuario de la consulta de recursos
@@ -24,7 +25,13 @@ public class CancelarReservaBean {
 
     int idReserva;
 
-    void cancelarReserva(){
-        rebi.cancelarReserva(idReserva);
+    public void cancelarReserva(int id_reserva){
+        if (Objects.equals(rebi.consultarReservaPorId(id_reserva).getEstado(), "activo")){
+            rebi.cancelarReserva(id_reserva);
+        }
+    }
+
+    public boolean esCancelable(int id_reserva){
+        return Objects.equals(rebi.consultarReservaPorId(id_reserva).getEstado(), "activo");
     }
 }
