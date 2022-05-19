@@ -26,4 +26,6 @@ public interface ReservaDAO {
     List<Reserva> consultarReservasPasadas(int id);
 
     List<Reserva> consultarReservasPorUsuario(int id);
+
+    Reserva consultarReservaExtendida(int id);
 }
