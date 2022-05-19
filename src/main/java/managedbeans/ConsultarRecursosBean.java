@@ -119,8 +119,11 @@ public class ConsultarRecursosBean extends BasePageBean {
      * Metodo que revisa quien esta logeado un admin
      */
     public boolean admin(){
-        Usuario user = (Usuario) FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("user");
-        return Objects.equals(user.getTipoUsuario(), "administrador");
+        if(FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("user") != null){
+            Usuario user = (Usuario) FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("user");
+            return Objects.equals(user.getTipoUsuario(), "administrador");
+        }
+        return false;
     }
 
     /**
