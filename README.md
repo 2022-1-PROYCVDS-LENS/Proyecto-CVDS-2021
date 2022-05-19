@@ -64,41 +64,40 @@ Manual de usuario
 
 Al ingresar al enlace de la aplicación se muestra la pantalla de inicio de sesión. En el cual se muestran los espacios para ingresar los datos correspondientes (correo y contraseña) y dos botones uno para ingresar cuando se diligencien los datos y el otro para poder consultar los recursos disponibles actualmente.
 
-![](RackMultipart20220519-1-k5gdcm_html_206c4aa83e4566ad.png)
+![image](https://user-images.githubusercontent.com/79550161/169211188-26047c9d-79b0-4df7-86be-77a3f35e3561.png)
 
 Al dar en Consultar recursos se muestra la pantalla de los recursos consultados.
 
-![](RackMultipart20220519-1-k5gdcm_html_1e4018b5fd1eda0f.png)
+![image](https://user-images.githubusercontent.com/79550161/169211239-ee2ce2f4-ca5d-4128-9dee-5a1c694a466a.png)
 
 En este podemos observar cada uno de los recursos que se encuentran activos actualmente, en la parte de arriba nos da la opción de buscar los recursos según tres filtros los cuales nos permiten clasificar los distintos tipos de recursos de acuerdo con las necesidades del usuario.
 
-![](RackMultipart20220519-1-k5gdcm_html_f609606c7db90a43.png)
+![image](https://user-images.githubusercontent.com/79550161/169211270-3d1217ab-8fe4-4362-ad2c-3c37fee2c7bb.png)
 
 El filtro de la izquierda nos indica la capacidad del recurso, se pueden seleccionar un número entre 1 y 5. Una vez seleccionado se da en el botón Buscar y nos muestra todos los recursos que posean esa característica.
 
 El usuario podrá darle click a cualquiera de las opciones para seleccionar la capacidad del recurso que quiera buscar, en caso de que no quiera filtrar por capacidad se deja la opción seleccione capacidad.
 
-![](RackMultipart20220519-1-k5gdcm_html_f902a50e6667f826.png)
+![image](https://user-images.githubusercontent.com/79550161/169211286-002d29a6-7717-4c6f-af0d-fd47d9461b48.png)
 
-![Inserting image...](RackMultipart20220519-1-k5gdcm_html_f832257b8ccd2544.png)
+![image](https://user-images.githubusercontent.com/79550161/169211300-2be5eaba-015a-4323-8d6b-93b53e8d7aa3.png)
 
 En el filtro del centro podemos seleccionar uno de los tres tipos de recursos que posee la biblioteca (libro, equipo de cómputo y sala de estudio). Una vez seleccionado el tipo deseado le damos en Buscar para que muestre los recursos correspondientes.
 
-![](RackMultipart20220519-1-k5gdcm_html_a8118072e941de76.png)
+![image](https://user-images.githubusercontent.com/79550161/169211320-e71d0c41-1509-4368-bef5-7c5db60ec3cd.png)
 
 En el filtro de la derecha podemos escribir el edificio en el cual queremos buscar un recurso (del bloque A hasta el bloque I), una vez digitado el bloque deseado se da en Buscar para que aparezcan los recursos en la ubicación deseada.
 
-![](RackMultipart20220519-1-k5gdcm_html_4071652c3f18b4fe.png)
+![image](https://user-images.githubusercontent.com/79550161/169211338-5c5dfaa4-1a5f-40d0-a633-ae4680167a41.png)
 
 Si se desea buscar un recurso con características combinadas (una capacidad específica, con un tipo deseado o en una ubicación esperada), se deben seleccionar las opciones queridas en el filtro correspondiente y darle en el botón de Buscar para que aparezcan los recursos designados.
 
-![](RackMultipart20220519-1-k5gdcm_html_96f00fd98888e6f3.png)
+![image](https://user-images.githubusercontent.com/79550161/169211351-aa27c05f-d5d2-45cc-8dd2-e69d60e76879.png)
 
 El botón de ver reservas permite ver todos los momentos en que un recurso esta siendo ocupado por alguien de la comunidad en un formato de un calendario
 
-![](RackMultipart20220519-1-k5gdcm_html_500857ea18ca2860.png)
-
-![](RackMultipart20220519-1-k5gdcm_html_3283417a8ad55bf0.png)
+![image](https://user-images.githubusercontent.com/79550161/169211368-5230f9ab-0a66-41ba-a9fa-8ab73ba2ad7f.png)
+![image](https://user-images.githubusercontent.com/79550161/169211376-484ab332-76c1-4686-aea4-10f9dd594962.png)
 
 Esta vista muestra todas las reservas en caso dado de ser un administrador o un usuario no registrado y solo las reservas relacionadas a un usuario en caso dado de ser un usuario logeado.
 
@@ -106,7 +105,7 @@ Desde la vista anterior, para volver atrás y poder iniciar sesión le damos al 
 
 En este debemos diligencias los datos correspondientes (correo del usuario y su respectiva contraseña), y le damos en el botón de Ingresar. (El usuario prueba es de carácter administrador).
 
-![](RackMultipart20220519-1-k5gdcm_html_9c93663357d581dd.png)
+![image](https://user-images.githubusercontent.com/79550161/169211390-c57dcb13-c45b-4df9-a134-6cc4bf1ad2eb.png)
 
 Los perfiles de usuario que maneja la plataforma son dos:
 
@@ -117,21 +116,21 @@ Según el rol del usuario ira a una de las 2 siguientes vistas:
 
 Administrador:
 
-![](RackMultipart20220519-1-k5gdcm_html_d8df91d9fd3e9d0f.png)
+![image](https://user-images.githubusercontent.com/79550161/169211411-319ea927-2963-4113-a4a9-9d45b83fca11.png)
 
 Comunidad:
 
-![](RackMultipart20220519-1-k5gdcm_html_35d990722643f4ca.png)
+![image](https://user-images.githubusercontent.com/79550161/169211426-3a15daf1-b09d-4196-8275-a0e1fd94fe8e.png)
 
 ADMINISTADOR:
 
 Este rol tiene la capacidad de agregar un recurso y consultar los recursos (vista que ya fue explicada)
 
-![](RackMultipart20220519-1-k5gdcm_html_14b71627b435bdc0.png)
+![image](https://user-images.githubusercontent.com/79550161/169211437-01c0946e-404a-45c5-8259-126130e7e77b.png)
 
 Al seleccionar la opción de agregar recurso aparece la siguiente vista:
 
-![](RackMultipart20220519-1-k5gdcm_html_3739dbc31f1c841d.png)
+![image](https://user-images.githubusercontent.com/79550161/169211474-16bc6968-9e71-49ec-a476-8c2b547c016a.png)
 
 La cual al completar la información requerida permite agregar un nuevo recurso que puede ser visto y reservado por la comunidad.
 
@@ -139,26 +138,26 @@ COMUNIDAD:
 
 Un usuario perteneciente a dicha categoría puede consultar recursos vista que ya fue explicada, aunque tiene la posibilidad de reservar un recurso al seleccionarlo y darle al botón de reservar
 
-![](RackMultipart20220519-1-k5gdcm_html_f1c67f235e22986a.png)
+![image](https://user-images.githubusercontent.com/79550161/169211501-ef5700f0-104c-4962-a827-c35aa6d18a07.png)
 
 Tras esto se abrirá la siguiente vista:
 
-![](RackMultipart20220519-1-k5gdcm_html_ba6817cf4a7cd406.png)
+![image](https://user-images.githubusercontent.com/79550161/169211513-0ee0c88f-584c-4e6d-b411-37a82398f3e3.png)
 
 Donde siempre y cuando el recurso cuente con horarios disponibles, se podrá reservar, seleccionando el horario deseado y dando en el botón de reservar
 
-![](RackMultipart20220519-1-k5gdcm_html_a3cd9f82f0a98458.png)
+![image](https://user-images.githubusercontent.com/79550161/169211525-6fda2dfa-30e4-4a6c-a2c3-2b6c0e8b27f2.png)
 
 Tras esto veremos la siguiente vista donde se podrá elegir el día en el cual se desea hacer la reserva
 
-![](RackMultipart20220519-1-k5gdcm_html_5216b3eafee7065c.png)
+![image](https://user-images.githubusercontent.com/79550161/169211538-b3f6c7c6-5fa3-4727-ba21-36e889d74c81.png)
 
 # Arquitectura y diseño
 
 #
 Modelo E-D
 
-![](RackMultipart20220519-1-k5gdcm_html_8a70889ae297096f.png)
+![image](https://user-images.githubusercontent.com/79550161/169211552-e5d6c48c-b843-4dec-954e-38cde413304b.png)
 
 Las tablas principales son las de reservas y las de recursos, de ellas se desprenden las demás tablas las cuales sirven como complementos a las dos principales.
 
@@ -178,19 +177,19 @@ Diagrama de clases
 
 Paquete de entidades
 
-![](RackMultipart20220519-1-k5gdcm_html_9f0e813887d186d8.png)
+![image](https://user-images.githubusercontent.com/79550161/169211656-d740fe9d-bd0a-4318-9f41-d55e552b17b6.png)
 
 Paquete de manage beans
 
-![](RackMultipart20220519-1-k5gdcm_html_2c84512efd6a480f.png)
+![image](https://user-images.githubusercontent.com/79550161/169211669-e23d6677-1efa-4097-968d-0e09d2277a1d.png)
 
 Paquete de persistencia
 
-![](RackMultipart20220519-1-k5gdcm_html_2984fb4d7b3171b7.png)
+![image](https://user-images.githubusercontent.com/79550161/169211683-421a9a80-2858-46da-a849-1dd9824650a0.png)
 
 Paquete de servicios
 
-![](RackMultipart20220519-1-k5gdcm_html_2b66148353f0221d.png)
+![image](https://user-images.githubusercontent.com/79550161/169211692-5843d56b-a7b9-4668-acd6-99304f04249d.png)
 
 Arquitectura del proyecto
 
