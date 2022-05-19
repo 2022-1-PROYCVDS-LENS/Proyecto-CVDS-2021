@@ -65,6 +65,8 @@ public interface ReservaMapper {
      */
     List<Reserva> consultarReservasPasadas(@Param("id") int id);
 
+    void cancelarReserva(@Param("idReserva")int id);
+
     /**
      * Metodo para consultar las reservas de un usuario especificp
      * @param id id del usuario al cual se le desean consultar las reservas
@@ -73,4 +75,5 @@ public interface ReservaMapper {
     List<Reserva> consultarReservasPorUsuario(@Param("id") int id);
 
     Reserva consultarReservaExtendida(@Param("id") int id);
+
 }

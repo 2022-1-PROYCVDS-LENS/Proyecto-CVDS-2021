@@ -11,6 +11,7 @@ import javax.faces.bean.SessionScoped;
 import javax.faces.context.FacesContext;
 import java.io.IOException;
 import java.util.List;
+import java.util.Objects;
 
 @ManagedBean(name = "consultarReservaBean")
 @SessionScoped
@@ -45,4 +46,12 @@ public class ConsultarReservaBean extends BasePageBean {
     public ReservaInformacion getReserva(){return reserva;}
 
     public void setReserva(ReservaInformacion reserva){this.reserva = reserva;}
+
+    public void cancelarReserva(int id_reserva){
+        recursosBiblioteca.cancelarReserva(id_reserva);
+    }
+
+    public boolean esCancelable(){
+        return Objects.equals(reserva.getEstado(), "activo");
+    }
 }

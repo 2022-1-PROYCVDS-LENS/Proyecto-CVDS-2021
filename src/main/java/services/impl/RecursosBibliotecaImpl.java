@@ -59,7 +59,25 @@ public class RecursosBibliotecaImpl implements RecursosBiblioteca {
 
     }
 
+    @Override
+    public void registratHorario() {
 
+    }
+
+    @Override
+    public void registrarHorario(Horario h) {
+        horarioDAO.save(h);
+    }
+
+    @Override
+    public Recurso consultarRecurso(int id) {
+        return recursoDAO.load(id);
+    }
+
+    @Override
+    public Recurso consultarRecursosPorId(int id) {
+        return recursoDAO.consultarRecursosPorId(id);
+    }
 
     @Override
     public void registrarRecurso(String nombre, String habilitado, String ubicacion, int ejemplar, TipoRecurso tipo, int capacidad) throws ExceptionRecursosBiblioteca{
@@ -141,10 +159,6 @@ public class RecursosBibliotecaImpl implements RecursosBiblioteca {
         return reservaDAO.consultarReservas();
     }
 
-    @Override
-    public Recurso consultarRecursosPorId(int id) {
-        return recursoDAO.consultarRecursosPorId(id);
-    }
 
     @Override
     public void cambiarRecursoDanado(int id) {
@@ -157,14 +171,24 @@ public class RecursosBibliotecaImpl implements RecursosBiblioteca {
     }
 
     @Override
+    public void cancelarReserva(int idReserva) {
+        reservaDAO.cancelarReserva(idReserva);
+    }
+
+    @Override
     public ReservaInformacion consultarReservaExtendida(int id, Usuario user) {
         Reserva reservas = reservaDAO.consultarReservaExtendida(id);
 
         Recurso recurso = consultarRecursosPorId(reservas.getRecurso().getId());
         ReservaInformacion reserva = (new ReservaInformacion(reservas.getId(), recurso.getNombre(),
                 reservas.getSolicitud(), reservas.getInicio(), reservas.getFin(), user.getNombre(),
-                user.getPrograma(), reservas.isRecurrente()));
+                user.getPrograma(), reservas.isRecurrente(),reservas.getEstado()));
         return reserva;
+    }
+
+    @Override
+    public Reserva consultarReservaPorId(int id) {
+        return reservaDAO.consultarReserva(id);
     }
 
     @Override

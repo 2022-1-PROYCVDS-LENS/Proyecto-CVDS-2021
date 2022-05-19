@@ -43,6 +43,9 @@ public interface ReservaDAO {
      */
     public List<Reserva> consultarReservas();
 
+
+    Reserva consultarReserva(int id);
+
     /**
      * Metodo para consultar las reservas activas
      * @param id id del recurso al cual se le desean consultar las reservas
@@ -70,6 +73,8 @@ public interface ReservaDAO {
      * @return lista de reservas del usuario
      */
     List<Reserva> consultarReservasPorUsuario(int id);
+
+    void cancelarReserva(int id);
 
     Reserva consultarReservaExtendida(int id);
 }

@@ -42,6 +42,11 @@ public class MyBATISReservaDAO implements ReservaDAO {
     }
 
     @Override
+    public Reserva consultarReserva(int id) {
+        return reservaMapper.consultarReservaExtendida(id);
+    }
+
+    @Override
     public List<Reserva> consultarReservasActivas(int id) {
         return reservaMapper.consultarReservasActivas(id);
     }
@@ -54,6 +59,11 @@ public class MyBATISReservaDAO implements ReservaDAO {
     @Override
     public List<Reserva> consultarReservasPasadas(int id) {
         return reservaMapper.consultarReservasPasadas(id);
+    }
+
+    @Override
+    public void cancelarReserva(int id) {
+        reservaMapper.cancelarReserva(id);
     }
 
     @Override
