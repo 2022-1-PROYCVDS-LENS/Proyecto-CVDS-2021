@@ -48,4 +48,5 @@ public interface RecursosBiblioteca {
     void agregarHorarios(String[] horarios);
 
     ReservaInformacion consultarReservaExtendida(int id, Usuario user);
+    Recurso consultarRecursosPorId(int id);
 }

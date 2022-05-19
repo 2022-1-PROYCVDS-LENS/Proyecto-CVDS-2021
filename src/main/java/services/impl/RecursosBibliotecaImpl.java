@@ -59,25 +59,7 @@ public class RecursosBibliotecaImpl implements RecursosBiblioteca {
 
     }
 
-    @Override
-    public void registratHorario() {
 
-    }
-
-    @Override
-    public void registrarHorario(Horario h) {
-        horarioDAO.save(h);
-    }
-
-    @Override
-    public Recurso consultarRecurso(int id) {
-        return recursoDAO.load(id);
-    }
-
-    @Override
-    public Recurso consultarRecursosPorId(int id) {
-        return recursoDAO.consultarRecursosPorId(id);
-    }
 
     @Override
     public void registrarRecurso(String nombre, String habilitado, String ubicacion, int ejemplar, TipoRecurso tipo, int capacidad) throws ExceptionRecursosBiblioteca{
@@ -95,10 +77,6 @@ public class RecursosBibliotecaImpl implements RecursosBiblioteca {
         }
     }
 
-    @Override
-    public void registrarRegusrso(Recurso r) {
-        recursoDAO.save(r);
-    }
 
     @Override
     public List<Recurso> consultarRecursos() {
@@ -110,55 +88,12 @@ public class RecursosBibliotecaImpl implements RecursosBiblioteca {
         return recursoDAO.consultarRecursosPorTipo(tipo);
     }
 
-    @Override
-    public ReservaRecurrente consultarReservaRecurrente(int id) {
-        return reservaRecurrenteDAO.load(id);
-    }
-
-    @Override
-    public void registrarReservaRecurrente() {
-
-    }
-
-    @Override
-    public void registrarReservaRecurrente(ReservaRecurrente r) {
-        reservaRecurrenteDAO.save(r);
-    }
-
-    @Override
-    public TipoRecurso consultarTipo(int id) {
-        return tipoRecursoDAO.load(id);
-    }
-
-    @Override
-    public void registarrTipo() {
-
-    }
-
-    @Override
-    public void registrarTipo(TipoRecurso t) {
-        tipoRecursoDAO.save(t);
-    }
-
-    @Override
-    public Usuario consultarUsuario(int id) {
-        return usuarioDAO.load(id);
-    }
-
-    @Override
-    public void registrarUsuario() {
-
-    }
 
     @Override
     public Usuario consultarUsuarioPorId(int id) {
         return usuarioDAO.consultarUsuarioPorId(id);
     }
 
-    @Override
-    public void registrarUsuario(Usuario u) {
-        usuarioDAO.save(u);
-    }
 
     @Override
     public List<Recurso> consultarRecursosPorCapacidad(int i) {
@@ -204,6 +139,11 @@ public class RecursosBibliotecaImpl implements RecursosBiblioteca {
     @Override
     public List<Reserva> consultarReservas(){
         return reservaDAO.consultarReservas();
+    }
+
+    @Override
+    public Recurso consultarRecursosPorId(int id) {
+        return recursoDAO.consultarRecursosPorId(id);
     }
 
     @Override
