@@ -108,4 +108,29 @@ public class ConsultarRecursosBean extends BasePageBean {
 
     }
 
+    /**
+     * Metodo que revisa quien esta logeado
+     */
+    public boolean logeado(){
+        return FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("user") != null;
+    }
+
+    /**
+     * Metodo que revisa quien esta logeado un admin
+     */
+    public boolean admin(){
+        Usuario user = (Usuario) FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("user");
+        return Objects.equals(user.getTipoUsuario(), "administrador");
+    }
+
+    /**
+     * Metodo que cambia el estado de un recurso de dañado a habilitado o de habilitado a dañado
+     */
+    public void cambiarEstado(){
+        if(Objects.equals(recurso.getHabilitado(), "habilitado")){
+            recursosBiblioteca.cambiarRecursoHabilitado(recurso.getId());
+        }else if(Objects.equals(recurso.getHabilitado(), "dañado")){
+            recursosBiblioteca.cambiarRecursoDanado(recurso.getId());
+        }
+    }
 }

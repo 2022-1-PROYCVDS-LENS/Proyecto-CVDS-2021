@@ -106,4 +106,16 @@ public interface RecursoMapper {
      * @return nombre del recursp
      */
     Recurso consultarNombreRecurso(@Param("id") int id);
+
+    /**
+     * Metodo que cambia el estado de dañado a habilitado
+     * @param id id del recurso
+     */
+    void cambiarRecursoDanado(@Param("idRecurso")int id);
+
+    /**
+     * Metodo que cambia el estado de habilitado a dañado
+     * @param id id del recurso
+     */
+    void cambiarRecursoHabilitado(@Param("idRecurso")int id);
 }

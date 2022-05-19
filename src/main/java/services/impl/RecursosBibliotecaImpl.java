@@ -147,6 +147,16 @@ public class RecursosBibliotecaImpl implements RecursosBiblioteca {
     }
 
     @Override
+    public void cambiarRecursoDanado(int id) {
+        recursoDAO.cambiarRecursoDanado(id);
+    }
+
+    @Override
+    public void cambiarRecursoHabilitado(int id) {
+        recursoDAO.cambiarRecursoHabilitado(id);
+    }
+
+    @Override
     public ReservaInformacion consultarReservaExtendida(int id, Usuario user) {
         Reserva reservas = reservaDAO.consultarReservaExtendida(id);
 

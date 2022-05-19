@@ -2,6 +2,7 @@ package persistence;
 
 import entities.Recurso;
 import entities.TipoRecurso;
+import org.apache.ibatis.annotations.Param;
 import services.ExceptionRecursosBiblioteca;
 
 import java.util.List;
@@ -106,4 +107,16 @@ public interface RecursoDAO {
      * @return nombre del recursp
      */
     Recurso consultarNombreRecurso(int id);
+
+    /**
+     * Metodo que cambia el estado de dañado a habilitado
+     * @param id id del recurso
+     */
+    void cambiarRecursoDanado(int id);
+
+    /**
+     * Metodo que cambia el estado de habilitado a dañado
+     * @param id id del recurso
+     */
+    void cambiarRecursoHabilitado(int id);
 }

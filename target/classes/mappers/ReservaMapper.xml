@@ -111,4 +111,6 @@
         where res.id_usuario = #{id};
     </select>
 
+
+
 </mapper>

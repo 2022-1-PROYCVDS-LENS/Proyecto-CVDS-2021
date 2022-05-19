@@ -49,4 +49,6 @@ public interface RecursosBiblioteca {
 
     ReservaInformacion consultarReservaExtendida(int id, Usuario user);
     Recurso consultarRecursosPorId(int id);
+    void cambiarRecursoDanado(int id);
+    void cambiarRecursoHabilitado(int id);
 }

@@ -194,4 +194,16 @@
         where #{id} = rec.id_recurso;
     </select>
 
+    <update id="cambiarRecursoDanado" >
+        update public.recursos
+        set habilitado = 'habilitado'
+        where id_recurso = #{idRecurso}
+    </update>
+
+    <update id="cambiarRecursoHabilitado" >
+        update public.recursos
+        set habilitado = 'dañado'
+        where id_recurso = #{idRecurso}
+    </update>
+
 </mapper>

@@ -88,4 +88,24 @@ public class MyBATISRecursoDAO implements RecursoDAO {
     public Recurso consultarNombreRecurso(int id){
         return recursoMapper.consultarNombreRecurso(id);
     }
+
+    /**
+     * Metodo que cambia el estado de dañado a habilitado
+     *
+     * @param id id del recurso
+     */
+    @Override
+    public void cambiarRecursoDanado(int id) {
+        recursoMapper.cambiarRecursoDanado(id);
+    }
+
+    /**
+     * Metodo que cambia el estado de habilitado a dañado
+     *
+     * @param id id del recurso
+     */
+    @Override
+    public void cambiarRecursoHabilitado(int id) {
+        recursoMapper.cambiarRecursoHabilitado(id);
+    }
 }
