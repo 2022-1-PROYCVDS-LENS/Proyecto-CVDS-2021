@@ -70,4 +70,6 @@ public interface ReservaDAO {
      * @return lista de reservas del usuario
      */
     List<Reserva> consultarReservasPorUsuario(int id);
+
+    Reserva consultarReservaExtendida(int id);
 }

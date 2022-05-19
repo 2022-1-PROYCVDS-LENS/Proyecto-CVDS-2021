@@ -71,4 +71,6 @@ public interface ReservaMapper {
      * @return lista de reservas del usuario
      */
     List<Reserva> consultarReservasPorUsuario(@Param("id") int id);
+
+    Reserva consultarReservaExtendida(@Param("id") int id);
 }

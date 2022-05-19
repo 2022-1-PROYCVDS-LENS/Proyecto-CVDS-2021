@@ -25,6 +25,15 @@ public class MyBATISUsuarioDAO implements UsuarioDAO {
     }
 
     @Override
+    public Usuario consultarUsuarioPorId(int id) throws PersistenceException{
+        try{
+            return usuarioMapper.consultarUsuarioPorId(id);
+        }catch (Exception e){
+            throw new PersistenceException(e.getMessage());
+        }
+    }
+
+    @Override
     public Usuario load(int id) {
         return null;
     }

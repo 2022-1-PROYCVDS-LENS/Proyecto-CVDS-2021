@@ -21,6 +21,12 @@ public interface UsuarioDAO {
     Usuario load(int id);
 
     /**
+     * Metodo para obtener un usuario por id
+     * @param id id del usuario que se desea obtener
+     * @return usuario correspondiente
+     */
+    public Usuario consultarUsuarioPorId(int id) throws  PersistenceException;
+    /**
      * Metodo oara guardar un usuario
      * @param u usuario que se desea agregar
      */

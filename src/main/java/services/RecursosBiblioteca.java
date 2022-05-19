@@ -1,7 +1,6 @@
 package services;
 
 import entities.*;
-import entities.Usuario;
 import org.bouncycastle.util.Times;
 
 import java.sql.Time;
@@ -21,6 +20,7 @@ public interface RecursosBiblioteca {
     public abstract List<Recurso> consultarRecursosPorTipo(int tipo);
 
 
+    public abstract Usuario consultarUsuarioPorId(int id);
     List<Recurso> consultarRecursosPorCapacidad(int i);
 
     List<Recurso> consultarRecursosPorUbicacion(String ubi);
@@ -46,4 +46,6 @@ public interface RecursosBiblioteca {
     List<Reserva> consultarReservasPorUsuario(int id);
 
     void agregarHorarios(String[] horarios);
+
+    ReservaInformacion consultarReservaExtendida(int id, Usuario user);
 }

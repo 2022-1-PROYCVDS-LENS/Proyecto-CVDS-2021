@@ -17,4 +17,6 @@ public interface UsuarioMapper {
      */
     public Usuario buscarUsuarioxCorreo(@Param ("Correo") String correo);
 
+    public Usuario consultarUsuarioPorId(@Param("id") int id);
+
 }

@@ -31,10 +31,18 @@ public interface RecursoDAO {
     public List<Recurso> consultarRecursos();
 
     /**
+     * Metodo para obtener un recurso especifico
+     * @param id id del
+     * @return
+     */
+    public Recurso consultarRecursosPorId(int id);
+
+    /**
      * Consultar los recursos con cierto tipo
      * @param tipo tipo de los recursos que queremos listar
      * @return lista de los recursos con el tipo especificado
      */
+
     public List<Recurso> consultarRecursosPorTipo(int tipo);
 
     /**

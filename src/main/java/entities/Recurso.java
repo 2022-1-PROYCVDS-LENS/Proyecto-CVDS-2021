@@ -24,6 +24,7 @@ public class Recurso implements Serializable {
     private @Getter @Setter String ubicacion;
     private @Getter @Setter int ejemplares;
     private @Getter @Setter int capacidad;
+
     private @Getter @Setter TipoRecurso tipo;
     private @Getter @Setter List<Horario> horarios;
     private @Getter @Setter List<Reserva> reservas;
@@ -34,6 +35,6 @@ public class Recurso implements Serializable {
      */
     @Override
     public String toString() {
-        return "Recurso{" + "id= " + id + " nombre= " + nombre + " habilitado= " + habilitado + " ubicacion= " + ubicacion + " capacidad= "+ capacidad + " ejemplares= " +ejemplares+ " horarios= " + horarios + " reservas= " + reservas + " tipo= " + tipo.getNombre() + "}";
+        return "Recurso{" + "id= " + id + " nombre= " + nombre + " habilitado= " + habilitado + " ubicacion= " + ubicacion + " capacidad= "+ capacidad + " ejemplares= " +ejemplares+  "}";
     }
 }

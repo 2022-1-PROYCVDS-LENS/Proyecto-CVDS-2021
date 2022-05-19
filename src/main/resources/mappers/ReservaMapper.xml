@@ -16,9 +16,7 @@
         <result property="idRecurso" column="id_recurso"/>
         <association property="recurso" javaType="Recurso" resultMap="persistence.mybatisimpl.mappers.RecursoMapper.RecursoResult"/>
         <association property="usuario" javaType="Usuario" resultMap="persistence.mybatisimpl.mappers.UsuarioMapper.UsuarioResult"/>
-<!--        <collection property="reservaRecurrentes" ofType="ReservaRecurrente" resultMap="persistence.mybatisimpl.mappers.ReservaRecurrenteMapper.ReservaRecurrenteResult"/>-->
-<!--        <collection property="usuarios" ofType="Usuario" resultMap="persistence.mybatisimpl.mappers.UsuarioMapper.UsuarioResult"/>-->
-<!--        <collection property="recursos" ofType="Recurso" resultMap="persistence.mybatisimpl.mappers.RecursoMapper.RecursoResult" columnPrefix="rec_"/>-->
+        <collection property="reservaRecurrentes" ofType="ReservaRecurrente" resultMap="persistence.mybatisimpl.mappers.ReservaRecurrenteMapper.ReservaRecurrenteResult"/>
     </resultMap>
 
     <insert parameterType="map" id="reservarRecurso">
@@ -43,32 +41,57 @@
     </select>
     <select id="consultarReservasActivas" resultMap="ReservaResult">
         select
+        res.id_reserva,
         res.estado,
         res.solicitud,
         res.inicio,
-        res.fin
+        res.fin,
+        rec.nombre
         from public.reservas as res
+        left join recursos as rec
+        ON rec.id_recurso = res.id_recurso
         WHERE res.estado = 'activa' AND res.id_usuario = #{id}
     </select>
 
     <select id="consultarReservasCanceladas" resultMap="ReservaResult">
         select
+            res.id_reserva,
             res.estado,
             res.solicitud,
             res.inicio,
-            res.fin
+            res.fin,
+            rec.nombre
         from public.reservas as res
+        left join recursos as rec
+        ON rec.id_recurso = res.id_recurso
         WHERE res.estado = 'cancelada' AND res.id_usuario = #{id}
     </select>
 
     <select id="consultarReservasPasadas" resultMap="ReservaResult">
         select
-            res.estado,
+        res.id_reserva,
+        res.estado,
+        res.solicitud,
+        res.inicio,
+        res.fin,
+        rec.nombre
+        from public.reservas as res
+        left join recursos as rec
+        ON rec.id_recurso = res.id_recurso
+        WHERE res.estado = 'finalizada' AND res.id_usuario = #{id}
+    </select>
+
+    <select id="consultarReservaExtendida" resultMap="ReservaResult">
+        select
+            res.id_reserva,
+            res.id_recurso,
+            res.id_usuario,
             res.solicitud,
             res.inicio,
-            res.fin
+            res.fin,
+            res.recurrente
         from public.reservas as res
-        WHERE res.estado = 'finalizada' AND res.id_usuario = #{id}
+        where res.id_reserva = #{id}
     </select>
 
     <select id="consultarReservasPorUsuario" resultMap="ReservaResult">
