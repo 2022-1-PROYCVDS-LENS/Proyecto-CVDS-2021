@@ -236,7 +236,11 @@ Enlace al sistema de integración continua
 
 [https://github.com/2022-1-PROYCVDS-LENS/Proyecto-CVDS-2021.git](https://github.com/2022-1-PROYCVDS-LENS/Proyecto-CVDS-2021.git)
 
-
 En el readme.md del repositorio se encuentra
+
 Proyecto de manejo de recursos de una biblioteca
+
+
 [![CircleCI](https://circleci.com/gh/2022-1-PROYCVDS-LENS/Proyecto-CVDS-2021/tree/main.svg?style=svg)](https://circleci.com/gh/2022-1-PROYCVDS-LENS/Proyecto-CVDS-2021/tree/main)
+
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/06d45f50e6f740e1b421e0701c4fdf36)](https://www.codacy.com/gh/2022-1-PROYCVDS-LENS/Proyecto-CVDS-2021/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=2022-1-PROYCVDS-LENS/Proyecto-CVDS-2021&amp;utm_campaign=Badge_Grade)
