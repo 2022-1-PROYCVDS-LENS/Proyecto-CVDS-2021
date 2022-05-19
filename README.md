@@ -191,6 +191,15 @@ Paquete de servicios
 
 ![image](https://user-images.githubusercontent.com/79550161/169211692-5843d56b-a7b9-4668-acd6-99304f04249d.png)
 
+**BACKLOGS**
+
+![image](https://user-images.githubusercontent.com/90010904/169289044-8d2d3967-e949-4b5a-a254-a65fc26df3c4.png)
+
+![image](https://user-images.githubusercontent.com/90010904/169289138-29fa117a-d1c0-4b42-b1ce-d61c109ef1a3.png)
+
+![image](https://user-images.githubusercontent.com/90010904/169289269-69c8fd55-1746-4854-8608-ba43c3e93124.png)
+
+
 Arquitectura del proyecto
 
 Capas Aplicación Presentación Persistencia Capa de aplicación: En la capa de aplicación se utilizaron las siguientes tecnologías:
@@ -226,6 +235,8 @@ Enlace Heroku
 Enlace al sistema de integración continua
 
 [https://github.com/2022-1-PROYCVDS-LENS/Proyecto-CVDS-2021.git](https://github.com/2022-1-PROYCVDS-LENS/Proyecto-CVDS-2021.git)
+
+En el readme.md del repositorio se encuentra
 
 Proyecto de manejo de recursos de una biblioteca
 
