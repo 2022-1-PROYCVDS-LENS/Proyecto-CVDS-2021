@@ -36,7 +36,4 @@ public class Reserva implements Serializable {
         return "Reserva" + "id=" + id + "inicio" + inicio.toString() + "}";
     }
 
-    public String nombreRecurso(){
-        return Recurso.getNombre();
-    }
 }
